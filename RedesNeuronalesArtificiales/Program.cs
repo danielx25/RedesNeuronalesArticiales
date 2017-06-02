@@ -16,7 +16,7 @@ namespace RedesNeuronalesArtificiales
       
         static void Main()
         {
-            ejemplo e1 = new ejemplo(FuncionesActivacion.funcionTriangular);
+            Perceptron per = new Perceptron();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

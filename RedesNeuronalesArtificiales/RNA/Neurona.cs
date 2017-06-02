@@ -25,8 +25,16 @@ namespace RedesNeuronalesArtificiales.RNA
         public Neurona(Func<Double, Double> funcionAct)
         {
             funcionActivacion = funcionAct;
+            pesos = new Double[1];
+            entradas = new Double[1];
         }
 
+        public Neurona(Func<Double, Double> funcionAct, int numeroEntrada)
+        {
+            funcionActivacion = funcionAct;
+            pesos = new Double[numeroEntrada];
+            entradas = new Double[numeroEntrada];
+        }
         //esta funcion accede a los valores calculados por las neuronas predesesoras o la capa anterior a ella
         //se hizo de esta manera porque el metodo backpropagation desde la salida hacia atras
         protected void extrayendoMisValoresEntrada()
@@ -39,7 +47,7 @@ namespace RedesNeuronalesArtificiales.RNA
         }
 
         //calcula el valor nero del producto entre los pesos y la entrada y le suma el bias (polarizacion)
-        private void entradaxPesos()
+        public void entradaxPesos()
         {
             n = 0;
             for(int i=0; i<entradas.Length; i++)
@@ -50,7 +58,7 @@ namespace RedesNeuronalesArtificiales.RNA
         }
 
         //calculo del valor que sale por el axon de la neurona
-        private void humbralActivacion()
+        public void humbralActivacion()
         {
             salida = funcionActivacion(n);
         }
@@ -61,5 +69,19 @@ namespace RedesNeuronalesArtificiales.RNA
             return salida;
         }
 
+        public void setEntrada(Double[] entradas)
+        {
+            this.entradas = entradas;
+        }
+
+        public void setPesos(Double[] pesos)
+        {
+            this.pesos = pesos;
+        }
+
+        public void setPolarizacion(Double p)
+        {
+            b = p;
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace RedesNeuronalesArtificiales
     class ejemplo
     {
         Func<Double, Double> mifuncion;
-        public ejemplo(Func<Double, Double> transfirMetodo)
+        public ejemplo(Func<Double, Double> transfirMetodo, bool bandera=true)
         {
             mifuncion = transfirMetodo;
         }
