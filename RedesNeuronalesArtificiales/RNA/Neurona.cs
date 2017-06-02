@@ -8,6 +8,9 @@ namespace RedesNeuronalesArtificiales.RNA
 {
     class Neurona
     {
+        int numeroCapa = 0;
+        int numeroNeurona = 0;
+
         // a :salida del axon
         private Double salida = 0;
         // intensidad de la relacion con la neurona W
@@ -82,6 +85,11 @@ namespace RedesNeuronalesArtificiales.RNA
         public void setPolarizacion(Double p)
         {
             b = p;
+        }
+
+        public void agregarNeuronaEnlace(Neurona neurona)
+        {
+            neuronasPredecesoras.Add(neurona);
         }
     }
 }
