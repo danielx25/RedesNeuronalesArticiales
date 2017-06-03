@@ -77,9 +77,18 @@ namespace RedesNeuronalesArtificiales.RNA
             this.entradas = entradas;
         }
 
-        public void setPesos(Double[] pesos)
+        public Double[] Pesos
         {
-            this.pesos = pesos;
+            get
+            {
+                return pesos;
+            }
+            set
+            {
+                pesos = value;
+            }
+
+
         }
 
         public void setPolarizacion(Double p)

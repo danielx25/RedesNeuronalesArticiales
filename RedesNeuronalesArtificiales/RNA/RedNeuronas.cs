@@ -41,6 +41,7 @@ namespace RedesNeuronalesArtificiales.RNA
             ejemploEntrenamiento = new Double[numeroEntrada];
         }
 
+
         public void iniciandoLaRNA()
         {
             //cargando la cola con todas las neuronas
@@ -75,6 +76,7 @@ namespace RedesNeuronalesArtificiales.RNA
             }
             return new Double[0];
         }
+        /*
         public void ejecutarUnaNeurona()
         {
             Neurona neurona = capaEntrada[0];
@@ -102,7 +104,7 @@ namespace RedesNeuronalesArtificiales.RNA
             System.Console.WriteLine("1, 1 = 1: " + neurona.getSalidaAxon());
 
         }
-
+        */
         protected void iniciandoCola()
         {
             colaDeNeuronas = new List<Neurona>();
@@ -160,6 +162,11 @@ namespace RedesNeuronalesArtificiales.RNA
                         }
                     }
             }
+        }
+
+        public Neurona getNeuronaCapaEntrada(int indice)
+        {
+            return capaEntrada[indice];
         }
     }
 
