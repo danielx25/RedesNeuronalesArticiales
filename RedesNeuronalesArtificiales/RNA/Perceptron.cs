@@ -16,12 +16,16 @@ namespace RedesNeuronalesArtificiales.RNA
         public Perceptron()
         {
             percepron = new RedNeuronas();
-            percepron.agregarNeuronasEntrada(FuncionesActivacion.hardLim, 1, 2, RedNeuronas.CONEXION_TODOCONTRATODO);
+            percepron.agregarNeuronasEntrada(FuncionesActivacion.hardLim, 1, 3, RedNeuronas.CONEXION_TODOCONTRATODO);
             percepron.iniciandoLaRNA();
             Neurona neurona = percepron.getNeuronaCapaEntrada(0);
-            neurona.Pesos = new Double[] {random.NextDouble(-1 ,1), random.NextDouble(-1, 1)};
+            for(int i=0; i<neurona.Pesos.Length; i++)
+            {
+                neurona.Pesos[i] = random.NextDouble(-1, 1);// = new Double[] { random.NextDouble(-1, 1), random.NextDouble(-1, 1) };
+            }
+            
             //neurona.Pesos = new Double[] { -0.7, 0.2 };
-            neurona.setPolarizacion(1.5);
+            neurona.setPolarizacion(random.NextDouble(-1, 1));
         }
 
         public void entrenamiento(Double[,] tabla)

@@ -17,7 +17,7 @@ namespace RedesNeuronalesArtificiales
         static void Main()
         {
             Perceptron per = new Perceptron();
-            per.entrenamiento(EjemploEntrenamiento.OR());
+            per.entrenamiento(EjemploEntrenamiento.XORDIMENSION());
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

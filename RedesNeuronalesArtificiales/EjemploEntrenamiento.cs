@@ -34,5 +34,24 @@ namespace RedesNeuronalesArtificiales
                                   { 0, 2, -1} };
             return ejemplo;
         }
+
+        static public Double[,] XOR()
+        {
+            Double[,] ejemplo = { { 0, 0, 1},
+                                  { 0, 1, 0},
+                                  { 1, 0, 0},
+                                  { 1, 1, 1} };
+            return ejemplo;
+        }
+
+        static public Double[,] XORDIMENSION()
+        {
+            Double[,] ejemplo = { {1, 0, 0, 1},
+                                  {0, 0, 1, 0},
+                                  {0, 1, 0, 0},
+                                  {1, 1, 1, 1} };
+            return ejemplo;
+        }
+
     }
 }
