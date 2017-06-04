@@ -25,5 +25,14 @@ namespace RedesNeuronalesArtificiales
                                   { 1, 1, 1} };
             return ejemplo;
         }
+
+        static public Double[,] ejemplo1()
+        {
+            Double[,] ejemplo = { { 2, 1, 1},
+                                  { 0, -1, 1},
+                                  { -2, 1, -1},
+                                  { 0, 2, -1} };
+            return ejemplo;
+        }
     }
 }

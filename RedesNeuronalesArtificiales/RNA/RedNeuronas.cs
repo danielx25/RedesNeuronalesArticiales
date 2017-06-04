@@ -57,11 +57,11 @@ namespace RedesNeuronalesArtificiales.RNA
             List<Double> resultado = new List<double>();
             if (capaEntrada.Count>0)
             {
-                int tamañoCola = capaEntrada.Count;
                 Neurona neurona = null;
-                for(int indiceCapa=0; indiceCapa < tamañoCola; indiceCapa++)
+                for(int indiceCapa=0; indiceCapa < capaEntrada.Count; indiceCapa++)
                 {
                     neurona = capaEntrada[indiceCapa];
+                    neurona.setEntrada(ejemploEntrenamiento);
                     neurona.entradaxPesos();
                     neurona.humbralActivacion();
                 }

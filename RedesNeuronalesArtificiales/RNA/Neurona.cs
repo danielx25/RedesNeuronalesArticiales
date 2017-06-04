@@ -55,9 +55,12 @@ namespace RedesNeuronalesArtificiales.RNA
             n = 0;
             for(int i=0; i<entradas.Length; i++)
             {
-                n += entradas[i] * pesos[i]; 
+                System.Console.Write(" w_: " + pesos[i] + " p_: " + entradas[i]+" ");
+                n += entradas[i] * pesos[i];
+                
             }
             n += b;//suma del vias
+            System.Console.Write(" W*N: " + n + " ");
         }
 
         //calculo del valor que sale por el axon de la neurona
@@ -89,6 +92,18 @@ namespace RedesNeuronalesArtificiales.RNA
             }
 
 
+        }
+
+        public Double Polarizacion
+        {
+            get
+            {
+                return b;
+            }
+            set
+            {
+                b = value;
+            }
         }
 
         public void setPolarizacion(Double p)
