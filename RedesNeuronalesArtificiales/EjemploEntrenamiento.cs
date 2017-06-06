@@ -53,5 +53,23 @@ namespace RedesNeuronalesArtificiales
             return ejemplo;
         }
 
+        static public Double[,] LED7SEGMENTOS()
+        {                        //a  b  c  d  e  f  g   Object 
+            Double[,] ejemplo = { {1, 1, 1, 1, 1, 1, 0, 1},//0
+                                  {0, 1, 1, 0, 0, 0, 0, 0},//1
+                                  {1, 1, 0, 1, 1, 0, 1, 1},//2
+                                  {1, 1, 1, 1, 0, 0, 1, 0},//3
+                                  {0, 1, 1, 0, 0, 1, 1, 1},//4
+                                  {1, 0, 1, 1, 0, 1, 1, 0},//5
+                                  {1, 0, 1, 1, 1, 1, 1, 1},//6
+                                  {1, 1, 1, 0, 0, 0, 0, 0},//7
+                                  {1, 1, 1, 1, 1, 1, 1, 1},//8
+                                  {1, 1, 1, 1, 1, 0, 1, 0},//9
+                                   };
+            return ejemplo;
+        }
+
+
+
     }
 }

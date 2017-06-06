@@ -55,12 +55,12 @@ namespace RedesNeuronalesArtificiales.RNA
             n = 0;
             for(int i=0; i<entradas.Length; i++)
             {
-                System.Console.Write(" w_: " + pesos[i] + " p_: " + entradas[i]+" ");
+                //System.Console.Write(" w_: " + pesos[i] + " p_: " + entradas[i]+" ");
                 n += entradas[i] * pesos[i];
                 
             }
             n += b;//suma del vias
-            System.Console.Write(" W*N: " + n + " ");
+            //System.Console.Write(" W*N: " + n + " ");
         }
 
         //calculo del valor que sale por el axon de la neurona

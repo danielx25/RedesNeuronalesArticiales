@@ -13,15 +13,16 @@ namespace RedesNeuronalesArtificiales.RNA
         Double alfa = 0.1;
         Double polarizacion = 0;
         Double[] salida;
-        public Perceptron()
+        public Perceptron(int numeroEntradas)
         {
             percepron = new RedNeuronas();
-            percepron.agregarNeuronasEntrada(FuncionesActivacion.hardLim, 1, 3, RedNeuronas.CONEXION_TODOCONTRATODO);
+            //1  una neurona, 3 entradas
+            percepron.agregarNeuronasEntrada(FuncionesActivacion.hardLim, 1, numeroEntradas, RedNeuronas.CONEXION_TODOCONTRATODO);
             percepron.iniciandoLaRNA();
             Neurona neurona = percepron.getNeuronaCapaEntrada(0);
             for(int i=0; i<neurona.Pesos.Length; i++)
             {
-                neurona.Pesos[i] = random.NextDouble(-1, 1);// = new Double[] { random.NextDouble(-1, 1), random.NextDouble(-1, 1) };
+                neurona.Pesos[i] = random.NextDouble(-1, 1);
             }
             
             //neurona.Pesos = new Double[] { -0.7, 0.2 };
@@ -43,9 +44,10 @@ namespace RedesNeuronalesArtificiales.RNA
             while(numeroAciertos < numeroFila)
             {
                 numeroAciertos = 0;
-                if (contador > 20)
+                if (contador > 100000)
                     break;
                 contador += 1;
+                
                 for(int numeroRegistro=0; numeroRegistro<numeroFila; numeroRegistro++)
                 {
                     for (int i = 0; i < numeroColumna - 1; i++)
@@ -54,7 +56,7 @@ namespace RedesNeuronalesArtificiales.RNA
                     
                     salida = percepron.entrenandoLaRed(fila);
                     esperado = tabla[numeroRegistro, numeroColumna - 1];
-                    System.Console.Write(" salida: " + salida[0] + " esperado: " + esperado);
+                    System.Console.WriteLine(" salida: " + salida[0] + " esperado: " + esperado);
                     if (esperado != salida[0])
                     {
                         Double[] pesos = neurona.Pesos;
@@ -62,27 +64,30 @@ namespace RedesNeuronalesArtificiales.RNA
                         Double error = 0;
                         for(int indice=0; indice<pesos.Length; indice++)
                         {
-                            System.Console.Write(" antesW" + indice + ": " + pesos[indice] + " p: " + tabla[numeroRegistro, indice] + " ");
+                            //System.Console.Write(" antesW" + indice + ": " + pesos[indice]);
+                            //System.Console.Write(" p: " + tabla[numeroRegistro, indice] + " ");
                             nuevoPeso = ajustePeso(pesos[indice], 1, salida[0], esperado, tabla[numeroRegistro, indice]);
                             neurona.Pesos[indice] = nuevoPeso;
-                            System.Console.Write(" w" + indice + ": " + nuevoPeso);
+                            //System.Console.Write(" w" + indice + ": " + nuevoPeso);
                         }
-                        System.Console.Write(" b: " + neurona.Polarizacion);
-                        System.Console.WriteLine();
+                        //System.Console.Write(" b: " + neurona.Polarizacion);
+                        //System.Console.WriteLine();
                         error = (esperado - salida[0]);
                         neurona.Polarizacion += error;
                     }
                     else
                     {
-                        System.Console.WriteLine();
+                        //System.Console.WriteLine();
                         numeroAciertos += 1;
                     }
 
                     //System.Console.Write(" Aciertos: " + numeroAciertos);
                         
                 }
+                System.Console.WriteLine("numero Aciertos: " + numeroAciertos);
                 System.Console.WriteLine();
             }
+            System.Console.WriteLine("contador: " + contador);
     }
 
         private Double ajustePeso(Double peso_, Double alfa_, Double obtenido_, Double esperado_, Double entrada_)
