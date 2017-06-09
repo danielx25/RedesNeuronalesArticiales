@@ -80,6 +80,14 @@ namespace RedesNeuronalesArtificiales.RNA
             this.entradas = entradas;
         }
 
+        public Double[] Entradas
+        {
+            get
+            {
+                return entradas;
+            }
+        }
+
         public Double[] Pesos
         {
             get
@@ -103,6 +111,15 @@ namespace RedesNeuronalesArtificiales.RNA
             set
             {
                 b = value;
+
+            }
+        }
+
+        public Double Neto
+        {
+            get
+            {
+                return n;
             }
         }
 
