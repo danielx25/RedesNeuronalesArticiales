@@ -41,11 +41,71 @@ namespace RedesNeuronalesArtificiales.RNA
             ejemploEntrenamiento = new Double[numeroEntrada];
         }
 
+        public void agregarCapaOculta(Func<Double, Double> funcionActivacion, int numeroNeuronas)
+        {
+            List<Neurona> capaOculta = new List<Neurona>();
+            if (capasOcultas.Count == 0)
+            {
+                for (int indice = 0; indice < numeroNeuronas; indice++)//agregando las neurona a la lista
+                {
+                    Neurona neuronaCO = new Neurona(funcionActivacion, capaEntrada.Count);
+                    foreach (Neurona neuronaCE in capaEntrada)//enlazando la nueva neurona 
+                    {
+                        neuronaCO.agregarNeuronaEnlace(neuronaCE);
+                    }
+                    capaOculta.Add(neuronaCO);
+
+                }
+            }
+            else
+            {
+                for (int indice = 0; indice < numeroNeuronas; indice++)//agregando las neurona a la lista
+                {
+                    Neurona neuronaCO = new Neurona(funcionActivacion, capasOcultas[capasOcultas.Count - 1].Count);
+                    foreach (Neurona neuronaC01 in capasOcultas[capasOcultas.Count-1])//enlazando la nueva neurona 
+                    {
+                        neuronaCO.agregarNeuronaEnlace(neuronaC01);
+                    }
+                    capaOculta.Add(neuronaCO);
+                }
+            }
+            
+            capasOcultas.Add(capaOculta);
+        }
+
+        public void agregarCapaSalida(Func<Double, Double> funcionActivacion, int numeroNeuronas)
+        {
+            if(capasOcultas.Count > 0)
+            {
+                for (int indice = 0; indice < numeroNeuronas; indice++)//agregando las neurona a la lista
+                {
+                    Neurona neuronaCS = new Neurona(funcionActivacion, capasOcultas[capasOcultas.Count-1].Count);
+                    foreach (Neurona neuronaCE in capaEntrada)//enlazando la nueva neurona 
+                    {
+                        neuronaCS.agregarNeuronaEnlace(neuronaCE);
+                    }
+                    capaSalida.Add(neuronaCS);
+
+                }
+            }
+        }
+
+        public void enlazandoCapas(List<Neurona> capa0, List<Neurona> capa1)
+        {
+            foreach(Neurona neurona_1 in capa1)
+            {
+                foreach(Neurona neurona_0 in capa0)
+                {
+                    neurona_1.agregarNeuronaEnlace(neurona_0);
+                }
+            }
+        }
+
 
         public void iniciandoLaRNA()
         {
             //cargando la cola con todas las neuronas
-            iniciandoCola();
+            //iniciandoCola();
             //uniniendoCapaEntradaCapaOculta();
             //uniendoLasCapasOcultas();
             //uniendoLaCapaSalidaCapaOculta();
@@ -55,15 +115,18 @@ namespace RedesNeuronalesArtificiales.RNA
         {
             this.ejemploEntrenamiento = ejemploEntrenamiento;
             List<Double> resultado = new List<double>();
+            List<Double> resultadoxCapas = null;
             if (capaEntrada.Count>0)
             {
                 Neurona neurona = null;
+                resultadoxCapas = new List<Double>();
                 for(int indiceCapa=0; indiceCapa < capaEntrada.Count; indiceCapa++)
                 {
                     neurona = capaEntrada[indiceCapa];
                     neurona.setEntrada(ejemploEntrenamiento);
                     neurona.entradaxPesos();
                     neurona.humbralActivacion();
+                    resultadoxCapas.Add(neurona.getSalidaAxon());
                 }
                 if(capasOcultas.Count ==0)
                 {
@@ -74,37 +137,32 @@ namespace RedesNeuronalesArtificiales.RNA
                     return resultado.ToArray();
                 }
             }
+
+            if(capasOcultas.Count > 0)
+            {
+                int numeroCapas = 0;
+                while(numeroCapas < capasOcultas.Count)
+                {
+                    
+                }
+
+                for(int indice_capa=0; indice_capa < capasOcultas.Count; indice_capa++) //(List < Neurona > capaOculta in capasOcultas)
+                {
+                    List<Double> resultado_aux = new List<Double>();
+                    foreach(Neurona neuronaCO in capasOcultas[indice_capa])
+                    {
+                        neuronaCO.setEntrada(resultadoxCapas.ToArray());
+                        neuronaCO.entradaxPesos();
+                        neuronaCO.humbralActivacion();
+                        resultado_aux.Add(neuronaCO.getSalidaAxon());
+                    }
+                    resultadoxCapas = resultado_aux;
+                }
+            }
+
             return new Double[0];
         }
-        /*
-        public void ejecutarUnaNeurona()
-        {
-            Neurona neurona = capaEntrada[0];
-            neurona.setPesos(new Double[] { 1, 1 });
-            neurona.setPolarizacion(-1.5);
-
-            neurona.setEntrada(new Double[] {0, 0});
-            neurona.entradaxPesos();
-            neurona.humbralActivacion();
-            System.Console.WriteLine("0, 0 = 0: "+neurona.getSalidaAxon());
-
-            neurona.setEntrada(new Double[] { 0, 1 });
-            neurona.entradaxPesos();
-            neurona.humbralActivacion();
-            System.Console.WriteLine("0, 1 = 0: " + neurona.getSalidaAxon());
-
-            neurona.setEntrada(new Double[] { 1, 0 });
-            neurona.entradaxPesos();
-            neurona.humbralActivacion();
-            System.Console.WriteLine("1, 0 = 0: " + neurona.getSalidaAxon());
-
-            neurona.setEntrada(new Double[] { 1, 1 });
-            neurona.entradaxPesos();
-            neurona.humbralActivacion();
-            System.Console.WriteLine("1, 1 = 1: " + neurona.getSalidaAxon());
-
-        }
-        */
+        
         protected void iniciandoCola()
         {
             colaDeNeuronas = new List<Neurona>();

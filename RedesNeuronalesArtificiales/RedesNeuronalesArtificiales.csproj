@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RNA\BackPropagation.cs" />
     <Compile Include="RNA\FuncionesActivacion.cs" />
     <Compile Include="RNA\Neurona.cs" />
     <Compile Include="RNA\NumeroRandom.cs" />

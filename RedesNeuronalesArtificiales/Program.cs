@@ -16,9 +16,9 @@ namespace RedesNeuronalesArtificiales
       
         static void Main()
         {
-            Perceptron per = new Perceptron(7);
-            per.entrenamiento(EjemploEntrenamiento.LED7SEGMENTOS());
-
+            //Perceptron per = new Perceptron(7);
+            //per.entrenamiento(EjemploEntrenamiento.LED7SEGMENTOS());
+            BackPropagation redmulticapa = new BackPropagation();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

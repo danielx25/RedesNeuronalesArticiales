@@ -21,7 +21,7 @@ namespace RedesNeuronalesArtificiales.RNA
         private Double b = 0;
         //entrada neta a la neurona
         private Double n = 0;
-        List<Neurona> neuronasPredecesoras;
+        List<Neurona> neuronasPredecesoras = new List<Neurona>();
 
         private Func<Double, Double> funcionActivacion;
 
