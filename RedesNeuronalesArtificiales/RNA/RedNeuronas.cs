@@ -17,6 +17,8 @@ namespace RedesNeuronalesArtificiales.RNA
         private List<List<Neurona>> capasOcultas = new List<List<Neurona>>();
         private List<Neurona> capaSalida = new List<Neurona>();
 
+        private bool tipoConexion = false;
+
         //en la entrada a la capa cada neurona solo tiene derecho a un dato
         public const bool CONEXION_LINEAL = true;
         //esto el contrario a la conexion lineal todas las entradas van a todas las neuronas de la capa de entrada
@@ -31,6 +33,7 @@ namespace RedesNeuronalesArtificiales.RNA
         // numero de entradas
         public void agregarNeuronasEntrada(Func<Double, Double> funcionActivacion, int numeroNeuronas, int numeroEntrada, bool tipoConexion =true)
         {
+            this.tipoConexion = tipoConexion;
             for(int i=0; i<numeroNeuronas; i++)
             {
                 if(tipoConexion == CONEXION_LINEAL)
@@ -139,7 +142,11 @@ namespace RedesNeuronalesArtificiales.RNA
                 for(int indiceCapa=0; indiceCapa < capaEntrada.Count; indiceCapa++)
                 {
                     neurona = capaEntrada[indiceCapa];
-                    neurona.setEntrada(ejemploEntrenamiento);
+                    if (tipoConexion == CONEXION_TODOCONTRATODO)
+                        neurona.setEntrada(ejemploEntrenamiento);
+                    if (tipoConexion == CONEXION_LINEAL)
+                        neurona.setEntrada(new Double[] { ejemploEntrenamiento[indiceCapa] });
+
                     neurona.entradaxPesos();
                     neurona.humbralActivacion();
                     resultadoxCapas.Add(neurona.getSalidaAxon());
@@ -172,6 +179,14 @@ namespace RedesNeuronalesArtificiales.RNA
                         neuronaCO.entradaxPesos();
                         neuronaCO.humbralActivacion();
                         resultado_aux.Add(neuronaCO.getSalidaAxon());
+
+                        for (int i = 0; i < neuronaCO.Pesos.Length; i++)
+                        {
+                            System.Console.WriteLine("W: " + neuronaCO.Pesos[i] + " E: " + neuronaCO.Entradas[i]);
+                        }
+                        System.Console.WriteLine("Neto (n): " + neuronaCO.Neto);
+                        System.Console.WriteLine("salida Capa Oculta: " + neuronaCO.getSalidaAxon());
+
                     }
                     resultadoxCapas = resultado_aux;
                 }
@@ -264,6 +279,22 @@ namespace RedesNeuronalesArtificiales.RNA
             get
             {
                 return capaEntrada;
+            }
+        }
+
+        public List<List<Neurona>> CapasOcultas
+        {
+            get
+            {
+                return capasOcultas;
+            }
+        }
+
+        public List<Neurona> CapaSalida
+        {
+            get
+            {
+                return capaSalida;
             }
         }
     }
