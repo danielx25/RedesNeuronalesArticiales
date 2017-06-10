@@ -149,6 +149,32 @@ namespace RedesNeuronalesArtificiales.RNA
                     }
                 }
             }
+
+            Double[] gradienteEntrada = new Double[redMulticapa.CapaEntrada.Count];
+            List<Neurona> capaOculta1 = redMulticapa.CapasOcultas[0];
+            //gradiente de la capa de entrada
+            for (int indice_NeuronaEntrada = 0; indice_NeuronaEntrada < gradienteEntrada.Length; indice_NeuronaEntrada++)
+            {
+                Double gradiente = 0;
+                for(int indice_neurona=0; indice_neurona<capaOculta1.Count; indice_neurona++)
+                {
+                    gradiente += capaOculta1[indice_neurona].Pesos[indice_NeuronaEntrada]* listaxCapadeGradientes[0][indice_neurona];
+                }
+                Double y = redMulticapa.CapaEntrada[indice_NeuronaEntrada].getSalidaAxon();
+                gradiente = gradiente * 0.5 * (1 + y) * (1 - y);
+                gradienteEntrada[indice_NeuronaEntrada] = gradiente;
+                System.Console.WriteLine("g: " + gradiente);
+            }
+
+            for(int indice_neurona = 0; indice_neurona<redMulticapa.CapaEntrada.Count; indice_neurona++)
+            {
+                for(int indice_pesos = 0; indice_pesos< redMulticapa.CapaEntrada[indice_neurona].Pesos.Length; indice_pesos++)
+                {
+                    redMulticapa.CapaEntrada[indice_neurona].Pesos[indice_pesos] = alfa * gradienteEntrada[indice_neurona]*
+                        redMulticapa.CapaEntrada[indice_neurona].Entradas[indice_pesos];
+                }
+                redMulticapa.CapaEntrada[indice_neurona].Polarizacion = alfa * gradienteEntrada[indice_neurona]*-1;
+            }
         }
 
     }

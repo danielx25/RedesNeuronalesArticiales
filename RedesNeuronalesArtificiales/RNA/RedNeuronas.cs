@@ -150,12 +150,14 @@ namespace RedesNeuronalesArtificiales.RNA
                     neurona.entradaxPesos();
                     neurona.humbralActivacion();
                     resultadoxCapas.Add(neurona.getSalidaAxon());
+                    
                     for(int i=0; i<neurona.Pesos.Length; i++)
                     {
                         System.Console.WriteLine("W: " + neurona.Pesos[i] + " E: " + neurona.Entradas[i]);
                     }
                     System.Console.WriteLine("Neto (n): " + neurona.Neto);
                     System.Console.WriteLine("salida Capa Entrada: " + neurona.getSalidaAxon());
+                    
                 }
                 if(capasOcultas.Count ==0)
                 {
@@ -179,14 +181,14 @@ namespace RedesNeuronalesArtificiales.RNA
                         neuronaCO.entradaxPesos();
                         neuronaCO.humbralActivacion();
                         resultado_aux.Add(neuronaCO.getSalidaAxon());
-
+                        /*
                         for (int i = 0; i < neuronaCO.Pesos.Length; i++)
                         {
                             System.Console.WriteLine("W: " + neuronaCO.Pesos[i] + " E: " + neuronaCO.Entradas[i]);
                         }
                         System.Console.WriteLine("Neto (n): " + neuronaCO.Neto);
                         System.Console.WriteLine("salida Capa Oculta: " + neuronaCO.getSalidaAxon());
-
+                        */
                     }
                     resultadoxCapas = resultado_aux;
                 }
