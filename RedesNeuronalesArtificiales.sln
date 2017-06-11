@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedesNeuronalesArticiales", "RedesNeuronalesArticiales\RedesNeuronalesArticiales.csproj", "{B641D9F0-96E2-429F-A5A8-AC2D0B0D2586}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedesNeuronalesArtificiales", "RedesNeuronalesArtificiales\RedesNeuronalesArtificiales.csproj", "{B641D9F0-96E2-429F-A5A8-AC2D0B0D2586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
