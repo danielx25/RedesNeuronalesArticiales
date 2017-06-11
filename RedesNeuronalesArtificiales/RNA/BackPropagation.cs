@@ -20,7 +20,7 @@ namespace RedesNeuronalesArtificiales.RNA
             int numeroEntradas = 3;
             //(Func<Double, Double> funcionActivacion, int numeroNeuronas, int numeroEntrada, bool tipoConexion =true)
             redMulticapa.agregarNeuronasEntrada(FuncionesActivacion.Sigmoide, 
-                numeroNeuronas, numeroEntradas, RedNeuronas.CONEXION_TODOCONTRATODO);
+                numeroNeuronas, numeroEntradas, RedNeuronas.CONEXION_LINEAL);
             redMulticapa.agregarCapaOculta(FuncionesActivacion.Sigmoide, 2);
             //redMulticapa.agregarCapaOculta(FuncionesActivacion.Sigmoide, 4);
             redMulticapa.agregarCapaSalida(FuncionesActivacion.Sigmoide, 1);
@@ -80,7 +80,7 @@ namespace RedesNeuronalesArtificiales.RNA
             Double[] resultadoObtenido = new Double[redMulticapa.CapaSalida.Count];
             Double[] resultadoEsperado = new Double[redMulticapa.CapaSalida.Count];
             int contadorEpocas = 0;
-            int numeroEpocas = 1;
+            int numeroEpocas = 10;
 
             while (contadorEpocas < numeroEpocas)
             {
@@ -102,6 +102,7 @@ namespace RedesNeuronalesArtificiales.RNA
                     }
                         
                     resultadoObtenido = redMulticapa.entrenandoLaRed(fila);
+
                     System.Console.WriteLine("re Obtenido: " + resultadoObtenido[0]+" re Esperado: "+resultadoEsperado[0]);
                     
                     if(resultadoObtenido[0] != resultadoEsperado[0])
@@ -127,6 +128,7 @@ namespace RedesNeuronalesArtificiales.RNA
                 gradienteSalida[i] = (resultadoEsperado[i] - resultadoObtenido[i])*resultadoObtenido[i]
                     * (1- resultadoObtenido[i]);
             }
+            if(debug)
             System.Console.WriteLine("gradiente salida: " + gradienteSalida[0]);
             List<Double>[] listaxCapadeGradientes = new List<Double>[redMulticapa.CapasOcultas.Count];
             //recorriendo las capas de atras para adelante
@@ -170,8 +172,8 @@ namespace RedesNeuronalesArtificiales.RNA
                     }
                 }
             }
-
-            for(int indiceCapa=0; indiceCapa<listaxCapadeGradientes.Length; indiceCapa++)
+            if (debug)
+                for (int indiceCapa=0; indiceCapa<listaxCapadeGradientes.Length; indiceCapa++)
             {
                 foreach(Double l in listaxCapadeGradientes[indiceCapa])
                 {
@@ -188,13 +190,16 @@ namespace RedesNeuronalesArtificiales.RNA
                 for(int indice_neurona=0; indice_neurona<capaOculta1.Count; indice_neurona++)
                 {
                     gradiente += capaOculta1[indice_neurona].Pesos[indice_NeuronaEntrada]* listaxCapadeGradientes[0][indice_neurona];
-                    System.Console.WriteLine("W: " + capaOculta1[indice_neurona].Pesos[indice_NeuronaEntrada] + " G: " + listaxCapadeGradientes[0][indice_neurona]);
+                    if (debug)
+                        System.Console.WriteLine("W: " + capaOculta1[indice_neurona].Pesos[indice_NeuronaEntrada] + " G: " + listaxCapadeGradientes[0][indice_neurona]);
                 }
                 Double y = redMulticapa.CapaEntrada[indice_NeuronaEntrada].getSalidaAxon();
                 gradiente = gradiente * 0.5 *(1 - y) * y;
-                System.Console.WriteLine("y: " + y);
+                if (debug)
+                    System.Console.WriteLine("y: " + y);
                 gradienteEntrada[indice_NeuronaEntrada] = gradiente;
-                System.Console.WriteLine("gradiente capa entrada: " + gradiente);
+                if (debug)
+                    System.Console.WriteLine("gradiente capa entrada: " + gradiente);
             }
 
             //actualizando los pesos de la capa de entrada
@@ -207,7 +212,8 @@ namespace RedesNeuronalesArtificiales.RNA
                     deltaW = alfa * gradienteEntrada[indice_neurona] *
                         redMulticapa.CapaEntrada[indice_neurona].Entradas[indice_pesos];
                     redMulticapa.CapaEntrada[indice_neurona].Pesos[indice_pesos] += deltaW;
-                    System.Console.WriteLine("alfa: " + alfa + " G: " + gradienteEntrada[indice_neurona] +" En: "+
+                    if (debug)
+                        System.Console.WriteLine("alfa: " + alfa + " G: " + gradienteEntrada[indice_neurona] +" En: "+
                         redMulticapa.CapaEntrada[indice_neurona].Entradas[indice_pesos]+" = "+deltaW);
                 }
                 redMulticapa.CapaEntrada[indice_neurona].Polarizacion+= alfa * gradienteEntrada[indice_neurona]*-1;

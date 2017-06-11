@@ -18,7 +18,7 @@ namespace RedesNeuronalesArtificiales.RNA
         private List<Neurona> capaSalida = new List<Neurona>();
 
         private bool tipoConexion = false;
-        private bool debug = true;
+        private bool debug = false;
         //en la entrada a la capa cada neurona solo tiene derecho a un dato
         public const bool CONEXION_LINEAL = true;
         //esto el contrario a la conexion lineal todas las entradas van a todas las neuronas de la capa de entrada
