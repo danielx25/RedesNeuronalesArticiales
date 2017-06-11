@@ -20,9 +20,9 @@ namespace RedesNeuronalesArtificiales
             //per.entrenamiento(EjemploEntrenamiento.LED7SEGMENTOS());
             BackPropagation redmulticapa = new BackPropagation();
             redmulticapa.entrenamiento(EjemploEntrenamiento.DESAYUNO());
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
         }
     }
 }
