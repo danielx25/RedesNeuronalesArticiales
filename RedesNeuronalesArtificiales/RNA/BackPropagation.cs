@@ -103,11 +103,13 @@ namespace RedesNeuronalesArtificiales.RNA
                         
                     resultadoObtenido = redMulticapa.entrenandoLaRed(fila);
                     System.Console.WriteLine("re Obtenido: " + resultadoObtenido[0]+" re Esperado: "+resultadoEsperado[0]);
-
+                    
                     if(resultadoObtenido[0] != resultadoEsperado[0])
                     {
                         propagacion_error(resultadoObtenido, resultadoEsperado);
                     }
+
+                    System.Console.WriteLine("================================================================================");
                 }
                 System.Console.WriteLine();
                 contadorEpocas += 1;
@@ -122,8 +124,8 @@ namespace RedesNeuronalesArtificiales.RNA
             //gradiente de salida de la red
             for (int i = 0; i < resultadoEsperado.Length; i++)
             {
-                gradienteSalida[i] = (resultadoEsperado[i] - resultadoObtenido[i]) *
-                    0.5 * (1+ resultadoObtenido[i])*(1- resultadoObtenido[i]);
+                gradienteSalida[i] = (resultadoEsperado[i] - resultadoObtenido[i])*resultadoObtenido[i]
+                    * (1- resultadoObtenido[i]);
             }
             System.Console.WriteLine("gradiente salida: " + gradienteSalida[0]);
             List<Double>[] listaxCapadeGradientes = new List<Double>[redMulticapa.CapasOcultas.Count];
@@ -145,7 +147,7 @@ namespace RedesNeuronalesArtificiales.RNA
                             gradiente+= redMulticapa.CapaSalida[indice_neurona].Pesos[indice_NCaOcul] * gradienteSalida[indice_neurona];
                         }
                         Double y = capaOculta[indice_NCaOcul].getSalidaAxon();
-                        gradiente = gradiente * 0.5 *  (1- y)*(1+y);
+                        gradiente = gradiente *(1- y)*y;
                         listaxCapadeGradientes[indice_capa].Add(gradiente);
                     }
                     
@@ -163,7 +165,7 @@ namespace RedesNeuronalesArtificiales.RNA
                         }
 
                         Double y = capaOculta[indice_NCaOcul].getSalidaAxon();
-                        gradiente = gradiente * 0.5 *  (1 - y) * (1 + y);
+                        gradiente = gradiente * 0.5 * (1 - y) * y;
                         listaxCapadeGradientes[indice_capa].Add(gradiente);
                     }
                 }
@@ -189,7 +191,7 @@ namespace RedesNeuronalesArtificiales.RNA
                     System.Console.WriteLine("W: " + capaOculta1[indice_neurona].Pesos[indice_NeuronaEntrada] + " G: " + listaxCapadeGradientes[0][indice_neurona]);
                 }
                 Double y = redMulticapa.CapaEntrada[indice_NeuronaEntrada].getSalidaAxon();
-                gradiente = gradiente * 0.5 *  (1 - y) * (1 + y);
+                gradiente = gradiente * 0.5 *(1 - y) * y;
                 System.Console.WriteLine("y: " + y);
                 gradienteEntrada[indice_NeuronaEntrada] = gradiente;
                 System.Console.WriteLine("gradiente capa entrada: " + gradiente);

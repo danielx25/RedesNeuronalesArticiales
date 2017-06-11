@@ -74,7 +74,7 @@ namespace RedesNeuronalesArtificiales
             Double[,] ejemplo = {
                                   { 2, 3, 0, 3280 },
                                      { 2, 1, 0, 1840 },
-                                     /*{ 0, 0, 1, 800 },
+                                     { 0, 0, 1, 800 },
                                      { 1, 1, 0, 1280 },
                                      { 0, 3, 0, 2160 },
                                      { 2, 2, 1, 3360 },
@@ -101,7 +101,7 @@ namespace RedesNeuronalesArtificiales
                                      { 0, 2, 1, 2240 },
                                      { 1, 1, 0, 1280 },
                                      { 0, 0, 0, 0 },
-                                     { 0, 2, 0, 1440 }*/
+                                     { 0, 2, 0, 1440 }
                                    };
             return ejemplo;
         }
