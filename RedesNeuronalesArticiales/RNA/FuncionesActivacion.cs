@@ -42,7 +42,7 @@ namespace RedesNeuronalesArtificiales.RNA
         */
         public static double Sigmoide(double n)
         {
-            return 1 / (1 + Math.Exp(-n));
+            return (2 / (1 + Math.Exp(-n)))-1;
         }
 
     }
