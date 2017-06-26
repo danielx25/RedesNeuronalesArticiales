@@ -16,7 +16,7 @@ namespace RedesNeuronalesArtificiales
             //Perceptron per = new Perceptron(7);
             //per.entrenamiento(EjemploEntrenamiento.LED7SEGMENTOS());
             //BackPropagation redmulticapa = new BackPropagation();
-            //redmulticapa.entrenamiento(EjemploEntrenamiento.DESAYUNO());
+            //redmulticapa.entrenamiento(EjemploEntrenamiento.DESAYUNO_NORMALIZADO());
 
 			//double[] minimos = {0, 0.5, 0.3, -0.5, -0.5, -1, 1, 0, 0.5, 0};
 			//double[] maximos = {1, 1, 0.3, 0.5, 0.5, 1, 2, 1, 0.7, 3 };

@@ -89,8 +89,8 @@ namespace RedesNeuronalesArtificiales.RNA
                     resultadoEsperado[0] = tabla[numeroRegistro, numeroColumna - 1];
                     for (int i = 0; i < numeroColumna - 1; i++)
                     {
-                        //fila[i] = tabla[numeroRegistro, i];
-                        
+                        fila[i] = tabla[numeroRegistro, i];
+                        /*
                         if (tabla[numeroRegistro, i] != 0)
                             fila[i] = 1 / tabla[numeroRegistro, i];
                         else
@@ -98,7 +98,7 @@ namespace RedesNeuronalesArtificiales.RNA
 
                         if(tabla[numeroRegistro, numeroColumna - 1] !=0)
                             resultadoEsperado[0] = 1/tabla[numeroRegistro, numeroColumna - 1];
-                        
+                        */
                     }
                         
                     resultadoObtenido = redMulticapa.entrenandoLaRed(fila);
