@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RedesNeuronalesArtificiales.BaseDeDatos
+namespace ProcesarDatos
 {
 	public class Fila
 	{
@@ -18,12 +18,14 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 		private Double precipitacionAcumuladaDia1;
 		private Double precipitacionAcumuladaDia2;
 		private Double precipitacionAcumuladaDia3;
+		private Double precipitacionAcumuladaDia4;
+		private Double precipitacionAcumuladaDia5;
 
 		private Double evaporacionAcumuladaDia1;
 		private Double evaporacionAcumuladaDia2;
 		private Double evaporacionAcumuladaDia3;
-
-		private bool estimada = false;
+		private Double evaporacionAcumuladaDia4;
+		private Double evaporacionAcumuladaDia5;
 
 		public Fila (DateTime fecha, Double velocidadViento, Int16 direccionViento, Double temperatura, Int16 humedadRelativa,
 			Int32 mp10,	Double precipitacion, Int32 radiacionSolar,	Int32 precionAtmosferica, Double evaporacion)
@@ -38,22 +40,6 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			this.radiacionSolar = radiacionSolar;
 			this.precionAtmosferica = precionAtmosferica;
 			this.evaporacion = evaporacion;
-		}
-
-		public Fila (DateTime fecha, Double velocidadViento, Int16 direccionViento, Double temperatura, Int16 humedadRelativa,
-			Int32 mp10,	Double precipitacion, Int32 radiacionSolar,	Int32 precionAtmosferica, Double evaporacion, bool estimada)
-		{
-			this.fecha = fecha;
-			this.velocidadViento = velocidadViento;
-			this.direccionViento = direccionViento;
-			this.temperatura = temperatura;
-			this.humedadRelativa = humedadRelativa;
-			this.mp10 = mp10;
-			this.precipitacion = precipitacion;
-			this.radiacionSolar = radiacionSolar;
-			this.precionAtmosferica = precionAtmosferica;
-			this.evaporacion = evaporacion;
-			this.estimada = estimada;
 		}
 
 		public DateTime Fecha
@@ -162,6 +148,26 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			}
 		}
 
+		public Double PrecipitacionAcumuladaDia4
+		{
+			get {
+				return precipitacionAcumuladaDia4;
+			}
+			set {
+				this.precipitacionAcumuladaDia4 = value;
+			}
+		}
+
+		public Double PrecipitacionAcumuladaDia5
+		{
+			get {
+				return precipitacionAcumuladaDia5;
+			}
+			set {
+				this.precipitacionAcumuladaDia5 = value;
+			}
+		}
+
 		public Double EvaporacionAcumuladaDia1
 		{
 			get {
@@ -192,9 +198,29 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			}
 		}
 
+		public Double EvaporacionAcumuladaDia4
+		{
+			get {
+				return evaporacionAcumuladaDia4;
+			}
+			set {
+				this.evaporacionAcumuladaDia4 = value;
+			}
+		}
+
+		public Double EvaporacionAcumuladaDia5
+		{
+			get {
+				return evaporacionAcumuladaDia5;
+			}
+			set {
+				this.evaporacionAcumuladaDia5 = value;
+			}
+		}
+
 		public override string ToString ()
 		{
-			return string.Format ("[Fila: {0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8} \t {9} \t {10} \t {11} \t {12} \t {13} \t {14} \t {15} \t {16}]", Fecha, VelocidadViento, DireccionViento, Temperatura, HumedadRelativa, Mp10, Precipitacion, RadiacionSolar, PrecionAtmosferica, Evaporacion, PrecipitacionAcumuladaDia1, PrecipitacionAcumuladaDia2, PrecipitacionAcumuladaDia3, EvaporacionAcumuladaDia1, EvaporacionAcumuladaDia2, EvaporacionAcumuladaDia3, estimada);
+			return string.Format ("[Fila: {0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8} \t {9} \t {10} \t {11} \t {12} \t {13} \t {14} \t {15} \t {16} \t {17} \t {18} \t {19} \t {20}]", Fecha, VelocidadViento, DireccionViento, Temperatura, HumedadRelativa, Mp10, Precipitacion, RadiacionSolar, PrecionAtmosferica, Evaporacion, PrecipitacionAcumuladaDia1, PrecipitacionAcumuladaDia2, PrecipitacionAcumuladaDia3, PrecipitacionAcumuladaDia4, PrecipitacionAcumuladaDia5, EvaporacionAcumuladaDia1, EvaporacionAcumuladaDia2, EvaporacionAcumuladaDia3, EvaporacionAcumuladaDia4, EvaporacionAcumuladaDia5);
 		}
 	}
 }
