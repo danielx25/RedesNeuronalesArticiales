@@ -1,4 +1,5 @@
 ﻿using RedesNeuronalesArtificiales.RNA;
+using RedesNeuronalesArtificiales.BaseDeDatos;
 using System;
 using System.Collections.Generic;
 
@@ -18,14 +19,21 @@ namespace RedesNeuronalesArtificiales
             //BackPropagation redmulticapa = new BackPropagation();
             //redmulticapa.entrenamiento(EjemploEntrenamiento.DESAYUNO_NORMALIZADO());
 
-			//double[] minimos = {0, 0.5, 0.3, -0.5, -0.5, -1, 1, 0, 0.5, 0};
-			//double[] maximos = {1, 1, 0.3, 0.5, 0.5, 1, 2, 1, 0.7, 3 };
+			//double[] minimos = {0, 1, 3, 5, 6, 7, 1, 0, 0.5, 0, 1, 1, 1, 1, 1, 1, 1, 1};
+			//double[] maximos = {1, 2, 4, 6, 7, 8, 2, 1, 0.7, 3, 1, 1, 1, 1, 1, 1, 1, 1};
+			DateTime inicio = new DateTime(2010,01,01,00,00,00);
+			DateTime fin = new DateTime(2010,01,01,01,00,00);
 
-			Som redNeuronal = new Som (10,20);
-			//redNeuronal.inicializarMatriz (minimos, maximos);
+			List<Fila> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
+
+			Som redNeuronal = new Som (18,40);
 			redNeuronal.inicializarMatriz (-0.5, 0.5);
-			Console.WriteLine (redNeuronal);
+			//redNeuronal.inicializarMatriz (minimos, maximos);
+			redNeuronal.Datos = datosMeteorologicos;
 
+			Console.WriteLine (redNeuronal);
+			redNeuronal.entrenar (1);//Aun no tiene sentido dar mas ciclos
+			Console.WriteLine (redNeuronal);
 
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);

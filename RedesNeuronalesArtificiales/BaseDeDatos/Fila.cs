@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ProcesarDatos
+namespace RedesNeuronalesArtificiales
 {
 	public class Fila
 	{
@@ -10,10 +10,8 @@ namespace ProcesarDatos
 		private Double temperatura;
 		private Int16 humedadRelativa;
 		private Int32 mp10;
-		private Double precipitacion;//Acumulada
 		private Int32 radiacionSolar;
 		private Int32 precionAtmosferica;
-		private Double evaporacion;//Acumulada
 
 		private Double precipitacionAcumuladaDia1;
 		private Double precipitacionAcumuladaDia2;
@@ -28,7 +26,10 @@ namespace ProcesarDatos
 		private Double evaporacionAcumuladaDia5;
 
 		public Fila (DateTime fecha, Double velocidadViento, Int16 direccionViento, Double temperatura, Int16 humedadRelativa,
-			Int32 mp10,	Double precipitacion, Int32 radiacionSolar,	Int32 precionAtmosferica, Double evaporacion)
+			Int32 mp10,	Int32 radiacionSolar, Int32 precionAtmosferica, Double precipitacionAcumuladaDia1, Double precipitacionAcumuladaDia2, 
+			Double precipitacionAcumuladaDia3, Double precipitacionAcumuladaDia4, Double precipitacionAcumuladaDia5,
+			Double evaporacionAcumuladaDia1, Double evaporacionAcumuladaDia2, Double evaporacionAcumuladaDia3, Double evaporacionAcumuladaDia4,
+			Double evaporacionAcumuladaDia5)
 		{
 			this.fecha = fecha;
 			this.velocidadViento = velocidadViento;
@@ -36,10 +37,99 @@ namespace ProcesarDatos
 			this.temperatura = temperatura;
 			this.humedadRelativa = humedadRelativa;
 			this.mp10 = mp10;
-			this.precipitacion = precipitacion;
 			this.radiacionSolar = radiacionSolar;
 			this.precionAtmosferica = precionAtmosferica;
-			this.evaporacion = evaporacion;
+			this.precipitacionAcumuladaDia1 = precipitacionAcumuladaDia1;
+			this.precipitacionAcumuladaDia2 = precipitacionAcumuladaDia2;
+			this.precipitacionAcumuladaDia3 = precipitacionAcumuladaDia3;
+			this.precipitacionAcumuladaDia4 = precipitacionAcumuladaDia4;
+			this.precipitacionAcumuladaDia5 = precipitacionAcumuladaDia5;
+			this.evaporacionAcumuladaDia1 = evaporacionAcumuladaDia1;
+			this.evaporacionAcumuladaDia2 = evaporacionAcumuladaDia2;
+			this.evaporacionAcumuladaDia3 = evaporacionAcumuladaDia3;
+			this.evaporacionAcumuladaDia4 = evaporacionAcumuladaDia4;
+			this.evaporacionAcumuladaDia5 = evaporacionAcumuladaDia5;
+		}
+
+		public double procesarDato(int x)
+		{
+			double rango = 0.5; //negativo y positivo
+
+			if (x == 0) {
+				//Fecha
+				//Console.WriteLine ("Error: Fecha no procesadas aun");
+				return 0;
+			}
+			else if (x == 1) {
+				//velocidadViento
+				return (velocidadViento/30)*rango;
+			}
+			else if (x == 2) {
+				//direccionViento
+				return (direccionViento/360)*rango;
+			}
+			else if (x == 3) {
+				//temperatura
+				return (temperatura/50)*rango;//Impresiso
+			}
+			else if (x == 4) {
+				//humedadRelativa
+				return (humedadRelativa/100)*rango;
+			}
+			else if (x == 5) {
+				//mp10
+				return (mp10/1800)*rango;//Impresiso
+			}
+			else if (x == 6) {
+				//radiacionSolar
+				return (radiacionSolar/1700)*rango;//Impresiso
+			}
+			else if (x == 7) {
+				//precionAtmosferica
+				return (precionAtmosferica/600)*rango;
+			}
+			else if (x == 8) {
+				//precipitacionAcumuladaDia1
+				return (PrecipitacionAcumuladaDia1/200)*rango;//Impresiso
+			}
+			else if (x == 9) {
+				//precipitacionAcumuladaDia2
+				return (PrecipitacionAcumuladaDia2/200)*rango;//Impresiso
+			}
+			else if (x == 10) {
+				//precipitacionAcumuladaDia3
+				return (PrecipitacionAcumuladaDia3/200)*rango;//Impresiso
+			}
+			else if (x == 11) {
+				//precipitacionAcumuladaDia4
+				return (PrecipitacionAcumuladaDia4/200)*rango;//Impresiso
+			}
+			else if (x == 12) {
+				//precipitacionAcumuladaDia5
+				return (PrecipitacionAcumuladaDia5/200)*rango;//Impresiso
+			}
+			else if (x == 13) {
+				//evaporacionAcumuladaDia1
+				return (evaporacionAcumuladaDia1/300)*rango;//Impresiso
+			}
+			else if (x == 14) {
+				//evaporacionAcumuladaDia2
+				return (evaporacionAcumuladaDia2/300)*rango;//Impresiso
+			}
+			else if (x == 15) {
+				//evaporacionAcumuladaDia3
+				return (evaporacionAcumuladaDia3/300)*rango;//Impresiso
+			}
+			else if (x == 16) {
+				//evaporacionAcumuladaDia4
+				return (evaporacionAcumuladaDia4/300)*rango;//Impresiso
+			}
+			else if (x == 17) {
+				//evaporacionAcumuladaDia5
+				return (evaporacionAcumuladaDia5/300)*rango;//Impresiso
+			}
+			Console.WriteLine ("Error: No hay tantas columnas en la fila");
+			return 0;
 		}
 
 		public DateTime Fecha
@@ -84,16 +174,6 @@ namespace ProcesarDatos
 			}
 		}
 
-		public Double Precipitacion
-		{
-			get {
-				return precipitacion;
-			}
-			set {
-				this.precipitacion = value;
-			}
-		}
-
 		public Int32 RadiacionSolar
 		{
 			get {
@@ -105,16 +185,6 @@ namespace ProcesarDatos
 		{
 			get {
 				return precionAtmosferica;
-			}
-		}
-
-		public Double Evaporacion
-		{
-			get {
-				return evaporacion;
-			}
-			set {
-				this.evaporacion = value;
 			}
 		}
 
@@ -220,7 +290,7 @@ namespace ProcesarDatos
 
 		public override string ToString ()
 		{
-			return string.Format ("[Fila: {0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8} \t {9} \t {10} \t {11} \t {12} \t {13} \t {14} \t {15} \t {16} \t {17} \t {18} \t {19} \t {20}]", Fecha, VelocidadViento, DireccionViento, Temperatura, HumedadRelativa, Mp10, Precipitacion, RadiacionSolar, PrecionAtmosferica, Evaporacion, PrecipitacionAcumuladaDia1, PrecipitacionAcumuladaDia2, PrecipitacionAcumuladaDia3, PrecipitacionAcumuladaDia4, PrecipitacionAcumuladaDia5, EvaporacionAcumuladaDia1, EvaporacionAcumuladaDia2, EvaporacionAcumuladaDia3, EvaporacionAcumuladaDia4, EvaporacionAcumuladaDia5);
+			return string.Format ("[Fila: {0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8} \t {9} \t {10} \t {11} \t {12} \t {13} \t {14} \t {15} \t {16} \t {17}]", Fecha, VelocidadViento, DireccionViento, Temperatura, HumedadRelativa, Mp10, RadiacionSolar, PrecionAtmosferica, PrecipitacionAcumuladaDia1, PrecipitacionAcumuladaDia2, PrecipitacionAcumuladaDia3, PrecipitacionAcumuladaDia4, PrecipitacionAcumuladaDia5, EvaporacionAcumuladaDia1, EvaporacionAcumuladaDia2, EvaporacionAcumuladaDia3, EvaporacionAcumuladaDia4, EvaporacionAcumuladaDia5);
 		}
 	}
 }

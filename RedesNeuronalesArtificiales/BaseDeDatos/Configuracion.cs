@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RedesNeuronalesArtificiales
+namespace RedesNeuronalesArtificiales.BaseDeDatos
 {
 	public class Configuracion
 	{
