@@ -53,8 +53,8 @@ namespace RedesNeuronalesArtificiales
 
 		public double procesarDato(int x)
 		{
-			double rango = 0.5; //negativo y positivo
-
+			double rango = 1; //negativo y positivo
+			//(X_i - X.min) / (X.max - X.min)
 			if (x == 0) {
 				//Fecha
 				//Console.WriteLine ("Error: Fecha no procesadas aun");
@@ -62,7 +62,7 @@ namespace RedesNeuronalesArtificiales
 			}
 			else if (x == 1) {
 				//velocidadViento
-				return (velocidadViento/30)*rango;
+				return (velocidadViento/30.0)*rango;
 			}
 			else if (x == 2) {
 				//direccionViento
@@ -74,19 +74,19 @@ namespace RedesNeuronalesArtificiales
 			}
 			else if (x == 4) {
 				//humedadRelativa
-				return (humedadRelativa/100)*rango;
+				return (humedadRelativa/100.0)*rango;
 			}
 			else if (x == 5) {
 				//mp10
-				return (mp10/1800)*rango;//Impresiso
+				return (mp10/1800.0)*rango;//Impresiso
 			}
 			else if (x == 6) {
 				//radiacionSolar
-				return (radiacionSolar/1700)*rango;//Impresiso
+				return (radiacionSolar/1700.0)*rango;//Impresiso
 			}
 			else if (x == 7) {
 				//precionAtmosferica
-				return (precionAtmosferica/600)*rango;
+				return (precionAtmosferica/600.0)*rango;
 			}
 			else if (x == 8) {
 				//precipitacionAcumuladaDia1
