@@ -10,9 +10,9 @@ namespace RedesNeuronalesArtificiales.RNA
     {
         private RedNeuronas redMulticapa = new RedNeuronas();
         private Double alfa = 0.5; //taza de aprendizaje
-        private int numeroEpocas = 10;//numero de veces que le presentas el conjunto a la red
+        //private int numeroEpocas = 10;//numero de veces que le presentas el conjunto a la red
 
-        private bool debug = false;
+        //private bool debug = false;
          
         public BackPropagation()
         {
@@ -31,7 +31,7 @@ namespace RedesNeuronalesArtificiales.RNA
 
         public void inicializarPesosCapaEntrada()
         {
-            NumeroRandom random = new NumeroRandom();
+            //NumeroRandom random = new NumeroRandom();
             double[] ejemplo = new double[] { 0.5, 0.7, 0.2};
             int indice = 0;
             foreach (Neurona neurona in redMulticapa.CapaEntrada)
@@ -45,7 +45,7 @@ namespace RedesNeuronalesArtificiales.RNA
             }
             double[] ejemplo1 = new double[] { 0.3, 0.8};
             indice = 0;
-            random = new NumeroRandom();
+            //random = new NumeroRandom();
             foreach (List<Neurona> capaOculta in redMulticapa.CapasOcultas)
             {
                 foreach(Neurona neurona in capaOculta)
@@ -74,7 +74,7 @@ namespace RedesNeuronalesArtificiales.RNA
 
             int numeroFila = tabla.GetLength(0);
             int numeroColumna = tabla.GetLength(1);
-            int numeroAciertos = 0;
+            //int numeroAciertos = 0;
             //int numeroRegistro = 0;
             Double[] fila = new Double[numeroColumna - 1];
             Double[] resultadoObtenido = new Double[redMulticapa.CapaSalida.Count];

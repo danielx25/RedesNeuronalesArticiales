@@ -24,15 +24,19 @@ namespace RedesNeuronalesArtificiales
 			DateTime inicio = new DateTime(2010,01,01,00,00,00);
 			DateTime fin = new DateTime(2010,02,01,00,00,00);
 
-			List<Fila> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
+			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
+			//var z = new int[x.Length + y.Length];
+			//x.CopyTo(z, 0);
+			//y.CopyTo(z, x.Length); 
 
-			Som redNeuronal = new Som (18,40, 8);
+
+			Som redNeuronal = new Som (datosMeteorologicos[0].Length,40, 8);
 			redNeuronal.inicializarMatriz (-0.5, 0.5);
 			//redNeuronal.inicializarMatriz (minimos, maximos);
 			redNeuronal.Datos = datosMeteorologicos;
 
 			Console.WriteLine (redNeuronal);
-			redNeuronal.entrenar (1);//Aun no tiene sentido dar mas ciclos
+			redNeuronal.entrenar (10);
 			Console.WriteLine (redNeuronal);
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);

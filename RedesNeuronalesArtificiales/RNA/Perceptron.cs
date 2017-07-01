@@ -10,8 +10,8 @@ namespace RedesNeuronalesArtificiales.RNA
     {
         RedNeuronas percepron;
         NumeroRandom random = new NumeroRandom();
-        Double alfa = 0.1;
-        Double polarizacion = 0;
+        //Double alfa = 0.1;
+        //Double polarizacion = 0;
         Double[] salida;
         public Perceptron(int numeroEntradas)
         {

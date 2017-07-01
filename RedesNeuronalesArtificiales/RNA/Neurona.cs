@@ -8,8 +8,8 @@ namespace RedesNeuronalesArtificiales.RNA
 {
     class Neurona
     {
-        int numeroCapa = 0;
-        int numeroNeurona = 0;
+        //int numeroCapa = 0;
+        //int numeroNeurona = 0;
 
         // a :salida del axon
         private Double salida = 0;

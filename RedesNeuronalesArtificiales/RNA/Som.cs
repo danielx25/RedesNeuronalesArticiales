@@ -12,9 +12,8 @@ namespace RedesNeuronalesArtificiales.RNA
 		private int[,] matriz;
 		private int numeroColumnasMatriz = 2;
 		private int numeroFilaMatriz = 2;
-		private int tamañoVecindad = 3;//Incluida la neurona ganadora
 		private int[] indiceVecindad;
-		private List<Fila> datos;
+		private List<double[]> datos;
 
 		private double alfa = 0.1;
 		private double BETA = 0.05;
@@ -84,7 +83,7 @@ namespace RedesNeuronalesArtificiales.RNA
 		{
 			alfa = 0.5;
 			Console.WriteLine ("Entrenando...");
-			double distanciaActual = 0;
+			//double distanciaActual = 0;
 			double menorDistancia = double.MaxValue;
 			int neuronaGanadora = -1;
 			int cicloActual = 0;
@@ -99,13 +98,9 @@ namespace RedesNeuronalesArtificiales.RNA
 
 					//Se calcula la distancia y se selecciona la ganadora
 					for (int y = 0; y < numeroNeuronas; y++) {
-						distanciaActual = 0;
-						//Sumatoria de la distancia
-						for (int x = 0; x < numeroVariablesEntradas; x++) {
-							distanciaActual += Math.Pow (datos [z].procesarDato (x) - matrizPesos [x, y], 2);
-						}
-						//Calculo de la distancia
-						distancia [y] = Math.Sqrt (distanciaActual);
+
+						//Se calcula distancia
+						distancia [y] = calculoDistancia(datos[z], matrizPesos, y);
 
 						//Se selecciona la ganadora
 						if (distancia [y] < menorDistancia) {
@@ -120,15 +115,16 @@ namespace RedesNeuronalesArtificiales.RNA
 					for (int x = 0; x < numeroVariablesEntradas; x++) {
 						for (int i = 0; i < indiceVecindad.Length; i++) {
 							if(i == 0)
-								matrizPesos [x, indiceVecindad[i]] += ((datos [z].procesarDato (x) - matrizPesos [x, indiceVecindad[i]]) * alfa);
+								matrizPesos [x, indiceVecindad[i]] += ((datos [z][x] - matrizPesos [x, indiceVecindad[i]]) * alfa);
 							else if(i > 0 && i <= 8)
-								matrizPesos [x, indiceVecindad[i]] += ((datos [z].procesarDato (x) - matrizPesos [x, indiceVecindad[i]]) * (alfa/2));
+								matrizPesos [x, indiceVecindad[i]] += ((datos [z][x] - matrizPesos [x, indiceVecindad[i]]) * (alfa/2));
 							else
-								matrizPesos [x, indiceVecindad[i]] += ((datos [z].procesarDato (x) - matrizPesos [x, indiceVecindad[i]]) * (alfa/3));
+								matrizPesos [x, indiceVecindad[i]] += ((datos [z][x] - matrizPesos [x, indiceVecindad[i]]) * (alfa/3));
 						}
 					}
-					Console.WriteLine ("Ganadora " + neuronaGanadora);
-					Console.WriteLine ("Menor Distancia: " + menorDistancia);
+					//Console.WriteLine (this);//Imprime la matriz
+					//Console.WriteLine ("Ganadora " + neuronaGanadora);
+					//Console.WriteLine ("Menor Distancia: " + menorDistancia);
 
 					//Se restablecen los valores
 					neuronaGanadora = -1;
@@ -140,6 +136,18 @@ namespace RedesNeuronalesArtificiales.RNA
 				cicloActual++;
 			}
 			Console.WriteLine ("Entrenamiento terminado");
+		}
+
+		public double calculoDistancia(double[] datos, double[,] pesos, int neurona)
+		{
+			double distanciaActual = 0;
+
+			//Sumatoria de la distancia
+			for (int x = 0; x < datos.Length; x++) {
+				distanciaActual += Math.Pow (datos [x] - pesos [x, neurona], 2);
+			}
+			//Calculo de la distancia
+			return Math.Sqrt (distanciaActual);
 		}
 
 		public int[] calcularVecindad(int ganadora)
@@ -196,7 +204,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			return matriz[nuevaX, nuevaY];
 		}
 
-		public List<Fila> Datos
+		public List<double[]> Datos
 		{
 			get {
 				return datos;

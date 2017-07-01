@@ -9,9 +9,9 @@ namespace RedesNeuronalesArtificiales.RNA
     class RedNeuronas
     {
         //datos de entrenamiento
-        private Double [] ejemploEntrenamiento;
+        //private Double [] ejemploEntrenamiento;
         //salida de la red
-        private Double[] salidaRed;
+        //private Double[] salidaRed;
 
         private List<Neurona> capaEntrada = new List<Neurona>();
         private List<List<Neurona>> capasOcultas = new List<List<Neurona>>();
@@ -41,7 +41,7 @@ namespace RedesNeuronalesArtificiales.RNA
                 if (tipoConexion == CONEXION_TODOCONTRATODO)
                     capaEntrada.Add(new Neurona(funcionActivacion, numeroEntrada));
             }
-            ejemploEntrenamiento = new Double[numeroEntrada];
+            //ejemploEntrenamiento = new Double[numeroEntrada];
         }
 
         public void agregarCapaOculta(Func<Double, Double> funcionActivacion, int numeroNeuronas)
@@ -132,7 +132,7 @@ namespace RedesNeuronalesArtificiales.RNA
 
         public Double[] entrenandoLaRed(Double [] ejemploEntrenamiento)
         {
-            this.ejemploEntrenamiento = ejemploEntrenamiento;
+           //this.ejemploEntrenamiento = ejemploEntrenamiento;
             List<Double> resultado = new List<double>();
             List<Double> resultadoxCapas = null;
             if (capaEntrada.Count>0)
