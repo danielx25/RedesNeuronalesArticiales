@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace RedesNeuronalesArtificiales.RNA
 {
@@ -14,6 +15,7 @@ namespace RedesNeuronalesArtificiales.RNA
 		private int numeroFilaMatriz = 2;
 		private int[] indiceVecindad;
 		private List<double[]> datos;
+		private Hashtable colorMatriz;
 
 		private double alfa = 0.1;
 		private double BETA = 0.05;
@@ -34,6 +36,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			this.numeroColumnasMatriz = numeroColumnasMatriz;
 			this.numeroVariablesEntradas = numeroVariablesEntrada;
 			this.numeroNeuronas = numeroNeuronas;
+			this.colorMatriz = new Hashtable ();
 		}
 
 		public void inicializarMatriz(double minimo, double maximo)
@@ -112,14 +115,25 @@ namespace RedesNeuronalesArtificiales.RNA
 					indiceVecindad = calcularVecindad (neuronaGanadora);
 
 					//Se mueve la neurona ganadora y la vecindad
+					int color = 0;
 					for (int x = 0; x < numeroVariablesEntradas; x++) {
 						for (int i = 0; i < indiceVecindad.Length; i++) {
-							if(i == 0)
-								matrizPesos [x, indiceVecindad[i]] += ((datos [z][x] - matrizPesos [x, indiceVecindad[i]]) * alfa);
-							else if(i > 0 && i <= 8)
-								matrizPesos [x, indiceVecindad[i]] += ((datos [z][x] - matrizPesos [x, indiceVecindad[i]]) * (alfa/2));
-							else
-								matrizPesos [x, indiceVecindad[i]] += ((datos [z][x] - matrizPesos [x, indiceVecindad[i]]) * (alfa/3));
+							color = 0;
+							if (i == 0) {
+								color = 3;
+								matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
+							} else if (i > 0 && i <= 8) {
+								color = 2;
+								matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
+							} else {
+								color = 1;
+								matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
+							}
+							if (colorMatriz.ContainsKey (indiceVecindad[i])) {
+								colorMatriz [indiceVecindad[i]] = (int)colorMatriz [indiceVecindad[i]] + color;
+							} else {
+								colorMatriz.Add (indiceVecindad[i], color);
+							}
 						}
 					}
 					//Console.WriteLine (this);//Imprime la matriz
@@ -134,6 +148,7 @@ namespace RedesNeuronalesArtificiales.RNA
 				//Se disminuye la tasa de aprendizaje
 				alfa -= BETA;
 				cicloActual++;
+				Console.WriteLine (this);
 			}
 			Console.WriteLine ("Entrenamiento terminado");
 		}
@@ -231,6 +246,11 @@ namespace RedesNeuronalesArtificiales.RNA
 					texto += matriz [x,y] + "\t";
 				}
 				texto += "\n";
+			}
+			texto += "Color\n";
+			foreach(int neurona in colorMatriz.Keys)
+			{
+				texto += neurona + "\t" + colorMatriz[neurona] + "\n";
 			}
 			return texto;
 		}
