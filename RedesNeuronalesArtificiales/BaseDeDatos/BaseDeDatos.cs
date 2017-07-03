@@ -21,7 +21,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
             conexion.Open();
 			string fechaInicio = inicio.Year + "-" + inicio.Month + "-" + inicio.Day + " " + inicio.Hour + ":" + inicio.Minute + ":" + inicio.Second;
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
-			NpgsqlCommand leer = new NpgsqlCommand("SELECT * FROM meteorologicoprocesado " +
+			NpgsqlCommand leer = new NpgsqlCommand("SELECT * FROM meteorologicoprocesado4 " +
 															"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
 															"ORDER BY fecha ", conexion);
 			//Console.WriteLine ("SELECT * FROM meteorologicoprocesado " +
@@ -33,62 +33,58 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			List<double[]> tabla = new List<double[]> ();
             while (leido.Read())
             {
-				double[] filaActual = new double[23];
-				filaActual[0] = fechaDifusa((DateTime)leido [0], 1);//Verano
-				filaActual[1] = fechaDifusa((DateTime)leido [0], 2);//Otoño
-				filaActual[2] = fechaDifusa((DateTime)leido [0], 3);//Invierno
-				filaActual[3] = fechaDifusa((DateTime)leido [0], 4);//Primavera
-				filaActual[4] = horaDifusa((DateTime)leido [0], 1);//Dia
-				filaActual[5] = fechaDifusa((DateTime)leido [0], 2);//Noche
-				filaActual [6] = normalizar ((double)leido [1],0,30);//velocidad_viento
-				filaActual [7] = normalizar ((Int16)leido [2],0,360);//direccion_viento
-				filaActual [8] = normalizar ((double)leido [3],-40,50);//temperatura
-				filaActual [9] = normalizar ((Int16)leido [4],0,100);//humedad_relativa
-				filaActual [10] = normalizar ((Int32)leido [5],0,10000);//mp10
-				filaActual [11] = normalizar ((Int32)leido [6],0,1700);//radiacion_solar
-				filaActual [12] = normalizar ((Int32)leido [7],0,600);//presion_atmosferica
-				filaActual [13] = normalizar ((double)leido [8],0,20000);//precipitaciondia1
-				filaActual [14] = normalizar ((double)leido [9],0,20000);//precipitaciondia2
-				filaActual [15] = normalizar ((double)leido [10],0,20000);//precipitaciondia3
-				filaActual [16] = normalizar ((double)leido [11],0,20000);//precipitaciondia4
-				filaActual [17] = normalizar ((double)leido [12],0,20000);//precipitaciondia5
-				filaActual [18] = normalizar ((double)leido [13],0,37000);//evaporaciondia1
-				filaActual [19] = normalizar ((double)leido [14],0,37000);//evaporaciondia2
-				filaActual [20] = normalizar ((double)leido [15],0,37000);//evaporaciondia3
-				filaActual [21] = normalizar ((double)leido [16],0,37000);//evaporaciondia4
-				filaActual [22] = normalizar ((double)leido [17],0,37000);//evaporaciondia5
+				double[] filaActual = new double[19];
+				filaActual[0] = normalizar(fecha((DateTime)leido [0]),1,13);//Mes con los dias de decimales
+				filaActual[1] = normalizar(hora((DateTime)leido [0]),0, 24);//Hora
+				filaActual [2] = normalizar ((double)leido [1],0,30);//velocidad_viento
+				filaActual [3] = normalizar ((Int16)leido [2],0,360);//direccion_viento
+				filaActual [4] = normalizar ((double)leido [3],-10,55);//temperatura
+				filaActual [5] = normalizar ((Int16)leido [4],0,100);//humedad_relativa
+				filaActual [6] = normalizar ((Int32)leido [5],0,1400);//mp10
+				filaActual [7] = normalizar ((Int32)leido [6],0,1700);//radiacion_solar
+				filaActual [8] = normalizar ((Int32)leido [7],440,600);//presion_atmosferica
+				filaActual [9] = normalizar ((double)leido [9],0,47);//precipitaciondia1
+				filaActual [10] = normalizar ((double)leido [10],0,47);//precipitaciondia2
+				filaActual [11] = normalizar ((double)leido [11],0,47);//precipitaciondia3
+				filaActual [12] = normalizar ((double)leido [12],0,47);//precipitaciondia4
+				filaActual [13] = normalizar ((double)leido [13],0,47);//precipitaciondia5
+				filaActual [14] = normalizar ((double)leido [15],0,363000);//evaporaciondia1
+				filaActual [15] = normalizar ((double)leido [16],0,363000);//evaporaciondia2
+				filaActual [16] = normalizar ((double)leido [17],0,363000);//evaporaciondia3
+				filaActual [17] = normalizar ((double)leido [18],0,363000);//evaporaciondia4
+				filaActual [18] = normalizar ((double)leido [19],0,363000);//evaporaciondia5
 
 				tabla.Add (filaActual);
 			}
 			return tabla;
         }
 
-		public static double fechaDifusa(DateTime fecha, int estacion)
+		public static double fecha(DateTime fecha)
 		{
-			//1 -> Verano
-			//2 -> Otoño
-			//3 -> Invierno
-			//4 -> Primavera
-			return 0;
+			return fecha.Month + (((99.99999*fecha.Day)/DateTime.DaysInMonth(fecha.Year, fecha.Month))/100);
 		}
 
-		public static double horaDifusa(DateTime fecha, int diaNoche)
+		public static double hora(DateTime fecha)
 		{
-			//1 -> Dia
-			//2 -> Noche
-			return 0;
+			return fecha.Hour;
 		}
 
 		public static double normalizar(double valor, double minimo, double maximo)
 		{
 			//(X_i - X.min) / (X.max - X.min)
-			return (valor - minimo)/(maximo-minimo);
+			double valorNormalizado = (valor - minimo)/(maximo-minimo);
+			if (valorNormalizado < 0 && valor != -1)
+				Console.WriteLine ("Valor fuera de rango en: " + valor + " minimo: " + minimo + " maximo: " + maximo);
+			return valorNormalizado;
 		}
 
 		public static double normalizar(int valor, int minimo, int maximo)
 		{
 			//(X_i - X.min) / (X.max - X.min)
-			return ((double)(valor - minimo))/((double)(maximo-minimo));
+			double valorNormalizado = ((double)(valor - minimo))/((double)(maximo-minimo));
+			if (valorNormalizado < 0 && valor != -1)
+				Console.WriteLine ("Valor fuera de rango en: " + valor + " minimo: " + minimo + " maximo: " + maximo);
+			return valorNormalizado;
 		}
     }
 }

@@ -129,6 +129,8 @@ namespace RedesNeuronalesArtificiales.RNA
 								color = 1;
 								matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
 							}
+
+							//Se almacena el "color"
 							if (colorMatriz.ContainsKey (indiceVecindad[i])) {
 								colorMatriz [indiceVecindad[i]] = (int)colorMatriz [indiceVecindad[i]] + color;
 							} else {
@@ -159,7 +161,10 @@ namespace RedesNeuronalesArtificiales.RNA
 
 			//Sumatoria de la distancia
 			for (int x = 0; x < datos.Length; x++) {
-				distanciaActual += Math.Pow (datos [x] - pesos [x, neurona], 2);
+                if(datos [x] >= 0 && datos[x] <= 1)//Solo datos dentro de rango
+                    distanciaActual += Math.Pow (datos [x] - pesos [x, neurona], 2);
+				//else
+				//	Console.WriteLine("Alerta dato fuera de rango en: " + datos[0] + " con valor: " + datos[x] + " Columna de datos: " + (x+1));
 			}
 			//Calculo de la distancia
 			return Math.Sqrt (distanciaActual);
@@ -247,10 +252,16 @@ namespace RedesNeuronalesArtificiales.RNA
 				}
 				texto += "\n";
 			}
-			texto += "Color\n";
-			foreach(int neurona in colorMatriz.Keys)
+			texto += "Matriz Color\n";
+			for(int x=0; x<numeroFilaMatriz; x++)
 			{
-				texto += neurona + "\t" + colorMatriz[neurona] + "\n";
+				for (int y = 0; y < numeroColumnasMatriz; y++) {
+					if(colorMatriz[matriz [x,y]] == null)
+						texto += "0\t";
+					else
+						texto += colorMatriz[matriz [x,y]] + "\t";
+				}
+				texto += "\n";
 			}
 			return texto;
 		}
