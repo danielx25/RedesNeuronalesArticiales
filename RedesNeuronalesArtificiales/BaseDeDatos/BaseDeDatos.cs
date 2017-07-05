@@ -56,6 +56,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 
 				tabla.Add (filaActual);
 			}
+			Console.WriteLine ("Terminado");
 			return tabla;
         }
 
