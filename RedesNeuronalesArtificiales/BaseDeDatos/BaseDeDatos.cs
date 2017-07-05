@@ -21,7 +21,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
             conexion.Open();
 			string fechaInicio = inicio.Year + "-" + inicio.Month + "-" + inicio.Day + " " + inicio.Hour + ":" + inicio.Minute + ":" + inicio.Second;
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
-			NpgsqlCommand leer = new NpgsqlCommand("SELECT * FROM meteorologicoprocesado4 " +
+			NpgsqlCommand leer = new NpgsqlCommand("SELECT * FROM meteorologicohora " +
 															"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
 															"ORDER BY fecha ", conexion);
 			//Console.WriteLine ("SELECT * FROM meteorologicoprocesado " +

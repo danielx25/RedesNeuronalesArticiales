@@ -22,7 +22,7 @@ namespace RedesNeuronalesArtificiales
 			//double[] minimos = {0, 1, 3, 5, 6, 7, 1, 0, 0.5, 0, 1, 1, 1, 1, 1, 1, 1, 1};
 			//double[] maximos = {1, 2, 4, 6, 7, 8, 2, 1, 0.7, 3, 1, 1, 1, 1, 1, 1, 1, 1};
 			DateTime inicio = new DateTime(2010,01,01,00,00,00);
-			DateTime fin = new DateTime(2010,01,02,00,00,00);
+			DateTime fin = new DateTime(2017,03,01,00,00,00);
 
 			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
 			//var z = new int[x.Length + y.Length];
@@ -30,7 +30,7 @@ namespace RedesNeuronalesArtificiales
 			//y.CopyTo(z, x.Length); 
 
 
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,400, 20);
+			Som redNeuronal = new Som (datosMeteorologicos[0].Length,10000, 100);
 			redNeuronal.inicializarMatriz (0, 1);
 			//redNeuronal.inicializarMatriz (minimos, maximos);
 			redNeuronal.Datos = datosMeteorologicos;

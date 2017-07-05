@@ -121,13 +121,16 @@ namespace RedesNeuronalesArtificiales.RNA
 							color = 0;
 							if (i == 0) {
 								color = 3;
-								matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
+								if(datos [z][x] >= 0 && datos[z][x] <= 1)
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
 							} else if (i > 0 && i <= 8) {
 								color = 2;
-								matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
+								if(datos [z][x] >= 0 && datos[z][x] <= 1)
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
 							} else {
 								color = 1;
-								matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
+								if(datos [z][x] >= 0 && datos[z][x] <= 1)
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
 							}
 
 							//Se almacena el "color"
