@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace RedesNeuronalesArtificiales.BaseDeDatos
 {
@@ -29,7 +30,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			//	"ORDER BY fecha ");
             NpgsqlDataReader leido = leer.ExecuteReader();
 
-			Console.WriteLine ("Creando Lista");
+			Console.WriteLine ("Creando Lista Meteorologico");
 			List<double[]> tabla = new List<double[]> ();
             while (leido.Read())
             {
@@ -59,6 +60,90 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			Console.WriteLine ("Terminado");
 			return tabla;
         }
+
+		public static Hashtable datosMitigacion(DateTime inicio, DateTime fin)
+		{
+			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
+				"Port="+Configuracion.PUERTO+";" +
+				"CommandTimeout=500000;" +
+				"User Id="+Configuracion.USUARIO+";" +
+				"Password="+Configuracion.CONTRASEÑA+";" +
+				"Database=meteorologico;";
+
+			NpgsqlConnection conexion = new NpgsqlConnection(datos_conexion);
+			conexion.Open();
+			string fechaInicio = inicio.Year + "-" + inicio.Month + "-" + inicio.Day + " " + inicio.Hour + ":" + inicio.Minute + ":" + inicio.Second;
+			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
+			NpgsqlCommand leer = new NpgsqlCommand("SELECT * FROM mitigacion " +
+				"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
+				"ORDER BY fecha ", conexion);
+			NpgsqlDataReader leido = leer.ExecuteReader();
+
+			Console.WriteLine ("Creando Lista Mitigación");
+			Hashtable tabla = new Hashtable ();
+			while (leido.Read())
+			{
+				tabla.Add ((DateTime)leido[0], leido);
+			}
+			Console.WriteLine ("Terminado");
+			return tabla;
+		}
+
+		public static Hashtable datosDetencionPalas(DateTime inicio, DateTime fin)
+		{
+			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
+				"Port="+Configuracion.PUERTO+";" +
+				"CommandTimeout=500000;" +
+				"User Id="+Configuracion.USUARIO+";" +
+				"Password="+Configuracion.CONTRASEÑA+";" +
+				"Database=meteorologico;";
+
+			NpgsqlConnection conexion = new NpgsqlConnection(datos_conexion);
+			conexion.Open();
+			string fechaInicio = inicio.Year + "-" + inicio.Month + "-" + inicio.Day + " " + inicio.Hour + ":" + inicio.Minute + ":" + inicio.Second;
+			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
+			NpgsqlCommand leer = new NpgsqlCommand("SELECT * FROM detencion_palas " +
+				"WHERE fecha_inicio BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
+				"ORDER BY fecha ", conexion);
+			NpgsqlDataReader leido = leer.ExecuteReader();
+
+			Console.WriteLine ("Creando Lista Detención de Palas");
+			Hashtable tabla = new Hashtable ();
+			while (leido.Read())
+			{
+				//tabla.Add ((DateTime)leido[3], leido);
+			}
+			Console.WriteLine ("Terminado");
+			return tabla;
+		}
+
+		public static Hashtable datosDetencionChancado(DateTime inicio, DateTime fin)
+		{
+			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
+				"Port="+Configuracion.PUERTO+";" +
+				"CommandTimeout=500000;" +
+				"User Id="+Configuracion.USUARIO+";" +
+				"Password="+Configuracion.CONTRASEÑA+";" +
+				"Database=meteorologico;";
+
+			NpgsqlConnection conexion = new NpgsqlConnection(datos_conexion);
+			conexion.Open();
+			string fechaInicio = inicio.Year + "-" + inicio.Month + "-" + inicio.Day + " " + inicio.Hour + ":" + inicio.Minute + ":" + inicio.Second;
+			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
+			NpgsqlCommand leer = new NpgsqlCommand("SELECT * FROM detencion_chancado " +
+				"WHERE fecha_inicio BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
+				"ORDER BY fecha ", conexion);
+			NpgsqlDataReader leido = leer.ExecuteReader();
+
+			Console.WriteLine ("Creando Lista Detencion Chancado");
+			Hashtable tabla = new Hashtable ();
+			while (leido.Read())
+			{
+				//tabla.Add ((DateTime)leido[2], leido);
+			}
+			Console.WriteLine ("Terminado");
+			return tabla;
+		}
 
 		public static double fecha(DateTime fecha)
 		{

@@ -30,7 +30,7 @@ namespace RedesNeuronalesArtificiales
 			//y.CopyTo(z, x.Length); 
 
 
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,10000, 100);
+			Som redNeuronal = new Som (datosMeteorologicos[0].Length,1600, 40);
 			redNeuronal.inicializarMatriz (0, 1);
 			//redNeuronal.inicializarMatriz (minimos, maximos);
 			redNeuronal.Datos = datosMeteorologicos;
