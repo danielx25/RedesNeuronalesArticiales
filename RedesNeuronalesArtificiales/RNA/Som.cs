@@ -16,6 +16,8 @@ namespace RedesNeuronalesArtificiales.RNA
 		private int[] indiceVecindad;
 		private List<double[]> datos;
 		private Hashtable colorMatriz;
+		private Hashtable mp10Matriz;
+		private Hashtable numeroDatos;
 
 		private double alfa = 0.1;
 		private double BETA = 0.05;
@@ -37,6 +39,8 @@ namespace RedesNeuronalesArtificiales.RNA
 			this.numeroVariablesEntradas = numeroVariablesEntrada;
 			this.numeroNeuronas = numeroNeuronas;
 			this.colorMatriz = new Hashtable ();
+			this.mp10Matriz = new Hashtable ();
+			this.numeroDatos = new Hashtable ();
 		}
 
 		public void inicializarMatriz(double minimo, double maximo)
@@ -139,6 +143,17 @@ namespace RedesNeuronalesArtificiales.RNA
 							} else {
 								colorMatriz.Add (indiceVecindad[i], color);
 							}
+
+							if (x == 6) {
+								//Mp10
+								if (mp10Matriz.ContainsKey (indiceVecindad [i])) {
+									mp10Matriz [indiceVecindad [i]] = (double)mp10Matriz [indiceVecindad [i]] + datos [z] [x];
+									numeroDatos [indiceVecindad [i]] = (int)numeroDatos [indiceVecindad [i]] + 1;
+								} else {
+									mp10Matriz.Add (indiceVecindad [i], datos [z] [x]);
+									numeroDatos.Add (indiceVecindad [i], 1);
+								}
+							}
 						}
 					}
 					//Console.WriteLine (this);//Imprime la matriz
@@ -153,7 +168,7 @@ namespace RedesNeuronalesArtificiales.RNA
 				//Se disminuye la tasa de aprendizaje
 				alfa -= BETA;
 				cicloActual++;
-				Console.WriteLine (this);
+				//Console.WriteLine (this);
 			}
 			Console.WriteLine ("Entrenamiento terminado");
 		}
@@ -256,6 +271,17 @@ namespace RedesNeuronalesArtificiales.RNA
 						texto += "0\t";
 					else
 						texto += colorMatriz[matriz [x,y]] + "\t";
+				}
+				texto += "\n";
+			}
+			texto += "MP10\n";
+			for(int x=0; x<numeroFilaMatriz; x++)
+			{
+				for (int y = 0; y < numeroColumnasMatriz; y++) {
+					if(mp10Matriz[matriz [x,y]] == null)
+						texto += "0\t";
+					else
+						texto += (((double)mp10Matriz[matriz [x,y]])/((int)numeroDatos[matriz [x,y]])) + "\t";
 				}
 				texto += "\n";
 			}
