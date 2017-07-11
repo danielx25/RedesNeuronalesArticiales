@@ -103,14 +103,14 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			string fechaInicio = inicio.Year + "-" + inicio.Month + "-" + inicio.Day + " " + inicio.Hour + ":" + inicio.Minute + ":" + inicio.Second;
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
 			NpgsqlCommand leer = new NpgsqlCommand("SELECT * FROM detencion_palas " +
-				"WHERE fecha_inicio BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
-				"ORDER BY fecha ", conexion);
+				"WHERE fecha_inicio BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' ", conexion);
 			NpgsqlDataReader leido = leer.ExecuteReader();
 
 			Console.WriteLine ("Creando Lista Detención de Palas");
 			Hashtable tabla = new Hashtable ();
 			while (leido.Read())
 			{
+				Console.WriteLine (((DateTime)leido[4]) - ((DateTime)leido[3]));
 				//tabla.Add ((DateTime)leido[3], leido);
 			}
 			Console.WriteLine ("Terminado");

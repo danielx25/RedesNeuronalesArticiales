@@ -62,11 +62,13 @@
     <Compile Include="BaseDeDatos\Configuracion.cs" />
     <Compile Include="Inicio.cs" />
     <Compile Include="BaseDeDatos\BaseDeDatos.cs" />
+    <Compile Include="Archivo\Guardar.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="RNA\" />
     <Folder Include="BaseDeDatos\" />
+    <Folder Include="Archivo\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -4,6 +4,7 @@ using System.Collections;
 
 namespace RedesNeuronalesArtificiales.RNA
 {
+	[Serializable]
 	public class Som
 	{
 		private int numeroVariablesEntradas = 0;
