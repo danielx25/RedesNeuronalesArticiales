@@ -161,10 +161,10 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
             double[] vectorEntrada = l.ToArray();
 
-            double sinAlerta = 150 / 800;
-            double alerta1 = 250 / 800;
-            double alerta2 = 350 / 800;
-            double alerta3 = 500 / 800;
+            double sinAlerta = 150 / maxMP10;
+            double alerta1 = 250 / maxMP10;
+            double alerta2 = 350 / maxMP10;
+            double alerta3 = 500 / maxMP10;
 
 
             for (int mp10=0; mp10<=800; mp10++)
