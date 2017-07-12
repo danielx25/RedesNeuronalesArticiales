@@ -21,9 +21,12 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             this.numeroClases = numeroClases;
                                         // fila           columna
             gruposxclases = new Grupo[numeroClases,  numeroGrupos];
+            // matriz de grupos, cada fila representa la activacion de los n grupos respecto a la z clase
 
         }
-
+        /***
+         * ingresa los vectores de cada grupo y repite el mismo por todas las z clases que hayan
+         */
         public void tablaVectoresGrupos(double[,] tabla)
         {
             for (int i = 0; i < tabla.GetLength(0); i++)
@@ -45,6 +48,33 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             }
         }
 
+        // calcula la distancia media que existe entre grupo i a toda los ejemplos de la clase
+        private double MediaDistianciaGrupo(double[,] matrizDitancias, int indiceGrupo)
+        {
+            double suma = 0; 
+            for(int i=0; i<matrizDitancias.GetLength(0); i++)
+            {
+                suma += matrizDitancias[i, indiceGrupo];
+            }
+            return suma / matrizDitancias.GetLength(0);
+        }
+        // calcula la desviacion estandar que existe entre grupo i a toda los ejemplos de la clase
+        private double DesviacionDistianciaGrupo(double[,] matrizDitancias,double mediaDistancia, int indiceGrupo)
+        {
+            double suma = 0;
+            int n = matrizDitancias.GetLength(0);
+            for (int i = 0; i < matrizDitancias.GetLength(0); i++)
+            {
+                suma += Math.Pow((matrizDitancias[i, indiceGrupo]-mediaDistancia),2);
+            }
+
+            suma = Math.Sqrt(suma / n);
+
+            return suma;
+        }
+
+
+        //calcula los conjuntos de cada grupo segun la clase y se guarda en la matriz grupoxclases
         public void calcularConjuntoClase(double [,] conjuntoClase, int indice_clase)
         {
             double []vectorDisMedia = new double[gruposxclases.GetLength(1)];
@@ -59,23 +89,46 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                     vectorEntrada[j] = conjuntoClase[i, j];
                     //System.Console.Write(conjuntoClase[i, j]+ "-");
                 }
+
+
                 double min = 999999999;
-                int indice = 0;
+                int indice_min = 0;
                 for (int indice_grupo = 0; indice_grupo<gruposxclases.GetLength(1); indice_grupo++)
                 {
                     matrizDitancias[i, indice_grupo] = calculoDistancia(vectorEntrada, gruposxclases[indice_clase, indice_grupo].vector);
                     if (matrizDitancias[i, indice_grupo] < min)
                     {
-                        indice = indice_grupo;
+                        indice_min = indice_grupo;
                         min = matrizDitancias[i, indice_grupo];
                     }
                         
                     System.Console.Write(matrizDitancias[i, indice_grupo] + "-");
                 }
-                gruposxclases[indice_clase, indice].numeroActivacion += 1;
+                gruposxclases[indice_clase, indice_min].numeroActivacion += 1;
 
-                System.Console.WriteLine(indice);
+                System.Console.WriteLine(indice_min);
             }
+
+            System.Console.WriteLine("distancias medias: ");
+
+            for(int d=0; d < matrizDitancias.GetLength(1); d++)
+            {
+                vectorDisMedia[d] = MediaDistianciaGrupo(matrizDitancias, d);
+                vectorDisDVS[d] = DesviacionDistianciaGrupo(matrizDitancias, vectorDisMedia[d], d);
+                gruposxclases[indice_clase, d].media = vectorDisMedia[d];
+                gruposxclases[indice_clase, d].desviacionEstandar = vectorDisDVS[d];
+                gruposxclases[indice_clase, d].nivelPertenencia = gruposxclases[indice_clase, d].numeroActivacion /conjuntoClase.GetLength(0);
+
+                System.Console.WriteLine("numero Activacion  : "+ gruposxclases[indice_clase, d].numeroActivacion);
+                System.Console.WriteLine("media              : "+ gruposxclases[indice_clase, d].media);
+                System.Console.WriteLine("desviacion estandar: "+ gruposxclases[indice_clase, d].desviacionEstandar);
+                System.Console.WriteLine("nivel pertencia    : "+ gruposxclases[indice_clase, d].nivelPertenencia);
+
+
+                //System.Console.Write("["+vectorDisMedia[d] + ";"+ vectorDisDVS[d]+"] - ");
+            }
+
+
         }
 
         public double calculoDistancia(double[] datos, double[] pesos)
@@ -94,6 +147,55 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             return Math.Sqrt(distanciaActual);
         }
 
+        public double prediccionMP10(double []entradaNormalizada)
+        {
+            double minMP10 = 0;
+            double maxMP10 = 800;
+            double[] vectorNivelPertenencia = new double[801];
+            double maxPertenencia =0;
+            double clasePredecir;
+            double mp10Predecir;
 
+            List<double> l = entradaNormalizada.ToList();
+            l.Add(0);
+
+            double[] vectorEntrada = l.ToArray();
+
+            double sinAlerta = 150 / 800;
+            double alerta1 = 250 / 800;
+            double alerta2 = 350 / 800;
+            double alerta3 = 500 / 800;
+
+
+            for (int mp10=0; mp10<=800; mp10++)
+            {
+                if(mp10 < sinAlerta)// sin alerta
+                {
+
+                }
+
+                if(sinAlerta<=mp10 && mp10<=alerta1)//alerta 1
+                {
+
+                }
+
+                if (alerta1 < mp10 && mp10 <= alerta2)//alerta 2
+                {
+
+                }
+
+                if (alerta2 < mp10 && mp10 <= alerta3)//alerta 3
+                {
+
+                }
+
+                if (alerta3 < mp10)//alerta 4
+                {
+
+                }
+            }
+
+            return 0;
+        }
     }
 }

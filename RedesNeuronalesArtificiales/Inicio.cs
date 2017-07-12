@@ -45,15 +45,16 @@ namespace RedesNeuronalesArtificiales
             //Application.Run(new Form1());
             */
 
-            Double[,] vectoresG = { { 99, 2, 1},
+            Double[,] vectoresG = { { .99, .2, .1},
                                   { 0, 0, 0},
-                                  { 5, 5, 5},
-                                  { 2, 1, 0} };
+                                  { .5, .5, .5},
+                                  { .2, .1, 0} };
 
-            Double[,] ejemplo = { { 0, 0, 0},
-                                  { 0, 1, 0},
-                                  { 1, 0, 0},
-                                  { 1, 1, 1} };
+            Double[,] ejemplo = { { .1, .5, .6},
+                                  { .3, .5, .1},
+                                  { .1, .8, .7},
+                                  { .9, .9, .5},
+                                  { .6, .12, .3} };
 
             ConstruccionConjuntos conj = new ConstruccionConjuntos(4, 3);
             conj.tablaVectoresGrupos(vectoresG);
