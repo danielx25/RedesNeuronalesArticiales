@@ -147,14 +147,25 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             return Math.Sqrt(distanciaActual);
         }
 
+        /*
+         * def gaussian(x, mu, sig, a):
+            return a*np.exp(-np.power(x - mu, 2.) / (2 * np.power(sig, 2.)))
+         */
+
+
+        private double funcion_gaussiana(double x, double media, double desviasion, double pertenencia)
+        {
+            return pertenencia * Math.Exp(-Math.Pow(x - media, 2)/(2*Math.Pow(desviasion, 2)));
+        }
+
         public double prediccionMP10(double []entradaNormalizada)
         {
             double minMP10 = 0;
             double maxMP10 = 800;
             double[] vectorNivelPertenencia = new double[801];
-            double maxPertenencia =0;
+            double maxPertenencia = Double.NegativeInfinity;
             double clasePredecir;
-            double mp10Predecir;
+            double mp10Predecir=0;
 
             List<double> l = entradaNormalizada.ToList();
             l.Add(0);
@@ -166,36 +177,115 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             double alerta2 = 350 / maxMP10;
             double alerta3 = 500 / maxMP10;
 
-
+            int indice_mp10 = vectorEntrada.Length - 1;
+            double distanciaMin;
             for (int mp10=0; mp10<=800; mp10++)
             {
+                vectorEntrada[indice_mp10] = mp10/maxMP10;
                 if(mp10 < sinAlerta)// sin alerta
                 {
-
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo=0; indice_grupo<gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[0, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[0, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[0, indice_grupo];
+                        }
+                            
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
 
                 if(sinAlerta<=mp10 && mp10<=alerta1)//alerta 1
                 {
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[1, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[1, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[1, indice_grupo];
+                        }
 
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
 
                 if (alerta1 < mp10 && mp10 <= alerta2)//alerta 2
                 {
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[2, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[2, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[2, indice_grupo];
+                        }
+
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
 
                 }
 
                 if (alerta2 < mp10 && mp10 <= alerta3)//alerta 3
                 {
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[3, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[3, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[3, indice_grupo];
+                        }
 
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
 
                 if (alerta3 < mp10)//alerta 4
                 {
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[4, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[4, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[4, indice_grupo];
+                        }
 
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                }
+
+                if(maxPertenencia < vectorNivelPertenencia[mp10])
+                {
+                    maxPertenencia = vectorNivelPertenencia[mp10];
+                    mp10Predecir = mp10;
                 }
             }
 
-            return 0;
+            return mp10Predecir;
         }
     }
 }
