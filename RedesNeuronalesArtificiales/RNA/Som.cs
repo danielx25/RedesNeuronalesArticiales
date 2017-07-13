@@ -20,8 +20,8 @@ namespace RedesNeuronalesArtificiales.RNA
 		private Hashtable mp10Matriz;
 		private Hashtable numeroDatos;
 
-		private double alfa = 0.1;
-		private double BETA = 0.05;
+		private double alfa = 0.05;
+		private double BETA = 0.001;
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz)
 		{
@@ -89,7 +89,6 @@ namespace RedesNeuronalesArtificiales.RNA
 
 		public void entrenar(int ciclos)
 		{
-			alfa = 0.5;
 			Console.WriteLine ("Entrenando...");
 			//double distanciaActual = 0;
 			double menorDistancia = double.MaxValue;
@@ -99,7 +98,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfa >= 0) {
-				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos);
+				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Alfa: " + alfa);
 
 				//Se recorre la tabla de datos
 				for (int z = 0; z < datos.Count; z++) {

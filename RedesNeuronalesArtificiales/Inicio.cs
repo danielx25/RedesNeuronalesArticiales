@@ -32,25 +32,38 @@ namespace RedesNeuronalesArtificiales
 			DateTime fin = new DateTime(2017,03,01,00,00,00);
 
 			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
+			Console.WriteLine ("Total: " + datosMeteorologicos.Count);
+			List<double[,]> dr = Conexion.datosPorRangoMp10 (inicio, fin);
+			double[,] sa = dr [0];//Sin Alerta
+			double[,] a1 = dr [1];//Alerta 1
+			double[,] a2 = dr [2];//Alerta 2
+			double[,] a3 = dr [3];//Alerta 3
+			double[,] a4 = dr [4];//Alerta 4
 
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,1600, 40);
+			Console.WriteLine ("Sin Alerta: " + sa.GetLength(0) + " " + sa.GetLength(1));
+			Console.WriteLine ("Alerta 1: " + a1.GetLength(0) + " " + a1.GetLength(1));
+			Console.WriteLine ("Alerta 2: " + a2.GetLength(0) + " " + a2.GetLength(1));
+			Console.WriteLine ("Alerta 3: " + a3.GetLength(0) + " " + a3.GetLength(1));
+			Console.WriteLine ("Alerta 4: " + a4.GetLength(0) + " " + a4.GetLength(1));
+
+			/*Som redNeuronal = new Som (datosMeteorologicos[0].Length,1600, 40);
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
 
 			//Conexion.datosDetencionPalas(inicio, fin);
 
 			Console.WriteLine (redNeuronal);
-			redNeuronal.entrenar (1);
+			redNeuronal.entrenar (100);
 			Console.WriteLine (redNeuronal);
 
 			//Guarda Archivo
-			Guardar.Serializar (redNeuronal, "Red Som.mp10");
-
+			Guardar.Serializar (redNeuronal, "Red Som Completa.mp10");
+*/
             //Lee Archivo
-			/*
-			Som redNeuronalLeida = Guardar.Deserializar("Red Som.mp10");
-			Console.WriteLine (redNeuronalLeida);
-			*/
+
+			//Som redNeuronalLeida = Guardar.Deserializar("Red Som.mp10");
+			//Console.WriteLine (redNeuronalLeida);
+
         }
     }
 }
