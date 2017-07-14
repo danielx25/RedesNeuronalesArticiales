@@ -49,7 +49,7 @@ namespace RedesNeuronalesArtificiales
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            */
+            
 
             Double[,] vectoresG = { { 99, 2, 1},
                                   { 0, 0, 0},
