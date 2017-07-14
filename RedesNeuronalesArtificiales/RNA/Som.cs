@@ -255,7 +255,7 @@ namespace RedesNeuronalesArtificiales.RNA
 		public override string ToString ()
 		{
 			string texto = "Matriz:\n";
-			if (numeroNeuronas <= 1600) {
+			if (numeroNeuronas <= 500) {
 				for (int x = 0; x < numeroVariablesEntradas; x++) {
 					for (int y = 0; y < numeroNeuronas; y++) {
 						texto += matrizPesos [x, y] + ", ";
