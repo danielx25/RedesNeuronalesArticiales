@@ -40,8 +40,6 @@ namespace RedesNeuronalesArtificiales
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
 
-			
-
 			Console.WriteLine (redNeuronal);
 			redNeuronal.entrenar (100);
 			Console.WriteLine (redNeuronal);

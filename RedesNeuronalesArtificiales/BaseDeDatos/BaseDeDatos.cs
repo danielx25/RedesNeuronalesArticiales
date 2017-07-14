@@ -206,7 +206,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 
 		public static double valorHora (double dia, double noche, DateTime fecha)
 		{
-			if (fecha.Hour > 8 && fecha.Hour < 16) {
+			if (fecha.Hour >= 8 && fecha.Hour <= 18) {
 				return dia;
 			} else {
 				return noche;

@@ -7,7 +7,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 		public static string SERVIDOR = "localhost";
 		public static string PUERTO = "5432";
 		public static string USUARIO = "postgres";
-		public static string CONTRASEÑA = "postgres";
+		public static string CONTRASEÑA = "12345";
 		public static string BASEDEDATOS = "postgres";
 	}
 }
