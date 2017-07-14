@@ -31,7 +31,7 @@ namespace RedesNeuronalesArtificiales
 			//Application.Run(new Form1());
 
 			//Redes Som Entrenando
-
+            */
 			DateTime inicio = new DateTime(2010,01,01,00,00,00);
 			DateTime fin = new DateTime(2017,03,01,00,00,00);
 

@@ -16,7 +16,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 									"CommandTimeout=500000;" +
 									"User Id="+Configuracion.USUARIO+";" +
 									"Password="+Configuracion.CONTRASEÑA+";" +
-									"Database=meteorologico;";
+									"Database="+Configuracion.DATABASE+";";
 
             NpgsqlConnection conexion = new NpgsqlConnection(datos_conexion);
             conexion.Open();
@@ -68,7 +68,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				"CommandTimeout=500000;" +
 				"User Id="+Configuracion.USUARIO+";" +
 				"Password="+Configuracion.CONTRASEÑA+";" +
-				"Database=meteorologico;";
+                "Database=" + Configuracion.DATABASE + ";";
 
 			NpgsqlConnection conexion = new NpgsqlConnection(datos_conexion);
 			conexion.Open();
@@ -165,7 +165,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				"CommandTimeout=500000;" +
 				"User Id="+Configuracion.USUARIO+";" +
 				"Password="+Configuracion.CONTRASEÑA+";" +
-				"Database=meteorologico;";
+                "Database=" + Configuracion.DATABASE + ";";
 
 			NpgsqlConnection conexion = new NpgsqlConnection(datos_conexion);
 			conexion.Open();
@@ -193,7 +193,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				"CommandTimeout=500000;" +
 				"User Id="+Configuracion.USUARIO+";" +
 				"Password="+Configuracion.CONTRASEÑA+";" +
-				"Database=meteorologico;";
+                "Database=" + Configuracion.DATABASE + ";";
 
 			NpgsqlConnection conexion = new NpgsqlConnection(datos_conexion);
 			conexion.Open();
@@ -221,7 +221,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				"CommandTimeout=500000;" +
 				"User Id="+Configuracion.USUARIO+";" +
 				"Password="+Configuracion.CONTRASEÑA+";" +
-				"Database=meteorologico;";
+                "Database=" + Configuracion.DATABASE + ";";
 
 			NpgsqlConnection conexion = new NpgsqlConnection(datos_conexion);
 			conexion.Open();
