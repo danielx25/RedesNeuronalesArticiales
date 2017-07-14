@@ -57,7 +57,6 @@
     <Compile Include="RNA\NumeroRandom.cs" />
     <Compile Include="RNA\Perceptron.cs" />
     <Compile Include="RNA\RedNeuronas.cs" />
-    <Compile Include="BaseDeDatos\Fila.cs" />
     <Compile Include="RNA\Som.cs" />
     <Compile Include="BaseDeDatos\Configuracion.cs" />
     <Compile Include="Inicio.cs" />
