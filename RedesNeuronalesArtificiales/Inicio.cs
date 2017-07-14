@@ -2,6 +2,7 @@
 using RedesNeuronalesArtificiales.BaseDeDatos;
 using System;
 using System.Collections.Generic;
+using RedesNeuronalesArtificiales.AnalisisDeRNA;
 
 namespace RedesNeuronalesArtificiales
 {
@@ -14,6 +15,9 @@ namespace RedesNeuronalesArtificiales
       
         static void Main()
         {
+
+            /*
+
 			//Atntiguo
             //Perceptron per = new Perceptron(7);
             //per.entrenamiento(EjemploEntrenamiento.LED7SEGMENTOS());
@@ -42,11 +46,32 @@ namespace RedesNeuronalesArtificiales
 			redNeuronal.entrenar (100);
 			Console.WriteLine (redNeuronal);
 
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
+            */
+
+            Double[,] vectoresG = { { 99, 2, 1},
+                                  { 0, 0, 0},
+                                  { 5, 5, 5},
+                                  { 2, 1, 0} };
+
+            Double[,] ejemplo = { { 0, 0, 0},
+                                  { 0, 1, 0},
+                                  { 1, 0, 0},
+                                  { 1, 1, 1} };
+
+            ConstruccionConjuntos conj = new ConstruccionConjuntos(4, 3);
+            conj.tablaVectoresGrupos(vectoresG);
+            conj.calcularConjuntoClase(ejemplo, 0);
+            System.Console.ReadKey();
+
+
 			//Guarda Archivo
-			Guardar.Serializar (redNeuronal, "Red Som Completa.mp10");
+			//Guardar.Serializar (redNeuronal, "Red Som Completa.mp10");
             //Lee Archivo
 
-			//Som redNeuronalLeida = Guardar.Deserializar("Red Som.mp10");
+			//Som redNeuronalLeida = Guardar.Deserializar("Red Som Completa.mp10");
 			//Console.WriteLine (redNeuronalLeida);
 
         }
