@@ -20,8 +20,8 @@ namespace RedesNeuronalesArtificiales.RNA
 		private Hashtable mp10Matriz;
 		private Hashtable numeroDatos;
 
-		private double alfa = 0.05;
-		private double BETA = 0.001;
+		private double alfa = 0.005;
+		private double BETA = 0.0001;
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz)
 		{
@@ -98,6 +98,8 @@ namespace RedesNeuronalesArtificiales.RNA
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfa >= 0) {
+				mp10Matriz.Clear ();//Prueba
+				numeroDatos.Clear ();//Prueba
 				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Alfa: " + alfa);
 
 				//Se recorre la tabla de datos
@@ -168,7 +170,7 @@ namespace RedesNeuronalesArtificiales.RNA
 				//Se disminuye la tasa de aprendizaje
 				alfa -= BETA;
 				cicloActual++;
-				//Console.WriteLine (this);
+				Console.WriteLine (this);
 			}
 			Console.WriteLine ("Entrenamiento terminado");
 		}
@@ -240,6 +242,24 @@ namespace RedesNeuronalesArtificiales.RNA
 				nuevaY = y - numeroColumnasMatriz;
 			
 			return matriz[nuevaX, nuevaY];
+		}
+
+		public List<double[]> obtenerPesosNeuronas(Hashtable neuronas)
+		{
+			List<double[]> neuronasCentrales = new List<double[]> ();
+			int contadorEncontrado = 0;
+			for (int x = 0; x < numeroNeuronas && contadorEncontrado < neuronas.Count; x++) {
+				double[] neuronaActual = new double[numeroVariablesEntradas];
+				if (neuronas [x] != null) {
+					for(int y=0; y<numeroVariablesEntradas; y++)
+					{
+						neuronaActual[y] = matrizPesos[y,x];
+					}
+					neuronasCentrales.Add (neuronaActual);
+					contadorEncontrado++;
+				}
+			}
+			return neuronasCentrales;
 		}
 
 		public List<double[]> Datos
