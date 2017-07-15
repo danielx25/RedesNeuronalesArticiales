@@ -16,7 +16,7 @@ namespace RedesNeuronalesArtificiales
         static void Main()
         {
 
-            /*
+            
 
 			//Atntiguo
             //Perceptron per = new Perceptron(7);
@@ -49,7 +49,7 @@ namespace RedesNeuronalesArtificiales
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            */
+            /*
 
             Double[,] vectoresG = { { 99, 2, 1},
                                   { 0, 0, 0},
@@ -65,10 +65,10 @@ namespace RedesNeuronalesArtificiales
             conj.tablaVectoresGrupos(vectoresG);
             conj.calcularConjuntoClase(ejemplo, 0);
             System.Console.ReadKey();
-
+*/
 
 			//Guarda Archivo
-			//Guardar.Serializar (redNeuronal, "Red Som Completa.mp10");
+			Guardar.Serializar (redNeuronal, "Red Som Final.mp10");
             //Lee Archivo
 
 			//Som redNeuronalLeida = Guardar.Deserializar("Red Som Completa.mp10");

@@ -40,39 +40,40 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			List<double[]> tabla = new List<double[]> ();
 			while (datosMeteorologicosLeidos.Read())
             {
-				double[] filaActual = new double[37];
+				double[] filaActual = new double[38];
 				DateTime fechaActual = (DateTime)datosMeteorologicosLeidos [0];
-				filaActual[0] = normalizar(fecha(fechaActual),1,13);//Mes con los dias de decimales
-				filaActual[1] = normalizar(hora(fechaActual),0, 24);//Hora
-				filaActual [2] = normalizar ((double)datosMeteorologicosLeidos [1],0,30);//velocidad_viento
-				filaActual [3] = normalizar ((Int16)datosMeteorologicosLeidos [2],0,360);//direccion_viento
-				filaActual [4] = normalizar ((double)datosMeteorologicosLeidos [3],-10,55);//temperatura
-				filaActual [5] = normalizar ((Int16)datosMeteorologicosLeidos [4],0,100);//humedad_relativa
-				filaActual [6] = normalizar ((Int32)datosMeteorologicosLeidos [5],0,1400);//mp10
-				filaActual [7] = normalizar ((Int32)datosMeteorologicosLeidos [6],0,1700);//radiacion_solar
-				filaActual [8] = normalizar ((Int32)datosMeteorologicosLeidos [7],440,600);//presion_atmosferica
-				filaActual [9] = normalizar ((double)datosMeteorologicosLeidos [9],0,47);//precipitaciondia1
-				filaActual [10] = normalizar ((double)datosMeteorologicosLeidos [10],0,47);//precipitaciondia2
-				filaActual [11] = normalizar ((double)datosMeteorologicosLeidos [11],0,47);//precipitaciondia3
-				filaActual [12] = normalizar ((double)datosMeteorologicosLeidos [12],0,47);//precipitaciondia4
-				filaActual [13] = normalizar ((double)datosMeteorologicosLeidos [13],0,47);//precipitaciondia5
-				filaActual [14] = normalizar ((double)datosMeteorologicosLeidos [15],0,363000);//evaporaciondia1
-				filaActual [15] = normalizar ((double)datosMeteorologicosLeidos [16],0,363000);//evaporaciondia2
-				filaActual [16] = normalizar ((double)datosMeteorologicosLeidos [17],0,363000);//evaporaciondia3
-				filaActual [17] = normalizar ((double)datosMeteorologicosLeidos [18],0,363000);//evaporaciondia4
-				filaActual [18] = normalizar ((double)datosMeteorologicosLeidos [19],0,363000);//evaporaciondia5
+				filaActual[0] = verano(fechaActual);//Verano
+				filaActual[1] = invierno(fechaActual);//Invierno
+				filaActual[2] = normalizar(hora(fechaActual),0, 24);//Hora
+				filaActual [3] = normalizar ((double)datosMeteorologicosLeidos [1],0,30);//velocidad_viento
+				filaActual [4] = normalizar ((Int16)datosMeteorologicosLeidos [2],0,360);//direccion_viento
+				filaActual [5] = normalizar ((double)datosMeteorologicosLeidos [3],-10,55);//temperatura
+				filaActual [6] = normalizar ((Int16)datosMeteorologicosLeidos [4],0,100);//humedad_relativa
+				filaActual [7] = normalizar ((Int32)datosMeteorologicosLeidos [5],0,1400);//mp10
+				filaActual [8] = normalizar ((Int32)datosMeteorologicosLeidos [6],0,1700);//radiacion_solar
+				filaActual [9] = normalizar ((Int32)datosMeteorologicosLeidos [7],440,600);//presion_atmosferica
+				filaActual [10] = normalizar ((double)datosMeteorologicosLeidos [9],0,47);//precipitaciondia1
+				filaActual [11] = normalizar ((double)datosMeteorologicosLeidos [10],0,47);//precipitaciondia2
+				filaActual [12] = normalizar ((double)datosMeteorologicosLeidos [11],0,47);//precipitaciondia3
+				filaActual [13] = normalizar ((double)datosMeteorologicosLeidos [12],0,47);//precipitaciondia4
+				filaActual [14] = normalizar ((double)datosMeteorologicosLeidos [13],0,47);//precipitaciondia5
+				filaActual [15] = normalizar ((double)datosMeteorologicosLeidos [15],0,363000);//evaporaciondia1
+				filaActual [16] = normalizar ((double)datosMeteorologicosLeidos [16],0,363000);//evaporaciondia2
+				filaActual [17] = normalizar ((double)datosMeteorologicosLeidos [17],0,363000);//evaporaciondia3
+				filaActual [18] = normalizar ((double)datosMeteorologicosLeidos [18],0,363000);//evaporaciondia4
+				filaActual [19] = normalizar ((double)datosMeteorologicosLeidos [19],0,363000);//evaporaciondia5
 
 				//Palas y Chancadores
-				filaActual [19] = estado(palas[0], fechaActual);
-				filaActual [20] = estado(palas[1], fechaActual);
-				filaActual [21] = estado(palas[2], fechaActual);
-				filaActual [22] = estado(palas[3], fechaActual);
-				filaActual [23] = estado(palas[4], fechaActual);
-				filaActual [24] = estado(palas[5], fechaActual);
-				filaActual [25] = estado(palas[6], fechaActual);
-				filaActual [26] = estado(palas[7], fechaActual);
-				filaActual [27] = estado(chancados[0], fechaActual);
-				filaActual [28] = estado(chancados[1], fechaActual);
+				filaActual [20] = estado(palas[0], fechaActual);
+				filaActual [21] = estado(palas[1], fechaActual);
+				filaActual [22] = estado(palas[2], fechaActual);
+				filaActual [23] = estado(palas[3], fechaActual);
+				filaActual [24] = estado(palas[4], fechaActual);
+				filaActual [25] = estado(palas[5], fechaActual);
+				filaActual [26] = estado(palas[6], fechaActual);
+				filaActual [27] = estado(palas[7], fechaActual);
+				filaActual [28] = estado(chancados[0], fechaActual);
+				filaActual [29] = estado(chancados[1], fechaActual);
 
 				//Mitigación
 				string clave = fechaActual.Year+"-"+fechaActual.Month+"-"+fechaActual.Day;
@@ -80,17 +81,17 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				if (filaMitigacion == null) {
 					filaMitigacion = new double[] {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
 				}
-				filaActual [29] = normalizar(valorHora(filaMitigacion[0], filaMitigacion[1], fechaActual), 0, 7);//chaxa camion dia y noche
-				filaActual [30] = normalizar(valorHora(filaMitigacion[2], filaMitigacion[3], fechaActual), 0, 8);//movitec camion dia y noche
+				filaActual [30] = normalizar(valorHora(filaMitigacion[0], filaMitigacion[1], fechaActual), 0, 7);//chaxa camion dia y noche
+				filaActual [31] = normalizar(valorHora(filaMitigacion[2], filaMitigacion[3], fechaActual), 0, 8);//movitec camion dia y noche
 				double valorNoche = 0;
 				if (filaMitigacion [4] == -1)
 					valorNoche = -1;
-				filaActual [31] = normalizar(valorHora(filaMitigacion[4], valorNoche, fechaActual), 0, 4);//das camion dia
-				filaActual [32] = normalizar(Math.Round((filaMitigacion[5]/24),1),0,90240);//cnorte consumo de agua
-				filaActual [33] = normalizar(Math.Round((filaMitigacion[6]/24),1),0,4480);//cmovil consumo de agua
-				filaActual [34] = normalizar(Math.Round((filaMitigacion[7]/24),1),0,1500);//cachimba1 consumo de agua
-				filaActual [35] = normalizar(Math.Round((filaMitigacion[8]/24),1),0,2270);//cachimba2 consumo de agua
-				filaActual [36] = normalizar(Math.Round((filaMitigacion[9]/24),1),0,27000);//gerencia consumo de agua
+				filaActual [32] = normalizar(valorHora(filaMitigacion[4], valorNoche, fechaActual), 0, 4);//das camion dia
+				filaActual [33] = normalizar(Math.Round((filaMitigacion[5]/24),1),0,90240);//cnorte consumo de agua
+				filaActual [34] = normalizar(Math.Round((filaMitigacion[6]/24),1),0,4480);//cmovil consumo de agua
+				filaActual [35] = normalizar(Math.Round((filaMitigacion[7]/24),1),0,1500);//cachimba1 consumo de agua
+				filaActual [36] = normalizar(Math.Round((filaMitigacion[8]/24),1),0,2270);//cachimba2 consumo de agua
+				filaActual [37] = normalizar(Math.Round((filaMitigacion[9]/24),1),0,27000);//gerencia consumo de agua
 
 				tabla.Add (filaActual);
 			}
@@ -133,39 +134,40 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			List<double[]> alerta4 = new List<double[]> ();
 			while (leido.Read())
 			{
-				double[] filaActual = new double[37];
+				double[] filaActual = new double[38];
 				DateTime fechaActual = (DateTime)leido [0];
-				filaActual[0] = normalizar(fecha(fechaActual),1,13);//Mes con los dias de decimales
-				filaActual[1] = normalizar(hora(fechaActual),0, 24);//Hora
-				filaActual [2] = normalizar ((double)leido [1],0,30);//velocidad_viento
-				filaActual [3] = normalizar ((Int16)leido [2],0,360);//direccion_viento
-				filaActual [4] = normalizar ((double)leido [3],-10,55);//temperatura
-				filaActual [5] = normalizar ((Int16)leido [4],0,100);//humedad_relativa
-				filaActual [6] = normalizar ((Int32)leido [5],0,1400);//mp10
-				filaActual [7] = normalizar ((Int32)leido [6],0,1700);//radiacion_solar
-				filaActual [8] = normalizar ((Int32)leido [7],440,600);//presion_atmosferica
-				filaActual [9] = normalizar ((double)leido [9],0,47);//precipitaciondia1
-				filaActual [10] = normalizar ((double)leido [10],0,47);//precipitaciondia2
-				filaActual [11] = normalizar ((double)leido [11],0,47);//precipitaciondia3
-				filaActual [12] = normalizar ((double)leido [12],0,47);//precipitaciondia4
-				filaActual [13] = normalizar ((double)leido [13],0,47);//precipitaciondia5
-				filaActual [14] = normalizar ((double)leido [15],0,363000);//evaporaciondia1
-				filaActual [15] = normalizar ((double)leido [16],0,363000);//evaporaciondia2
-				filaActual [16] = normalizar ((double)leido [17],0,363000);//evaporaciondia3
-				filaActual [17] = normalizar ((double)leido [18],0,363000);//evaporaciondia4
-				filaActual [18] = normalizar ((double)leido [19],0,363000);//evaporaciondia5
+				filaActual[0] = verano(fechaActual);//Verano
+				filaActual[1] = invierno(fechaActual);//Invierno
+				filaActual[2] = normalizar(hora(fechaActual),0, 24);//Hora
+				filaActual [3] = normalizar ((double)leido [1],0,30);//velocidad_viento
+				filaActual [4] = normalizar ((Int16)leido [2],0,360);//direccion_viento
+				filaActual [5] = normalizar ((double)leido [3],-10,55);//temperatura
+				filaActual [6] = normalizar ((Int16)leido [4],0,100);//humedad_relativa
+				filaActual [7] = normalizar ((Int32)leido [5],0,1400);//mp10
+				filaActual [8] = normalizar ((Int32)leido [6],0,1700);//radiacion_solar
+				filaActual [9] = normalizar ((Int32)leido [7],440,600);//presion_atmosferica
+				filaActual [10] = normalizar ((double)leido [9],0,47);//precipitaciondia1
+				filaActual [11] = normalizar ((double)leido [10],0,47);//precipitaciondia2
+				filaActual [12] = normalizar ((double)leido [11],0,47);//precipitaciondia3
+				filaActual [13] = normalizar ((double)leido [12],0,47);//precipitaciondia4
+				filaActual [14] = normalizar ((double)leido [13],0,47);//precipitaciondia5
+				filaActual [15] = normalizar ((double)leido [15],0,363000);//evaporaciondia1
+				filaActual [16] = normalizar ((double)leido [16],0,363000);//evaporaciondia2
+				filaActual [17] = normalizar ((double)leido [17],0,363000);//evaporaciondia3
+				filaActual [18] = normalizar ((double)leido [18],0,363000);//evaporaciondia4
+				filaActual [19] = normalizar ((double)leido [19],0,363000);//evaporaciondia5
 
 				//Palas y Chancadores
-				filaActual [19] = estado(palas[0], fechaActual);
-				filaActual [20] = estado(palas[1], fechaActual);
-				filaActual [21] = estado(palas[2], fechaActual);
-				filaActual [22] = estado(palas[3], fechaActual);
-				filaActual [23] = estado(palas[4], fechaActual);
-				filaActual [24] = estado(palas[5], fechaActual);
-				filaActual [25] = estado(palas[6], fechaActual);
-				filaActual [26] = estado(palas[7], fechaActual);
-				filaActual [27] = estado(chancados[0], fechaActual);
-				filaActual [28] = estado(chancados[1], fechaActual);
+				filaActual [20] = estado(palas[0], fechaActual);
+				filaActual [21] = estado(palas[1], fechaActual);
+				filaActual [22] = estado(palas[2], fechaActual);
+				filaActual [23] = estado(palas[3], fechaActual);
+				filaActual [24] = estado(palas[4], fechaActual);
+				filaActual [25] = estado(palas[5], fechaActual);
+				filaActual [26] = estado(palas[6], fechaActual);
+				filaActual [27] = estado(palas[7], fechaActual);
+				filaActual [28] = estado(chancados[0], fechaActual);
+				filaActual [29] = estado(chancados[1], fechaActual);
 
 				//Mitigación
 				string clave = fechaActual.Year+"-"+fechaActual.Month+"-"+fechaActual.Day;
@@ -173,14 +175,14 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				if (filaMitigacion == null) {
 					filaMitigacion = new double[] {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
 				}
-				filaActual [29] = normalizar(valorHora(filaMitigacion[0], filaMitigacion[1], fechaActual), 0, 7);//chaxa camion dia y noche
-				filaActual [30] = normalizar(valorHora(filaMitigacion[2], filaMitigacion[3], fechaActual), 0, 8);//movitec camion dia y noche
-				filaActual [31] = normalizar(valorHora(filaMitigacion[4], 0, fechaActual), 0, 4);//das camion dia
-				filaActual [32] = normalizar(Math.Round((filaMitigacion[5]/24),1),0,90240);//cnorte consumo de agua
-				filaActual [33] = normalizar(Math.Round((filaMitigacion[6]/24),1),0,4480);//cmovil consumo de agua
-				filaActual [34] = normalizar(Math.Round((filaMitigacion[7]/24),1),0,1500);//cachimba1 consumo de agua
-				filaActual [35] = normalizar(Math.Round((filaMitigacion[8]/24),1),0,2270);//cachimba2 consumo de agua
-				filaActual [36] = normalizar(Math.Round((filaMitigacion[9]/24),1),0,27000);//gerencia consumo de agua
+				filaActual [30] = normalizar(valorHora(filaMitigacion[0], filaMitigacion[1], fechaActual), 0, 7);//chaxa camion dia y noche
+				filaActual [31] = normalizar(valorHora(filaMitigacion[2], filaMitigacion[3], fechaActual), 0, 8);//movitec camion dia y noche
+				filaActual [32] = normalizar(valorHora(filaMitigacion[4], 0, fechaActual), 0, 4);//das camion dia
+				filaActual [33] = normalizar(Math.Round((filaMitigacion[5]/24),1),0,90240);//cnorte consumo de agua
+				filaActual [34] = normalizar(Math.Round((filaMitigacion[6]/24),1),0,4480);//cmovil consumo de agua
+				filaActual [35] = normalizar(Math.Round((filaMitigacion[7]/24),1),0,1500);//cachimba1 consumo de agua
+				filaActual [36] = normalizar(Math.Round((filaMitigacion[8]/24),1),0,2270);//cachimba2 consumo de agua
+				filaActual [37] = normalizar(Math.Round((filaMitigacion[9]/24),1),0,27000);//gerencia consumo de agua
 
 				if((Int32)leido [5] <= 150)//Sin Alerta
 					sinAlerta.Add (filaActual);
@@ -203,25 +205,6 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			Console.WriteLine ("Terminado");
 			return tabla;
 		}
-
-		public static double valorHora (double dia, double noche, DateTime fecha)
-		{
-			if (fecha.Hour >= 8 && fecha.Hour <= 18) {
-				return dia;
-			} else {
-				return noche;
-			}
-		}
-
-		public static double estado(Hashtable elementos, DateTime fecha)
-		{
-			if (elementos [fecha] != null)
-				return 1;
-			else
-				return 0;
-		}
-
-
 
 		private static double[,] listaAArreglo (List<double[]> entrada)
 		{
@@ -438,14 +421,48 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			}
 		}
 
-		public static double fecha(DateTime fecha)
+		public static double verano(DateTime fecha)
 		{
-			return fecha.Month + (((99.99999*fecha.Day)/DateTime.DaysInMonth(fecha.Year, fecha.Month))/100);
+			double mes = fecha.Month + (((99.99999*fecha.Day)/DateTime.DaysInMonth(fecha.Year, fecha.Month))/100);
+			double valor1 = funcionGaussiana (0.25, 0.5, mes);
+			double valor2 = funcionGaussiana (0.25, 12.5, mes);
+			if (valor1 > valor2)
+				return valor1;
+			else
+				return valor2;
+		}
+
+		public static double invierno(DateTime fecha)
+		{
+			double mes = fecha.Month + (((99.99999*fecha.Day)/DateTime.DaysInMonth(fecha.Year, fecha.Month))/100);
+			return funcionGaussiana (0.25, 6.5, mes);
 		}
 
 		public static double hora(DateTime fecha)
 		{
 			return fecha.Hour;
+		}
+
+		public static double funcionGaussiana(double k, double m, double x)
+		{
+			return Math.Exp (-k*Math.Pow((x-m),2));
+		}
+
+		public static double valorHora (double dia, double noche, DateTime fecha)
+		{
+			if (fecha.Hour >= 8 && fecha.Hour <= 18) {
+				return dia;
+			} else {
+				return noche;
+			}
+		}
+
+		public static double estado(Hashtable elementos, DateTime fecha)
+		{
+			if (elementos [fecha] != null)
+				return 1;
+			else
+				return 0;
 		}
 
 		public static double normalizar(double valor, double minimo, double maximo)
