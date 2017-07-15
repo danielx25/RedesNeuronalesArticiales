@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
+using RedesNeuronalesArtificiales.Archivo;
+using System.Threading;
+using System.Diagnostics;
 
 namespace RedesNeuronalesArtificiales.RNA
 {
@@ -19,9 +22,23 @@ namespace RedesNeuronalesArtificiales.RNA
 		private Hashtable colorMatriz;
 		private Hashtable mp10Matriz;
 		private Hashtable numeroDatos;
+		private Thread hilo1;
+		private Thread hilo2;
+
+		private int Z= -1;
+		private int Y1= -1;
+		private int Y2= -1;
+		private int LIMITE1 = -1;
+		private int LIMITE2 = -1;
+		private double MENOR1 = double.MaxValue;
+		private double MENOR2 = double.MaxValue;
+		private int GANADORA1 = -1;
+		private int GANADORA2 = -1;
+		private bool terminado1 = true;
+		private bool terminado2 = true;
 
 		private double alfa = 0.005;
-		private double BETA = 0.0001;
+		private double BETA = 0.00008;
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz)
 		{
@@ -87,6 +104,46 @@ namespace RedesNeuronalesArtificiales.RNA
 			}
 		}
 
+		public void procesar1()
+		{
+			while (true) {
+				if (!terminado1) {
+					for (int y = Y1; y < LIMITE1; y++) {
+
+						//Se calcula distancia
+						distancia [y] = calculoDistancia (datos [Z], matrizPesos, y);
+
+						//Se selecciona la ganadora
+						if (distancia [y] < MENOR1) {
+							MENOR1 = distancia [y];
+							GANADORA1 = y;
+						}
+					}
+					terminado1 = true;
+				}
+			}
+		}
+
+		public void procesar2()
+		{
+			while (true) {
+				if (!terminado2) {
+					for (int y = Y2; y < LIMITE2; y++) {
+
+						//Se calcula distancia
+						distancia [y] = calculoDistancia (datos [Z], matrizPesos, y);
+
+						//Se selecciona la ganadora
+						if (distancia [y] < MENOR2) {
+							MENOR2 = distancia [y];
+							GANADORA2 = y;
+						}
+					}
+					terminado2 = true;
+				}
+			}
+		}
+
 		public void entrenar(int ciclos)
 		{
 			Console.WriteLine ("Entrenando...");
@@ -94,83 +151,122 @@ namespace RedesNeuronalesArtificiales.RNA
 			double menorDistancia = double.MaxValue;
 			int neuronaGanadora = -1;
 			int cicloActual = 0;
-
+			hilo1 = new Thread (new ThreadStart(procesar1));
+			hilo2 = new Thread (new ThreadStart(procesar2));
+			hilo1.Start ();
+			hilo2.Start ();
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfa >= 0) {
-				mp10Matriz.Clear ();//Prueba
-				numeroDatos.Clear ();//Prueba
-				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Alfa: " + alfa);
+				if (terminado1 && terminado2) {
+					mp10Matriz.Clear ();//Prueba
+					numeroDatos.Clear ();//Prueba
+					Console.WriteLine ("Ciclo Nº " + (cicloActual + 1) + " de " + ciclos + " Alfa: " + alfa);
 
-				//Se recorre la tabla de datos
-				for (int z = 0; z < datos.Count; z++) {
+					//Se recorre la tabla de datos
 
-					//Se calcula la distancia y se selecciona la ganadora
-					for (int y = 0; y < numeroNeuronas; y++) {
+					for (int z = 0; z < datos.Count; z++) {
+						if (terminado1 && terminado2) {
 
-						//Se calcula distancia
-						distancia [y] = calculoDistancia(datos[z], matrizPesos, y);
+							//Se calcula la distancia y se selecciona la ganadora
 
-						//Se selecciona la ganadora
-						if (distancia [y] < menorDistancia) {
-							menorDistancia = distancia [y];
-							neuronaGanadora = y;
-						}
-					}
+							Z = z;
+							MENOR1 = double.MaxValue;
+							MENOR2 = double.MaxValue;
+							GANADORA1 = -1;
+							GANADORA2 = -1;
 
-					indiceVecindad = calcularVecindad (neuronaGanadora);
+							int cantidad = numeroNeuronas / 3;
+							Y1 = cantidad;
+							LIMITE1 = cantidad * 2;
+							Y2 = LIMITE1;
+							LIMITE2 = numeroNeuronas;
+							terminado1 = false;
+							terminado2 = false;
 
-					//Se mueve la neurona ganadora y la vecindad
-					int color = 0;
-					for (int x = 0; x < numeroVariablesEntradas; x++) {
-						for (int i = 0; i < indiceVecindad.Length; i++) {
-							color = 0;
-							if (i == 0) {
-								color = 3;
-								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
-							} else if (i > 0 && i <= 8) {
-								color = 2;
-								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
-							} else {
-								color = 1;
-								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
-							}
+							for (int y = 0; y < cantidad; y++) {
 
-							//Se almacena el "color"
-							if (colorMatriz.ContainsKey (indiceVecindad[i])) {
-								colorMatriz [indiceVecindad[i]] = (int)colorMatriz [indiceVecindad[i]] + color;
-							} else {
-								colorMatriz.Add (indiceVecindad[i], color);
-							}
+								//Se calcula distancia
+								distancia [y] = calculoDistancia (datos [z], matrizPesos, y);
 
-							if (x == 6) {
-								//Mp10
-								if (mp10Matriz.ContainsKey (indiceVecindad [i])) {
-									mp10Matriz [indiceVecindad [i]] = (double)mp10Matriz [indiceVecindad [i]] + datos [z] [x];
-									numeroDatos [indiceVecindad [i]] = (int)numeroDatos [indiceVecindad [i]] + 1;
-								} else {
-									mp10Matriz.Add (indiceVecindad [i], datos [z] [x]);
-									numeroDatos.Add (indiceVecindad [i], 1);
+								//Se selecciona la ganadora
+								if (distancia [y] < menorDistancia) {
+									menorDistancia = distancia [y];
+									neuronaGanadora = y;
 								}
 							}
+
+							if (menorDistancia > MENOR1) {
+								menorDistancia = MENOR1;
+								neuronaGanadora = GANADORA1;
+							}
+
+							if (menorDistancia > MENOR2) {
+								menorDistancia = MENOR2;
+								neuronaGanadora = GANADORA2;
+							}
+								
+							indiceVecindad = calcularVecindad (neuronaGanadora);
+
+							//Se mueve la neurona ganadora y la vecindad
+							int color = 0;
+							for (int x = 0; x < numeroVariablesEntradas; x++) {
+								for (int i = 0; i < indiceVecindad.Length; i++) {
+									color = 0;
+									if (i == 0) {
+										color = 3;
+										if (datos [z] [x] >= 0 && datos [z] [x] <= 1)
+											matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
+									} else if (i > 0 && i <= 8) {
+										color = 2;
+										if (datos [z] [x] >= 0 && datos [z] [x] <= 1)
+											matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
+									} else {
+										color = 1;
+										if (datos [z] [x] >= 0 && datos [z] [x] <= 1)
+											matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
+									}
+
+									//Se almacena el "color"
+									if (colorMatriz.ContainsKey (indiceVecindad [i])) {
+										colorMatriz [indiceVecindad [i]] = (int)colorMatriz [indiceVecindad [i]] + color;
+									} else {
+										colorMatriz.Add (indiceVecindad [i], color);
+									}
+
+									if (x == 6) {
+										//Mp10
+										if (mp10Matriz.ContainsKey (indiceVecindad [i])) {
+											mp10Matriz [indiceVecindad [i]] = (double)mp10Matriz [indiceVecindad [i]] + datos [z] [x];
+											numeroDatos [indiceVecindad [i]] = (int)numeroDatos [indiceVecindad [i]] + 1;
+										} else {
+											mp10Matriz.Add (indiceVecindad [i], datos [z] [x]);
+											numeroDatos.Add (indiceVecindad [i], 1);
+										}
+									}
+								}
+							}
+							//Console.WriteLine (this);//Imprime la matriz
+							//Console.WriteLine ("Ganadora " + neuronaGanadora);
+							//Console.WriteLine ("Menor Distancia: " + menorDistancia);
+
+							//Se restablecen los valores
+							neuronaGanadora = -1;
+							menorDistancia = double.MaxValue;
+						} else {
+							z--;
 						}
 					}
-					//Console.WriteLine (this);//Imprime la matriz
-					//Console.WriteLine ("Ganadora " + neuronaGanadora);
-					//Console.WriteLine ("Menor Distancia: " + menorDistancia);
 
-					//Se restablecen los valores
-					neuronaGanadora = -1;
-					menorDistancia = double.MaxValue;
+					//Se disminuye la tasa de aprendizaje
+					alfa -= BETA;
+					cicloActual++;
+					//Console.WriteLine (this);
+					EscribirArchivo archivo = new EscribirArchivo ("Datos del ciclo (" + (cicloActual - 1) + ").txt");
+					archivo.imprimir (this.ToString ());
+					archivo.imprimir ("\nFIN\n");
+					archivo.cerrar ();
 				}
-
-				//Se disminuye la tasa de aprendizaje
-				alfa -= BETA;
-				cicloActual++;
-				//Console.WriteLine (this);
 			}
 			Console.WriteLine ("Entrenamiento terminado");
 		}
@@ -283,7 +379,7 @@ namespace RedesNeuronalesArtificiales.RNA
 					texto += "\n";
 				}
 			}
-			texto += "Matriz Color\n";
+			texto += "\nMatriz Color\n";
 			for(int x=0; x<numeroFilaMatriz; x++)
 			{
 				for (int y = 0; y < numeroColumnasMatriz; y++) {
@@ -294,7 +390,7 @@ namespace RedesNeuronalesArtificiales.RNA
 				}
 				texto += "\n";
 			}
-			texto += "MP10\n";
+			texto += "\nMP10\n";
 			for(int x=0; x<numeroFilaMatriz; x++)
 			{
 				for (int y = 0; y < numeroColumnasMatriz; y++) {

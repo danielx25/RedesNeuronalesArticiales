@@ -1,8 +1,10 @@
 ﻿using RedesNeuronalesArtificiales.RNA;
 using RedesNeuronalesArtificiales.BaseDeDatos;
+using RedesNeuronalesArtificiales.Archivo;
 using System;
 using System.Collections.Generic;
 using RedesNeuronalesArtificiales.AnalisisDeRNA;
+using System.Diagnostics;
 
 namespace RedesNeuronalesArtificiales
 {
@@ -15,8 +17,8 @@ namespace RedesNeuronalesArtificiales
       
         static void Main()
         {
-
-            
+			Stopwatch tiempoEjecucion = new Stopwatch ();
+			tiempoEjecucion.Start ();
 
 			//Atntiguo
             //Perceptron per = new Perceptron(7);
@@ -39,10 +41,10 @@ namespace RedesNeuronalesArtificiales
 			Som redNeuronal = new Som (datosMeteorologicos[0].Length,1600, 40);
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
-
-			
-
-			Console.WriteLine (redNeuronal);
+			tiempoEjecucion.Stop ();
+			Console.WriteLine("Tiempo al cargar la base de datos: " + tiempoEjecucion.Elapsed.ToString());
+			tiempoEjecucion.Restart ();
+			//Console.WriteLine (redNeuronal);
 			redNeuronal.entrenar (100);
 			Console.WriteLine (redNeuronal);
 
@@ -73,7 +75,8 @@ namespace RedesNeuronalesArtificiales
 
 			//Som redNeuronalLeida = Guardar.Deserializar("Red Som Completa.mp10");
 			//Console.WriteLine (redNeuronalLeida);
-
+			tiempoEjecucion.Stop();
+			Console.WriteLine("Tiempo al entrenar la red: " + tiempoEjecucion.Elapsed.ToString());
         }
     }
 }
