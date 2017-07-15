@@ -170,7 +170,7 @@ namespace RedesNeuronalesArtificiales.RNA
 				//Se disminuye la tasa de aprendizaje
 				alfa -= BETA;
 				cicloActual++;
-				Console.WriteLine (this);
+				//Console.WriteLine (this);
 			}
 			Console.WriteLine ("Entrenamiento terminado");
 		}
