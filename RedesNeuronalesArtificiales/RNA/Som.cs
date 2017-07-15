@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
+using RedesNeuronalesArtificiales.Archivo;
 
 namespace RedesNeuronalesArtificiales.RNA
 {
@@ -171,6 +172,9 @@ namespace RedesNeuronalesArtificiales.RNA
 				alfa -= BETA;
 				cicloActual++;
 				//Console.WriteLine (this);
+				EscribirArchivo archivo = new EscribirArchivo("Datos ciclo ("+cicloActual+").txt");
+				archivo.imprimir (this.ToString());
+				archivo.cerrar ();
 			}
 			Console.WriteLine ("Entrenamiento terminado");
 		}
@@ -283,7 +287,7 @@ namespace RedesNeuronalesArtificiales.RNA
 					texto += "\n";
 				}
 			}
-			texto += "Matriz Color\n";
+			texto += "\nMatriz Color\n";
 			for(int x=0; x<numeroFilaMatriz; x++)
 			{
 				for (int y = 0; y < numeroColumnasMatriz; y++) {
@@ -294,7 +298,7 @@ namespace RedesNeuronalesArtificiales.RNA
 				}
 				texto += "\n";
 			}
-			texto += "MP10\n";
+			texto += "\nMP10\n";
 			for(int x=0; x<numeroFilaMatriz; x++)
 			{
 				for (int y = 0; y < numeroColumnasMatriz; y++) {
