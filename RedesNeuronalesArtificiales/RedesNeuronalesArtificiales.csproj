@@ -44,6 +44,7 @@
     <Reference Include="Npgsql">
       <HintPath>..\packages\Npgsql.2.2.4.3\lib\net45\Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnalisisDeRNA\ConstruccionConjuntos.cs" />

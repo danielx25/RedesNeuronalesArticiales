@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using RedesNeuronalesArtificiales.Archivo;
+using System.Drawing;
 
 namespace RedesNeuronalesArtificiales.RNA
 {
@@ -21,8 +22,8 @@ namespace RedesNeuronalesArtificiales.RNA
 		private Hashtable mp10Matriz;
 		private Hashtable numeroDatos;
 
-		private double alfa = 0.005;
-		private double BETA = 0.0001;
+		private double alfa = 0.5;
+		private double BETA = 0.001;
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz)
 		{
@@ -298,7 +299,30 @@ namespace RedesNeuronalesArtificiales.RNA
 				}
 				texto += "\n";
 			}
-			texto += "\nMP10\n";
+			texto += "\nMatriz Color RGB\n<table>";
+			bool cicloTerminado = false;
+			int neurona = 0;
+			while(!cicloTerminado)
+			{
+				texto +="<tr>";
+				for (int y=0; y < numeroColumnasMatriz; y++) {
+					texto +="<td style=' background: rgb(";
+					for (int x = 0; x < numeroVariablesEntradas; x++) {
+						int valor = (int)(matrizPesos [x, neurona] * 255);
+						if(x<numeroVariablesEntradas-1)
+							texto += valor + ",";
+						else
+							texto += valor;
+					}
+					neurona++;
+					texto +=");width: 18px;'></td>";
+				}
+				texto += "\n";
+				if (neurona >= numeroNeuronas)
+					cicloTerminado = true;
+				texto +="</tr>";
+			}
+			texto += "</table>\nMP10\n";
 			for(int x=0; x<numeroFilaMatriz; x++)
 			{
 				for (int y = 0; y < numeroColumnasMatriz; y++) {
