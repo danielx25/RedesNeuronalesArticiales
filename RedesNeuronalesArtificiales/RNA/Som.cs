@@ -315,7 +315,7 @@ namespace RedesNeuronalesArtificiales.RNA
 							texto += valor;
 					}
 					neurona++;
-					texto +=");width: 18px;'></td>";
+					texto +=");width: 10px; height: 10px;'></td>";
 				}
 				texto += "\n";
 				if (neurona >= numeroNeuronas)
