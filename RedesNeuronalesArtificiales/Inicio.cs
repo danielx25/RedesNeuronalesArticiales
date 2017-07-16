@@ -51,21 +51,21 @@ namespace RedesNeuronalesArtificiales
 
 
 			List<double[]> colores = new List<double[]> ();
-			colores.Add (new double[] {n(29), n(196), n(72)});//RGB
-			colores.Add (new double[] {n(4), n(131), n(37)});//RGB
-			colores.Add (new double[] {n(94), n(109), n(224)});//RGB
-			colores.Add (new double[] {n(0), n(30), n(255)});//RGB
-			colores.Add (new double[] {n(255), n(210), n(0)});//RGB
-			colores.Add (new double[] {n(210), n(29), n(157)});//RGB
+			//colores.Add (new double[] {n(29), n(196), n(72)});//RGB
+			//colores.Add (new double[] {n(4), n(131), n(37)});//RGB
+			//colores.Add (new double[] {n(94), n(109), n(224)});//RGB
+			colores.Add (new double[] {n(0), n(0), n(160)});//RGB
+			colores.Add (new double[] {n(142), n(247), n(251)});//RGB
+			colores.Add (new double[] {n(251), n(152), n(10)});//RGB
 			colores.Add (new double[] {n(255), n(0), n(0)});//RGB
 			colores.Add (new double[] {n(0), n(255), n(0)});//RGB
 			colores.Add (new double[] {n(0), n(0), n(255)});//RGB
 			colores.Add (new double[] {n(255), n(255), n(255)});//RGB
 			colores.Add (new double[] {n(0), n(0), n(0)});//RGB
-			colores.Add (new double[] {n(216), n(152), n(149)});//RGB
-			colores.Add (new double[] {n(232), n(141), n(52)});//RGB
+			//colores.Add (new double[] {n(216), n(152), n(149)});//RGB
+			//colores.Add (new double[] {n(232), n(141), n(52)});//RGB
 
-			Som redColores = new Som (3, 400, 20);
+			Som redColores = new Som (3, 100, 10);
 			redColores.inicializarMatriz (0,1);
 			redColores.Datos = colores;
 
