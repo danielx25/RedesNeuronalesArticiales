@@ -130,7 +130,7 @@ namespace RedesNeuronalesArtificiales.RNA
 								color = 3;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
 									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
-							} else if (i > 0 && i <= 8) {
+							} else if (i > 0 && i <= 4) {
 								color = 2;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
 									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
