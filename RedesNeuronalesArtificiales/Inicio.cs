@@ -65,10 +65,10 @@ namespace RedesNeuronalesArtificiales
 			//colores.Add (new double[] {n(216), n(152), n(149)});//RGB
 			//colores.Add (new double[] {n(232), n(141), n(52)});//RGB
 
-			Som redColores = new Som (3, 100, 10);
+			Som redColores = new Som (3, 1600, 40);
 			redColores.inicializarMatriz (0,1);
 			redColores.Datos = colores;
-
+			Console.WriteLine (redColores);
 			redColores.entrenar (5000);
 
 			Console.WriteLine (redColores);

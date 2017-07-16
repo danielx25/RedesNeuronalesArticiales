@@ -22,8 +22,8 @@ namespace RedesNeuronalesArtificiales.RNA
 		private Hashtable mp10Matriz;
 		private Hashtable numeroDatos;
 
-		private double alfa = 0.5;
-		private double BETA = 0.001;
+		private double alfa = 0.05;
+		private double BETA = 0.0001;
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz)
 		{
@@ -127,18 +127,26 @@ namespace RedesNeuronalesArtificiales.RNA
 					for (int x = 0; x < numeroVariablesEntradas; x++) {
 						for (int i = 0; i < indiceVecindad.Length; i++) {
 							color = 0;
-							if (i == 0) {
-								color = 3;
+							if (i == 0) {//Ganadora
+								color = 5;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
 									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
-							} else if (i > 0 && i <= 8) {
-								color = 2;
+							} else if (i > 0 && i <= 4) {//Distancia 1
+								color = 4;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
 									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
-							} else {
-								color = 1;
+							} else if (i > 4 && i <= 12) {//Distancia 2
+								color = 3;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
 									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
+							} else if (i > 12 && i <= 24) {//Distancia 3
+								color = 2;
+								if(datos [z][x] >= 0 && datos[z][x] <= 1)
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 4));
+							} else if (i > 24 && i <= 40) {//Distancia 4
+								color = 1;
+								if(datos [z][x] >= 0 && datos[z][x] <= 1)
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 5));
 							}
 
 							//Se almacena el "color"
@@ -197,7 +205,7 @@ namespace RedesNeuronalesArtificiales.RNA
 
 		public int[] calcularVecindad(int ganadora)
 		{
-			int[] vecindad = new int[13];//Math.Pow(tamañoVecindad,2)+Math.Pow(tamañoVecindad-1)
+			int[] vecindad = new int[41];//Math.Pow(tamañoVecindad,2)+Math.Pow(tamañoVecindad-1)
 			vecindad[0] = ganadora;
 
 			for(int x=0; x<numeroFilaMatriz; x++)
@@ -206,20 +214,53 @@ namespace RedesNeuronalesArtificiales.RNA
 				{
 					if (matriz [x, y] == ganadora) {
 
+						//Distancia 1
 						vecindad [1] = verificar (x,y-1);
 						vecindad [2] = verificar (x,y+1);
 						vecindad [3] = verificar (x-1,y);
 						vecindad [4] = verificar (x+1,y);
 
+						//Distancia 2
 						vecindad [5] = verificar (x+1,y+1);
 						vecindad [6] = verificar (x-1,y-1);
 						vecindad [7] = verificar (x+1,y-1);
 						vecindad [8] = verificar (x-1,y+1);
-
 						vecindad [9] = verificar (x,y-2);
 						vecindad [10] = verificar (x,y+2);
 						vecindad [11] = verificar (x-2,y);
 						vecindad [12] = verificar (x+2,y);
+
+						//Distancia 3
+						vecindad [13] = verificar (x,y-3);
+						vecindad [14] = verificar (x+1,y-2);
+						vecindad [15] = verificar (x+2,y-1);
+						vecindad [16] = verificar (x+3,y);
+						vecindad [17] = verificar (x+2,y+1);
+						vecindad [18] = verificar (x+1,y+2);
+						vecindad [19] = verificar (x,y+3);
+						vecindad [20] = verificar (x-1,y+2);
+						vecindad [21] = verificar (x-2,y+1);
+						vecindad [22] = verificar (x-3,y);
+						vecindad [23] = verificar (x-2,y-1);
+						vecindad [24] = verificar (x-1,y-2);
+
+						//Distancia 4
+						vecindad [25] = verificar (x,y-4);
+						vecindad [26] = verificar (x+1,y-3);
+						vecindad [27] = verificar (x+2,y-2);
+						vecindad [28] = verificar (x+3,y-1);
+						vecindad [29] = verificar (x+4,y);
+						vecindad [30] = verificar (x+3,y+1);
+						vecindad [31] = verificar (x+2,y+2);
+						vecindad [32] = verificar (x+1,y+3);
+						vecindad [33] = verificar (x,y+4);
+						vecindad [34] = verificar (x-1,y+3);
+						vecindad [35] = verificar (x-2,y+2);
+						vecindad [36] = verificar (x-3,y+1);
+						vecindad [37] = verificar (x-4,y);
+						vecindad [38] = verificar (x-3,y-1);
+						vecindad [39] = verificar (x-2,y-2);
+						vecindad [40] = verificar (x-1,y-3);
 
 						y = numeroColumnasMatriz;
 						x = numeroFilaMatriz;
