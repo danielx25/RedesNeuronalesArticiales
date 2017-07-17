@@ -25,7 +25,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
 			NpgsqlCommand meteorologicos = new NpgsqlCommand("SELECT * FROM meteorologicohora " +
 															"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
-															"ORDER BY fecha ", conexion);
+															"and mp10 > 100 ORDER BY fecha ", conexion);
 
 			NpgsqlDataReader datosMeteorologicosLeidos = meteorologicos.ExecuteReader();
 

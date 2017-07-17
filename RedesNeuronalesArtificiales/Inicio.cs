@@ -38,14 +38,18 @@ namespace RedesNeuronalesArtificiales
 			DateTime fin = new DateTime(2017,03,01,00,00,00);
 
 			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,1600, 40);
+			Som redNeuronal = new Som (datosMeteorologicos[0].Length,400, 20);
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
 			tiempoEjecucion.Stop ();
 			Console.WriteLine("Tiempo al cargar la base de datos: " + tiempoEjecucion.Elapsed.ToString());
 			tiempoEjecucion.Restart ();
 			//Console.WriteLine (redNeuronal);
-			redNeuronal.entrenar (100);
+			EscribirArchivo archivo = new EscribirArchivo("Pesos aleatorios.html");
+			archivo.imprimir (redNeuronal.obtenerMP10HTML2());
+			archivo.cerrar ();
+
+			redNeuronal.entrenar (200);
 			//Console.WriteLine (redNeuronal);
 
             //Application.EnableVisualStyles();
