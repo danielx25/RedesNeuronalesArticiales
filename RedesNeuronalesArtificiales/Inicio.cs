@@ -46,7 +46,7 @@ namespace RedesNeuronalesArtificiales
 			tiempoEjecucion.Restart ();
 			//Console.WriteLine (redNeuronal);
 			redNeuronal.entrenar (100);
-			Console.WriteLine (redNeuronal);
+			//Console.WriteLine (redNeuronal);
 
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
