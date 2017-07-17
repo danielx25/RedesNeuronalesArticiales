@@ -34,11 +34,11 @@ namespace RedesNeuronalesArtificiales
 
 			//Redes Som Entrenando
 
-			DateTime inicio = new DateTime(2010,01,01,00,00,00);
+			DateTime inicio = new DateTime(2013,08,08,22,00,00);
 			DateTime fin = new DateTime(2017,03,01,00,00,00);
 
 			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,400, 20);
+			Som redNeuronal = new Som (datosMeteorologicos[0].Length,1225, 35);
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
 			tiempoEjecucion.Stop ();
@@ -49,7 +49,7 @@ namespace RedesNeuronalesArtificiales
 			archivo.imprimir (redNeuronal.obtenerMP10HTML2());
 			archivo.cerrar ();
 
-			redNeuronal.entrenar (200);
+			redNeuronal.entrenar (1000);
 			//Console.WriteLine (redNeuronal);
 
             //Application.EnableVisualStyles();
