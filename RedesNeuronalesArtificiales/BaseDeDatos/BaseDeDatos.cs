@@ -25,7 +25,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
 			NpgsqlCommand meteorologicos = new NpgsqlCommand("SELECT * FROM meteorologicohora " +
 															"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
-															"and mp10 > 40 ORDER BY fecha ", conexion);
+															"and mp10 >= 100 ORDER BY fecha ", conexion);
 
 			NpgsqlDataReader datosMeteorologicosLeidos = meteorologicos.ExecuteReader();
 
@@ -49,7 +49,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				filaActual [4] = normalizar ((Int16)datosMeteorologicosLeidos [2],0,360);//direccion_viento
 				filaActual [5] = normalizar ((double)datosMeteorologicosLeidos [3],-10,55);//temperatura
 				filaActual [6] = normalizar ((Int16)datosMeteorologicosLeidos [4],0,100);//humedad_relativa
-				filaActual [7] = normalizar ((Int32)datosMeteorologicosLeidos [5],0,700);//mp10
+				filaActual [7] = normalizar ((Int32)datosMeteorologicosLeidos [5],0,800);//mp10
 				filaActual [8] = normalizar ((Int32)datosMeteorologicosLeidos [6],0,1700);//radiacion_solar
 				filaActual [9] = normalizar ((Int32)datosMeteorologicosLeidos [7],440,600);//presion_atmosferica
 				filaActual [10] = normalizar ((double)datosMeteorologicosLeidos [9],0,47);//precipitaciondia1
@@ -115,7 +115,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
 			NpgsqlCommand meteorologicos = new NpgsqlCommand("SELECT * FROM meteorologicohora " +
 				"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
-				"ORDER BY fecha ", conexion);
+				"and mp10 >= 100 ORDER BY fecha ", conexion);
 
 			NpgsqlDataReader leido = meteorologicos.ExecuteReader();
 
