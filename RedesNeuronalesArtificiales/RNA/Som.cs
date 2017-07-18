@@ -19,7 +19,7 @@ namespace RedesNeuronalesArtificiales.RNA
 		private List<double[]> datos;
 		private Hashtable colorMatriz;
 
-		private double alfa = 0.05;
+		private double alfa = 0.005;
 		private double BETA = 0.00001;
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz)
@@ -84,10 +84,31 @@ namespace RedesNeuronalesArtificiales.RNA
 			}
 		}
 
+		public int[] calcularResultados(double[] fila)
+		{
+			int neuronaGanadora = -1;
+			double mp10Normalizado = 0;
+			double distanciaActual = 0;
+			double menorDistancia = double.MaxValue;
+
+			for (int y = 0; y < numeroNeuronas; y++) {
+
+				//Se calcula distancia
+				distanciaActual = calculoDistancia(fila, matrizPesos, y);
+
+				//Se selecciona la ganadora
+				if (distanciaActual < menorDistancia) {
+					menorDistancia = distanciaActual;
+					neuronaGanadora = y;
+					mp10Normalizado = matrizPesos [7, y];
+				}
+			}
+			return new int[] {neuronaGanadora, (int)(mp10Normalizado * 800)};
+		}
+
 		public void entrenar(int ciclos)
 		{
 			Console.WriteLine ("Entrenando...");
-			//double distanciaActual = 0;
 			double menorDistancia = double.MaxValue;
 			int neuronaGanadora = -1;
 			int cicloActual = 0;
