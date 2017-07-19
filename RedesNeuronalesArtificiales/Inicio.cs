@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using RedesNeuronalesArtificiales.AnalisisDeRNA;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace RedesNeuronalesArtificiales
 {
@@ -17,7 +18,11 @@ namespace RedesNeuronalesArtificiales
       
         static void Main()
         {
-			Stopwatch tiempoEjecucion = new Stopwatch ();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Ventana());
+            /*
+            Stopwatch tiempoEjecucion = new Stopwatch ();
 			tiempoEjecucion.Start ();
 
 			//Atntiguo
@@ -28,9 +33,7 @@ namespace RedesNeuronalesArtificiales
 			//var z = new int[x.Length + y.Length];
 			//x.CopyTo(z, 0);
 			//y.CopyTo(z, x.Length);
-			//Application.EnableVisualStyles();
-			//Application.SetCompatibleTextRenderingDefault(false);
-			//Application.Run(new Form1());
+			
 
 			//Redes Som Entrenando
 
@@ -76,7 +79,7 @@ namespace RedesNeuronalesArtificiales
             conj.tablaVectoresGrupos(vectoresG);
             conj.calcularConjuntoClase(ejemplo, 0);
             System.Console.ReadKey();
-*/
+
 
 			//Guarda Archivo
 			Guardar.Serializar (redNeuronal, "Red Som Final.mp10");
@@ -95,6 +98,7 @@ namespace RedesNeuronalesArtificiales
 				int[] resultado = redNeuronal.calcularResultados (fila);
 				Console.WriteLine ("Neurona Ganadora: " + resultado[0] + " MP10: " + resultado[1] + " MP10 real: " + mp10Real + " Alerta: " + calcularAlerta(resultado[1]) + "Alerta Real: " + calcularAlerta(mp10Real));
 			}
+            */
         }
 
 		public static int calcularAlerta(double mp10)
