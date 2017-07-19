@@ -17,51 +17,24 @@ namespace RedesNeuronalesArtificiales
         [STAThread]
 
         static void Main()
-        {
+        {/*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Ventana());
-            /*
+*/
             Stopwatch tiempoEjecucion = new Stopwatch ();
 			tiempoEjecucion.Start ();
-<<<<<<< HEAD
-
-			//Atntiguo
-            //Perceptron per = new Perceptron(7);
-            //per.entrenamiento(EjemploEntrenamiento.LED7SEGMENTOS());
-            //BackPropagation redmulticapa = new BackPropagation();
-            //redmulticapa.entrenamiento(EjemploEntrenamiento.DESAYUNO_NORMALIZADO());
-			//var z = new int[x.Length + y.Length];
-			//x.CopyTo(z, 0);
-			//y.CopyTo(z, x.Length);
-			
-
-=======
->>>>>>> 9ea6fb775d5fd1f6049541cf3822541f1de150be
 			//Redes Som Entrenando
 
 			DateTime inicio = new DateTime(2010,01,01,00,00,00);
 			DateTime fin = new DateTime(2016,12,31,23,59,59);
 
-			//DateTime inicioPrueba = new DateTime(2017,01,01,00,00,00);
-			//DateTime finPrueba = new DateTime(2017,03,01,00,00,00);
+			DateTime inicioPrueba = new DateTime(2017,01,01,00,00,00);
+			DateTime finPrueba = new DateTime(2017,03,01,00,00,00);
 
-			//List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin, 100);
-			//List<double[]> datosPruebas = Conexion.datosMeteorologicos (inicioPrueba, finPrueba, 100);
+			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin, 100);
+			List<double[]> datosPruebas = Conexion.datosMeteorologicos (inicioPrueba, finPrueba, 0);
 
-			List<double[,]> datos = Conexion.datosPorRangoMp10 (inicio, fin, 100);
-			double[,] sinAlerta = datos [0]; 
-			for(int x=0; x<sinAlerta.GetLength(0); x++)
-			{
-				Console.Write ("Fila: ");
-				for(int y=0; y<sinAlerta.GetLength(1); y++)
-				{
-					Console.Write(sinAlerta[x,y] + "\t");
-				}
-				Console.WriteLine();
-			}
-
-			/*
 			Som redNeuronal = new Som (datosMeteorologicos[0].Length,2500, 50, 0.01, 0.0001);
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
@@ -74,32 +47,7 @@ namespace RedesNeuronalesArtificiales
 			archivo.imprimir (redNeuronal.obtenerMP10HTML());
 			archivo.cerrar ();
 
-<<<<<<< HEAD
-			redNeuronal.entrenar (200);
-
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
-            /*
-
-            Double[,] vectoresG = { { 99, 2, 1},
-                                  { 0, 0, 0},
-                                  { 5, 5, 5},
-                                  { 2, 1, 0} };
-
-            Double[,] ejemplo = { { 0, 0, 0},
-                                  { 0, 1, 0},
-                                  { 1, 0, 0},
-                                  { 1, 1, 1} };
-
-            ConstruccionConjuntos conj = new ConstruccionConjuntos(4, 3);
-            conj.tablaVectoresGrupos(vectoresG);
-            conj.calcularConjuntoClase(ejemplo, 0);
-            System.Console.ReadKey();
-
-=======
 			redNeuronal.entrenar (100);
->>>>>>> 9ea6fb775d5fd1f6049541cf3822541f1de150be
 
 			//Guarda Archivo
 			Guardar.Serializar (redNeuronal, "Red Som Final.mp10");
@@ -125,9 +73,6 @@ namespace RedesNeuronalesArtificiales
 				if (calcularAlerta (resultado [1]) < calcularAlerta (mp10Real))
 					errorMenor++;
 			}
-
-            */
-
         }
 		public static int calcularAlerta(double mp10)
 		{
