@@ -15,7 +15,7 @@ namespace RedesNeuronalesArtificiales
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
-      
+
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -24,6 +24,7 @@ namespace RedesNeuronalesArtificiales
             /*
             Stopwatch tiempoEjecucion = new Stopwatch ();
 			tiempoEjecucion.Start ();
+<<<<<<< HEAD
 
 			//Atntiguo
             //Perceptron per = new Perceptron(7);
@@ -35,18 +36,33 @@ namespace RedesNeuronalesArtificiales
 			//y.CopyTo(z, x.Length);
 			
 
+=======
+>>>>>>> 9ea6fb775d5fd1f6049541cf3822541f1de150be
 			//Redes Som Entrenando
 
-			DateTime inicio = new DateTime(2013,08,08,22,00,00);
+			DateTime inicio = new DateTime(2010,01,01,00,00,00);
 			DateTime fin = new DateTime(2016,12,31,23,59,59);
 
-			DateTime inicioPrueba = new DateTime(2017,01,01,00,00,00);
-			DateTime finPrueba = new DateTime(2017,03,01,00,00,00);
+			//DateTime inicioPrueba = new DateTime(2017,01,01,00,00,00);
+			//DateTime finPrueba = new DateTime(2017,03,01,00,00,00);
 
-			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
-			List<double[]> datosPruebas = Conexion.datosMeteorologicos (inicioPrueba, finPrueba);
+			//List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin, 100);
+			//List<double[]> datosPruebas = Conexion.datosMeteorologicos (inicioPrueba, finPrueba, 100);
 
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,1600, 40);
+			List<double[,]> datos = Conexion.datosPorRangoMp10 (inicio, fin, 100);
+			double[,] sinAlerta = datos [0]; 
+			for(int x=0; x<sinAlerta.GetLength(0); x++)
+			{
+				Console.Write ("Fila: ");
+				for(int y=0; y<sinAlerta.GetLength(1); y++)
+				{
+					Console.Write(sinAlerta[x,y] + "\t");
+				}
+				Console.WriteLine();
+			}
+
+			/*
+			Som redNeuronal = new Som (datosMeteorologicos[0].Length,2500, 50, 0.01, 0.0001);
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
 
@@ -58,6 +74,7 @@ namespace RedesNeuronalesArtificiales
 			archivo.imprimir (redNeuronal.obtenerMP10HTML());
 			archivo.cerrar ();
 
+<<<<<<< HEAD
 			redNeuronal.entrenar (200);
 
             //Application.EnableVisualStyles();
@@ -80,27 +97,38 @@ namespace RedesNeuronalesArtificiales
             conj.calcularConjuntoClase(ejemplo, 0);
             System.Console.ReadKey();
 
+=======
+			redNeuronal.entrenar (100);
+>>>>>>> 9ea6fb775d5fd1f6049541cf3822541f1de150be
 
 			//Guarda Archivo
 			Guardar.Serializar (redNeuronal, "Red Som Final.mp10");
             //Lee Archivo
-			//Som redNeuronalLeida = Guardar.Deserializar("Red Som Completa.mp10");
-			//Console.WriteLine (redNeuronalLeida);
+			//Som redNeuronal = Guardar.Deserializar("Red Som Final.mp10");
 			tiempoEjecucion.Stop();
 			Console.WriteLine("Tiempo al entrenar la red: " + tiempoEjecucion.Elapsed.ToString());
 
-
+			int error = 0;
+			int errorMayor = 0;
+			int errorMenor = 0;
 			for(int x=0; x<datosPruebas.Count; x++)
 			{
 				double[] fila = datosPruebas [x];
-				double mp10Real = fila [7];
+				double mp10Real = fila [7]*800;
 				fila [7] = -1;
 				int[] resultado = redNeuronal.calcularResultados (fila);
-				Console.WriteLine ("Neurona Ganadora: " + resultado[0] + " MP10: " + resultado[1] + " MP10 real: " + mp10Real + " Alerta: " + calcularAlerta(resultado[1]) + "Alerta Real: " + calcularAlerta(mp10Real));
+				//Console.WriteLine ("Neurona Ganadora: " + resultado[0] + " MP10: " + resultado[1] + " MP10 real: " + (mp10Real) + " Alerta: " + calcularAlerta(resultado[1]) + " Alerta Real: " + calcularAlerta(mp10Real));
+				if (calcularAlerta (resultado [1]) != calcularAlerta (mp10Real))
+					error++;
+				if (Math.Abs (calcularAlerta (resultado [1]) - calcularAlerta (mp10Real)) > 1)
+					error++;
+				if (calcularAlerta (resultado [1]) < calcularAlerta (mp10Real))
+					errorMenor++;
 			}
-            */
-        }
 
+            */
+
+        }
 		public static int calcularAlerta(double mp10)
 		{
 			if (mp10 <= 150)

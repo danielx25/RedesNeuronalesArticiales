@@ -9,7 +9,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 	public class Conexion
     {
 		
-		public static List<double[]> datosMeteorologicos(DateTime inicio, DateTime fin)
+		public static List<double[]> datosMeteorologicos(DateTime inicio, DateTime fin, int mp10Minimo)
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 									"Port="+Configuracion.PUERTO+";" +
@@ -25,7 +25,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
 			NpgsqlCommand meteorologicos = new NpgsqlCommand("SELECT * FROM meteorologicohora " +
 															"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
-															"and mp10 >= 100 ORDER BY fecha ", conexion);
+															"and mp10 >= "+mp10Minimo+" ORDER BY fecha ", conexion);
 
 			NpgsqlDataReader datosMeteorologicosLeidos = meteorologicos.ExecuteReader();
 
@@ -99,7 +99,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			return tabla;
         }
 
-		public static List<double[,]> datosPorRangoMp10(DateTime inicio, DateTime fin)
+		public static List<double[,]> datosPorRangoMp10(DateTime inicio, DateTime fin, int mp10Minimo)
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 				"Port="+Configuracion.PUERTO+";" +
@@ -115,7 +115,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
 			NpgsqlCommand meteorologicos = new NpgsqlCommand("SELECT * FROM meteorologicohora " +
 				"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
-				"and mp10 >= 100 ORDER BY fecha ", conexion);
+				"and mp10 >= "+mp10Minimo+" ORDER BY fecha ", conexion);
 
 			NpgsqlDataReader leido = meteorologicos.ExecuteReader();
 
@@ -143,7 +143,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				filaActual [4] = normalizar ((Int16)leido [2],0,360);//direccion_viento
 				filaActual [5] = normalizar ((double)leido [3],-10,55);//temperatura
 				filaActual [6] = normalizar ((Int16)leido [4],0,100);//humedad_relativa
-				filaActual [7] = normalizar ((Int32)leido [5],0,1400);//mp10
+				filaActual [7] = normalizar ((Int32)leido [5],0,800);//mp10
 				filaActual [8] = normalizar ((Int32)leido [6],0,1700);//radiacion_solar
 				filaActual [9] = normalizar ((Int32)leido [7],440,600);//presion_atmosferica
 				filaActual [10] = normalizar ((double)leido [9],0,47);//precipitaciondia1
@@ -219,12 +219,12 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			}
 			return matriz;
 			*/
-			double[,] matriz = new double[entrada[0].Length, entrada.Count];
+			double[,] matriz = new double[entrada.Count, entrada[0].Length];
 			for (int x = 0; x < entrada.Count; x++) {
 				double[] fila = entrada [x];
 				for(int y=0; y<fila.Length; y++)
 				{
-					matriz [y, x] = fila [y];
+					matriz [x, y] = fila [y];
 				}
 			}
 			return matriz;

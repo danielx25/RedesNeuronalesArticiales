@@ -19,8 +19,29 @@ namespace RedesNeuronalesArtificiales.RNA
 		private List<double[]> datos;
 		private Hashtable colorMatriz;
 
-		private double alfa = 0.005;
-		private double BETA = 0.00001;
+		private double alfa = 0.05;
+		private double BETA = 0.004;
+
+		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz, double alfa, double beta)
+		{
+			this.alfa = alfa;
+			this.BETA = beta;
+			matrizPesos = new double[numeroVariablesEntrada,numeroNeuronas];
+			distancia = new double[numeroNeuronas];
+			if (numeroColumnasMatriz < 1)
+				this.numeroColumnasMatriz = 2;
+			if (numeroNeuronas % numeroColumnasMatriz != 0) {
+				Console.WriteLine ("Error: No se puede formar una la matriz:" + numeroColumnasMatriz + "x" + (numeroNeuronas/(double)numeroColumnasMatriz));
+				Console.WriteLine ("Codigo de error: " + Environment.ExitCode);
+				Environment.Exit (Environment.ExitCode);
+			}
+			numeroFilaMatriz = (numeroNeuronas / numeroColumnasMatriz);
+			this.matriz = new int[numeroFilaMatriz, numeroColumnasMatriz];
+			this.numeroColumnasMatriz = numeroColumnasMatriz;
+			this.numeroVariablesEntradas = numeroVariablesEntrada;
+			this.numeroNeuronas = numeroNeuronas;
+			this.colorMatriz = new Hashtable ();
+		}
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz)
 		{
@@ -90,7 +111,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			double mp10Normalizado = 0;
 			double distanciaActual = 0;
 			double menorDistancia = double.MaxValue;
-
+			//int[] vecindad;
 			for (int y = 0; y < numeroNeuronas; y++) {
 
 				//Se calcula distancia
@@ -116,7 +137,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfa >= 0) {
-				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Alfa: " + alfa);
+				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Limite, Alfa actual: " + alfa);
 
 				//Se recorre la tabla de datos
 				for (int z = 0; z < datos.Count; z++) {
@@ -288,13 +309,13 @@ namespace RedesNeuronalesArtificiales.RNA
 			return matriz[nuevaX, nuevaY];
 		}
 
-		public List<double[]> obtenerPesosNeuronas(Hashtable neuronas)
+		public List<double[]> obtenerPesosNeuronas(HashSet<int> neuronas)
 		{
 			List<double[]> neuronasCentrales = new List<double[]> ();
 			int contadorEncontrado = 0;
 			for (int x = 0; x < numeroNeuronas && contadorEncontrado < neuronas.Count; x++) {
 				double[] neuronaActual = new double[numeroVariablesEntradas];
-				if (neuronas [x] != null) {
+				if (neuronas.Contains(x)) {
 					for(int y=0; y<numeroVariablesEntradas; y++)
 					{
 						neuronaActual[y] = matrizPesos[y,x];
