@@ -9,7 +9,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 	public class Conexion
     {
 		
-		public static List<double[]> datosMeteorologicos(DateTime inicio, DateTime fin)
+		public static List<double[]> datosMeteorologicos(DateTime inicio, DateTime fin, int mp10Minimo)
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 									"Port="+Configuracion.PUERTO+";" +
@@ -25,7 +25,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
 			NpgsqlCommand meteorologicos = new NpgsqlCommand("SELECT * FROM meteorologicohora " +
 															"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
-															"and mp10 >= 100 ORDER BY fecha ", conexion);
+															"and mp10 >= "+mp10Minimo+" ORDER BY fecha ", conexion);
 
 			NpgsqlDataReader datosMeteorologicosLeidos = meteorologicos.ExecuteReader();
 
@@ -99,7 +99,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			return tabla;
         }
 
-		public static List<double[,]> datosPorRangoMp10(DateTime inicio, DateTime fin)
+		public static List<double[,]> datosPorRangoMp10(DateTime inicio, DateTime fin, int mp10Minimo)
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 				"Port="+Configuracion.PUERTO+";" +
@@ -115,7 +115,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			string fechaFinal = fin.Year + "-" + fin.Month + "-" + fin.Day + " " + fin.Hour + ":" + fin.Minute + ":" + fin.Second;
 			NpgsqlCommand meteorologicos = new NpgsqlCommand("SELECT * FROM meteorologicohora " +
 				"WHERE fecha BETWEEN '"+fechaInicio+"' AND '"+fechaFinal+"' " +
-				"and mp10 >= 100 ORDER BY fecha ", conexion);
+				"and mp10 >= "+mp10Minimo+" ORDER BY fecha ", conexion);
 
 			NpgsqlDataReader leido = meteorologicos.ExecuteReader();
 
@@ -219,12 +219,12 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 			}
 			return matriz;
 			*/
-			double[,] matriz = new double[entrada[0].Length, entrada.Count];
+			double[,] matriz = new double[entrada.Count, entrada[0].Length];
 			for (int x = 0; x < entrada.Count; x++) {
 				double[] fila = entrada [x];
 				for(int y=0; y<fila.Length; y++)
 				{
-					matriz [y, x] = fila [y];
+					matriz [x, y] = fila [y];
 				}
 			}
 			return matriz;

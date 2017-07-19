@@ -123,25 +123,7 @@ namespace RedesNeuronalesArtificiales.RNA
 					neuronaGanadora = y;
 					mp10Normalizado = matrizPesos [7, y];
 				}
-			}/*
-			vecindad = calcularVecindad (neuronaGanadora);
-
-			for(int x=0; x<vecindad.Length; x++)
-			{
-				if (x == 0) {
-					mp10Normalizado += matrizPesos [7, vecindad [x]];
-				} else if (x <= 4) {
-					mp10Normalizado += matrizPesos [7, vecindad [x]] / 2;
-				} else if (x <= 12) {
-					mp10Normalizado += matrizPesos [7, vecindad [x]] / 3;
-				} else if (x <= 24) {
-					mp10Normalizado += matrizPesos [7, vecindad [x]] / 4;
-				} else if (x <= 40) {
-					mp10Normalizado += matrizPesos [7, vecindad [x]] / 5;
-				}
 			}
-			mp10Normalizado = mp10Normalizado / vecindad.Length;
-*/
 			return new int[] {neuronaGanadora, (int)(mp10Normalizado * 800)};
 		}
 
@@ -155,7 +137,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfa >= 0) {
-				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Limite Alfa actual: " + alfa);
+				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Limite, Alfa actual: " + alfa);
 
 				//Se recorre la tabla de datos
 				for (int z = 0; z < datos.Count; z++) {
@@ -327,13 +309,13 @@ namespace RedesNeuronalesArtificiales.RNA
 			return matriz[nuevaX, nuevaY];
 		}
 
-		public List<double[]> obtenerPesosNeuronas(Hashtable neuronas)
+		public List<double[]> obtenerPesosNeuronas(HashSet<int> neuronas)
 		{
 			List<double[]> neuronasCentrales = new List<double[]> ();
 			int contadorEncontrado = 0;
 			for (int x = 0; x < numeroNeuronas && contadorEncontrado < neuronas.Count; x++) {
 				double[] neuronaActual = new double[numeroVariablesEntradas];
-				if (neuronas [x] != null) {
+				if (neuronas.Contains(x)) {
 					for(int y=0; y<numeroVariablesEntradas; y++)
 					{
 						neuronaActual[y] = matrizPesos[y,x];
