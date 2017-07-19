@@ -143,7 +143,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				filaActual [4] = normalizar ((Int16)leido [2],0,360);//direccion_viento
 				filaActual [5] = normalizar ((double)leido [3],-10,55);//temperatura
 				filaActual [6] = normalizar ((Int16)leido [4],0,100);//humedad_relativa
-				filaActual [7] = normalizar ((Int32)leido [5],0,1400);//mp10
+				filaActual [7] = normalizar ((Int32)leido [5],0,800);//mp10
 				filaActual [8] = normalizar ((Int32)leido [6],0,1700);//radiacion_solar
 				filaActual [9] = normalizar ((Int32)leido [7],440,600);//presion_atmosferica
 				filaActual [10] = normalizar ((double)leido [9],0,47);//precipitaciondia1

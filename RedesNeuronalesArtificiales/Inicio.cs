@@ -34,7 +34,7 @@ namespace RedesNeuronalesArtificiales
 
 			//Redes Som Entrenando
 
-			DateTime inicio = new DateTime(2013,08,08,22,00,00);
+			DateTime inicio = new DateTime(2010,01,01,00,00,00);
 			DateTime fin = new DateTime(2016,12,31,23,59,59);
 
 			DateTime inicioPrueba = new DateTime(2017,01,01,00,00,00);
@@ -43,7 +43,7 @@ namespace RedesNeuronalesArtificiales
 			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin);
 			List<double[]> datosPruebas = Conexion.datosMeteorologicos (inicioPrueba, finPrueba);
 
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,1600, 40);
+			Som redNeuronal = new Som (datosMeteorologicos[0].Length,2500, 50, 0.05, 0.004);
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
 
@@ -55,7 +55,7 @@ namespace RedesNeuronalesArtificiales
 			archivo.imprimir (redNeuronal.obtenerMP10HTML());
 			archivo.cerrar ();
 
-			redNeuronal.entrenar (200);
+			redNeuronal.entrenar (500);
 
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
@@ -79,22 +79,33 @@ namespace RedesNeuronalesArtificiales
 */
 
 			//Guarda Archivo
-			Guardar.Serializar (redNeuronal, "Red Som Final.mp10");
+			//Guardar.Serializar (redNeuronal, "Red Som Final.mp10");
             //Lee Archivo
-			//Som redNeuronalLeida = Guardar.Deserializar("Red Som Completa.mp10");
+			//Som redNeuronal = Guardar.Deserializar("Red Som Final.mp10");
 			//Console.WriteLine (redNeuronalLeida);
 			tiempoEjecucion.Stop();
 			Console.WriteLine("Tiempo al entrenar la red: " + tiempoEjecucion.Elapsed.ToString());
 
-
+			int error = 0;
+			int errorMayor = 0;
+			int errorMenor = 0;
 			for(int x=0; x<datosPruebas.Count; x++)
 			{
 				double[] fila = datosPruebas [x];
-				double mp10Real = fila [7];
+				double mp10Real = fila [7]*800;
 				fila [7] = -1;
 				int[] resultado = redNeuronal.calcularResultados (fila);
-				Console.WriteLine ("Neurona Ganadora: " + resultado[0] + " MP10: " + resultado[1] + " MP10 real: " + mp10Real + " Alerta: " + calcularAlerta(resultado[1]) + "Alerta Real: " + calcularAlerta(mp10Real));
+				//Console.WriteLine ("Neurona Ganadora: " + resultado[0] + " MP10: " + resultado[1] + " MP10 real: " + (mp10Real) + " Alerta: " + calcularAlerta(resultado[1]) + " Alerta Real: " + calcularAlerta(mp10Real));
+				if (calcularAlerta (resultado [1]) != calcularAlerta (mp10Real))
+					error++;
+				if (Math.Abs (calcularAlerta (resultado [1]) - calcularAlerta (mp10Real)) > 1)
+					error++;
+				if (calcularAlerta (resultado [1]) < calcularAlerta (mp10Real))
+					errorMenor++;
 			}
+			Console.WriteLine ("Porcentaje de error: " + ((error*100)/datosPruebas.Count) + "%");
+			Console.WriteLine ("Porcentaje de error mayor a 1 Alerta: " + ((errorMayor*100)/datosPruebas.Count) + "%");
+			Console.WriteLine ("Porcentaje de error menor de la alerta real: " + ((errorMenor*100)/error) + "%");
         }
 
 		public static int calcularAlerta(double mp10)
