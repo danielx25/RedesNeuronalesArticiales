@@ -34,10 +34,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.diasPrediccion = new System.Windows.Forms.TabControl();
+            this.dia_n = new System.Windows.Forms.TabPage();
+            this.datosEntrada = new System.Windows.Forms.TabControl();
+            this.dmeteorologico = new System.Windows.Forms.TabPage();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dmitigacion = new System.Windows.Forms.TabPage();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.textBox27 = new System.Windows.Forms.TextBox();
@@ -95,23 +95,23 @@
             this.label27 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.ddetencionChancado = new System.Windows.Forms.TabPage();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.ddetencionPalas = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label34 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl2.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabControl3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
+            this.diasPrediccion.SuspendLayout();
+            this.dia_n.SuspendLayout();
+            this.datosEntrada.SuspendLayout();
+            this.dmeteorologico.SuspendLayout();
+            this.dmitigacion.SuspendLayout();
+            this.ddetencionChancado.SuspendLayout();
+            this.ddetencionPalas.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -131,7 +131,7 @@
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.tabControl2);
+            this.tabPage1.Controls.Add(this.diasPrediccion);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -182,87 +182,87 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tabControl2
+            // diasPrediccion
             // 
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Location = new System.Drawing.Point(9, 48);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1147, 593);
-            this.tabControl2.TabIndex = 0;
+            this.diasPrediccion.Controls.Add(this.dia_n);
+            this.diasPrediccion.Location = new System.Drawing.Point(9, 48);
+            this.diasPrediccion.Name = "diasPrediccion";
+            this.diasPrediccion.SelectedIndex = 0;
+            this.diasPrediccion.Size = new System.Drawing.Size(1147, 593);
+            this.diasPrediccion.TabIndex = 0;
             // 
-            // tabPage5
+            // dia_n
             // 
-            this.tabPage5.Controls.Add(this.tabControl3);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1139, 564);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "Dia 1";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.dia_n.Controls.Add(this.datosEntrada);
+            this.dia_n.Location = new System.Drawing.Point(4, 25);
+            this.dia_n.Name = "dia_n";
+            this.dia_n.Padding = new System.Windows.Forms.Padding(3);
+            this.dia_n.Size = new System.Drawing.Size(1139, 564);
+            this.dia_n.TabIndex = 1;
+            this.dia_n.Text = "Dia 1";
+            this.dia_n.UseVisualStyleBackColor = true;
             // 
-            // tabControl3
+            // datosEntrada
             // 
-            this.tabControl3.Controls.Add(this.tabPage4);
-            this.tabControl3.Controls.Add(this.tabPage6);
-            this.tabControl3.Controls.Add(this.tabPage7);
-            this.tabControl3.Controls.Add(this.tabPage8);
-            this.tabControl3.Location = new System.Drawing.Point(6, 6);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1127, 552);
-            this.tabControl3.TabIndex = 0;
+            this.datosEntrada.Controls.Add(this.dmeteorologico);
+            this.datosEntrada.Controls.Add(this.dmitigacion);
+            this.datosEntrada.Controls.Add(this.ddetencionChancado);
+            this.datosEntrada.Controls.Add(this.ddetencionPalas);
+            this.datosEntrada.Location = new System.Drawing.Point(6, 6);
+            this.datosEntrada.Name = "datosEntrada";
+            this.datosEntrada.SelectedIndex = 0;
+            this.datosEntrada.Size = new System.Drawing.Size(1127, 552);
+            this.datosEntrada.TabIndex = 0;
             // 
-            // tabPage4
+            // dmeteorologico
             // 
-            this.tabPage4.Controls.Add(this.label16);
-            this.tabPage4.Controls.Add(this.label18);
-            this.tabPage4.Controls.Add(this.label19);
-            this.tabPage4.Controls.Add(this.label20);
-            this.tabPage4.Controls.Add(this.label21);
-            this.tabPage4.Controls.Add(this.textBox12);
-            this.tabPage4.Controls.Add(this.textBox14);
-            this.tabPage4.Controls.Add(this.textBox15);
-            this.tabPage4.Controls.Add(this.textBox16);
-            this.tabPage4.Controls.Add(this.textBox17);
-            this.tabPage4.Controls.Add(this.textBox18);
-            this.tabPage4.Controls.Add(this.label23);
-            this.tabPage4.Controls.Add(this.label22);
-            this.tabPage4.Controls.Add(this.textBox13);
-            this.tabPage4.Controls.Add(this.textBox10);
-            this.tabPage4.Controls.Add(this.textBox11);
-            this.tabPage4.Controls.Add(this.textBox9);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.label17);
-            this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Controls.Add(this.textBox7);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.textBox6);
-            this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Controls.Add(this.textBox5);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.textBox1);
-            this.tabPage4.Controls.Add(this.comboBox2);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.label4);
-            this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1119, 523);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "Meteorologico";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.dmeteorologico.Controls.Add(this.label16);
+            this.dmeteorologico.Controls.Add(this.label18);
+            this.dmeteorologico.Controls.Add(this.label19);
+            this.dmeteorologico.Controls.Add(this.label20);
+            this.dmeteorologico.Controls.Add(this.label21);
+            this.dmeteorologico.Controls.Add(this.textBox12);
+            this.dmeteorologico.Controls.Add(this.textBox14);
+            this.dmeteorologico.Controls.Add(this.textBox15);
+            this.dmeteorologico.Controls.Add(this.textBox16);
+            this.dmeteorologico.Controls.Add(this.textBox17);
+            this.dmeteorologico.Controls.Add(this.textBox18);
+            this.dmeteorologico.Controls.Add(this.label23);
+            this.dmeteorologico.Controls.Add(this.label22);
+            this.dmeteorologico.Controls.Add(this.textBox13);
+            this.dmeteorologico.Controls.Add(this.textBox10);
+            this.dmeteorologico.Controls.Add(this.textBox11);
+            this.dmeteorologico.Controls.Add(this.textBox9);
+            this.dmeteorologico.Controls.Add(this.textBox8);
+            this.dmeteorologico.Controls.Add(this.label17);
+            this.dmeteorologico.Controls.Add(this.label14);
+            this.dmeteorologico.Controls.Add(this.label15);
+            this.dmeteorologico.Controls.Add(this.label13);
+            this.dmeteorologico.Controls.Add(this.label12);
+            this.dmeteorologico.Controls.Add(this.label11);
+            this.dmeteorologico.Controls.Add(this.textBox7);
+            this.dmeteorologico.Controls.Add(this.label10);
+            this.dmeteorologico.Controls.Add(this.textBox6);
+            this.dmeteorologico.Controls.Add(this.label9);
+            this.dmeteorologico.Controls.Add(this.textBox5);
+            this.dmeteorologico.Controls.Add(this.label8);
+            this.dmeteorologico.Controls.Add(this.textBox3);
+            this.dmeteorologico.Controls.Add(this.textBox4);
+            this.dmeteorologico.Controls.Add(this.label7);
+            this.dmeteorologico.Controls.Add(this.textBox2);
+            this.dmeteorologico.Controls.Add(this.textBox1);
+            this.dmeteorologico.Controls.Add(this.comboBox2);
+            this.dmeteorologico.Controls.Add(this.label6);
+            this.dmeteorologico.Controls.Add(this.label5);
+            this.dmeteorologico.Controls.Add(this.label4);
+            this.dmeteorologico.Controls.Add(this.label3);
+            this.dmeteorologico.Location = new System.Drawing.Point(4, 25);
+            this.dmeteorologico.Name = "dmeteorologico";
+            this.dmeteorologico.Padding = new System.Windows.Forms.Padding(3);
+            this.dmeteorologico.Size = new System.Drawing.Size(1119, 523);
+            this.dmeteorologico.TabIndex = 0;
+            this.dmeteorologico.Text = "Meteorologico";
+            this.dmeteorologico.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
@@ -588,31 +588,31 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Mes";
             // 
-            // tabPage6
+            // dmitigacion
             // 
-            this.tabPage6.Controls.Add(this.textBox28);
-            this.tabPage6.Controls.Add(this.label33);
-            this.tabPage6.Controls.Add(this.textBox27);
-            this.tabPage6.Controls.Add(this.label32);
-            this.tabPage6.Controls.Add(this.textBox23);
-            this.tabPage6.Controls.Add(this.label28);
-            this.tabPage6.Controls.Add(this.textBox24);
-            this.tabPage6.Controls.Add(this.label29);
-            this.tabPage6.Controls.Add(this.textBox25);
-            this.tabPage6.Controls.Add(this.label30);
-            this.tabPage6.Controls.Add(this.textBox26);
-            this.tabPage6.Controls.Add(this.label31);
-            this.tabPage6.Controls.Add(this.textBox22);
-            this.tabPage6.Controls.Add(this.label27);
-            this.tabPage6.Controls.Add(this.textBox19);
-            this.tabPage6.Controls.Add(this.label24);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1119, 523);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Mitigación";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.dmitigacion.Controls.Add(this.textBox28);
+            this.dmitigacion.Controls.Add(this.label33);
+            this.dmitigacion.Controls.Add(this.textBox27);
+            this.dmitigacion.Controls.Add(this.label32);
+            this.dmitigacion.Controls.Add(this.textBox23);
+            this.dmitigacion.Controls.Add(this.label28);
+            this.dmitigacion.Controls.Add(this.textBox24);
+            this.dmitigacion.Controls.Add(this.label29);
+            this.dmitigacion.Controls.Add(this.textBox25);
+            this.dmitigacion.Controls.Add(this.label30);
+            this.dmitigacion.Controls.Add(this.textBox26);
+            this.dmitigacion.Controls.Add(this.label31);
+            this.dmitigacion.Controls.Add(this.textBox22);
+            this.dmitigacion.Controls.Add(this.label27);
+            this.dmitigacion.Controls.Add(this.textBox19);
+            this.dmitigacion.Controls.Add(this.label24);
+            this.dmitigacion.Location = new System.Drawing.Point(4, 25);
+            this.dmitigacion.Name = "dmitigacion";
+            this.dmitigacion.Padding = new System.Windows.Forms.Padding(3);
+            this.dmitigacion.Size = new System.Drawing.Size(1119, 523);
+            this.dmitigacion.TabIndex = 1;
+            this.dmitigacion.Text = "Mitigación";
+            this.dmitigacion.UseVisualStyleBackColor = true;
             // 
             // textBox28
             // 
@@ -742,27 +742,47 @@
             this.label24.TabIndex = 0;
             this.label24.Text = "Chancado por dia";
             // 
-            // tabPage7
+            // ddetencionChancado
             // 
-            this.tabPage7.Controls.Add(this.checkedListBox2);
-            this.tabPage7.Controls.Add(this.label25);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1119, 523);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "detencion de chancadores";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.ddetencionChancado.Controls.Add(this.checkedListBox2);
+            this.ddetencionChancado.Controls.Add(this.label25);
+            this.ddetencionChancado.Location = new System.Drawing.Point(4, 25);
+            this.ddetencionChancado.Name = "ddetencionChancado";
+            this.ddetencionChancado.Size = new System.Drawing.Size(1119, 523);
+            this.ddetencionChancado.TabIndex = 2;
+            this.ddetencionChancado.Text = "detencion de chancadores";
+            this.ddetencionChancado.UseVisualStyleBackColor = true;
             // 
-            // tabPage8
+            // checkedListBox2
             // 
-            this.tabPage8.Controls.Add(this.checkedListBox1);
-            this.tabPage8.Controls.Add(this.label34);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1119, 523);
-            this.tabPage8.TabIndex = 3;
-            this.tabPage8.Text = "detencion de palas";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "CH-1",
+            "CH-2"});
+            this.checkedListBox2.Location = new System.Drawing.Point(91, 83);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(117, 242);
+            this.checkedListBox2.TabIndex = 5;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(88, 48);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(125, 17);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Equipos detenidos";
+            // 
+            // ddetencionPalas
+            // 
+            this.ddetencionPalas.Controls.Add(this.checkedListBox1);
+            this.ddetencionPalas.Controls.Add(this.label34);
+            this.ddetencionPalas.Location = new System.Drawing.Point(4, 25);
+            this.ddetencionPalas.Name = "ddetencionPalas";
+            this.ddetencionPalas.Size = new System.Drawing.Size(1119, 523);
+            this.ddetencionPalas.TabIndex = 3;
+            this.ddetencionPalas.Text = "detencion de palas";
+            this.ddetencionPalas.UseVisualStyleBackColor = true;
             // 
             // checkedListBox1
             // 
@@ -810,26 +830,6 @@
             this.tabPage3.Text = "Reportes de prediccion MP10";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox2
-            // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "CH-1",
-            "CH-2"});
-            this.checkedListBox2.Location = new System.Drawing.Point(91, 83);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(117, 242);
-            this.checkedListBox2.TabIndex = 5;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(88, 48);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(125, 17);
-            this.label25.TabIndex = 4;
-            this.label25.Text = "Equipos detenidos";
-            // 
             // Ventana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -841,17 +841,17 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
+            this.diasPrediccion.ResumeLayout(false);
+            this.dia_n.ResumeLayout(false);
+            this.datosEntrada.ResumeLayout(false);
+            this.dmeteorologico.ResumeLayout(false);
+            this.dmeteorologico.PerformLayout();
+            this.dmitigacion.ResumeLayout(false);
+            this.dmitigacion.PerformLayout();
+            this.ddetencionChancado.ResumeLayout(false);
+            this.ddetencionChancado.PerformLayout();
+            this.ddetencionPalas.ResumeLayout(false);
+            this.ddetencionPalas.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -864,15 +864,15 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl2;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabControl diasPrediccion;
+        private System.Windows.Forms.TabPage dia_n;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabControl tabControl3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabControl datosEntrada;
+        private System.Windows.Forms.TabPage dmeteorologico;
+        private System.Windows.Forms.TabPage dmitigacion;
+        private System.Windows.Forms.TabPage ddetencionChancado;
+        private System.Windows.Forms.TabPage ddetencionPalas;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox2;
