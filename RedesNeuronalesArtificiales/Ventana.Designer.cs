@@ -30,58 +30,59 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -90,19 +91,18 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -110,6 +110,7 @@
             this.tabControl3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +139,29 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ingreso de datos";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(258, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Prediccion para: ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1 Dia",
+            "2 Dias",
+            "3 Dias",
+            "4 Dias",
+            "5 Dias"});
+            this.comboBox1.Location = new System.Drawing.Point(379, 14);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 3;
             // 
             // label1
             // 
@@ -177,48 +201,6 @@
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Dia 1";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1162, 647);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Prediccion del MP10";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1162, 647);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Reportes de prediccion MP10";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1 Dia",
-            "2 Dias",
-            "3 Dias",
-            "4 Dias",
-            "5 Dias"});
-            this.comboBox1.Location = new System.Drawing.Point(379, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(258, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Prediccion para: ";
             // 
             // tabControl3
             // 
@@ -282,297 +264,50 @@
             this.tabPage4.Text = "Meteorologico";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.textBox28);
-            this.tabPage6.Controls.Add(this.label33);
-            this.tabPage6.Controls.Add(this.textBox27);
-            this.tabPage6.Controls.Add(this.label32);
-            this.tabPage6.Controls.Add(this.textBox23);
-            this.tabPage6.Controls.Add(this.label28);
-            this.tabPage6.Controls.Add(this.textBox24);
-            this.tabPage6.Controls.Add(this.label29);
-            this.tabPage6.Controls.Add(this.textBox25);
-            this.tabPage6.Controls.Add(this.label30);
-            this.tabPage6.Controls.Add(this.textBox26);
-            this.tabPage6.Controls.Add(this.label31);
-            this.tabPage6.Controls.Add(this.textBox22);
-            this.tabPage6.Controls.Add(this.label27);
-            this.tabPage6.Controls.Add(this.textBox19);
-            this.tabPage6.Controls.Add(this.label24);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1119, 523);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Mitigación";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1119, 523);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "detencion de chancadores";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.checkedListBox1);
-            this.tabPage8.Controls.Add(this.label35);
-            this.tabPage8.Controls.Add(this.comboBox3);
-            this.tabPage8.Controls.Add(this.label34);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1119, 523);
-            this.tabPage8.TabIndex = 3;
-            this.tabPage8.Text = "detencion de palas";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mes";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "velocidad viento";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(98, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 17);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "direccion Viento";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(98, 163);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 17);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "temperatura";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(238, 46);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(238, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(238, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(98, 199);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 17);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Humedad relativa";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(238, 199);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(238, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(238, 240);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(98, 240);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 17);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Radiacion solar";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(238, 283);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 13;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(98, 283);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 17);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Presion atmosferica";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(238, 328);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 15;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(98, 328);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 17);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Precipitacion";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(458, 42);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(214, 17);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Precipitacion de los utlimo 5 dias";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(458, 78);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 17);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "dia de mañana";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(458, 117);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 17);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "hoy";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(458, 192);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 17);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "2 dias antes";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(458, 153);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 17);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "1 dias antes";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(458, 233);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(85, 17);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "3 dias antes";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(565, 78);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 23;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(565, 117);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 24;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(565, 195);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 26;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(565, 156);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 25;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(565, 233);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 27;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(799, 46);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(212, 17);
-            this.label22.TabIndex = 28;
-            this.label22.Text = "Evaporacion de los utlimo 5 dias";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(238, 371);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 22);
-            this.textBox18.TabIndex = 40;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(98, 371);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(87, 17);
-            this.label23.TabIndex = 39;
-            this.label23.Text = "Evaporacion";
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(798, 236);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 17);
+            this.label16.TabIndex = 55;
+            this.label16.Text = "3 dias antes";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(798, 195);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(85, 17);
+            this.label18.TabIndex = 54;
+            this.label18.Text = "2 dias antes";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(798, 156);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 17);
+            this.label19.TabIndex = 53;
+            this.label19.Text = "1 dias antes";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(798, 120);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(31, 17);
+            this.label20.TabIndex = 52;
+            this.label20.Text = "hoy";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(798, 81);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(102, 17);
+            this.label21.TabIndex = 51;
+            this.label21.Text = "dia de mañana";
             // 
             // textBox12
             // 
@@ -609,37 +344,307 @@
             this.textBox17.Size = new System.Drawing.Size(100, 22);
             this.textBox17.TabIndex = 46;
             // 
-            // label24
+            // textBox18
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(209, 91);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(120, 17);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Chancado por dia";
+            this.textBox18.Location = new System.Drawing.Point(238, 371);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(100, 22);
+            this.textBox18.TabIndex = 40;
             // 
-            // textBox19
+            // label23
             // 
-            this.textBox19.Location = new System.Drawing.Point(377, 91);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 22);
-            this.textBox19.TabIndex = 1;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(98, 371);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(87, 17);
+            this.label23.TabIndex = 39;
+            this.label23.Text = "Evaporacion";
             // 
-            // textBox22
+            // label22
             // 
-            this.textBox22.Location = new System.Drawing.Point(377, 177);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 22);
-            this.textBox22.TabIndex = 5;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(799, 46);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(212, 17);
+            this.label22.TabIndex = 28;
+            this.label22.Text = "Evaporacion de los utlimo 5 dias";
             // 
-            // label27
+            // textBox13
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(209, 177);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(75, 17);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "Movitecdia";
+            this.textBox13.Location = new System.Drawing.Point(565, 233);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 22);
+            this.textBox13.TabIndex = 27;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(565, 195);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 22);
+            this.textBox10.TabIndex = 26;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(565, 156);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 22);
+            this.textBox11.TabIndex = 25;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(565, 117);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(100, 22);
+            this.textBox9.TabIndex = 24;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(565, 78);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(100, 22);
+            this.textBox8.TabIndex = 23;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(458, 233);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(85, 17);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "3 dias antes";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(458, 192);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 17);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "2 dias antes";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(458, 153);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(85, 17);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "1 dias antes";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(458, 117);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(31, 17);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "hoy";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(458, 78);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(102, 17);
+            this.label12.TabIndex = 17;
+            this.label12.Text = "dia de mañana";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(458, 42);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(214, 17);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "Precipitacion de los utlimo 5 dias";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(238, 328);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 22);
+            this.textBox7.TabIndex = 15;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(98, 328);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(89, 17);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Precipitacion";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(238, 283);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 22);
+            this.textBox6.TabIndex = 13;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(98, 283);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(133, 17);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Presion atmosferica";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(238, 240);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(98, 240);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 17);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Radiacion solar";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(238, 199);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 9;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(238, 160);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(98, 199);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 17);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Humedad relativa";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(238, 124);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(238, 85);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 5;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(238, 46);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(98, 163);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 17);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "temperatura";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(98, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "direccion Viento";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(98, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "velocidad viento";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(98, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Mes";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.textBox28);
+            this.tabPage6.Controls.Add(this.label33);
+            this.tabPage6.Controls.Add(this.textBox27);
+            this.tabPage6.Controls.Add(this.label32);
+            this.tabPage6.Controls.Add(this.textBox23);
+            this.tabPage6.Controls.Add(this.label28);
+            this.tabPage6.Controls.Add(this.textBox24);
+            this.tabPage6.Controls.Add(this.label29);
+            this.tabPage6.Controls.Add(this.textBox25);
+            this.tabPage6.Controls.Add(this.label30);
+            this.tabPage6.Controls.Add(this.textBox26);
+            this.tabPage6.Controls.Add(this.label31);
+            this.tabPage6.Controls.Add(this.textBox22);
+            this.tabPage6.Controls.Add(this.label27);
+            this.tabPage6.Controls.Add(this.textBox19);
+            this.tabPage6.Controls.Add(this.label24);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1119, 523);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "Mitigación";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(757, 264);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(100, 22);
+            this.textBox28.TabIndex = 19;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(589, 264);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(78, 17);
+            this.label33.TabIndex = 18;
+            this.label33.Text = "Cachimba2";
+            // 
+            // textBox27
+            // 
+            this.textBox27.Location = new System.Drawing.Point(377, 264);
+            this.textBox27.Name = "textBox27";
+            this.textBox27.Size = new System.Drawing.Size(100, 22);
+            this.textBox27.TabIndex = 17;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(209, 264);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(66, 17);
+            this.label32.TabIndex = 16;
+            this.label32.Text = "Gerencia";
             // 
             // textBox23
             // 
@@ -705,157 +710,125 @@
             this.label31.TabIndex = 8;
             this.label31.Text = "Dasdia";
             // 
-            // textBox27
+            // textBox22
             // 
-            this.textBox27.Location = new System.Drawing.Point(377, 264);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(100, 22);
-            this.textBox27.TabIndex = 17;
+            this.textBox22.Location = new System.Drawing.Point(377, 177);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(100, 22);
+            this.textBox22.TabIndex = 5;
             // 
-            // label32
+            // label27
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(209, 264);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(66, 17);
-            this.label32.TabIndex = 16;
-            this.label32.Text = "Gerencia";
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(209, 177);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(75, 17);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "Movitecdia";
             // 
-            // textBox28
+            // textBox19
             // 
-            this.textBox28.Location = new System.Drawing.Point(757, 264);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 22);
-            this.textBox28.TabIndex = 19;
+            this.textBox19.Location = new System.Drawing.Point(377, 91);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(100, 22);
+            this.textBox19.TabIndex = 1;
             // 
-            // label33
+            // label24
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(589, 264);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(78, 17);
-            this.label33.TabIndex = 18;
-            this.label33.Text = "Cachimba2";
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(209, 91);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(120, 17);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Chancado por dia";
             // 
-            // label34
+            // tabPage7
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(257, 98);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(45, 17);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Lugar";
+            this.tabPage7.Controls.Add(this.checkedListBox2);
+            this.tabPage7.Controls.Add(this.label25);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1119, 523);
+            this.tabPage7.TabIndex = 2;
+            this.tabPage7.Text = "detencion de chancadores";
+            this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // tabPage8
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "lugar",
-            "F6SW",
-            "RELL",
-            "STOC-",
-            "DERR",
-            "STOCK 3080",
-            "F10N",
-            "STOC 3080",
-            "F10E",
-            "F8SE",
-            "STOC",
-            "STOC PORT",
-            "HUAL",
-            "F6NE",
-            "F7NO",
-            "F8NE",
-            "VENT",
-            "F7R1",
-            "F7DW",
-            "F7NE",
-            "STOCK",
-            "CH_3",
-            "F9PD",
-            "F7DE",
-            "F7NW",
-            "PA07",
-            "F10NW"});
-            this.comboBox3.Location = new System.Drawing.Point(356, 98);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(134, 24);
-            this.comboBox3.TabIndex = 1;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(257, 156);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(48, 17);
-            this.label35.TabIndex = 2;
-            this.label35.Text = "Banco";
+            this.tabPage8.Controls.Add(this.checkedListBox1);
+            this.tabPage8.Controls.Add(this.label34);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1119, 523);
+            this.tabPage8.TabIndex = 3;
+            this.tabPage8.Text = "detencion de palas";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "PA-04",
-            "PA-07",
-            "PA-03",
             "PA-01",
-            "CF11",
+            "PA-03",
+            "PA-04",
             "PA-05",
+            "PA-07",
             "CF08",
-            "PA01",
-            "PA05",
             "CF10",
-            "PA04",
-            "PA07"});
-            this.checkedListBox1.Location = new System.Drawing.Point(595, 98);
+            "CF11"});
+            this.checkedListBox1.Location = new System.Drawing.Point(90, 57);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(117, 242);
             this.checkedListBox1.TabIndex = 3;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
             // 
-            // label16
+            // label34
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(798, 236);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(85, 17);
-            this.label16.TabIndex = 55;
-            this.label16.Text = "3 dias antes";
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(87, 22);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(125, 17);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Equipos detenidos";
             // 
-            // label18
+            // tabPage2
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(798, 195);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(85, 17);
-            this.label18.TabIndex = 54;
-            this.label18.Text = "2 dias antes";
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1162, 647);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Prediccion del MP10";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // tabPage3
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(798, 156);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(85, 17);
-            this.label19.TabIndex = 53;
-            this.label19.Text = "1 dias antes";
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1162, 647);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Reportes de prediccion MP10";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label20
+            // checkedListBox2
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(798, 120);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 17);
-            this.label20.TabIndex = 52;
-            this.label20.Text = "hoy";
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "CH-1",
+            "CH-2"});
+            this.checkedListBox2.Location = new System.Drawing.Point(91, 83);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(117, 242);
+            this.checkedListBox2.TabIndex = 5;
             // 
-            // label21
+            // label25
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(798, 81);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(102, 17);
-            this.label21.TabIndex = 51;
-            this.label21.Text = "dia de mañana";
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(88, 48);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(125, 17);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Equipos detenidos";
             // 
             // Ventana
             // 
@@ -875,6 +848,8 @@
             this.tabPage4.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
             this.ResumeLayout(false);
@@ -950,13 +925,13 @@
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.Label label25;
     }
 }
