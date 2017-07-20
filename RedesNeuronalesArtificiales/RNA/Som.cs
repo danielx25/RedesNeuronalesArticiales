@@ -309,22 +309,39 @@ namespace RedesNeuronalesArtificiales.RNA
 			return matriz[nuevaX, nuevaY];
 		}
 
-		public List<double[]> obtenerPesosNeuronas(HashSet<int> neuronas)
+		public double[,] obtenerPesosNeuronas(HashSet<int> neuronas)
 		{
-			List<double[]> neuronasCentrales = new List<double[]> ();
+			List<double[]> neuronasCentrales = new List<double[]>();
 			int contadorEncontrado = 0;
-			for (int x = 0; x < numeroNeuronas && contadorEncontrado < neuronas.Count; x++) {
+			for (int x = 0; x < numeroNeuronas && contadorEncontrado < neuronas.Count; x++)
+			{
 				double[] neuronaActual = new double[numeroVariablesEntradas];
-				if (neuronas.Contains(x)) {
-					for(int y=0; y<numeroVariablesEntradas; y++)
+				if (neuronas.Contains(x))
+				{
+					for (int y = 0; y < numeroVariablesEntradas; y++)
 					{
-						neuronaActual[y] = matrizPesos[y,x];
+						neuronaActual[y] = matrizPesos[y, x];
 					}
-					neuronasCentrales.Add (neuronaActual);
+					neuronasCentrales.Add(neuronaActual);
 					contadorEncontrado++;
 				}
 			}
-			return neuronasCentrales;
+
+			int numGrupo = neuronasCentrales.Count;
+			int numColumna = neuronasCentrales[0].Length;
+			double[,] pesosGrupos = new double[numGrupo, numColumna];
+			for (int fila = 0; fila < numGrupo; fila++)
+			{
+				for (int columna = 0; columna < numColumna; columna++)
+				{
+					pesosGrupos[fila, columna] = neuronasCentrales[fila][columna];
+					System.Console.Write("| " + pesosGrupos[fila, columna]);
+				}
+				System.Console.WriteLine();
+			}
+
+
+			return pesosGrupos;
 		}
 
 		public List<double[]> Datos
