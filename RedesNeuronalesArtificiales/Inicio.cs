@@ -18,12 +18,12 @@ namespace RedesNeuronalesArtificiales
 
         static void Main()
         {
-			/*
+			
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Ventana());
-*/
-            ejemploPrediccionGrupo();
+
+            //ejemploPrediccionGrupo();
             /*
             Stopwatch tiempoEjecucion = new Stopwatch ();
 			tiempoEjecucion.Start ();

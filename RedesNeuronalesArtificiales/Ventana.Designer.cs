@@ -28,7 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.MenuSoft = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -101,9 +124,23 @@
             this.ddetencionPalas = new System.Windows.Forms.TabPage();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.prediccionMP10 = new System.Windows.Forms.TabPage();
+            this.reportes = new System.Windows.Forms.TabPage();
+            this.analisisResultados = new System.Windows.Forms.TabControl();
+            this.nivelConfianza = new System.Windows.Forms.TabPage();
+            this.nivelMp10 = new System.Windows.Forms.TabPage();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.graficoSinAlerta = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.crearGrafico = new System.Windows.Forms.Button();
+            this.graficoAlerta2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graficoAlerta4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graficoAlerta3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graficoAlerta1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.MenuSoft.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.diasPrediccion.SuspendLayout();
             this.dia_n.SuspendLayout();
@@ -112,18 +149,28 @@
             this.dmitigacion.SuspendLayout();
             this.ddetencionChancado.SuspendLayout();
             this.ddetencionPalas.SuspendLayout();
+            this.prediccionMP10.SuspendLayout();
+            this.analisisResultados.SuspendLayout();
+            this.nivelConfianza.SuspendLayout();
+            this.nivelMp10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoSinAlerta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // MenuSoft
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 32);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1170, 676);
-            this.tabControl1.TabIndex = 0;
+            this.MenuSoft.Controls.Add(this.tabPage1);
+            this.MenuSoft.Controls.Add(this.prediccionMP10);
+            this.MenuSoft.Controls.Add(this.reportes);
+            this.MenuSoft.Location = new System.Drawing.Point(12, 32);
+            this.MenuSoft.Name = "MenuSoft";
+            this.MenuSoft.SelectedIndex = 0;
+            this.MenuSoft.Size = new System.Drawing.Size(1170, 676);
+            this.MenuSoft.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -811,34 +858,234 @@
             this.label34.TabIndex = 0;
             this.label34.Text = "Equipos detenidos";
             // 
-            // tabPage2
+            // prediccionMP10
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1162, 647);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Prediccion del MP10";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.prediccionMP10.Controls.Add(this.analisisResultados);
+            this.prediccionMP10.Location = new System.Drawing.Point(4, 25);
+            this.prediccionMP10.Name = "prediccionMP10";
+            this.prediccionMP10.Padding = new System.Windows.Forms.Padding(3);
+            this.prediccionMP10.Size = new System.Drawing.Size(1162, 647);
+            this.prediccionMP10.TabIndex = 1;
+            this.prediccionMP10.Text = "Prediccion del MP10";
+            this.prediccionMP10.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // reportes
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1162, 647);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Reportes de prediccion MP10";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.reportes.Location = new System.Drawing.Point(4, 25);
+            this.reportes.Name = "reportes";
+            this.reportes.Size = new System.Drawing.Size(1162, 647);
+            this.reportes.TabIndex = 2;
+            this.reportes.Text = "Reportes de prediccion MP10";
+            this.reportes.UseVisualStyleBackColor = true;
+            // 
+            // analisisResultados
+            // 
+            this.analisisResultados.Controls.Add(this.nivelConfianza);
+            this.analisisResultados.Controls.Add(this.nivelMp10);
+            this.analisisResultados.Location = new System.Drawing.Point(7, 7);
+            this.analisisResultados.Name = "analisisResultados";
+            this.analisisResultados.SelectedIndex = 0;
+            this.analisisResultados.Size = new System.Drawing.Size(1155, 644);
+            this.analisisResultados.TabIndex = 0;
+            // 
+            // nivelConfianza
+            // 
+            this.nivelConfianza.Controls.Add(this.graficoAlerta3);
+            this.nivelConfianza.Controls.Add(this.graficoAlerta1);
+            this.nivelConfianza.Controls.Add(this.graficoAlerta4);
+            this.nivelConfianza.Controls.Add(this.graficoAlerta2);
+            this.nivelConfianza.Controls.Add(this.crearGrafico);
+            this.nivelConfianza.Controls.Add(this.graficoSinAlerta);
+            this.nivelConfianza.Location = new System.Drawing.Point(4, 25);
+            this.nivelConfianza.Name = "nivelConfianza";
+            this.nivelConfianza.Padding = new System.Windows.Forms.Padding(3);
+            this.nivelConfianza.Size = new System.Drawing.Size(1147, 615);
+            this.nivelConfianza.TabIndex = 0;
+            this.nivelConfianza.Text = "Nivel de confianza ";
+            this.nivelConfianza.UseVisualStyleBackColor = true;
+            // 
+            // nivelMp10
+            // 
+            this.nivelMp10.Controls.Add(this.label36);
+            this.nivelMp10.Controls.Add(this.label37);
+            this.nivelMp10.Controls.Add(this.label35);
+            this.nivelMp10.Controls.Add(this.label26);
+            this.nivelMp10.Controls.Add(this.chart1);
+            this.nivelMp10.Location = new System.Drawing.Point(4, 25);
+            this.nivelMp10.Name = "nivelMp10";
+            this.nivelMp10.Padding = new System.Windows.Forms.Padding(3);
+            this.nivelMp10.Size = new System.Drawing.Size(1147, 615);
+            this.nivelMp10.TabIndex = 1;
+            this.nivelMp10.Text = "Prediccion alerta y nivel Mp10";
+            this.nivelMp10.UseVisualStyleBackColor = true;
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.Silver;
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(121, 62);
+            this.chart1.Name = "chart1";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
+            this.chart1.Size = new System.Drawing.Size(916, 300);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(121, 416);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(106, 17);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Nivel de Mp10: ";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(251, 416);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(16, 17);
+            this.label35.TabIndex = 2;
+            this.label35.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(251, 465);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(68, 17);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "Sin alerta";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(121, 465);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(96, 17);
+            this.label37.TabIndex = 3;
+            this.label37.Text = "Tipo de alerta";
+            // 
+            // graficoSinAlerta
+            // 
+            this.graficoSinAlerta.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea5.Name = "ChartArea1";
+            this.graficoSinAlerta.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.graficoSinAlerta.Legends.Add(legend5);
+            this.graficoSinAlerta.Location = new System.Drawing.Point(6, 6);
+            this.graficoSinAlerta.Name = "graficoSinAlerta";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.graficoSinAlerta.Series.Add(series5);
+            this.graficoSinAlerta.Size = new System.Drawing.Size(557, 193);
+            this.graficoSinAlerta.TabIndex = 0;
+            this.graficoSinAlerta.Text = "Sin alerta";
+            title5.Name = "Sin alerta";
+            this.graficoSinAlerta.Titles.Add(title5);
+            // 
+            // crearGrafico
+            // 
+            this.crearGrafico.Location = new System.Drawing.Point(1042, 563);
+            this.crearGrafico.Name = "crearGrafico";
+            this.crearGrafico.Size = new System.Drawing.Size(75, 23);
+            this.crearGrafico.TabIndex = 1;
+            this.crearGrafico.Text = "crearGrafico";
+            this.crearGrafico.UseVisualStyleBackColor = true;
+            this.crearGrafico.Click += new System.EventHandler(this.crearGrafico_Click);
+            // 
+            // graficoAlerta2
+            // 
+            this.graficoAlerta2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea4.Name = "ChartArea1";
+            this.graficoAlerta2.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.graficoAlerta2.Legends.Add(legend4);
+            this.graficoAlerta2.Location = new System.Drawing.Point(6, 215);
+            this.graficoAlerta2.Name = "graficoAlerta2";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.graficoAlerta2.Series.Add(series4);
+            this.graficoAlerta2.Size = new System.Drawing.Size(557, 193);
+            this.graficoAlerta2.TabIndex = 2;
+            this.graficoAlerta2.Text = "Sin alerta";
+            title4.Name = "Sin alerta";
+            this.graficoAlerta2.Titles.Add(title4);
+            // 
+            // graficoAlerta4
+            // 
+            this.graficoAlerta4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea3.Name = "ChartArea1";
+            this.graficoAlerta4.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.graficoAlerta4.Legends.Add(legend3);
+            this.graficoAlerta4.Location = new System.Drawing.Point(6, 420);
+            this.graficoAlerta4.Name = "graficoAlerta4";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.graficoAlerta4.Series.Add(series3);
+            this.graficoAlerta4.Size = new System.Drawing.Size(557, 193);
+            this.graficoAlerta4.TabIndex = 3;
+            this.graficoAlerta4.Text = "Sin alerta";
+            title3.Name = "Sin alerta";
+            this.graficoAlerta4.Titles.Add(title3);
+            // 
+            // graficoAlerta3
+            // 
+            this.graficoAlerta3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea1.Name = "ChartArea1";
+            this.graficoAlerta3.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.graficoAlerta3.Legends.Add(legend1);
+            this.graficoAlerta3.Location = new System.Drawing.Point(583, 215);
+            this.graficoAlerta3.Name = "graficoAlerta3";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.graficoAlerta3.Series.Add(series1);
+            this.graficoAlerta3.Size = new System.Drawing.Size(557, 193);
+            this.graficoAlerta3.TabIndex = 5;
+            this.graficoAlerta3.Text = "Sin alerta";
+            title1.Name = "Sin alerta";
+            this.graficoAlerta3.Titles.Add(title1);
+            // 
+            // graficoAlerta1
+            // 
+            this.graficoAlerta1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea2.Name = "ChartArea1";
+            this.graficoAlerta1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.graficoAlerta1.Legends.Add(legend2);
+            this.graficoAlerta1.Location = new System.Drawing.Point(583, 6);
+            this.graficoAlerta1.Name = "graficoAlerta1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.graficoAlerta1.Series.Add(series2);
+            this.graficoAlerta1.Size = new System.Drawing.Size(557, 193);
+            this.graficoAlerta1.TabIndex = 4;
+            this.graficoAlerta1.Text = "Sin alerta";
+            title2.Name = "Sin alerta";
+            this.graficoAlerta1.Titles.Add(title2);
             // 
             // Ventana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 720);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.MenuSoft);
             this.Name = "Ventana";
             this.Text = "Ventana";
-            this.tabControl1.ResumeLayout(false);
+            this.MenuSoft.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.diasPrediccion.ResumeLayout(false);
@@ -852,16 +1099,27 @@
             this.ddetencionChancado.PerformLayout();
             this.ddetencionPalas.ResumeLayout(false);
             this.ddetencionPalas.PerformLayout();
+            this.prediccionMP10.ResumeLayout(false);
+            this.analisisResultados.ResumeLayout(false);
+            this.nivelConfianza.ResumeLayout(false);
+            this.nivelMp10.ResumeLayout(false);
+            this.nivelMp10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoSinAlerta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl MenuSoft;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage prediccionMP10;
+        private System.Windows.Forms.TabPage reportes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl diasPrediccion;
@@ -933,5 +1191,19 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TabControl analisisResultados;
+        private System.Windows.Forms.TabPage nivelConfianza;
+        private System.Windows.Forms.TabPage nivelMp10;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button crearGrafico;
+        public System.Windows.Forms.DataVisualization.Charting.Chart graficoSinAlerta;
+        public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta3;
+        public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta1;
+        public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta4;
+        public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta2;
     }
 }
