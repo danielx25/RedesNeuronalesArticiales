@@ -13,7 +13,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
         private int numeroClases;
         private double[,] tablaDistancias;
 
-        private Grupo[,] gruposxclases;
+        public Grupo[,] gruposxclases;
 
         public ConstruccionConjuntos(int numeroGrupos, int numeroClases)
         {
@@ -153,7 +153,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
          */
 
 
-        private double funcion_gaussiana(double x, double media, double desviasion, double pertenencia)
+        public double funcion_gaussiana(double x, double media, double desviasion, double pertenencia)
         {
             return pertenencia * Math.Exp(-Math.Pow(x - media, 2) / (2 * Math.Pow(desviasion, 2)));
         }
