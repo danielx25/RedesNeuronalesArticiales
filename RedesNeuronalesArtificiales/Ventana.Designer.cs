@@ -30,27 +30,22 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MenuSoft = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,80 +61,87 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.datoEvapo3 = new System.Windows.Forms.TextBox();
+            this.datoEvapo2 = new System.Windows.Forms.TextBox();
+            this.datoEvapo1 = new System.Windows.Forms.TextBox();
+            this.datoEvapohoy = new System.Windows.Forms.TextBox();
+            this.datoEvapomañana = new System.Windows.Forms.TextBox();
+            this.datoEvapora = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.datoPreci3 = new System.Windows.Forms.TextBox();
+            this.datoPreci2 = new System.Windows.Forms.TextBox();
+            this.datoPreci1 = new System.Windows.Forms.TextBox();
+            this.datoPrecihoy = new System.Windows.Forms.TextBox();
+            this.datoPreciMañana = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.datoPrecipita = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.datoPresion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.datoRadiaSolar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.datoHumedad = new System.Windows.Forms.TextBox();
+            this.datoTemp = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.datoDirecViento = new System.Windows.Forms.TextBox();
+            this.datoVeloViento = new System.Windows.Forms.TextBox();
+            this.datoMes = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dmitigacion = new System.Windows.Forms.TabPage();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.datosCachimba2 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.datoGerencia = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.datosCachimba1 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.datosCnorte = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.datosCmovil = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.datosDasdia = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.datoMovitecDia = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.datoChancadoDia = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.ddetencionChancado = new System.Windows.Forms.TabPage();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.datosDetencionChancadores = new System.Windows.Forms.CheckedListBox();
             this.label25 = new System.Windows.Forms.Label();
             this.ddetencionPalas = new System.Windows.Forms.TabPage();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.datosDetencionPalas = new System.Windows.Forms.CheckedListBox();
             this.label34 = new System.Windows.Forms.Label();
             this.prediccionMP10 = new System.Windows.Forms.TabPage();
             this.reportes = new System.Windows.Forms.TabPage();
             this.analisisResultados = new System.Windows.Forms.TabControl();
             this.nivelConfianza = new System.Windows.Forms.TabPage();
             this.nivelMp10 = new System.Windows.Forms.TabPage();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graficoMP10 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label26 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
+            this.textoNivelMp10 = new System.Windows.Forms.Label();
+            this.textoTipoAlerta = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.graficoSinAlerta = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.crearGrafico = new System.Windows.Forms.Button();
-            this.graficoAlerta2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.graficoAlerta4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.graficoAlerta3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tiposAlertas = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.graficoSinAlerta = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.graficoAlerta1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.graficoAlerta2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graficoAlerta3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.graficoAlerta4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.botonGenerarP = new System.Windows.Forms.Button();
             this.MenuSoft.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.diasPrediccion.SuspendLayout();
@@ -153,12 +155,18 @@
             this.analisisResultados.SuspendLayout();
             this.nivelConfianza.SuspendLayout();
             this.nivelMp10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoMP10)).BeginInit();
+            this.tiposAlertas.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graficoSinAlerta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta1)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta4)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuSoft
@@ -174,6 +182,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.botonGenerarP);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label1);
@@ -268,37 +277,37 @@
             this.dmeteorologico.Controls.Add(this.label19);
             this.dmeteorologico.Controls.Add(this.label20);
             this.dmeteorologico.Controls.Add(this.label21);
-            this.dmeteorologico.Controls.Add(this.textBox12);
-            this.dmeteorologico.Controls.Add(this.textBox14);
-            this.dmeteorologico.Controls.Add(this.textBox15);
-            this.dmeteorologico.Controls.Add(this.textBox16);
-            this.dmeteorologico.Controls.Add(this.textBox17);
-            this.dmeteorologico.Controls.Add(this.textBox18);
+            this.dmeteorologico.Controls.Add(this.datoEvapo3);
+            this.dmeteorologico.Controls.Add(this.datoEvapo2);
+            this.dmeteorologico.Controls.Add(this.datoEvapo1);
+            this.dmeteorologico.Controls.Add(this.datoEvapohoy);
+            this.dmeteorologico.Controls.Add(this.datoEvapomañana);
+            this.dmeteorologico.Controls.Add(this.datoEvapora);
             this.dmeteorologico.Controls.Add(this.label23);
             this.dmeteorologico.Controls.Add(this.label22);
-            this.dmeteorologico.Controls.Add(this.textBox13);
-            this.dmeteorologico.Controls.Add(this.textBox10);
-            this.dmeteorologico.Controls.Add(this.textBox11);
-            this.dmeteorologico.Controls.Add(this.textBox9);
-            this.dmeteorologico.Controls.Add(this.textBox8);
+            this.dmeteorologico.Controls.Add(this.datoPreci3);
+            this.dmeteorologico.Controls.Add(this.datoPreci2);
+            this.dmeteorologico.Controls.Add(this.datoPreci1);
+            this.dmeteorologico.Controls.Add(this.datoPrecihoy);
+            this.dmeteorologico.Controls.Add(this.datoPreciMañana);
             this.dmeteorologico.Controls.Add(this.label17);
             this.dmeteorologico.Controls.Add(this.label14);
             this.dmeteorologico.Controls.Add(this.label15);
             this.dmeteorologico.Controls.Add(this.label13);
             this.dmeteorologico.Controls.Add(this.label12);
             this.dmeteorologico.Controls.Add(this.label11);
-            this.dmeteorologico.Controls.Add(this.textBox7);
+            this.dmeteorologico.Controls.Add(this.datoPrecipita);
             this.dmeteorologico.Controls.Add(this.label10);
-            this.dmeteorologico.Controls.Add(this.textBox6);
+            this.dmeteorologico.Controls.Add(this.datoPresion);
             this.dmeteorologico.Controls.Add(this.label9);
-            this.dmeteorologico.Controls.Add(this.textBox5);
+            this.dmeteorologico.Controls.Add(this.datoRadiaSolar);
             this.dmeteorologico.Controls.Add(this.label8);
-            this.dmeteorologico.Controls.Add(this.textBox3);
-            this.dmeteorologico.Controls.Add(this.textBox4);
+            this.dmeteorologico.Controls.Add(this.datoHumedad);
+            this.dmeteorologico.Controls.Add(this.datoTemp);
             this.dmeteorologico.Controls.Add(this.label7);
-            this.dmeteorologico.Controls.Add(this.textBox2);
-            this.dmeteorologico.Controls.Add(this.textBox1);
-            this.dmeteorologico.Controls.Add(this.comboBox2);
+            this.dmeteorologico.Controls.Add(this.datoDirecViento);
+            this.dmeteorologico.Controls.Add(this.datoVeloViento);
+            this.dmeteorologico.Controls.Add(this.datoMes);
             this.dmeteorologico.Controls.Add(this.label6);
             this.dmeteorologico.Controls.Add(this.label5);
             this.dmeteorologico.Controls.Add(this.label4);
@@ -356,47 +365,47 @@
             this.label21.TabIndex = 51;
             this.label21.Text = "dia de mañana";
             // 
-            // textBox12
+            // datoEvapo3
             // 
-            this.textBox12.Location = new System.Drawing.Point(906, 233);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 50;
+            this.datoEvapo3.Location = new System.Drawing.Point(906, 233);
+            this.datoEvapo3.Name = "datoEvapo3";
+            this.datoEvapo3.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo3.TabIndex = 50;
             // 
-            // textBox14
+            // datoEvapo2
             // 
-            this.textBox14.Location = new System.Drawing.Point(906, 195);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 22);
-            this.textBox14.TabIndex = 49;
+            this.datoEvapo2.Location = new System.Drawing.Point(906, 195);
+            this.datoEvapo2.Name = "datoEvapo2";
+            this.datoEvapo2.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo2.TabIndex = 49;
             // 
-            // textBox15
+            // datoEvapo1
             // 
-            this.textBox15.Location = new System.Drawing.Point(906, 156);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 22);
-            this.textBox15.TabIndex = 48;
+            this.datoEvapo1.Location = new System.Drawing.Point(906, 156);
+            this.datoEvapo1.Name = "datoEvapo1";
+            this.datoEvapo1.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo1.TabIndex = 48;
             // 
-            // textBox16
+            // datoEvapohoy
             // 
-            this.textBox16.Location = new System.Drawing.Point(906, 117);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 22);
-            this.textBox16.TabIndex = 47;
+            this.datoEvapohoy.Location = new System.Drawing.Point(906, 117);
+            this.datoEvapohoy.Name = "datoEvapohoy";
+            this.datoEvapohoy.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapohoy.TabIndex = 47;
             // 
-            // textBox17
+            // datoEvapomañana
             // 
-            this.textBox17.Location = new System.Drawing.Point(906, 78);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 22);
-            this.textBox17.TabIndex = 46;
+            this.datoEvapomañana.Location = new System.Drawing.Point(906, 78);
+            this.datoEvapomañana.Name = "datoEvapomañana";
+            this.datoEvapomañana.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapomañana.TabIndex = 46;
             // 
-            // textBox18
+            // datoEvapora
             // 
-            this.textBox18.Location = new System.Drawing.Point(238, 371);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 22);
-            this.textBox18.TabIndex = 40;
+            this.datoEvapora.Location = new System.Drawing.Point(238, 371);
+            this.datoEvapora.Name = "datoEvapora";
+            this.datoEvapora.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapora.TabIndex = 40;
             // 
             // label23
             // 
@@ -416,40 +425,40 @@
             this.label22.TabIndex = 28;
             this.label22.Text = "Evaporacion de los utlimo 5 dias";
             // 
-            // textBox13
+            // datoPreci3
             // 
-            this.textBox13.Location = new System.Drawing.Point(565, 233);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 27;
+            this.datoPreci3.Location = new System.Drawing.Point(565, 233);
+            this.datoPreci3.Name = "datoPreci3";
+            this.datoPreci3.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci3.TabIndex = 27;
             // 
-            // textBox10
+            // datoPreci2
             // 
-            this.textBox10.Location = new System.Drawing.Point(565, 195);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 26;
+            this.datoPreci2.Location = new System.Drawing.Point(565, 195);
+            this.datoPreci2.Name = "datoPreci2";
+            this.datoPreci2.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci2.TabIndex = 26;
             // 
-            // textBox11
+            // datoPreci1
             // 
-            this.textBox11.Location = new System.Drawing.Point(565, 156);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 25;
+            this.datoPreci1.Location = new System.Drawing.Point(565, 156);
+            this.datoPreci1.Name = "datoPreci1";
+            this.datoPreci1.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci1.TabIndex = 25;
             // 
-            // textBox9
+            // datoPrecihoy
             // 
-            this.textBox9.Location = new System.Drawing.Point(565, 117);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 24;
+            this.datoPrecihoy.Location = new System.Drawing.Point(565, 117);
+            this.datoPrecihoy.Name = "datoPrecihoy";
+            this.datoPrecihoy.Size = new System.Drawing.Size(100, 22);
+            this.datoPrecihoy.TabIndex = 24;
             // 
-            // textBox8
+            // datoPreciMañana
             // 
-            this.textBox8.Location = new System.Drawing.Point(565, 78);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 23;
+            this.datoPreciMañana.Location = new System.Drawing.Point(565, 78);
+            this.datoPreciMañana.Name = "datoPreciMañana";
+            this.datoPreciMañana.Size = new System.Drawing.Size(100, 22);
+            this.datoPreciMañana.TabIndex = 23;
             // 
             // label17
             // 
@@ -505,12 +514,12 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Precipitacion de los utlimo 5 dias";
             // 
-            // textBox7
+            // datoPrecipita
             // 
-            this.textBox7.Location = new System.Drawing.Point(238, 328);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 15;
+            this.datoPrecipita.Location = new System.Drawing.Point(238, 328);
+            this.datoPrecipita.Name = "datoPrecipita";
+            this.datoPrecipita.Size = new System.Drawing.Size(100, 22);
+            this.datoPrecipita.TabIndex = 15;
             // 
             // label10
             // 
@@ -521,12 +530,12 @@
             this.label10.TabIndex = 14;
             this.label10.Text = "Precipitacion";
             // 
-            // textBox6
+            // datoPresion
             // 
-            this.textBox6.Location = new System.Drawing.Point(238, 283);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 13;
+            this.datoPresion.Location = new System.Drawing.Point(238, 283);
+            this.datoPresion.Name = "datoPresion";
+            this.datoPresion.Size = new System.Drawing.Size(100, 22);
+            this.datoPresion.TabIndex = 13;
             // 
             // label9
             // 
@@ -537,12 +546,12 @@
             this.label9.TabIndex = 12;
             this.label9.Text = "Presion atmosferica";
             // 
-            // textBox5
+            // datoRadiaSolar
             // 
-            this.textBox5.Location = new System.Drawing.Point(238, 240);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 11;
+            this.datoRadiaSolar.Location = new System.Drawing.Point(238, 240);
+            this.datoRadiaSolar.Name = "datoRadiaSolar";
+            this.datoRadiaSolar.Size = new System.Drawing.Size(100, 22);
+            this.datoRadiaSolar.TabIndex = 11;
             // 
             // label8
             // 
@@ -553,19 +562,19 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Radiacion solar";
             // 
-            // textBox3
+            // datoHumedad
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 199);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 9;
+            this.datoHumedad.Location = new System.Drawing.Point(238, 199);
+            this.datoHumedad.Name = "datoHumedad";
+            this.datoHumedad.Size = new System.Drawing.Size(100, 22);
+            this.datoHumedad.TabIndex = 9;
             // 
-            // textBox4
+            // datoTemp
             // 
-            this.textBox4.Location = new System.Drawing.Point(238, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 8;
+            this.datoTemp.Location = new System.Drawing.Point(238, 160);
+            this.datoTemp.Name = "datoTemp";
+            this.datoTemp.Size = new System.Drawing.Size(100, 22);
+            this.datoTemp.TabIndex = 8;
             // 
             // label7
             // 
@@ -576,27 +585,40 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Humedad relativa";
             // 
-            // textBox2
+            // datoDirecViento
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 124);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 6;
+            this.datoDirecViento.Location = new System.Drawing.Point(238, 124);
+            this.datoDirecViento.Name = "datoDirecViento";
+            this.datoDirecViento.Size = new System.Drawing.Size(100, 22);
+            this.datoDirecViento.TabIndex = 6;
             // 
-            // textBox1
+            // datoVeloViento
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 5;
+            this.datoVeloViento.Location = new System.Drawing.Point(238, 85);
+            this.datoVeloViento.Name = "datoVeloViento";
+            this.datoVeloViento.Size = new System.Drawing.Size(100, 22);
+            this.datoVeloViento.TabIndex = 5;
             // 
-            // comboBox2
+            // datoMes
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(238, 46);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 4;
+            this.datoMes.FormattingEnabled = true;
+            this.datoMes.Items.AddRange(new object[] {
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.datoMes.Location = new System.Drawing.Point(238, 46);
+            this.datoMes.Name = "datoMes";
+            this.datoMes.Size = new System.Drawing.Size(121, 24);
+            this.datoMes.TabIndex = 4;
             // 
             // label6
             // 
@@ -637,21 +659,21 @@
             // 
             // dmitigacion
             // 
-            this.dmitigacion.Controls.Add(this.textBox28);
+            this.dmitigacion.Controls.Add(this.datosCachimba2);
             this.dmitigacion.Controls.Add(this.label33);
-            this.dmitigacion.Controls.Add(this.textBox27);
+            this.dmitigacion.Controls.Add(this.datoGerencia);
             this.dmitigacion.Controls.Add(this.label32);
-            this.dmitigacion.Controls.Add(this.textBox23);
+            this.dmitigacion.Controls.Add(this.datosCachimba1);
             this.dmitigacion.Controls.Add(this.label28);
-            this.dmitigacion.Controls.Add(this.textBox24);
+            this.dmitigacion.Controls.Add(this.datosCnorte);
             this.dmitigacion.Controls.Add(this.label29);
-            this.dmitigacion.Controls.Add(this.textBox25);
+            this.dmitigacion.Controls.Add(this.datosCmovil);
             this.dmitigacion.Controls.Add(this.label30);
-            this.dmitigacion.Controls.Add(this.textBox26);
+            this.dmitigacion.Controls.Add(this.datosDasdia);
             this.dmitigacion.Controls.Add(this.label31);
-            this.dmitigacion.Controls.Add(this.textBox22);
+            this.dmitigacion.Controls.Add(this.datoMovitecDia);
             this.dmitigacion.Controls.Add(this.label27);
-            this.dmitigacion.Controls.Add(this.textBox19);
+            this.dmitigacion.Controls.Add(this.datoChancadoDia);
             this.dmitigacion.Controls.Add(this.label24);
             this.dmitigacion.Location = new System.Drawing.Point(4, 25);
             this.dmitigacion.Name = "dmitigacion";
@@ -661,12 +683,12 @@
             this.dmitigacion.Text = "Mitigación";
             this.dmitigacion.UseVisualStyleBackColor = true;
             // 
-            // textBox28
+            // datosCachimba2
             // 
-            this.textBox28.Location = new System.Drawing.Point(757, 264);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(100, 22);
-            this.textBox28.TabIndex = 19;
+            this.datosCachimba2.Location = new System.Drawing.Point(757, 264);
+            this.datosCachimba2.Name = "datosCachimba2";
+            this.datosCachimba2.Size = new System.Drawing.Size(100, 22);
+            this.datosCachimba2.TabIndex = 19;
             // 
             // label33
             // 
@@ -677,12 +699,12 @@
             this.label33.TabIndex = 18;
             this.label33.Text = "Cachimba2";
             // 
-            // textBox27
+            // datoGerencia
             // 
-            this.textBox27.Location = new System.Drawing.Point(377, 264);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(100, 22);
-            this.textBox27.TabIndex = 17;
+            this.datoGerencia.Location = new System.Drawing.Point(377, 264);
+            this.datoGerencia.Name = "datoGerencia";
+            this.datoGerencia.Size = new System.Drawing.Size(100, 22);
+            this.datoGerencia.TabIndex = 17;
             // 
             // label32
             // 
@@ -693,12 +715,12 @@
             this.label32.TabIndex = 16;
             this.label32.Text = "Gerencia";
             // 
-            // textBox23
+            // datosCachimba1
             // 
-            this.textBox23.Location = new System.Drawing.Point(757, 224);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(100, 22);
-            this.textBox23.TabIndex = 15;
+            this.datosCachimba1.Location = new System.Drawing.Point(757, 224);
+            this.datosCachimba1.Name = "datosCachimba1";
+            this.datosCachimba1.Size = new System.Drawing.Size(100, 22);
+            this.datosCachimba1.TabIndex = 15;
             // 
             // label28
             // 
@@ -709,12 +731,12 @@
             this.label28.TabIndex = 14;
             this.label28.Text = "Cachimba1";
             // 
-            // textBox24
+            // datosCnorte
             // 
-            this.textBox24.Location = new System.Drawing.Point(757, 180);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 22);
-            this.textBox24.TabIndex = 13;
+            this.datosCnorte.Location = new System.Drawing.Point(757, 180);
+            this.datosCnorte.Name = "datosCnorte";
+            this.datosCnorte.Size = new System.Drawing.Size(100, 22);
+            this.datosCnorte.TabIndex = 13;
             // 
             // label29
             // 
@@ -725,12 +747,12 @@
             this.label29.TabIndex = 12;
             this.label29.Text = "Cnorte";
             // 
-            // textBox25
+            // datosCmovil
             // 
-            this.textBox25.Location = new System.Drawing.Point(757, 138);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(100, 22);
-            this.textBox25.TabIndex = 11;
+            this.datosCmovil.Location = new System.Drawing.Point(757, 138);
+            this.datosCmovil.Name = "datosCmovil";
+            this.datosCmovil.Size = new System.Drawing.Size(100, 22);
+            this.datosCmovil.TabIndex = 11;
             // 
             // label30
             // 
@@ -741,12 +763,12 @@
             this.label30.TabIndex = 10;
             this.label30.Text = "Cmovil";
             // 
-            // textBox26
+            // datosDasdia
             // 
-            this.textBox26.Location = new System.Drawing.Point(757, 94);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(100, 22);
-            this.textBox26.TabIndex = 9;
+            this.datosDasdia.Location = new System.Drawing.Point(757, 94);
+            this.datosDasdia.Name = "datosDasdia";
+            this.datosDasdia.Size = new System.Drawing.Size(100, 22);
+            this.datosDasdia.TabIndex = 9;
             // 
             // label31
             // 
@@ -757,12 +779,12 @@
             this.label31.TabIndex = 8;
             this.label31.Text = "Dasdia";
             // 
-            // textBox22
+            // datoMovitecDia
             // 
-            this.textBox22.Location = new System.Drawing.Point(377, 177);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(100, 22);
-            this.textBox22.TabIndex = 5;
+            this.datoMovitecDia.Location = new System.Drawing.Point(377, 177);
+            this.datoMovitecDia.Name = "datoMovitecDia";
+            this.datoMovitecDia.Size = new System.Drawing.Size(100, 22);
+            this.datoMovitecDia.TabIndex = 5;
             // 
             // label27
             // 
@@ -773,12 +795,12 @@
             this.label27.TabIndex = 4;
             this.label27.Text = "Movitecdia";
             // 
-            // textBox19
+            // datoChancadoDia
             // 
-            this.textBox19.Location = new System.Drawing.Point(377, 91);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 22);
-            this.textBox19.TabIndex = 1;
+            this.datoChancadoDia.Location = new System.Drawing.Point(377, 91);
+            this.datoChancadoDia.Name = "datoChancadoDia";
+            this.datoChancadoDia.Size = new System.Drawing.Size(100, 22);
+            this.datoChancadoDia.TabIndex = 1;
             // 
             // label24
             // 
@@ -791,7 +813,7 @@
             // 
             // ddetencionChancado
             // 
-            this.ddetencionChancado.Controls.Add(this.checkedListBox2);
+            this.ddetencionChancado.Controls.Add(this.datosDetencionChancadores);
             this.ddetencionChancado.Controls.Add(this.label25);
             this.ddetencionChancado.Location = new System.Drawing.Point(4, 25);
             this.ddetencionChancado.Name = "ddetencionChancado";
@@ -800,16 +822,16 @@
             this.ddetencionChancado.Text = "detencion de chancadores";
             this.ddetencionChancado.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox2
+            // datosDetencionChancadores
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.datosDetencionChancadores.FormattingEnabled = true;
+            this.datosDetencionChancadores.Items.AddRange(new object[] {
             "CH-1",
             "CH-2"});
-            this.checkedListBox2.Location = new System.Drawing.Point(91, 83);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(117, 242);
-            this.checkedListBox2.TabIndex = 5;
+            this.datosDetencionChancadores.Location = new System.Drawing.Point(91, 83);
+            this.datosDetencionChancadores.Name = "datosDetencionChancadores";
+            this.datosDetencionChancadores.Size = new System.Drawing.Size(117, 242);
+            this.datosDetencionChancadores.TabIndex = 5;
             // 
             // label25
             // 
@@ -822,7 +844,7 @@
             // 
             // ddetencionPalas
             // 
-            this.ddetencionPalas.Controls.Add(this.checkedListBox1);
+            this.ddetencionPalas.Controls.Add(this.datosDetencionPalas);
             this.ddetencionPalas.Controls.Add(this.label34);
             this.ddetencionPalas.Location = new System.Drawing.Point(4, 25);
             this.ddetencionPalas.Name = "ddetencionPalas";
@@ -831,10 +853,10 @@
             this.ddetencionPalas.Text = "detencion de palas";
             this.ddetencionPalas.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox1
+            // datosDetencionPalas
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.datosDetencionPalas.FormattingEnabled = true;
+            this.datosDetencionPalas.Items.AddRange(new object[] {
             "PA-01",
             "PA-03",
             "PA-04",
@@ -843,11 +865,11 @@
             "CF08",
             "CF10",
             "CF11"});
-            this.checkedListBox1.Location = new System.Drawing.Point(90, 57);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(117, 242);
-            this.checkedListBox1.TabIndex = 3;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
+            this.datosDetencionPalas.Location = new System.Drawing.Point(90, 57);
+            this.datosDetencionPalas.Name = "datosDetencionPalas";
+            this.datosDetencionPalas.Size = new System.Drawing.Size(117, 242);
+            this.datosDetencionPalas.TabIndex = 3;
+            this.datosDetencionPalas.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
             // 
             // label34
             // 
@@ -890,12 +912,8 @@
             // 
             // nivelConfianza
             // 
-            this.nivelConfianza.Controls.Add(this.graficoAlerta3);
-            this.nivelConfianza.Controls.Add(this.graficoAlerta1);
-            this.nivelConfianza.Controls.Add(this.graficoAlerta4);
-            this.nivelConfianza.Controls.Add(this.graficoAlerta2);
+            this.nivelConfianza.Controls.Add(this.tiposAlertas);
             this.nivelConfianza.Controls.Add(this.crearGrafico);
-            this.nivelConfianza.Controls.Add(this.graficoSinAlerta);
             this.nivelConfianza.Location = new System.Drawing.Point(4, 25);
             this.nivelConfianza.Name = "nivelConfianza";
             this.nivelConfianza.Padding = new System.Windows.Forms.Padding(3);
@@ -906,11 +924,11 @@
             // 
             // nivelMp10
             // 
-            this.nivelMp10.Controls.Add(this.label36);
+            this.nivelMp10.Controls.Add(this.textoTipoAlerta);
             this.nivelMp10.Controls.Add(this.label37);
-            this.nivelMp10.Controls.Add(this.label35);
+            this.nivelMp10.Controls.Add(this.textoNivelMp10);
             this.nivelMp10.Controls.Add(this.label26);
-            this.nivelMp10.Controls.Add(this.chart1);
+            this.nivelMp10.Controls.Add(this.graficoMP10);
             this.nivelMp10.Location = new System.Drawing.Point(4, 25);
             this.nivelMp10.Name = "nivelMp10";
             this.nivelMp10.Padding = new System.Windows.Forms.Padding(3);
@@ -919,22 +937,22 @@
             this.nivelMp10.Text = "Prediccion alerta y nivel Mp10";
             this.nivelMp10.UseVisualStyleBackColor = true;
             // 
-            // chart1
+            // graficoMP10
             // 
-            this.chart1.BackColor = System.Drawing.Color.Silver;
+            this.graficoMP10.BackColor = System.Drawing.Color.Silver;
             chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
+            this.graficoMP10.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
-            this.chart1.Location = new System.Drawing.Point(121, 62);
-            this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
-            this.chart1.Size = new System.Drawing.Size(916, 300);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.graficoMP10.Legends.Add(legend6);
+            this.graficoMP10.Location = new System.Drawing.Point(121, 62);
+            this.graficoMP10.Name = "graficoMP10";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.graficoMP10.Series.Add(series1);
+            this.graficoMP10.Size = new System.Drawing.Size(916, 300);
+            this.graficoMP10.TabIndex = 0;
+            this.graficoMP10.Text = "chart1";
             // 
             // label26
             // 
@@ -945,23 +963,23 @@
             this.label26.TabIndex = 1;
             this.label26.Text = "Nivel de Mp10: ";
             // 
-            // label35
+            // textoNivelMp10
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(251, 416);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(16, 17);
-            this.label35.TabIndex = 2;
-            this.label35.Text = "0";
+            this.textoNivelMp10.AutoSize = true;
+            this.textoNivelMp10.Location = new System.Drawing.Point(251, 416);
+            this.textoNivelMp10.Name = "textoNivelMp10";
+            this.textoNivelMp10.Size = new System.Drawing.Size(16, 17);
+            this.textoNivelMp10.TabIndex = 2;
+            this.textoNivelMp10.Text = "0";
             // 
-            // label36
+            // textoTipoAlerta
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(251, 465);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(68, 17);
-            this.label36.TabIndex = 4;
-            this.label36.Text = "Sin alerta";
+            this.textoTipoAlerta.AutoSize = true;
+            this.textoTipoAlerta.Location = new System.Drawing.Point(251, 465);
+            this.textoTipoAlerta.Name = "textoTipoAlerta";
+            this.textoTipoAlerta.Size = new System.Drawing.Size(68, 17);
+            this.textoTipoAlerta.TabIndex = 4;
+            this.textoTipoAlerta.Text = "Sin alerta";
             // 
             // label37
             // 
@@ -972,28 +990,9 @@
             this.label37.TabIndex = 3;
             this.label37.Text = "Tipo de alerta";
             // 
-            // graficoSinAlerta
-            // 
-            this.graficoSinAlerta.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea5.Name = "ChartArea1";
-            this.graficoSinAlerta.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.graficoSinAlerta.Legends.Add(legend5);
-            this.graficoSinAlerta.Location = new System.Drawing.Point(6, 6);
-            this.graficoSinAlerta.Name = "graficoSinAlerta";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.graficoSinAlerta.Series.Add(series5);
-            this.graficoSinAlerta.Size = new System.Drawing.Size(557, 193);
-            this.graficoSinAlerta.TabIndex = 0;
-            this.graficoSinAlerta.Text = "Sin alerta";
-            title5.Name = "Sin alerta";
-            this.graficoSinAlerta.Titles.Add(title5);
-            // 
             // crearGrafico
             // 
-            this.crearGrafico.Location = new System.Drawing.Point(1042, 563);
+            this.crearGrafico.Location = new System.Drawing.Point(589, 569);
             this.crearGrafico.Name = "crearGrafico";
             this.crearGrafico.Size = new System.Drawing.Size(75, 23);
             this.crearGrafico.TabIndex = 1;
@@ -1001,62 +1000,55 @@
             this.crearGrafico.UseVisualStyleBackColor = true;
             this.crearGrafico.Click += new System.EventHandler(this.crearGrafico_Click);
             // 
-            // graficoAlerta2
+            // tiposAlertas
             // 
-            this.graficoAlerta2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea4.Name = "ChartArea1";
-            this.graficoAlerta2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.graficoAlerta2.Legends.Add(legend4);
-            this.graficoAlerta2.Location = new System.Drawing.Point(6, 215);
-            this.graficoAlerta2.Name = "graficoAlerta2";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.graficoAlerta2.Series.Add(series4);
-            this.graficoAlerta2.Size = new System.Drawing.Size(557, 193);
-            this.graficoAlerta2.TabIndex = 2;
-            this.graficoAlerta2.Text = "Sin alerta";
-            title4.Name = "Sin alerta";
-            this.graficoAlerta2.Titles.Add(title4);
+            this.tiposAlertas.Controls.Add(this.tabPage2);
+            this.tiposAlertas.Controls.Add(this.tabPage3);
+            this.tiposAlertas.Controls.Add(this.tabPage4);
+            this.tiposAlertas.Controls.Add(this.tabPage5);
+            this.tiposAlertas.Controls.Add(this.tabPage6);
+            this.tiposAlertas.Location = new System.Drawing.Point(6, 6);
+            this.tiposAlertas.Name = "tiposAlertas";
+            this.tiposAlertas.SelectedIndex = 0;
+            this.tiposAlertas.Size = new System.Drawing.Size(1135, 545);
+            this.tiposAlertas.TabIndex = 2;
             // 
-            // graficoAlerta4
+            // tabPage2
             // 
-            this.graficoAlerta4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea3.Name = "ChartArea1";
-            this.graficoAlerta4.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.graficoAlerta4.Legends.Add(legend3);
-            this.graficoAlerta4.Location = new System.Drawing.Point(6, 420);
-            this.graficoAlerta4.Name = "graficoAlerta4";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.graficoAlerta4.Series.Add(series3);
-            this.graficoAlerta4.Size = new System.Drawing.Size(557, 193);
-            this.graficoAlerta4.TabIndex = 3;
-            this.graficoAlerta4.Text = "Sin alerta";
-            title3.Name = "Sin alerta";
-            this.graficoAlerta4.Titles.Add(title3);
+            this.tabPage2.Controls.Add(this.graficoSinAlerta);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1127, 506);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Sin alerta";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // graficoAlerta3
+            // tabPage3
             // 
-            this.graficoAlerta3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.tabPage3.Controls.Add(this.graficoAlerta1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1127, 506);
+            this.tabPage3.TabIndex = 1;
+            this.tabPage3.Text = "Alerta 1";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // graficoSinAlerta
+            // 
+            this.graficoSinAlerta.BackColor = System.Drawing.SystemColors.ActiveBorder;
             chartArea1.Name = "ChartArea1";
-            this.graficoAlerta3.ChartAreas.Add(chartArea1);
+            this.graficoSinAlerta.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.graficoAlerta3.Legends.Add(legend1);
-            this.graficoAlerta3.Location = new System.Drawing.Point(583, 215);
-            this.graficoAlerta3.Name = "graficoAlerta3";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.graficoAlerta3.Series.Add(series1);
-            this.graficoAlerta3.Size = new System.Drawing.Size(557, 193);
-            this.graficoAlerta3.TabIndex = 5;
-            this.graficoAlerta3.Text = "Sin alerta";
+            this.graficoSinAlerta.Legends.Add(legend1);
+            this.graficoSinAlerta.Location = new System.Drawing.Point(6, 6);
+            this.graficoSinAlerta.Name = "graficoSinAlerta";
+            this.graficoSinAlerta.Size = new System.Drawing.Size(1115, 494);
+            this.graficoSinAlerta.TabIndex = 1;
+            this.graficoSinAlerta.Text = "Sin alerta";
             title1.Name = "Sin alerta";
-            this.graficoAlerta3.Titles.Add(title1);
+            this.graficoSinAlerta.Titles.Add(title1);
             // 
             // graficoAlerta1
             // 
@@ -1065,17 +1057,98 @@
             this.graficoAlerta1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.graficoAlerta1.Legends.Add(legend2);
-            this.graficoAlerta1.Location = new System.Drawing.Point(583, 6);
+            this.graficoAlerta1.Location = new System.Drawing.Point(6, 6);
             this.graficoAlerta1.Name = "graficoAlerta1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.graficoAlerta1.Series.Add(series2);
-            this.graficoAlerta1.Size = new System.Drawing.Size(557, 193);
-            this.graficoAlerta1.TabIndex = 4;
+            this.graficoAlerta1.Size = new System.Drawing.Size(1115, 494);
+            this.graficoAlerta1.TabIndex = 2;
             this.graficoAlerta1.Text = "Sin alerta";
             title2.Name = "Sin alerta";
             this.graficoAlerta1.Titles.Add(title2);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.graficoAlerta2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1127, 506);
+            this.tabPage4.TabIndex = 2;
+            this.tabPage4.Text = "Alerta 2";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.graficoAlerta3);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1127, 506);
+            this.tabPage5.TabIndex = 3;
+            this.tabPage5.Text = "Alerta 3";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.graficoAlerta4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1127, 516);
+            this.tabPage6.TabIndex = 4;
+            this.tabPage6.Text = "Alerta 4";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // graficoAlerta2
+            // 
+            this.graficoAlerta2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea3.Name = "ChartArea1";
+            this.graficoAlerta2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.graficoAlerta2.Legends.Add(legend3);
+            this.graficoAlerta2.Location = new System.Drawing.Point(6, 6);
+            this.graficoAlerta2.Name = "graficoAlerta2";
+            this.graficoAlerta2.Size = new System.Drawing.Size(1115, 494);
+            this.graficoAlerta2.TabIndex = 3;
+            this.graficoAlerta2.Text = "Sin alerta";
+            title3.Name = "Sin alerta";
+            this.graficoAlerta2.Titles.Add(title3);
+            // 
+            // graficoAlerta3
+            // 
+            this.graficoAlerta3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea4.Name = "ChartArea1";
+            this.graficoAlerta3.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.graficoAlerta3.Legends.Add(legend4);
+            this.graficoAlerta3.Location = new System.Drawing.Point(6, 6);
+            this.graficoAlerta3.Name = "graficoAlerta3";
+            this.graficoAlerta3.Size = new System.Drawing.Size(1115, 494);
+            this.graficoAlerta3.TabIndex = 4;
+            this.graficoAlerta3.Text = "Sin alerta";
+            title4.Name = "Sin alerta";
+            this.graficoAlerta3.Titles.Add(title4);
+            // 
+            // graficoAlerta4
+            // 
+            this.graficoAlerta4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea5.Name = "ChartArea1";
+            this.graficoAlerta4.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.graficoAlerta4.Legends.Add(legend5);
+            this.graficoAlerta4.Location = new System.Drawing.Point(6, 6);
+            this.graficoAlerta4.Name = "graficoAlerta4";
+            this.graficoAlerta4.Size = new System.Drawing.Size(1115, 494);
+            this.graficoAlerta4.TabIndex = 4;
+            this.graficoAlerta4.Text = "Sin alerta";
+            title5.Name = "Sin alerta";
+            this.graficoAlerta4.Titles.Add(title5);
+            // 
+            // botonGenerarP
+            // 
+            this.botonGenerarP.Location = new System.Drawing.Point(588, 17);
+            this.botonGenerarP.Name = "botonGenerarP";
+            this.botonGenerarP.Size = new System.Drawing.Size(157, 23);
+            this.botonGenerarP.TabIndex = 5;
+            this.botonGenerarP.Text = "Generar Prediccion";
+            this.botonGenerarP.UseVisualStyleBackColor = true;
+            this.botonGenerarP.Click += new System.EventHandler(this.button2_Click);
             // 
             // Ventana
             // 
@@ -1104,12 +1177,18 @@
             this.nivelConfianza.ResumeLayout(false);
             this.nivelMp10.ResumeLayout(false);
             this.nivelMp10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoMP10)).EndInit();
+            this.tiposAlertas.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.graficoSinAlerta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta1)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1131,79 +1210,86 @@
         private System.Windows.Forms.TabPage dmitigacion;
         private System.Windows.Forms.TabPage ddetencionChancado;
         private System.Windows.Forms.TabPage ddetencionPalas;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox datoMes;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox26;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox datosDetencionPalas;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TabControl analisisResultados;
         private System.Windows.Forms.TabPage nivelConfianza;
         private System.Windows.Forms.TabPage nivelMp10;
-        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart graficoMP10;
         private System.Windows.Forms.Button crearGrafico;
+        private System.Windows.Forms.TabControl tiposAlertas;
+        private System.Windows.Forms.TabPage tabPage2;
         public System.Windows.Forms.DataVisualization.Charting.Chart graficoSinAlerta;
-        public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta3;
+        private System.Windows.Forms.TabPage tabPage3;
         public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta1;
-        public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta4;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
         public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta2;
+        public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta3;
+        public System.Windows.Forms.DataVisualization.Charting.Chart graficoAlerta4;
+        private System.Windows.Forms.Button botonGenerarP;
+        public System.Windows.Forms.TextBox datoDirecViento;
+        public System.Windows.Forms.TextBox datoVeloViento;
+        public System.Windows.Forms.TextBox datoPrecipita;
+        public System.Windows.Forms.TextBox datoPresion;
+        public System.Windows.Forms.TextBox datoRadiaSolar;
+        public System.Windows.Forms.TextBox datoHumedad;
+        public System.Windows.Forms.TextBox datoTemp;
+        public System.Windows.Forms.TextBox datoEvapora;
+        public System.Windows.Forms.TextBox datoEvapo3;
+        public System.Windows.Forms.TextBox datoEvapo2;
+        public System.Windows.Forms.TextBox datoEvapo1;
+        public System.Windows.Forms.TextBox datoEvapohoy;
+        public System.Windows.Forms.TextBox datoEvapomañana;
+        public System.Windows.Forms.TextBox datoPreci3;
+        public System.Windows.Forms.TextBox datoPreci2;
+        public System.Windows.Forms.TextBox datoPreci1;
+        public System.Windows.Forms.TextBox datoPrecihoy;
+        public System.Windows.Forms.TextBox datoPreciMañana;
+        public System.Windows.Forms.TextBox datosCachimba2;
+        public System.Windows.Forms.TextBox datoGerencia;
+        public System.Windows.Forms.TextBox datosCachimba1;
+        public System.Windows.Forms.TextBox datosCnorte;
+        public System.Windows.Forms.TextBox datosCmovil;
+        public System.Windows.Forms.TextBox datosDasdia;
+        public System.Windows.Forms.TextBox datoMovitecDia;
+        public System.Windows.Forms.TextBox datoChancadoDia;
+        public System.Windows.Forms.CheckedListBox datosDetencionChancadores;
+        public System.Windows.Forms.Label textoNivelMp10;
+        public System.Windows.Forms.Label textoTipoAlerta;
     }
 }

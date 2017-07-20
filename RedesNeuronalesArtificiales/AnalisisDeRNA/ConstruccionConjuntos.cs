@@ -15,6 +15,10 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
         public Grupo[,] gruposxclases;
 
+
+        public double[] vectorNivelPertenencia;
+        public double[] rangoMP10;
+
         public ConstruccionConjuntos(int numeroGrupos, int numeroClases)
         {
             this.numeroGrupos = numeroGrupos;
@@ -162,7 +166,8 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
         {
             double minMP10 = 0;
             double maxMP10 = 800;
-            double[] vectorNivelPertenencia = new double[801];
+            vectorNivelPertenencia = new double[801];
+            rangoMP10 = new double[801];
             double maxPertenencia = Double.NegativeInfinity;
             double clasePredecir;
             double mp10Predecir = 0;
@@ -172,17 +177,20 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
             double[] vectorEntrada = l.ToArray();
 
-            double sinAlerta = 150 / maxMP10;
-            double alerta1 = 250 / maxMP10;
-            double alerta2 = 350 / maxMP10;
-            double alerta3 = 500 / maxMP10;
+            double sinAlerta = 150 / (double)maxMP10;
+            double alerta1 = 250 / (double)maxMP10;
+            double alerta2 = 350 / (double)maxMP10;
+            double alerta3 = 500 / (double)maxMP10;
 
             int indice_mp10 = vectorEntrada.Length - 1;
             double distanciaMin;
+            double mp10Nor = 0;
             for (int mp10 = 0; mp10 <= 800; mp10++)
             {
-                vectorEntrada[indice_mp10] = mp10 / maxMP10;
-                if (mp10 < sinAlerta)// sin alerta
+                rangoMP10[mp10] = mp10;
+                vectorEntrada[indice_mp10] = mp10 / (double)maxMP10;
+                mp10Nor = mp10 / (double)maxMP10;
+                if (mp10Nor < sinAlerta)// sin alerta
                 {
                     distanciaMin = Double.PositiveInfinity;
                     Grupo grupoMenorDistancia = null;
@@ -201,7 +209,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                         grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
 
-                if (sinAlerta <= mp10 && mp10 <= alerta1)//alerta 1
+                if (sinAlerta <= mp10Nor && mp10Nor <= alerta1)//alerta 1
                 {
                     distanciaMin = Double.PositiveInfinity;
                     Grupo grupoMenorDistancia = null;
@@ -220,7 +228,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                         grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
 
-                if (alerta1 < mp10 && mp10 <= alerta2)//alerta 2
+                if (alerta1 < mp10Nor && mp10Nor <= alerta2)//alerta 2
                 {
                     distanciaMin = Double.PositiveInfinity;
                     Grupo grupoMenorDistancia = null;
@@ -240,7 +248,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
                 }
 
-                if (alerta2 < mp10 && mp10 <= alerta3)//alerta 3
+                if (alerta2 < mp10Nor && mp10Nor <= alerta3)//alerta 3
                 {
                     distanciaMin = Double.PositiveInfinity;
                     Grupo grupoMenorDistancia = null;
@@ -259,7 +267,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                         grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
 
-                if (alerta3 < mp10)//alerta 4
+                if (alerta3 < mp10Nor)//alerta 4
                 {
                     distanciaMin = Double.PositiveInfinity;
                     Grupo grupoMenorDistancia = null;
