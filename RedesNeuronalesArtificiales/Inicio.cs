@@ -18,11 +18,11 @@ namespace RedesNeuronalesArtificiales
 
         static void Main()
         {
-            /*
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Ventana());
-            */
+            
             //ejemploPrediccionGrupo();
             DateTime inicio = new DateTime(2010, 01, 01, 00, 00, 00);
             DateTime fin = new DateTime(2017, 02, 01, 23, 00, 00);

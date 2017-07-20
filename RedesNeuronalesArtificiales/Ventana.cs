@@ -253,7 +253,7 @@ namespace RedesNeuronalesArtificiales
                 graficoAlerta4.Series.Add(series);
 
             }
-            /*
+            
             DateTime inicio = new DateTime(2017, 01, 01, 00, 00, 00);
             DateTime fin = new DateTime(2017, 02, 01, 23, 00, 00);
 
@@ -271,7 +271,7 @@ namespace RedesNeuronalesArtificiales
                 0.0154758472246046, 0.0432606489934153, 0.075923386555986, 0.359977093864478, 0.66537945890997,
                 0.612634541406878, 0.354041483578386, 0.278723555756083, 0.100249147477755804, 0.00645568482134704,
                 0.0153524804817408, 0.0138216209766464, 0.000301244981904876
-            });
+            });*/
 
 
             graficoMP10.Titles.Add("nivel de mp10");
@@ -296,8 +296,6 @@ namespace RedesNeuronalesArtificiales
                 textoTipoAlerta.Text = "Alerta 3";
             if (alerta3 < mp10)//alerta 4
                 textoTipoAlerta.Text = "Alerta 4";
-
-            */
 
         }
 
