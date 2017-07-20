@@ -71,6 +71,9 @@
     <Compile Include="Ventana.Designer.cs">
       <DependentUpon>Ventana.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseDeDatos\Entrada.cs" />
+    <Compile Include="RNA\Difuso.cs" />
+    <Compile Include="MP10\Mp10.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -80,5 +83,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MP10\" />
   </ItemGroup>
 </Project>

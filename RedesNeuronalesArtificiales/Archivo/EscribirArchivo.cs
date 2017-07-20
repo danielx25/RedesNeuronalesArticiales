@@ -29,29 +29,9 @@ namespace RedesNeuronalesArtificiales.Archivo
 			}
 		}
 
-		public void imprimir(int dato)
-		{
-			archivo.Write(dato);
-		}
-
 		public void imprimir(String linea)
 		{
 			archivo.Write(linea);
-		}
-
-		public void imprimirln()
-		{
-			archivo.Write("\n");
-		}
-
-		public void imprimirln(int dato)
-		{
-			archivo.Write(dato+"\n");
-		}
-
-		public void imprimirln(String linea)
-		{
-			archivo.Write(linea+"\n");
 		}
 
 		public void cerrar()

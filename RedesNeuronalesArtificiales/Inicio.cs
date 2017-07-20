@@ -17,11 +17,12 @@ namespace RedesNeuronalesArtificiales
         [STAThread]
 
         static void Main()
-        {/*
+        {
+			/*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Ventana());
-*/
+			*/
             Stopwatch tiempoEjecucion = new Stopwatch ();
 			tiempoEjecucion.Start ();
 			//Redes Som Entrenando
@@ -35,7 +36,7 @@ namespace RedesNeuronalesArtificiales
 			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin, 100);
 			List<double[]> datosPruebas = Conexion.datosMeteorologicos (inicioPrueba, finPrueba, 0);
 
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,2500, 50, 0.01, 0.0001);
+			Som redNeuronal = new Som (datosMeteorologicos[0].Length,900, 30, 0.01, 0.0001);
 			redNeuronal.inicializarMatriz (0, 1);
 			redNeuronal.Datos = datosMeteorologicos;
 
@@ -44,7 +45,7 @@ namespace RedesNeuronalesArtificiales
 			tiempoEjecucion.Restart ();
 
 			EscribirArchivo archivo = new EscribirArchivo("Pesos aleatorios.html", true);
-			archivo.imprimir (redNeuronal.obtenerMP10HTML());
+			archivo.imprimir (Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
 			archivo.cerrar ();
 
 			redNeuronal.entrenar (100);
@@ -69,11 +70,15 @@ namespace RedesNeuronalesArtificiales
 				if (calcularAlerta (resultado [1]) != calcularAlerta (mp10Real))
 					error++;
 				if (Math.Abs (calcularAlerta (resultado [1]) - calcularAlerta (mp10Real)) > 1)
-					error++;
+					errorMayor++;
 				if (calcularAlerta (resultado [1]) < calcularAlerta (mp10Real))
 					errorMenor++;
 			}
+			Console.WriteLine ("Porcentaje de error: " + ((error*100)/datosPruebas.Count) + "%");
+			Console.WriteLine ("Porcentaje de error mayor a 1 Alerta: " + ((errorMayor*100)/datosPruebas.Count) + "%");
+			Console.WriteLine ("Porcentaje de error menor de la alerta real: " + ((errorMenor*100)/error) + "%");
         }
+
 		public static int calcularAlerta(double mp10)
 		{
 			if (mp10 <= 150)
