@@ -2,7 +2,7 @@
 using System.IO;
 using RedesNeuronalesArtificiales.RNA;
 
-namespace RedesNeuronalesArtificiales
+namespace RedesNeuronalesArtificiales.Archivo
 {
 	public class Guardar
 	{

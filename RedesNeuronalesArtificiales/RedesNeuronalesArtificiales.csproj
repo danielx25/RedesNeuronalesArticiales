@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Data" />
     <Reference Include="Mono.Security">
@@ -44,17 +45,15 @@
     <Reference Include="Npgsql">
       <HintPath>..\packages\Npgsql.2.2.4.3\lib\net45\Npgsql.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnalisisDeRNA\ConstruccionConjuntos.cs" />
     <Compile Include="AnalisisDeRNA\Grupo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Form1.Designer.cs" />
     <Compile Include="ejemplo.cs" />
     <Compile Include="EjemploEntrenamiento.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="RNA\BackPropagation.cs" />
     <Compile Include="RNA\FuncionesActivacion.cs" />
     <Compile Include="RNA\Neurona.cs" />
@@ -66,14 +65,25 @@
     <Compile Include="Inicio.cs" />
     <Compile Include="BaseDeDatos\BaseDeDatos.cs" />
     <Compile Include="Archivo\Guardar.cs" />
+    <Compile Include="Archivo\EscribirArchivo.cs" />
+    <Compile Include="Ventana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventana.Designer.cs">
+      <DependentUpon>Ventana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDeDatos\Entrada.cs" />
+    <Compile Include="RNA\Difuso.cs" />
+    <Compile Include="MP10\Mp10.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="RNA\" />
-    <Folder Include="BaseDeDatos\" />
-    <Folder Include="Archivo\" />
+    <EmbeddedResource Include="Ventana.resx">
+      <DependentUpon>Ventana.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
 </Project>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
+using RedesNeuronalesArtificiales.Archivo;
 
 namespace RedesNeuronalesArtificiales.RNA
 {
@@ -10,18 +11,37 @@ namespace RedesNeuronalesArtificiales.RNA
 		private int numeroVariablesEntradas = 0;
 		private int numeroNeuronas = 0;
 		private double[,] matrizPesos;
-		private double[] distancia;
-		private int[,] matriz;
+		private double[] distancia;//Distancia entre neuronas
+		private int[,] matriz;//Matriz de indices
 		private int numeroColumnasMatriz = 2;
 		private int numeroFilaMatriz = 2;
 		private int[] indiceVecindad;
-		private List<double[]> datos;
-		private Hashtable colorMatriz;
-		private Hashtable mp10Matriz;
-		private Hashtable numeroDatos;
+		private List<double[]> datos;//Datos de entrada
+		private Hashtable colorMatriz;//Matriz de colores
 
 		private double alfa = 0.05;
-		private double BETA = 0.001;
+		private double BETA = 0.004;
+
+		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz, double alfa, double beta)
+		{
+			this.alfa = alfa;
+			this.BETA = beta;
+			matrizPesos = new double[numeroVariablesEntrada,numeroNeuronas];
+			distancia = new double[numeroNeuronas];
+			if (numeroColumnasMatriz < 1)
+				this.numeroColumnasMatriz = 2;
+			if (numeroNeuronas % numeroColumnasMatriz != 0) {
+				Console.WriteLine ("Error: No se puede formar una la matriz:" + numeroColumnasMatriz + "x" + (numeroNeuronas/(double)numeroColumnasMatriz));
+				Console.WriteLine ("Codigo de error: " + Environment.ExitCode);
+				Environment.Exit (Environment.ExitCode);
+			}
+			numeroFilaMatriz = (numeroNeuronas / numeroColumnasMatriz);
+			this.matriz = new int[numeroFilaMatriz, numeroColumnasMatriz];
+			this.numeroColumnasMatriz = numeroColumnasMatriz;
+			this.numeroVariablesEntradas = numeroVariablesEntrada;
+			this.numeroNeuronas = numeroNeuronas;
+			this.colorMatriz = new Hashtable ();
+		}
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz)
 		{
@@ -40,8 +60,6 @@ namespace RedesNeuronalesArtificiales.RNA
 			this.numeroVariablesEntradas = numeroVariablesEntrada;
 			this.numeroNeuronas = numeroNeuronas;
 			this.colorMatriz = new Hashtable ();
-			this.mp10Matriz = new Hashtable ();
-			this.numeroDatos = new Hashtable ();
 		}
 
 		public void inicializarMatriz(double minimo, double maximo)
@@ -87,10 +105,31 @@ namespace RedesNeuronalesArtificiales.RNA
 			}
 		}
 
+		public int[] calcularResultados(double[] fila)
+		{
+			int neuronaGanadora = -1;
+			double mp10Normalizado = 0;
+			double distanciaActual = 0;
+			double menorDistancia = double.MaxValue;
+			//int[] vecindad;
+			for (int y = 0; y < numeroNeuronas; y++) {
+
+				//Se calcula distancia
+				distanciaActual = calculoDistancia(fila, matrizPesos, y);
+
+				//Se selecciona la ganadora
+				if (distanciaActual < menorDistancia) {
+					menorDistancia = distanciaActual;
+					neuronaGanadora = y;
+					mp10Normalizado = matrizPesos [7, y];
+				}
+			}
+			return new int[] {neuronaGanadora, (int)(mp10Normalizado * 800)};
+		}
+
 		public void entrenar(int ciclos)
 		{
 			Console.WriteLine ("Entrenando...");
-			//double distanciaActual = 0;
 			double menorDistancia = double.MaxValue;
 			int neuronaGanadora = -1;
 			int cicloActual = 0;
@@ -98,7 +137,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfa >= 0) {
-				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Alfa: " + alfa);
+				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Limite, Alfa actual: " + alfa);
 
 				//Se recorre la tabla de datos
 				for (int z = 0; z < datos.Count; z++) {
@@ -123,18 +162,26 @@ namespace RedesNeuronalesArtificiales.RNA
 					for (int x = 0; x < numeroVariablesEntradas; x++) {
 						for (int i = 0; i < indiceVecindad.Length; i++) {
 							color = 0;
-							if (i == 0) {
-								color = 3;
+							if (i == 0) {//Ganadora
+								color = 5;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
 									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
-							} else if (i > 0 && i <= 8) {
-								color = 2;
+							} else if (i > 0 && i <= 4) {//Distancia 1
+								color = 4;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
 									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
-							} else {
-								color = 1;
+							} else if (i > 4 && i <= 12) {//Distancia 2
+								color = 3;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
 									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
+							} else if (i > 12 && i <= 24) {//Distancia 3
+								color = 2;
+								if(datos [z][x] >= 0 && datos[z][x] <= 1)
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 4));
+							} else if (i > 24 && i <= 40) {//Distancia 4
+								color = 1;
+								if(datos [z][x] >= 0 && datos[z][x] <= 1)
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 5));
 							}
 
 							//Se almacena el "color"
@@ -143,22 +190,8 @@ namespace RedesNeuronalesArtificiales.RNA
 							} else {
 								colorMatriz.Add (indiceVecindad[i], color);
 							}
-
-							if (x == 6) {
-								//Mp10
-								if (mp10Matriz.ContainsKey (indiceVecindad [i])) {
-									mp10Matriz [indiceVecindad [i]] = (double)mp10Matriz [indiceVecindad [i]] + datos [z] [x];
-									numeroDatos [indiceVecindad [i]] = (int)numeroDatos [indiceVecindad [i]] + 1;
-								} else {
-									mp10Matriz.Add (indiceVecindad [i], datos [z] [x]);
-									numeroDatos.Add (indiceVecindad [i], 1);
-								}
-							}
 						}
 					}
-					//Console.WriteLine (this);//Imprime la matriz
-					//Console.WriteLine ("Ganadora " + neuronaGanadora);
-					//Console.WriteLine ("Menor Distancia: " + menorDistancia);
 
 					//Se restablecen los valores
 					neuronaGanadora = -1;
@@ -168,7 +201,9 @@ namespace RedesNeuronalesArtificiales.RNA
 				//Se disminuye la tasa de aprendizaje
 				alfa -= BETA;
 				cicloActual++;
-				//Console.WriteLine (this);
+				//EscribirArchivo archivo = new EscribirArchivo("Datos MP10 ciclo ("+cicloActual+").html", true);
+				//archivo.imprimir(Mp10.obtenerMP10HTML(MatrizPesos, NumeroFilas, NumeroColumnas));
+				//archivo.cerrar ();
 			}
 			Console.WriteLine ("Entrenamiento terminado");
 		}
@@ -190,7 +225,7 @@ namespace RedesNeuronalesArtificiales.RNA
 
 		public int[] calcularVecindad(int ganadora)
 		{
-			int[] vecindad = new int[13];//Math.Pow(tamañoVecindad,2)+Math.Pow(tamañoVecindad-1)
+			int[] vecindad = new int[41];//Math.Pow(tamañoVecindad,2)+Math.Pow(tamañoVecindad-1)
 			vecindad[0] = ganadora;
 
 			for(int x=0; x<numeroFilaMatriz; x++)
@@ -204,15 +239,47 @@ namespace RedesNeuronalesArtificiales.RNA
 						vecindad [3] = verificar (x-1,y);
 						vecindad [4] = verificar (x+1,y);
 
+						//Distancia 2
 						vecindad [5] = verificar (x+1,y+1);
 						vecindad [6] = verificar (x-1,y-1);
 						vecindad [7] = verificar (x+1,y-1);
 						vecindad [8] = verificar (x-1,y+1);
-
 						vecindad [9] = verificar (x,y-2);
 						vecindad [10] = verificar (x,y+2);
 						vecindad [11] = verificar (x-2,y);
 						vecindad [12] = verificar (x+2,y);
+
+						//Distancia 3
+						vecindad [13] = verificar (x,y-3);
+						vecindad [14] = verificar (x+1,y-2);
+						vecindad [15] = verificar (x+2,y-1);
+						vecindad [16] = verificar (x+3,y);
+						vecindad [17] = verificar (x+2,y+1);
+						vecindad [18] = verificar (x+1,y+2);
+						vecindad [19] = verificar (x,y+3);
+						vecindad [20] = verificar (x-1,y+2);
+						vecindad [21] = verificar (x-2,y+1);
+						vecindad [22] = verificar (x-3,y);
+						vecindad [23] = verificar (x-2,y-1);
+						vecindad [24] = verificar (x-1,y-2);
+
+						//Distancia 4
+						vecindad [25] = verificar (x,y-4);
+						vecindad [26] = verificar (x+1,y-3);
+						vecindad [27] = verificar (x+2,y-2);
+						vecindad [28] = verificar (x+3,y-1);
+						vecindad [29] = verificar (x+4,y);
+						vecindad [30] = verificar (x+3,y+1);
+						vecindad [31] = verificar (x+2,y+2);
+						vecindad [32] = verificar (x+1,y+3);
+						vecindad [33] = verificar (x,y+4);
+						vecindad [34] = verificar (x-1,y+3);
+						vecindad [35] = verificar (x-2,y+2);
+						vecindad [36] = verificar (x-3,y+1);
+						vecindad [37] = verificar (x-4,y);
+						vecindad [38] = verificar (x-3,y-1);
+						vecindad [39] = verificar (x-2,y-2);
+						vecindad [40] = verificar (x-1,y-3);
 
 						y = numeroColumnasMatriz;
 						x = numeroFilaMatriz;
@@ -222,7 +289,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			return vecindad;
 		}
 
-		public int verificar(int x, int y)
+		private int verificar(int x, int y)
 		{
 			if(x >= 0 && x<numeroFilaMatriz && y>=0 && y<numeroColumnasMatriz)
 				return matriz[x,y];
@@ -242,6 +309,41 @@ namespace RedesNeuronalesArtificiales.RNA
 			return matriz[nuevaX, nuevaY];
 		}
 
+		public double[,] obtenerPesosNeuronas(HashSet<int> neuronas)
+		{
+			List<double[]> neuronasCentrales = new List<double[]>();
+			int contadorEncontrado = 0;
+			for (int x = 0; x < numeroNeuronas && contadorEncontrado < neuronas.Count; x++)
+			{
+				double[] neuronaActual = new double[numeroVariablesEntradas];
+				if (neuronas.Contains(x))
+				{
+					for (int y = 0; y < numeroVariablesEntradas; y++)
+					{
+						neuronaActual[y] = matrizPesos[y, x];
+					}
+					neuronasCentrales.Add(neuronaActual);
+					contadorEncontrado++;
+				}
+			}
+
+			int numGrupo = neuronasCentrales.Count;
+			int numColumna = neuronasCentrales[0].Length;
+			double[,] pesosGrupos = new double[numGrupo, numColumna];
+			for (int fila = 0; fila < numGrupo; fila++)
+			{
+				for (int columna = 0; columna < numColumna; columna++)
+				{
+					pesosGrupos[fila, columna] = neuronasCentrales[fila][columna];
+					System.Console.Write("| " + pesosGrupos[fila, columna]);
+				}
+				System.Console.WriteLine();
+			}
+
+
+			return pesosGrupos;
+		}
+
 		public List<double[]> Datos
 		{
 			get {
@@ -252,18 +354,30 @@ namespace RedesNeuronalesArtificiales.RNA
 			}
 		}
 
+		public double[,] MatrizPesos
+		{
+			get {
+				return matrizPesos;
+			}
+		}
+
+		public int NumeroFilas
+		{
+			get {
+				return numeroFilaMatriz;
+			}
+		}
+
+		public int NumeroColumnas
+		{
+			get {
+				return numeroColumnasMatriz;
+			}
+		}
+
 		public override string ToString ()
 		{
-			string texto = "Matriz:\n";
-			if (numeroNeuronas <= 500) {
-				for (int x = 0; x < numeroVariablesEntradas; x++) {
-					for (int y = 0; y < numeroNeuronas; y++) {
-						texto += matrizPesos [x, y] + ", ";
-					}
-					texto += "\n";
-				}
-			}
-			texto += "Matriz Color\n";
+			string texto = "Matriz Color:\n";
 			for(int x=0; x<numeroFilaMatriz; x++)
 			{
 				for (int y = 0; y < numeroColumnasMatriz; y++) {
@@ -271,17 +385,6 @@ namespace RedesNeuronalesArtificiales.RNA
 						texto += "0\t";
 					else
 						texto += colorMatriz[matriz [x,y]] + "\t";
-				}
-				texto += "\n";
-			}
-			texto += "MP10\n";
-			for(int x=0; x<numeroFilaMatriz; x++)
-			{
-				for (int y = 0; y < numeroColumnasMatriz; y++) {
-					if(mp10Matriz[matriz [x,y]] == null)
-						texto += "0\t";
-					else
-						texto += (((double)mp10Matriz[matriz [x,y]])/((int)numeroDatos[matriz [x,y]])) + "\t";
 				}
 				texto += "\n";
 			}
