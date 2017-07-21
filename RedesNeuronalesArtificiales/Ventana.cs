@@ -303,5 +303,63 @@ namespace RedesNeuronalesArtificiales
         {
             ((Control)prediccionMP10).Enabled = false;
         }
+
+        private void botonEntrenar_Click(object sender, EventArgs e)
+        {
+            //mapaResultado.DocumentText = "<h1>Aqui se mostrara el mapa de resultados</h1>";
+            Som redNeuronal = Guardar.Deserializar("Red Som Final.mp10");
+            mapaResultado.Navigate("about:black");
+            mapaResultado.Document.OpenNew(false);
+            mapaResultado.Document.Write(Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
+            mapaResultado.Refresh();
+        }
+
+        private void agregarNeurona_Click(object sender, EventArgs e)
+        {
+            gruposDeNeuronas.Items.Add("Neurona "+ entradaNeurona.Text);
+            entradaNeurona.Text = "";
+        }
+
+        private void mapaResultado_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void entradaNeurona_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void entradaAlfa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsPunctuation(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void entradaBeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsPunctuation(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void entradaLimiteCiclos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void MenuSoft_Click(object sender, EventArgs e)
+        {
+            mapaResultado.DocumentText = "<center>Aqui se mostrara el mapa del MP10 cuando la red sea entrenada</center>";
+        }
     }
 }

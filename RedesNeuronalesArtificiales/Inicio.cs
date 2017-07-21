@@ -24,10 +24,6 @@ namespace RedesNeuronalesArtificiales
             Application.Run(new Ventana());
             
             //ejemploPrediccionGrupo();
-            DateTime inicio = new DateTime(2010, 01, 01, 00, 00, 00);
-            DateTime fin = new DateTime(2017, 02, 01, 23, 00, 00);
-
-            List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 10);
         }
 
         static void ejemploPrediccionGrupo()
