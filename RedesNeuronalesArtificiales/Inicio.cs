@@ -84,7 +84,7 @@ namespace RedesNeuronalesArtificiales
         static void ejemploPrediccionGrupo()
         {
             Som redNeuronal = Guardar.Deserializar("Red Som Final.mp10");
-            EscribirArchivo archivo = new EscribirArchivo("Pesos aleatorios.html", true);
+            EscribirArchivo archivo = new EscribirArchivo("Pesos MP10.html", true);
 			archivo.imprimir(Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
             archivo.cerrar();
 
