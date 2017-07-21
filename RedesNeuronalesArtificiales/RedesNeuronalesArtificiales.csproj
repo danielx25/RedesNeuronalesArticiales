@@ -75,11 +75,20 @@
     <Compile Include="BaseDeDatos\Entrada.cs" />
     <Compile Include="RNA\Difuso.cs" />
     <Compile Include="MP10\Mp10.cs" />
+    <Compile Include="Ventanas\Entrenamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Entrenamiento.Designer.cs">
+      <DependentUpon>Entrenamiento.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <EmbeddedResource Include="Ventana.resx">
       <DependentUpon>Ventana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Entrenamiento.resx">
+      <DependentUpon>Entrenamiento.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
