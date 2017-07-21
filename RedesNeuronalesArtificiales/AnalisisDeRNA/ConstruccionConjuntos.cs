@@ -185,12 +185,14 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             int indice_mp10 = 7;//vectorEntrada.Length - 1;
             double distanciaMin;
             double mp10Nor = 0;
+
+            double aux = Double.PositiveInfinity;
             for (int mp10 = 0; mp10 <= 800; mp10++)
             {
                 rangoMP10[mp10] = mp10;
                 vectorEntrada[indice_mp10] = mp10 / (double)maxMP10;
                 mp10Nor = mp10 / (double)maxMP10;
-                if (mp10Nor < sinAlerta)// sin alerta
+                if (true)//mp10Nor < sinAlerta)// sin alerta
                 {
                     distanciaMin = Double.PositiveInfinity;
                     Grupo grupoMenorDistancia = null;
@@ -205,9 +207,20 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
                     }
                     double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
-                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
-                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                    vectorNivelPertenencia[mp10] = distancia; //funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                                                              //grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                    if (aux > distancia)
+                    {
+                        aux = distancia;
+                        System.Console.WriteLine("min distancia: " + vectorNivelPertenencia[mp10] + " mp10: " + mp10);
+                    }
                 }
+                
+
+
+                
+
+                /*
 
                 if (sinAlerta <= mp10Nor && mp10Nor <= alerta1)//alerta 1
                 {
@@ -224,8 +237,8 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
                     }
                     double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
-                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
-                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                    vectorNivelPertenencia[mp10] = distancia;//funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        //grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
 
                 if (alerta1 < mp10Nor && mp10Nor <= alerta2)//alerta 2
@@ -243,8 +256,8 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
                     }
                     double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
-                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
-                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                    vectorNivelPertenencia[mp10] = distancia;//funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        //grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
 
                 }
 
@@ -263,8 +276,8 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
                     }
                     double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
-                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
-                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                    vectorNivelPertenencia[mp10] = distancia;//funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        //grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
 
                 if (alerta3 < mp10Nor)//alerta 4
@@ -282,15 +295,17 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
                     }
                     double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
-                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
-                        grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                    vectorNivelPertenencia[mp10] = distancia;//funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                        //grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                 }
-
+                System.Console.WriteLine("min distancia: " + vectorNivelPertenencia[mp10]);
                 if (maxPertenencia < vectorNivelPertenencia[mp10])
                 {
                     maxPertenencia = vectorNivelPertenencia[mp10];
+                    
                     mp10Predecir = mp10;
                 }
+                */
             }
 
             return mp10Predecir;
