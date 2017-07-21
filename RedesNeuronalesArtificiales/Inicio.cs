@@ -18,67 +18,12 @@ namespace RedesNeuronalesArtificiales
 
         static void Main()
         {
-			/*
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Ventana());
-*/
-            ejemploPrediccionGrupo();
-            /*
-            Stopwatch tiempoEjecucion = new Stopwatch ();
-			tiempoEjecucion.Start ();
-			//Redes Som Entrenando
-
-			DateTime inicio = new DateTime(2010,01,01,00,00,00);
-			DateTime fin = new DateTime(2016,12,31,23,59,59);
-
-			DateTime inicioPrueba = new DateTime(2017,01,01,00,00,00);
-			DateTime finPrueba = new DateTime(2017,03,01,00,00,00);
-
-			List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos (inicio, fin, 100);
-			List<double[]> datosPruebas = Conexion.datosMeteorologicos (inicioPrueba, finPrueba, 0);
-
-			Som redNeuronal = new Som (datosMeteorologicos[0].Length,900, 30, 0.01, 0.0001);
-			redNeuronal.inicializarMatriz (0, 1);
-			redNeuronal.Datos = datosMeteorologicos;
-
-			tiempoEjecucion.Stop ();
-			Console.WriteLine("Tiempo al cargar la base de datos: " + tiempoEjecucion.Elapsed.ToString());
-			tiempoEjecucion.Restart ();
-
-			EscribirArchivo archivo = new EscribirArchivo("Pesos aleatorios.html", true);
-			archivo.imprimir (Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
-			archivo.cerrar ();
-
-			redNeuronal.entrenar (100);
-
-			//Guarda Archivo
-			Guardar.Serializar (redNeuronal, "Red Som Final.mp10");
-            //Lee Archivo
-			//Som redNeuronal = Guardar.Deserializar("Red Som Final.mp10");
-			tiempoEjecucion.Stop();
-			Console.WriteLine("Tiempo al entrenar la red: " + tiempoEjecucion.Elapsed.ToString());
-
-			int error = 0;
-			int errorMayor = 0;
-			int errorMenor = 0;
-			for(int x=0; x<datosPruebas.Count; x++)
-			{
-				double[] fila = datosPruebas [x];
-				double mp10Real = fila [7]*800;
-				fila [7] = -1;
-				int[] resultado = redNeuronal.calcularResultados (fila);
-				//Console.WriteLine ("Neurona Ganadora: " + resultado[0] + " MP10: " + resultado[1] + " MP10 real: " + (mp10Real) + " Alerta: " + calcularAlerta(resultado[1]) + " Alerta Real: " + calcularAlerta(mp10Real));
-				if (calcularAlerta (resultado [1]) != calcularAlerta (mp10Real))
-					error++;
-				if (Math.Abs (calcularAlerta (resultado [1]) - calcularAlerta (mp10Real)) > 1)
-					errorMayor++;
-				if (calcularAlerta (resultado [1]) < calcularAlerta (mp10Real))
-					errorMenor++;
-			}
-			Console.WriteLine ("Porcentaje de error: " + ((error*100)/datosPruebas.Count) + "%");
-			Console.WriteLine ("Porcentaje de error mayor a 1 Alerta: " + ((errorMayor*100)/datosPruebas.Count) + "%");
-			Console.WriteLine ("Porcentaje de error menor de la alerta real: " + ((errorMenor*100)/error) + "%");*/
+            
+            //ejemploPrediccionGrupo();
         }
 
         static void ejemploPrediccionGrupo()
@@ -90,13 +35,13 @@ namespace RedesNeuronalesArtificiales
 
 
             HashSet<int> hashtable = new HashSet<int>();
-            hashtable.Add(8706);
-            hashtable.Add(7200);
-            hashtable.Add(9510);
-            hashtable.Add(7197);
-            hashtable.Add(7926);
-            hashtable.Add(8918);
-            hashtable.Add(6899);
+            hashtable.Add(870);
+            hashtable.Add(720);
+            hashtable.Add(950);
+            hashtable.Add(717);
+            hashtable.Add(726);
+            hashtable.Add(818);
+            hashtable.Add(699);
 
             double[,] pesosxgrupo = redNeuronal.obtenerPesosNeuronas(hashtable);
 
