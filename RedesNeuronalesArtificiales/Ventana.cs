@@ -79,6 +79,7 @@ namespace RedesNeuronalesArtificiales
             resultado.calcularConjuntoClase(a3, 3);
             System.Console.WriteLine("---------------------->");
             resultado.calcularConjuntoClase(a4, 4);
+            resultado.etiquetadoDelosGrupos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -110,19 +111,45 @@ namespace RedesNeuronalesArtificiales
             
 
             Grupo grupon = resultado.gruposxclases[0, 6];
-            double rangox0 = 0.5;
+            double rangox0 = 0.0;
             double rangox1 = 2.3;
             double x = 0;
             int densidad = 40;
             double tasa = (rangox1 - rangox0) / (double)densidad;
+
+            string cadenaLeyenda;
+
             for (int indice_grupo = 0;  indice_grupo < resultado.gruposxclases.GetLength(1); indice_grupo++)
             {
-                var series = new Series("grupo"+indice_grupo);
-                series.ChartType = SeriesChartType.Line;
-
                 grupon = resultado.gruposxclases[0, indice_grupo];
                 double[] ejex = new double[densidad];
                 double[] ejey = new double[densidad];
+
+                cadenaLeyenda = "grupo" + indice_grupo;
+                if (grupon.etiquetada)
+                {
+                    cadenaLeyenda = grupon.clase;
+                }
+                else
+                    continue;
+
+                var series = new Series(cadenaLeyenda);
+                series.ChartType = SeriesChartType.Line;
+                if (String.Compare(cadenaLeyenda, "sin alerta") == 0)
+                    series.Color = Color.Green;
+
+                if (String.Compare(cadenaLeyenda, "alerta 1") == 0)
+                    series.Color = Color.Yellow;
+
+                if (String.Compare(cadenaLeyenda, "alerta 2") == 0)
+                    series.Color = Color.Orange;
+
+                if (String.Compare(cadenaLeyenda, "alerta 3") == 0)
+                    series.Color = Color.Purple;
+
+                if (String.Compare(cadenaLeyenda, "alerta 4") == 0)
+                    series.Color = Color.Red;
+
                 x = rangox0;
                 for (int i = 0; i < densidad; i++)
                 {
@@ -146,12 +173,37 @@ namespace RedesNeuronalesArtificiales
             //double tasa = (rangox1 - rangox0) / (double)densidad;
             for (int indice_grupo = 0; indice_grupo < resultado.gruposxclases.GetLength(1); indice_grupo++)
             {
-                var series = new Series("grupo" + indice_grupo);
-                series.ChartType = SeriesChartType.Line;
 
                 grupon = resultado.gruposxclases[indiceClase, indice_grupo];
                 double[] ejex = new double[densidad];
                 double[] ejey = new double[densidad];
+
+                cadenaLeyenda = "grupo" + indice_grupo;
+                if (grupon.etiquetada)
+                {
+                    cadenaLeyenda = grupon.clase;
+                }
+                else
+                    continue;
+
+                var series = new Series(cadenaLeyenda);
+                series.ChartType = SeriesChartType.Line;
+                if (String.Compare(cadenaLeyenda, "sin alerta") == 0)
+                    series.Color = Color.Green;
+
+                if (String.Compare(cadenaLeyenda, "alerta 1") == 0)
+                    series.Color = Color.Yellow;
+
+                if (String.Compare(cadenaLeyenda, "alerta 2") == 0)
+                    series.Color = Color.Orange;
+
+                if (String.Compare(cadenaLeyenda, "alerta 3") == 0)
+                    series.Color = Color.Purple;
+
+                if (String.Compare(cadenaLeyenda, "alerta 4") == 0)
+                    series.Color = Color.Red;
+
+
                 x = rangox0;
                 for (int i = 0; i < densidad; i++)
                 {
@@ -176,12 +228,35 @@ namespace RedesNeuronalesArtificiales
             //double tasa = (rangox1 - rangox0) / (double)densidad;
             for (int indice_grupo = 0; indice_grupo < resultado.gruposxclases.GetLength(1); indice_grupo++)
             {
-                var series = new Series("grupo" + indice_grupo);
-                series.ChartType = SeriesChartType.Line;
-
                 grupon = resultado.gruposxclases[indiceClase, indice_grupo];
                 double[] ejex = new double[densidad];
                 double[] ejey = new double[densidad];
+
+                cadenaLeyenda = "grupo" + indice_grupo;
+                if (grupon.etiquetada)
+                {
+                    cadenaLeyenda = grupon.clase;
+                }
+                else
+                    continue;
+
+                var series = new Series(cadenaLeyenda);
+                series.ChartType = SeriesChartType.Line;
+                if (String.Compare(cadenaLeyenda, "sin alerta") == 0)
+                    series.Color = Color.Green;
+
+                if (String.Compare(cadenaLeyenda, "alerta 1") == 0)
+                    series.Color = Color.Yellow;
+
+                if (String.Compare(cadenaLeyenda, "alerta 2") == 0)
+                    series.Color = Color.Orange;
+
+                if (String.Compare(cadenaLeyenda, "alerta 3") == 0)
+                    series.Color = Color.Purple;
+
+                if (String.Compare(cadenaLeyenda, "alerta 4") == 0)
+                    series.Color = Color.Red;
+
                 x = rangox0;
                 for (int i = 0; i < densidad; i++)
                 {
@@ -200,18 +275,42 @@ namespace RedesNeuronalesArtificiales
             indiceClase = 3;
             grupon = resultado.gruposxclases[indiceClase, 6];
             //rangox0 = 0.5;
-            //rangox1 = 2.3;
+            //rangox1 = 2.3
             x = 0;
             //densidad = 40;
             //double tasa = (rangox1 - rangox0) / (double)densidad;
             for (int indice_grupo = 0; indice_grupo < resultado.gruposxclases.GetLength(1); indice_grupo++)
             {
-                var series = new Series("grupo" + indice_grupo);
-                series.ChartType = SeriesChartType.Line;
 
                 grupon = resultado.gruposxclases[indiceClase, indice_grupo];
                 double[] ejex = new double[densidad];
                 double[] ejey = new double[densidad];
+
+                cadenaLeyenda = "grupo" + indice_grupo;
+                if (grupon.etiquetada)
+                {
+                    cadenaLeyenda = grupon.clase;
+                }
+                else
+                    continue;
+
+                var series = new Series(cadenaLeyenda);
+                series.ChartType = SeriesChartType.Line;
+                if (String.Compare(cadenaLeyenda, "sin alerta") == 0)
+                    series.Color = Color.Green;
+
+                if (String.Compare(cadenaLeyenda, "alerta 1") == 0)
+                    series.Color = Color.Yellow;
+
+                if (String.Compare(cadenaLeyenda, "alerta 2") == 0)
+                    series.Color = Color.Orange;
+
+                if (String.Compare(cadenaLeyenda, "alerta 3") == 0)
+                    series.Color = Color.Purple;
+
+                if (String.Compare(cadenaLeyenda, "alerta 4") == 0)
+                    series.Color = Color.Red;
+
                 x = rangox0;
                 for (int i = 0; i < densidad; i++)
                 {
@@ -236,12 +335,37 @@ namespace RedesNeuronalesArtificiales
             //double tasa = (rangox1 - rangox0) / (double)densidad;
             for (int indice_grupo = 0; indice_grupo < resultado.gruposxclases.GetLength(1); indice_grupo++)
             {
-                var series = new Series("grupo" + indice_grupo);
-                series.ChartType = SeriesChartType.Line;
 
                 grupon = resultado.gruposxclases[indiceClase, indice_grupo];
                 double[] ejex = new double[densidad];
                 double[] ejey = new double[densidad];
+
+                cadenaLeyenda = "grupo" + indice_grupo;
+                if (grupon.etiquetada)
+                {
+                    cadenaLeyenda = grupon.clase;
+                }
+                else
+                    continue;
+
+                var series = new Series(cadenaLeyenda);
+                series.ChartType = SeriesChartType.Line;
+                if (String.Compare(cadenaLeyenda, "sin alerta") == 0)
+                    series.Color = Color.Green;
+
+                if (String.Compare(cadenaLeyenda, "alerta 1") == 0)
+                    series.Color = Color.Yellow;
+
+                if (String.Compare(cadenaLeyenda, "alerta 2") == 0)
+                    series.Color = Color.Orange;
+
+                if (String.Compare(cadenaLeyenda, "alerta 3") == 0)
+                    series.Color = Color.Purple;
+
+                if (String.Compare(cadenaLeyenda, "alerta 4") == 0)
+                    series.Color = Color.Red;
+
+
                 x = rangox0;
                 for (int i = 0; i < densidad; i++)
                 {

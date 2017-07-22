@@ -24,16 +24,12 @@ namespace RedesNeuronalesArtificiales
             Application.Run(new Ventana());
             
             //ejemploPrediccionGrupo();
-            DateTime inicio = new DateTime(2010, 01, 01, 00, 00, 00);
-            DateTime fin = new DateTime(2017, 02, 01, 23, 00, 00);
-
-            List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 10);
         }
 
         static void ejemploPrediccionGrupo()
         {
             Som redNeuronal = Guardar.Deserializar("Red Som Final.mp10");
-            EscribirArchivo archivo = new EscribirArchivo("Pesos aleatorios.html", true);
+            EscribirArchivo archivo = new EscribirArchivo("Pesos MP10.html", true);
 			archivo.imprimir(Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
             archivo.cerrar();
 

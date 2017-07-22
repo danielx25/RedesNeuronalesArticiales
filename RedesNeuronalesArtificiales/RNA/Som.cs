@@ -21,6 +21,8 @@ namespace RedesNeuronalesArtificiales.RNA
 
 		private double alfa = 0.05;
 		private double BETA = 0.004;
+		private int ciclos = 0;
+		private int cicloActual = 0;
 
 		public Som (int numeroVariablesEntrada, int numeroNeuronas, int numeroColumnasMatriz, double alfa, double beta)
 		{
@@ -129,15 +131,16 @@ namespace RedesNeuronalesArtificiales.RNA
 
 		public void entrenar(int ciclos)
 		{
+			this.ciclos = ciclos;
 			Console.WriteLine ("Entrenando...");
 			double menorDistancia = double.MaxValue;
 			int neuronaGanadora = -1;
-			int cicloActual = 0;
+			cicloActual = 0;
 
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfa >= 0) {
-				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + ciclos + " Limite, Alfa actual: " + alfa);
+				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + TotalCiclos + " Limite, Alfa actual: " + alfa);
 
 				//Se recorre la tabla de datos
 				for (int z = 0; z < datos.Count; z++) {
@@ -372,6 +375,23 @@ namespace RedesNeuronalesArtificiales.RNA
 		{
 			get {
 				return numeroColumnasMatriz;
+			}
+		}
+
+		public int TotalCiclos
+		{
+			get {
+				if (Math.Ceiling (alfa / BETA) < ciclos)
+					return (int)Math.Ceiling (alfa / BETA);
+				else
+					return ciclos;
+			}
+		}
+
+		public int CicloActual
+		{
+			get {
+				return cicloActual;
 			}
 		}
 

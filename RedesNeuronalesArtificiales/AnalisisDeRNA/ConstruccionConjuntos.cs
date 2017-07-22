@@ -14,10 +14,11 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
         private double[,] tablaDistancias;
 
         public Grupo[,] gruposxclases;
-
+        public Grupo[] gruposGanadores;//son los grupos etiquetados por cada clase(alerta)
 
         public double[] vectorNivelPertenencia;
         public double[] rangoMP10;
+        public double[,] vectorDistanciaMP10;
 
         public ConstruccionConjuntos(int numeroGrupos, int numeroClases)
         {
@@ -156,6 +157,111 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             return a*np.exp(-np.power(x - mu, 2.) / (2 * np.power(sig, 2.)))
          */
 
+        public void etiquetadoDelosGrupos()
+        {
+            gruposGanadores = new Grupo[5];
+            String[] etiquetados =new String[gruposxclases.GetLength(1)];
+            for (int i = 0; i < etiquetados.Length; i++)
+                etiquetados[i] = "SinEtiqueta";
+
+            double mayorActivacion = double.NegativeInfinity;
+            int indice = 0;
+            for(int indice_grupo=0; indice_grupo<gruposxclases.GetLength(1); indice_grupo++)
+            {
+                if(mayorActivacion < gruposxclases[0, indice_grupo].numeroActivacion)
+                {
+                    mayorActivacion = gruposxclases[0, indice_grupo].numeroActivacion;
+                    indice = indice_grupo;
+                }
+            }
+            gruposxclases[0, indice].clase = "sin alerta";
+            gruposxclases[0, indice].etiquetada = true;
+            etiquetados[indice] = "sin alerta";
+            gruposGanadores[0] = gruposxclases[0, indice];
+
+
+            mayorActivacion = double.NegativeInfinity;
+            indice = 0;
+            for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+            {
+                if (mayorActivacion < gruposxclases[1, indice_grupo].numeroActivacion)
+                {
+                    mayorActivacion = gruposxclases[1, indice_grupo].numeroActivacion;
+                    indice = indice_grupo;
+                }
+            }
+            gruposxclases[1, indice].clase = "alerta 1";
+            gruposxclases[1, indice].etiquetada = true;
+            etiquetados[indice] = "alerta 1";
+            gruposGanadores[1] = gruposxclases[1, indice];
+
+            mayorActivacion = double.NegativeInfinity;
+            indice = 0;
+            for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+            {
+                if (mayorActivacion < gruposxclases[2, indice_grupo].numeroActivacion)
+                {
+                    mayorActivacion = gruposxclases[2, indice_grupo].numeroActivacion;
+                    indice = indice_grupo;
+                }
+            }
+            gruposxclases[2, indice].clase = "alerta 2";
+            gruposxclases[2, indice].etiquetada = true;
+            etiquetados[indice] = "alerta 2";
+            gruposGanadores[2] = gruposxclases[2, indice];
+
+
+            mayorActivacion = double.NegativeInfinity;
+            indice = 0;
+            for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+            {
+                if (mayorActivacion < gruposxclases[3, indice_grupo].numeroActivacion)
+                {
+                    mayorActivacion = gruposxclases[3, indice_grupo].numeroActivacion;
+                    indice = indice_grupo;
+                }
+            }
+            gruposxclases[3, indice].clase = "alerta 3";
+            gruposxclases[3, indice].etiquetada = true;
+            etiquetados[indice] = "alerta 3";
+            gruposGanadores[3] = gruposxclases[3, indice];
+
+            mayorActivacion = double.NegativeInfinity;
+            indice = 0;
+            for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+            {
+                if (mayorActivacion < gruposxclases[4, indice_grupo].numeroActivacion)
+                {
+                    mayorActivacion = gruposxclases[4, indice_grupo].numeroActivacion;
+                    indice = indice_grupo;
+                }
+            }
+            gruposxclases[4, indice].clase = "alerta 4";
+            gruposxclases[4, indice].etiquetada = true;
+            etiquetados[indice] = "alerta 4";
+            gruposGanadores[4] = gruposxclases[4, indice];
+
+
+            for (int indice_clase = 0; indice_clase<gruposxclases.GetLength(0); indice_clase++)
+            {
+                for(int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                {
+                    Grupo grupon = gruposxclases[indice_clase, indice_grupo];
+                    Console.WriteLine("| " + grupon.clase);
+                    if(grupon.etiquetada == false)
+                    {
+                        if(String.Compare("SinEtiqueta", etiquetados[indice_grupo]) !=0)
+                        {
+                            grupon.clase = etiquetados[indice_grupo];
+                            grupon.etiquetada = true;
+                        }
+
+                    }
+                }
+                Console.WriteLine();
+            }
+
+        }
 
         public double funcion_gaussiana(double x, double media, double desviasion, double pertenencia)
         {
@@ -167,6 +273,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             double minMP10 = 0;
             double maxMP10 = 800;
             vectorNivelPertenencia = new double[801];
+            vectorDistanciaMP10 = new double[gruposxclases.GetLength(0), 801];
             rangoMP10 = new double[801];
             double maxPertenencia = Double.NegativeInfinity;
             double clasePredecir;
