@@ -149,7 +149,7 @@ namespace RedesNeuronalesArtificiales.RNA
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfaActual >= 0) {
-				Console.WriteLine ("Ciclo Nº " + CicloActual + " de " + TotalCiclos + " Limite, Alfa actual: " + alfa + " Beta: " + BETA);
+				Console.WriteLine ("Ciclo Nº " + CicloActual + " de " + TotalCiclos + " Limite, Alfa actual: " + alfaActual + " Beta: " + BETA);
 
 				//Se recorre la tabla de datos
 				for (int z = 0; z < datos.Count && cicloActual < ciclos; z++) {

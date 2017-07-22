@@ -79,7 +79,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 
                 mapaResultado.Navigate("about:black");
                 mapaResultado.Document.OpenNew(false);
-                mapaResultado.Document.Write(Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
+				mapaResultado.DocumentText = Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas);
                 mapaResultado.Refresh();
                 
                 entrenando = true;
@@ -96,6 +96,10 @@ namespace RedesNeuronalesArtificiales.Ventanas
         public void entrenar(object numeroDeCiclos)
         {
             redNeuronal.entrenar((int)numeroDeCiclos);
+			Guardar.Serializar (redNeuronal, "Red entrenada.mp10");
+			EscribirArchivo imagen = new EscribirArchivo ("Mapa del mp10.html", true);
+			imagen.imprimir (Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
+			imagen.cerrar ();
             entrenando = false;
         }
 
