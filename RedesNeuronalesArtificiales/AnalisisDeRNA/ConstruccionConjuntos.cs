@@ -290,21 +290,42 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             double alerta3 = 500 / (double)maxMP10;
 
             int indice_mp10 = 7;//vectorEntrada.Length - 1;
-            double distanciaMin;
+            //double distanciaMin;
             double mp10Nor = 0;
 
-            double aux = Double.PositiveInfinity;
+            double distanciaMenor = Double.PositiveInfinity;
             for (int mp10 = 0; mp10 <= 800; mp10++)
             {
                 rangoMP10[mp10] = mp10;
                 vectorEntrada[indice_mp10] = mp10 / (double)maxMP10;
                 mp10Nor = mp10 / (double)maxMP10;
-                if (true)//mp10Nor < sinAlerta)// sin alerta
+
+
+                for(int indice_grupo = 0; indice_grupo<gruposGanadores.Length; indice_grupo++)
+                {
+                    double distancia = calculoDistancia(vectorEntrada, gruposGanadores[indice_grupo].vector);
+                    vectorDistanciaMP10[indice_grupo, mp10] = distancia;
+                    if (distanciaMenor > distancia)
+                    {
+                        distanciaMenor = distancia;
+                        mp10Predecir = mp10;
+                    }
+                }
+
+            }
+
+            return mp10Predecir;
+        }
+
+
+        /*
+
+        if (true)//mp10Nor < sinAlerta)// sin alerta
                 {
                     distanciaMin = Double.PositiveInfinity;
                     Grupo grupoMenorDistancia = null;
                     // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
-                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    for (int indice_grupo = 0; indice_grupo<gruposxclases.GetLength(1); indice_grupo++)
                     {
                         if (distanciaMin > gruposxclases[0, indice_grupo].media)
                         {
@@ -312,9 +333,9 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                             grupoMenorDistancia = gruposxclases[0, indice_grupo];
                         }
 
-                    }
-                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
-                    vectorNivelPertenencia[mp10] = distancia; //funcion_gaussiana(distancia, grupoMenorDistancia.media,
+}
+double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+vectorNivelPertenencia[mp10] = distancia; //funcion_gaussiana(distancia, grupoMenorDistancia.media,
                                                               //grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
                     if (aux > distancia)
                     {
@@ -327,7 +348,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
                 
 
-                /*
+                
 
                 if (sinAlerta <= mp10Nor && mp10Nor <= alerta1)//alerta 1
                 {
@@ -413,9 +434,6 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                     mp10Predecir = mp10;
                 }
                 */
-            }
 
-            return mp10Predecir;
-        }
     }
 }
