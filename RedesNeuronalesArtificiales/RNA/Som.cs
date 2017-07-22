@@ -30,13 +30,13 @@ namespace RedesNeuronalesArtificiales.RNA
 			this.BETA = beta;
 			matrizPesos = new double[numeroVariablesEntrada,numeroNeuronas];
 			distancia = new double[numeroNeuronas];
-			if (numeroColumnasMatriz < 1)
+			if (numeroColumnasMatriz < 2)
 				this.numeroColumnasMatriz = 2;
 			if (numeroNeuronas % numeroColumnasMatriz != 0) {
 				Console.WriteLine ("Error: No se puede formar una la matriz:" + numeroColumnasMatriz + "x" + (numeroNeuronas/(double)numeroColumnasMatriz));
 				Console.WriteLine ("Codigo de error: " + Environment.ExitCode);
-				Environment.Exit (Environment.ExitCode);
-			}
+                Environment.Exit (Environment.ExitCode);
+            }
 			numeroFilaMatriz = (numeroNeuronas / numeroColumnasMatriz);
 			this.matriz = new int[numeroFilaMatriz, numeroColumnasMatriz];
 			this.numeroColumnasMatriz = numeroColumnasMatriz;
@@ -49,7 +49,7 @@ namespace RedesNeuronalesArtificiales.RNA
 		{
 			matrizPesos = new double[numeroVariablesEntrada,numeroNeuronas];
 			distancia = new double[numeroNeuronas];
-			if (numeroColumnasMatriz < 1)
+			if (numeroColumnasMatriz < 2)
 				this.numeroColumnasMatriz = 2;
 			if (numeroNeuronas % numeroColumnasMatriz != 0) {
 				Console.WriteLine ("Error: No se puede formar una la matriz:" + numeroColumnasMatriz + "x" + (numeroNeuronas/(double)numeroColumnasMatriz));
@@ -131,7 +131,8 @@ namespace RedesNeuronalesArtificiales.RNA
 
 		public void entrenar(int ciclos)
 		{
-			this.ciclos = ciclos;
+            double alfaActual = alfa;
+            this.ciclos = ciclos;
 			Console.WriteLine ("Entrenando...");
 			double menorDistancia = double.MaxValue;
 			int neuronaGanadora = -1;
@@ -139,11 +140,11 @@ namespace RedesNeuronalesArtificiales.RNA
 
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
-			while (cicloActual < ciclos && alfa >= 0) {
-				Console.WriteLine ("Ciclo Nº " + (cicloActual+1) + " de " + TotalCiclos + " Limite, Alfa actual: " + alfa);
+			while (cicloActual < ciclos && alfaActual >= 0) {
+				Console.WriteLine ("Ciclo Nº " + cicloActual + " de " + TotalCiclos + " Limite, Alfa actual: " + alfa);
 
 				//Se recorre la tabla de datos
-				for (int z = 0; z < datos.Count; z++) {
+				for (int z = 0; z < datos.Count && cicloActual < ciclos; z++) {
 
 					//Se calcula la distancia y se selecciona la ganadora
 					for (int y = 0; y < numeroNeuronas; y++) {
@@ -168,23 +169,23 @@ namespace RedesNeuronalesArtificiales.RNA
 							if (i == 0) {//Ganadora
 								color = 5;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfa);
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfaActual);
 							} else if (i > 0 && i <= 4) {//Distancia 1
 								color = 4;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 2));
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 2));
 							} else if (i > 4 && i <= 12) {//Distancia 2
 								color = 3;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 3));
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 3));
 							} else if (i > 12 && i <= 24) {//Distancia 3
 								color = 2;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 4));
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 4));
 							} else if (i > 24 && i <= 40) {//Distancia 4
 								color = 1;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfa / 5));
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 5));
 							}
 
 							//Se almacena el "color"
@@ -201,8 +202,8 @@ namespace RedesNeuronalesArtificiales.RNA
 					menorDistancia = double.MaxValue;
 				}
 
-				//Se disminuye la tasa de aprendizaje
-				alfa -= BETA;
+                //Se disminuye la tasa de aprendizaje
+                alfaActual -= BETA;
 				cicloActual++;
 				//EscribirArchivo archivo = new EscribirArchivo("Datos MP10 ciclo ("+cicloActual+").html", true);
 				//archivo.imprimir(Mp10.obtenerMP10HTML(MatrizPesos, NumeroFilas, NumeroColumnas));
@@ -391,8 +392,12 @@ namespace RedesNeuronalesArtificiales.RNA
 		public int CicloActual
 		{
 			get {
-				return cicloActual;
+				return cicloActual+1;
 			}
+            set
+            {
+                cicloActual = value;
+            }
 		}
 
 		public override string ToString ()

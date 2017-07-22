@@ -41,8 +41,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fechaDeTermino = new System.Windows.Forms.DateTimePicker();
+            this.fechaDeInicio = new System.Windows.Forms.DateTimePicker();
             this.titulo = new System.Windows.Forms.Label();
             this.entradaLimiteCiclos = new System.Windows.Forms.TextBox();
             this.limiteCiclos = new System.Windows.Forms.Label();
@@ -52,6 +52,11 @@
             this.beta = new System.Windows.Forms.Label();
             this.alfa = new System.Windows.Forms.Label();
             this.pestannaValidacion = new System.Windows.Forms.TabPage();
+            this.entradaNumeroNeuronas = new System.Windows.Forms.TextBox();
+            this.entradaNumeroNeuronasPorFila = new System.Windows.Forms.TextBox();
+            this.textoNumeroNeuronas = new System.Windows.Forms.Label();
+            this.textoNumeroNeuronasPorFila = new System.Windows.Forms.Label();
+            this.botonDetener = new System.Windows.Forms.Button();
             this.pestannas.SuspendLayout();
             this.pestannaEntrenamiento.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -115,16 +120,16 @@
             this.panel2.Controls.Add(this.entradaNeurona);
             this.panel2.Controls.Add(this.textoGruposNeuronas);
             this.panel2.Controls.Add(this.gruposDeNeuronas);
-            this.panel2.Location = new System.Drawing.Point(6, 201);
+            this.panel2.Location = new System.Drawing.Point(7, 259);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(311, 279);
+            this.panel2.Size = new System.Drawing.Size(311, 221);
             this.panel2.TabIndex = 16;
             // 
             // botonLimpiar
             // 
             this.botonLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonLimpiar.Location = new System.Drawing.Point(231, 252);
+            this.botonLimpiar.Location = new System.Drawing.Point(231, 194);
             this.botonLimpiar.Name = "botonLimpiar";
             this.botonLimpiar.Size = new System.Drawing.Size(75, 23);
             this.botonLimpiar.TabIndex = 9;
@@ -136,7 +141,7 @@
             // 
             this.agregarNeurona.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.agregarNeurona.Location = new System.Drawing.Point(107, 253);
+            this.agregarNeurona.Location = new System.Drawing.Point(107, 195);
             this.agregarNeurona.Name = "agregarNeurona";
             this.agregarNeurona.Size = new System.Drawing.Size(118, 23);
             this.agregarNeurona.TabIndex = 6;
@@ -148,7 +153,7 @@
             // 
             this.entradaNeurona.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.entradaNeurona.Location = new System.Drawing.Point(12, 255);
+            this.entradaNeurona.Location = new System.Drawing.Point(12, 197);
             this.entradaNeurona.Name = "entradaNeurona";
             this.entradaNeurona.Size = new System.Drawing.Size(89, 20);
             this.entradaNeurona.TabIndex = 8;
@@ -170,15 +175,20 @@
             this.gruposDeNeuronas.FormattingEnabled = true;
             this.gruposDeNeuronas.Location = new System.Drawing.Point(12, 27);
             this.gruposDeNeuronas.Name = "gruposDeNeuronas";
-            this.gruposDeNeuronas.Size = new System.Drawing.Size(294, 212);
+            this.gruposDeNeuronas.Size = new System.Drawing.Size(294, 160);
             this.gruposDeNeuronas.TabIndex = 5;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.botonDetener);
+            this.panel1.Controls.Add(this.textoNumeroNeuronasPorFila);
+            this.panel1.Controls.Add(this.textoNumeroNeuronas);
+            this.panel1.Controls.Add(this.entradaNumeroNeuronasPorFila);
+            this.panel1.Controls.Add(this.entradaNumeroNeuronas);
             this.panel1.Controls.Add(this.label36);
             this.panel1.Controls.Add(this.label35);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.fechaDeTermino);
+            this.panel1.Controls.Add(this.fechaDeInicio);
             this.panel1.Controls.Add(this.titulo);
             this.panel1.Controls.Add(this.entradaLimiteCiclos);
             this.panel1.Controls.Add(this.limiteCiclos);
@@ -189,7 +199,7 @@
             this.panel1.Controls.Add(this.alfa);
             this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 197);
+            this.panel1.Size = new System.Drawing.Size(311, 247);
             this.panel1.TabIndex = 10;
             // 
             // label36
@@ -210,21 +220,21 @@
             this.label35.TabIndex = 14;
             this.label35.Text = "Fecha de Inicio";
             // 
-            // dateTimePicker2
+            // fechaDeTermino
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(107, 138);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 13;
-            this.dateTimePicker2.Value = new System.DateTime(2017, 3, 1, 0, 0, 0, 0);
+            this.fechaDeTermino.Location = new System.Drawing.Point(107, 138);
+            this.fechaDeTermino.Name = "fechaDeTermino";
+            this.fechaDeTermino.Size = new System.Drawing.Size(200, 20);
+            this.fechaDeTermino.TabIndex = 13;
+            this.fechaDeTermino.Value = new System.DateTime(2017, 3, 1, 0, 0, 0, 0);
             // 
-            // dateTimePicker1
+            // fechaDeInicio
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(107, 112);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
-            this.dateTimePicker1.Value = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
+            this.fechaDeInicio.Location = new System.Drawing.Point(107, 112);
+            this.fechaDeInicio.Name = "fechaDeInicio";
+            this.fechaDeInicio.Size = new System.Drawing.Size(200, 20);
+            this.fechaDeInicio.TabIndex = 12;
+            this.fechaDeInicio.Value = new System.DateTime(2010, 1, 1, 0, 0, 0, 0);
             // 
             // titulo
             // 
@@ -255,9 +265,9 @@
             // 
             // botonEntrenar
             // 
-            this.botonEntrenar.Location = new System.Drawing.Point(107, 164);
+            this.botonEntrenar.Location = new System.Drawing.Point(107, 216);
             this.botonEntrenar.Name = "botonEntrenar";
-            this.botonEntrenar.Size = new System.Drawing.Size(116, 25);
+            this.botonEntrenar.Size = new System.Drawing.Size(119, 25);
             this.botonEntrenar.TabIndex = 4;
             this.botonEntrenar.Text = "Entrenar";
             this.botonEntrenar.UseVisualStyleBackColor = true;
@@ -269,7 +279,7 @@
             this.entradaBeta.Name = "entradaBeta";
             this.entradaBeta.Size = new System.Drawing.Size(199, 20);
             this.entradaBeta.TabIndex = 3;
-            this.entradaBeta.Text = "0.00001";
+            this.entradaBeta.Text = "0,00001";
             this.entradaBeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entradaBeta_KeyPress);
             // 
             // entradaAlfa
@@ -278,7 +288,7 @@
             this.entradaAlfa.Name = "entradaAlfa";
             this.entradaAlfa.Size = new System.Drawing.Size(200, 20);
             this.entradaAlfa.TabIndex = 2;
-            this.entradaAlfa.Text = "0.001";
+            this.entradaAlfa.Text = "0,001";
             this.entradaAlfa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entradaAlfa_KeyPress);
             // 
             // beta
@@ -309,6 +319,53 @@
             this.pestannaValidacion.Text = "Validación";
             this.pestannaValidacion.UseVisualStyleBackColor = true;
             // 
+            // entradaNumeroNeuronas
+            // 
+            this.entradaNumeroNeuronas.Location = new System.Drawing.Point(134, 164);
+            this.entradaNumeroNeuronas.Name = "entradaNumeroNeuronas";
+            this.entradaNumeroNeuronas.Size = new System.Drawing.Size(172, 20);
+            this.entradaNumeroNeuronas.TabIndex = 16;
+            this.entradaNumeroNeuronas.Text = "1600";
+            this.entradaNumeroNeuronas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entradaNumeroNeuronas_KeyPress);
+            // 
+            // entradaNumeroNeuronasPorFila
+            // 
+            this.entradaNumeroNeuronasPorFila.Location = new System.Drawing.Point(134, 190);
+            this.entradaNumeroNeuronasPorFila.Name = "entradaNumeroNeuronasPorFila";
+            this.entradaNumeroNeuronasPorFila.Size = new System.Drawing.Size(172, 20);
+            this.entradaNumeroNeuronasPorFila.TabIndex = 17;
+            this.entradaNumeroNeuronasPorFila.Text = "40";
+            this.entradaNumeroNeuronasPorFila.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entradaNumeroNeuronasPorFila_KeyPress);
+            // 
+            // textoNumeroNeuronas
+            // 
+            this.textoNumeroNeuronas.AutoSize = true;
+            this.textoNumeroNeuronas.Location = new System.Drawing.Point(9, 171);
+            this.textoNumeroNeuronas.Name = "textoNumeroNeuronas";
+            this.textoNumeroNeuronas.Size = new System.Drawing.Size(108, 13);
+            this.textoNumeroNeuronas.TabIndex = 18;
+            this.textoNumeroNeuronas.Text = "Numero de Neuronas";
+            // 
+            // textoNumeroNeuronasPorFila
+            // 
+            this.textoNumeroNeuronasPorFila.AutoSize = true;
+            this.textoNumeroNeuronasPorFila.Location = new System.Drawing.Point(9, 197);
+            this.textoNumeroNeuronasPorFila.Name = "textoNumeroNeuronasPorFila";
+            this.textoNumeroNeuronasPorFila.Size = new System.Drawing.Size(119, 13);
+            this.textoNumeroNeuronasPorFila.TabIndex = 19;
+            this.textoNumeroNeuronasPorFila.Text = "Neuronas por columnas";
+            // 
+            // botonDetener
+            // 
+            this.botonDetener.Enabled = false;
+            this.botonDetener.Location = new System.Drawing.Point(231, 216);
+            this.botonDetener.Name = "botonDetener";
+            this.botonDetener.Size = new System.Drawing.Size(75, 23);
+            this.botonDetener.TabIndex = 19;
+            this.botonDetener.Text = "Detener";
+            this.botonDetener.UseVisualStyleBackColor = true;
+            this.botonDetener.Click += new System.EventHandler(this.detener_Click);
+            // 
             // Entrenamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +374,7 @@
             this.Controls.Add(this.pestannas);
             this.Name = "Entrenamiento";
             this.Text = "Entrenamiento";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Entrenamiento_FormClosed);
             this.pestannas.ResumeLayout(false);
             this.pestannaEntrenamiento.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -335,8 +393,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fechaDeTermino;
+        private System.Windows.Forms.DateTimePicker fechaDeInicio;
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.TextBox entradaLimiteCiclos;
         private System.Windows.Forms.Label limiteCiclos;
@@ -353,5 +411,10 @@
         private System.Windows.Forms.WebBrowser mapaResultado;
         private System.Windows.Forms.ProgressBar barraDeProgreso;
         private System.Windows.Forms.Button botonLimpiar;
+        private System.Windows.Forms.Label textoNumeroNeuronasPorFila;
+        private System.Windows.Forms.Label textoNumeroNeuronas;
+        private System.Windows.Forms.TextBox entradaNumeroNeuronasPorFila;
+        private System.Windows.Forms.TextBox entradaNumeroNeuronas;
+        private System.Windows.Forms.Button botonDetener;
     }
 }
