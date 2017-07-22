@@ -138,10 +138,18 @@ namespace RedesNeuronalesArtificiales.RNA
 			int neuronaGanadora = -1;
 			cicloActual = 0;
 
+            double sinAlerta = 1.0 / (58401-228);
+            double alerta1 = 1.0 / (2258-228);
+            double alerta2 = 1.0 / (974-228);
+            double alerta3 = 1.0 / (524-228);
+            double alerta4 = 1.0;
+            double mp10 = 0;
+            double peso = 1;
+
 			//Este ciclo se ejecuta hasta que llege al numero maximo de ciclos o
 			//Hasta que la tasa de aprendizaje sea menor o igual a cero
 			while (cicloActual < ciclos && alfaActual >= 0) {
-				Console.WriteLine ("Ciclo Nº " + cicloActual + " de " + TotalCiclos + " Limite, Alfa actual: " + alfa);
+				Console.WriteLine ("Ciclo Nº " + CicloActual + " de " + TotalCiclos + " Limite, Alfa actual: " + alfa + " Beta: " + BETA);
 
 				//Se recorre la tabla de datos
 				for (int z = 0; z < datos.Count && cicloActual < ciclos; z++) {
@@ -166,26 +174,37 @@ namespace RedesNeuronalesArtificiales.RNA
 					for (int x = 0; x < numeroVariablesEntradas; x++) {
 						for (int i = 0; i < indiceVecindad.Length; i++) {
 							color = 0;
-							if (i == 0) {//Ganadora
+                            mp10 = matrizPesos[7, indiceVecindad[i]]*800;
+                            if (mp10 <= 150)
+                                peso = sinAlerta;
+                            else if (mp10 > 150 && mp10 <= 250)
+                                peso = alerta1;
+                            else if (mp10 > 250 && mp10 <= 350)
+                                peso = alerta2;
+                            else if (mp10 > 350 && mp10 <= 500)
+                                peso = alerta3;
+                            else if (mp10 > 500)
+                                peso = alerta4;
+                            if (i == 0) {//Ganadora
 								color = 5;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfaActual);
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * alfaActual*peso);
 							} else if (i > 0 && i <= 4) {//Distancia 1
 								color = 4;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 2));
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 2) * peso);
 							} else if (i > 4 && i <= 12) {//Distancia 2
 								color = 3;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 3));
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 3) * peso);
 							} else if (i > 12 && i <= 24) {//Distancia 3
 								color = 2;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 4));
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 4) * peso);
 							} else if (i > 24 && i <= 40) {//Distancia 4
 								color = 1;
 								if(datos [z][x] >= 0 && datos[z][x] <= 1)
-									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 5));
+									matrizPesos [x, indiceVecindad [i]] += ((datos [z] [x] - matrizPesos [x, indiceVecindad [i]]) * (alfaActual / 5) * peso);
 							}
 
 							//Se almacena el "color"

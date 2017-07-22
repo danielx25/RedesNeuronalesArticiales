@@ -72,17 +72,19 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 DateTime inicio = fechaDeInicio.Value;
                 DateTime fin = fechaDeTermino.Value;
 
-                List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 100);
+                List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 0);
                 redNeuronal = new Som(datosMeteorologicos[0].Length, totalNeuronas, neuronasPorFila, alfa, beta);
                 redNeuronal.inicializarMatriz(0, 1);
                 redNeuronal.Datos = datosMeteorologicos;
-
+                
                 mapaResultado.Navigate("about:black");
                 mapaResultado.Document.OpenNew(false);
                 mapaResultado.Document.Write(Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
                 mapaResultado.Refresh();
+                
                 entrenando = true;
                 hilo = new Thread(entrenar);
+                hilo.Priority = ThreadPriority.Highest;
                 hiloProgreso = new Thread(progreso);
                 hilo.Start(numeroDeCiclos);
                 hiloProgreso.Start();
@@ -178,7 +180,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
         {
             if (redNeuronal != null)
             {
-                redNeuronal.CicloActual = redNeuronal.TotalCiclos;
+                redNeuronal.CicloActual = 900000;
                 entrenando = false;
                 botonEntrenar.Enabled = true;
                 botonDetener.Enabled = false;
@@ -190,7 +192,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
             if(entrenando)
             {
                 entrenando = false;
-                redNeuronal.CicloActual = redNeuronal.TotalCiclos;
+                redNeuronal.CicloActual = 900000;
             }
             Thread.Sleep(110);
             Application.Exit();
