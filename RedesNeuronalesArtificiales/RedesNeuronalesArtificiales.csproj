@@ -66,12 +66,6 @@
     <Compile Include="BaseDeDatos\BaseDeDatos.cs" />
     <Compile Include="Archivo\Guardar.cs" />
     <Compile Include="Archivo\EscribirArchivo.cs" />
-    <Compile Include="Ventana.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventana.Designer.cs">
-      <DependentUpon>Ventana.cs</DependentUpon>
-    </Compile>
     <Compile Include="BaseDeDatos\Entrada.cs" />
     <Compile Include="RNA\Difuso.cs" />
     <Compile Include="MP10\Mp10.cs" />
@@ -84,9 +78,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <EmbeddedResource Include="Ventana.resx">
-      <DependentUpon>Ventana.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Entrenamiento.resx">
       <DependentUpon>Entrenamiento.cs</DependentUpon>
     </EmbeddedResource>

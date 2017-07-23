@@ -78,7 +78,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 redNeuronal.Datos = datosMeteorologicos;
                 
                 mapaResultado.Navigate("about:black");
-                mapaResultado.Document.OpenNew(false);
+                //mapaResultado.Document.OpenNew(false);//Comentado para linux
 				mapaResultado.DocumentText = Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas);
                 mapaResultado.Refresh();
                 
@@ -118,7 +118,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 if (InvokeRequired)
                 {
                     valor = redNeuronal.CicloActual;
-                    if (valor > redNeuronal.TotalCiclos)
+                    if (valor > redNeuronal.TotalCiclos-1)
                         valor = redNeuronal.CicloActual;
                     Invoke(new Action(() => barraDeProgreso.Value = valor));
                 }
