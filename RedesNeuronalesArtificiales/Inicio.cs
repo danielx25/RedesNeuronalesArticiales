@@ -4,6 +4,7 @@ using RedesNeuronalesArtificiales.Archivo;
 using System;
 using System.Collections.Generic;
 using RedesNeuronalesArtificiales.AnalisisDeRNA;
+using RedesNeuronalesArtificiales.Reportes;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -22,7 +23,8 @@ namespace RedesNeuronalesArtificiales
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Ventana());
-            
+            //ReportePrediccion reporte1 = new ReportePrediccion();
+            //reporte1.crearReporte();
             //ejemploPrediccionGrupo();
         }
 

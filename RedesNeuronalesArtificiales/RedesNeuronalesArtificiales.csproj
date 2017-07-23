@@ -35,6 +35,9 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\itextsharp-all-5.5.10\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -54,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ejemplo.cs" />
     <Compile Include="EjemploEntrenamiento.cs" />
+    <Compile Include="Reportes\ReportePrediccion.cs" />
     <Compile Include="RNA\BackPropagation.cs" />
     <Compile Include="RNA\FuncionesActivacion.cs" />
     <Compile Include="RNA\Neurona.cs" />
@@ -66,6 +70,7 @@
     <Compile Include="BaseDeDatos\BaseDeDatos.cs" />
     <Compile Include="Archivo\Guardar.cs" />
     <Compile Include="Archivo\EscribirArchivo.cs" />
+    <Compile Include="ValidacionRNA\Validacion.cs" />
     <Compile Include="Ventana.cs">
       <SubType>Form</SubType>
     </Compile>

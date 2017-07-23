@@ -17,8 +17,11 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
         public Grupo[] gruposGanadores;//son los grupos etiquetados por cada clase(alerta)
 
         public double[] vectorNivelPertenencia;
+
         public double[] rangoMP10;
         public double[,] vectorDistanciaMP10;
+        public double distanciaMinima = 0;
+        public double Mp10predecido;
 
         public ConstruccionConjuntos(int numeroGrupos, int numeroClases)
         {
@@ -123,13 +126,14 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                 gruposxclases[indice_clase, d].media = vectorDisMedia[d];
                 gruposxclases[indice_clase, d].desviacionEstandar = vectorDisDVS[d];
                 gruposxclases[indice_clase, d].nivelPertenencia = gruposxclases[indice_clase, d].numeroActivacion / (double)conjuntoClase.GetLength(0);
+                /*
                 System.Console.WriteLine();
                 System.Console.WriteLine("numero Activacion  : " + gruposxclases[indice_clase, d].numeroActivacion);
                 System.Console.WriteLine("media              : " + gruposxclases[indice_clase, d].media);
                 System.Console.WriteLine("desviacion estandar: " + gruposxclases[indice_clase, d].desviacionEstandar);
                 System.Console.WriteLine("nivel pertencia    : " + gruposxclases[indice_clase, d].nivelPertenencia);
 
-
+                */
                 //System.Console.Write("["+vectorDisMedia[d] + ";"+ vectorDisDVS[d]+"] - ");
             }
 
@@ -247,7 +251,6 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                 for(int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
                 {
                     Grupo grupon = gruposxclases[indice_clase, indice_grupo];
-                    Console.WriteLine("| " + grupon.clase);
                     if(grupon.etiquetada == false)
                     {
                         if(String.Compare("SinEtiqueta", etiquetados[indice_grupo]) !=0)
@@ -258,7 +261,6 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
 
                     }
                 }
-                Console.WriteLine();
             }
 
         }
@@ -309,11 +311,12 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
                     {
                         distanciaMenor = distancia;
                         mp10Predecir = mp10;
+                        distanciaMinima = distancia;
                     }
                 }
 
             }
-
+            Mp10predecido = mp10Predecir;
             return mp10Predecir;
         }
 

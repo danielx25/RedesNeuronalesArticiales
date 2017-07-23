@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title10 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.MenuSoft = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.botonGenerarP = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.diasApredecir = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.diasPrediccion = new System.Windows.Forms.TabControl();
@@ -129,7 +129,6 @@
             this.graficoAlerta3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.graficoAlerta4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.crearGrafico = new System.Windows.Forms.Button();
             this.nivelMp10 = new System.Windows.Forms.TabPage();
             this.textoTipoAlerta = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -137,6 +136,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.graficoMP10 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.reportes = new System.Windows.Forms.TabPage();
+            this.barraProgreso = new System.Windows.Forms.ProgressBar();
             this.MenuSoft.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.diasPrediccion.SuspendLayout();
@@ -178,9 +178,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.barraProgreso);
             this.tabPage1.Controls.Add(this.botonGenerarP);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.diasApredecir);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.diasPrediccion);
@@ -213,20 +214,21 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Prediccion para: ";
             // 
-            // comboBox1
+            // diasApredecir
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.diasApredecir.FormattingEnabled = true;
+            this.diasApredecir.Items.AddRange(new object[] {
             "1 Dia",
             "2 Dias",
             "3 Dias",
             "4 Dias",
             "5 Dias"});
-            this.comboBox1.Location = new System.Drawing.Point(379, 14);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
+            this.diasApredecir.Location = new System.Drawing.Point(379, 14);
+            this.diasApredecir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.diasApredecir.Name = "diasApredecir";
+            this.diasApredecir.Size = new System.Drawing.Size(121, 24);
+            this.diasApredecir.TabIndex = 3;
+            this.diasApredecir.SelectedIndexChanged += new System.EventHandler(this.diasApredecir_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -255,7 +257,7 @@
             this.diasPrediccion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.diasPrediccion.Name = "diasPrediccion";
             this.diasPrediccion.SelectedIndex = 0;
-            this.diasPrediccion.Size = new System.Drawing.Size(1147, 593);
+            this.diasPrediccion.Size = new System.Drawing.Size(1147, 510);
             this.diasPrediccion.TabIndex = 0;
             // 
             // dia_n
@@ -265,7 +267,7 @@
             this.dia_n.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dia_n.Name = "dia_n";
             this.dia_n.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dia_n.Size = new System.Drawing.Size(1139, 564);
+            this.dia_n.Size = new System.Drawing.Size(1139, 481);
             this.dia_n.TabIndex = 1;
             this.dia_n.Text = "Dia 1";
             this.dia_n.UseVisualStyleBackColor = true;
@@ -914,7 +916,6 @@
             // nivelConfianza
             // 
             this.nivelConfianza.Controls.Add(this.tiposAlertas);
-            this.nivelConfianza.Controls.Add(this.crearGrafico);
             this.nivelConfianza.Location = new System.Drawing.Point(4, 25);
             this.nivelConfianza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nivelConfianza.Name = "nivelConfianza";
@@ -935,7 +936,7 @@
             this.tiposAlertas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tiposAlertas.Name = "tiposAlertas";
             this.tiposAlertas.SelectedIndex = 0;
-            this.tiposAlertas.Size = new System.Drawing.Size(1135, 545);
+            this.tiposAlertas.Size = new System.Drawing.Size(1135, 572);
             this.tiposAlertas.TabIndex = 2;
             // 
             // tabPage2
@@ -945,7 +946,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1127, 516);
+            this.tabPage2.Size = new System.Drawing.Size(1127, 543);
             this.tabPage2.TabIndex = 0;
             this.tabPage2.Text = "Sin alerta";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -953,20 +954,20 @@
             // graficoSinAlerta
             // 
             this.graficoSinAlerta.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea1.AxisX.Title = "Distancia del grupo Sin Alerta";
-            chartArea1.AxisY.Title = "Nivel Pertenencia";
-            chartArea1.Name = "ChartArea1";
-            this.graficoSinAlerta.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.graficoSinAlerta.Legends.Add(legend1);
+            chartArea7.AxisX.Title = "Distancia del grupo Sin Alerta";
+            chartArea7.AxisY.Title = "Nivel Pertenencia";
+            chartArea7.Name = "ChartArea1";
+            this.graficoSinAlerta.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.graficoSinAlerta.Legends.Add(legend7);
             this.graficoSinAlerta.Location = new System.Drawing.Point(5, 6);
             this.graficoSinAlerta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoSinAlerta.Name = "graficoSinAlerta";
             this.graficoSinAlerta.Size = new System.Drawing.Size(1115, 494);
             this.graficoSinAlerta.TabIndex = 1;
             this.graficoSinAlerta.Text = "Sin alerta";
-            title1.Name = "Sin alerta";
-            this.graficoSinAlerta.Titles.Add(title1);
+            title6.Name = "Sin alerta";
+            this.graficoSinAlerta.Titles.Add(title6);
             // 
             // tabPage3
             // 
@@ -983,20 +984,20 @@
             // graficoAlerta1
             // 
             this.graficoAlerta1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea2.AxisX.Title = "Distancia del grupo Alerta 1";
-            chartArea2.AxisY.Title = "Nivel Pertenencia";
-            chartArea2.Name = "ChartArea1";
-            this.graficoAlerta1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.graficoAlerta1.Legends.Add(legend2);
+            chartArea8.AxisX.Title = "Distancia del grupo Alerta 1";
+            chartArea8.AxisY.Title = "Nivel Pertenencia";
+            chartArea8.Name = "ChartArea1";
+            this.graficoAlerta1.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.graficoAlerta1.Legends.Add(legend8);
             this.graficoAlerta1.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta1.Name = "graficoAlerta1";
             this.graficoAlerta1.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta1.TabIndex = 2;
             this.graficoAlerta1.Text = "Sin alerta";
-            title2.Name = "Sin alerta";
-            this.graficoAlerta1.Titles.Add(title2);
+            title7.Name = "Sin alerta";
+            this.graficoAlerta1.Titles.Add(title7);
             // 
             // tabPage4
             // 
@@ -1012,20 +1013,20 @@
             // graficoAlerta2
             // 
             this.graficoAlerta2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea3.AxisX.Title = "Distancia del grupo Alerta 2";
-            chartArea3.AxisY.Title = "Nivel Pertenencia";
-            chartArea3.Name = "ChartArea1";
-            this.graficoAlerta2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.graficoAlerta2.Legends.Add(legend3);
+            chartArea9.AxisX.Title = "Distancia del grupo Alerta 2";
+            chartArea9.AxisY.Title = "Nivel Pertenencia";
+            chartArea9.Name = "ChartArea1";
+            this.graficoAlerta2.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.graficoAlerta2.Legends.Add(legend9);
             this.graficoAlerta2.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta2.Name = "graficoAlerta2";
             this.graficoAlerta2.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta2.TabIndex = 3;
             this.graficoAlerta2.Text = "Sin alerta";
-            title3.Name = "Sin alerta";
-            this.graficoAlerta2.Titles.Add(title3);
+            title8.Name = "Sin alerta";
+            this.graficoAlerta2.Titles.Add(title8);
             // 
             // tabPage5
             // 
@@ -1041,20 +1042,20 @@
             // graficoAlerta3
             // 
             this.graficoAlerta3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea4.AxisX.Title = "Distancia del grupo Alerta 3";
-            chartArea4.AxisY.Title = "Nivel Pertenencia";
-            chartArea4.Name = "ChartArea1";
-            this.graficoAlerta3.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.graficoAlerta3.Legends.Add(legend4);
+            chartArea10.AxisX.Title = "Distancia del grupo Alerta 3";
+            chartArea10.AxisY.Title = "Nivel Pertenencia";
+            chartArea10.Name = "ChartArea1";
+            this.graficoAlerta3.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.graficoAlerta3.Legends.Add(legend10);
             this.graficoAlerta3.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta3.Name = "graficoAlerta3";
             this.graficoAlerta3.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta3.TabIndex = 4;
             this.graficoAlerta3.Text = "Sin alerta";
-            title4.Name = "Sin alerta";
-            this.graficoAlerta3.Titles.Add(title4);
+            title9.Name = "Sin alerta";
+            this.graficoAlerta3.Titles.Add(title9);
             // 
             // tabPage6
             // 
@@ -1070,31 +1071,20 @@
             // graficoAlerta4
             // 
             this.graficoAlerta4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea5.AxisX.Title = "Distancia del grupo Alerta 4";
-            chartArea5.AxisY.Title = "Nivel Pertenencia";
-            chartArea5.Name = "ChartArea1";
-            this.graficoAlerta4.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.graficoAlerta4.Legends.Add(legend5);
+            chartArea11.AxisX.Title = "Distancia del grupo Alerta 4";
+            chartArea11.AxisY.Title = "Nivel Pertenencia";
+            chartArea11.Name = "ChartArea1";
+            this.graficoAlerta4.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.graficoAlerta4.Legends.Add(legend11);
             this.graficoAlerta4.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta4.Name = "graficoAlerta4";
             this.graficoAlerta4.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta4.TabIndex = 4;
             this.graficoAlerta4.Text = "Sin alerta";
-            title5.Name = "Sin alerta";
-            this.graficoAlerta4.Titles.Add(title5);
-            // 
-            // crearGrafico
-            // 
-            this.crearGrafico.Location = new System.Drawing.Point(589, 569);
-            this.crearGrafico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.crearGrafico.Name = "crearGrafico";
-            this.crearGrafico.Size = new System.Drawing.Size(75, 23);
-            this.crearGrafico.TabIndex = 1;
-            this.crearGrafico.Text = "crearGrafico";
-            this.crearGrafico.UseVisualStyleBackColor = true;
-            this.crearGrafico.Click += new System.EventHandler(this.crearGrafico_Click);
+            title10.Name = "Sin alerta";
+            this.graficoAlerta4.Titles.Add(title10);
             // 
             // nivelMp10
             // 
@@ -1115,7 +1105,7 @@
             // textoTipoAlerta
             // 
             this.textoTipoAlerta.AutoSize = true;
-            this.textoTipoAlerta.Location = new System.Drawing.Point(251, 465);
+            this.textoTipoAlerta.Location = new System.Drawing.Point(152, 528);
             this.textoTipoAlerta.Name = "textoTipoAlerta";
             this.textoTipoAlerta.Size = new System.Drawing.Size(68, 17);
             this.textoTipoAlerta.TabIndex = 4;
@@ -1124,7 +1114,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(121, 465);
+            this.label37.Location = new System.Drawing.Point(22, 528);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(96, 17);
             this.label37.TabIndex = 3;
@@ -1133,7 +1123,7 @@
             // textoNivelMp10
             // 
             this.textoNivelMp10.AutoSize = true;
-            this.textoNivelMp10.Location = new System.Drawing.Point(251, 416);
+            this.textoNivelMp10.Location = new System.Drawing.Point(152, 479);
             this.textoNivelMp10.Name = "textoNivelMp10";
             this.textoNivelMp10.Size = new System.Drawing.Size(16, 17);
             this.textoNivelMp10.TabIndex = 2;
@@ -1142,7 +1132,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(121, 416);
+            this.label26.Location = new System.Drawing.Point(22, 479);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(106, 17);
             this.label26.TabIndex = 1;
@@ -1151,14 +1141,14 @@
             // graficoMP10
             // 
             this.graficoMP10.BackColor = System.Drawing.Color.Silver;
-            chartArea6.Name = "ChartArea1";
-            this.graficoMP10.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.graficoMP10.Legends.Add(legend6);
+            chartArea12.Name = "ChartArea1";
+            this.graficoMP10.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.graficoMP10.Legends.Add(legend12);
             this.graficoMP10.Location = new System.Drawing.Point(25, 21);
             this.graficoMP10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoMP10.Name = "graficoMP10";
-            this.graficoMP10.Size = new System.Drawing.Size(1092, 362);
+            this.graficoMP10.Size = new System.Drawing.Size(1092, 402);
             this.graficoMP10.TabIndex = 0;
             this.graficoMP10.Text = "chart1";
             // 
@@ -1171,6 +1161,13 @@
             this.reportes.TabIndex = 2;
             this.reportes.Text = "Reportes de prediccion MP10";
             this.reportes.UseVisualStyleBackColor = true;
+            // 
+            // barraProgreso
+            // 
+            this.barraProgreso.Location = new System.Drawing.Point(13, 579);
+            this.barraProgreso.Name = "barraProgreso";
+            this.barraProgreso.Size = new System.Drawing.Size(1139, 42);
+            this.barraProgreso.TabIndex = 6;
             // 
             // Ventana
             // 
@@ -1226,7 +1223,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl diasPrediccion;
         private System.Windows.Forms.TabPage dia_n;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl datosEntrada;
         private System.Windows.Forms.TabPage dmeteorologico;
@@ -1270,7 +1266,6 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DataVisualization.Charting.Chart graficoMP10;
-        private System.Windows.Forms.Button crearGrafico;
         private System.Windows.Forms.TabControl tiposAlertas;
         private System.Windows.Forms.TabPage tabPage2;
         public System.Windows.Forms.DataVisualization.Charting.Chart graficoSinAlerta;
@@ -1310,5 +1305,7 @@
         public System.Windows.Forms.CheckedListBox datosDetencionChancadores;
         public System.Windows.Forms.Label textoNivelMp10;
         public System.Windows.Forms.Label textoTipoAlerta;
+        public System.Windows.Forms.ProgressBar barraProgreso;
+        public System.Windows.Forms.ComboBox diasApredecir;
     }
 }
