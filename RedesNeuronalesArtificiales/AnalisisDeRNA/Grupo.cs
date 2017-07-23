@@ -13,6 +13,7 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
         public double media;
         public double desviacionEstandar;
         public double nivelPertenencia;
-
+        public string clase ="SinEtiqueta";//tipo de clase en la SOM
+        public bool etiquetada = false;
     }
 }

@@ -118,8 +118,8 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 if (InvokeRequired)
                 {
                     valor = redNeuronal.CicloActual;
-                    if (valor > redNeuronal.TotalCiclos-1)
-                        valor = redNeuronal.CicloActual;
+                    if (valor > redNeuronal.TotalCiclos)
+						valor = redNeuronal.TotalCiclos;
                     Invoke(new Action(() => barraDeProgreso.Value = valor));
                 }
                 if(cicloAnterior != redNeuronal.CicloActual)
