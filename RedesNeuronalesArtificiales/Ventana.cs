@@ -489,23 +489,59 @@ namespace RedesNeuronalesArtificiales
 
         private void button2_Click(object sender, EventArgs e)
         {
+            rellenoFormulario();
+            /*
             //Creamos el delegado 
             ThreadStart proceso = new ThreadStart(analisisResultadosEntregados);
             //Creamos la instancia del hilo 
             Thread hilo = new Thread(proceso);
             //Iniciamos el hilo 
             hilo.Start();
+            */
+        }
+
+        double [] rellenoFormulario()
+        {
+            double []vectorEntrada = new double[38];
+
+            int mes = datoMes1.SelectedIndex+1;
+            double velocidadViento = Convert.ToDouble( datoVeloViento1.Text);
+            double direccionViento = Convert.ToDouble(datoDirecViento1.Text);
+            double temperatura = Convert.ToDouble(datoTemp1.Text);
+            double humedad = Convert.ToDouble(datoHumedad1.Text);
+            double radiacion = Convert.ToDouble(datoRadiaSolar1.Text);
+            double presion = Convert.ToDouble(datoPresion1.Text);
+
+            double preci1 = Convert.ToDouble(datoPreciMañana1.Text);
+            double preci2 = Convert.ToDouble(datoPrecihoy1.Text);
+            double preci3 = Convert.ToDouble(datoPreci1_1.Text);
+            double preci4 = Convert.ToDouble(datoPreci2_1.Text);
+            double preci5 = Convert.ToDouble(datoPreci3_1.Text);
+
+            double evapo1 = Convert.ToDouble(datoEvapomañana1.Text);
+            double evapo2 = Convert.ToDouble(datoEvapohoy1.Text);
+            double evapo3 = Convert.ToDouble(datoEvapo1_1.Text);
+            double evapo4 = Convert.ToDouble(datoEvapo2_1.Text);
+            double evapo5 = Convert.ToDouble(datoEvapo3_1.Text);
+
+            Console.WriteLine("mes: " + mes);
+
+            return vectorEntrada;
         }
 
         private void diasApredecir_SelectedIndexChanged(object sender, EventArgs e)
         {
             prediccionDiaComboBox.Items.Clear();
             String opcion = (string)diasApredecir.SelectedItem;
+
+            this.diasPrediccion.Controls.Clear();
+
             if (String.Compare(opcion, "1 Dia") == 0)
             {
                 prediccionDiaComboBox.Items.Add("dia 1");
                 resultados = new ConstruccionConjuntos[1];
                 resultados[0] = resultado;
+                this.diasPrediccion.Controls.Add(tabDia1);
             }
 
             if (String.Compare(opcion, "2 Dias") == 0)
@@ -514,7 +550,8 @@ namespace RedesNeuronalesArtificiales
                 prediccionDiaComboBox.Items.Add("dia 2");
                 resultados = new ConstruccionConjuntos[2];
                 resultados[0] = resultado;
-                agregarDia("Dia 2");
+                this.diasPrediccion.Controls.Add(tabDia1);
+                this.diasPrediccion.Controls.Add(tabDia2);
             }
 
             if (String.Compare(opcion, "3 Dias") == 0)
@@ -524,6 +561,10 @@ namespace RedesNeuronalesArtificiales
                 prediccionDiaComboBox.Items.Add("dia 3");
                 resultados = new ConstruccionConjuntos[3];
                 resultados[0] = resultado;
+                this.diasPrediccion.Controls.Add(tabDia1);
+                this.diasPrediccion.Controls.Add(tabDia2);
+                this.diasPrediccion.Controls.Add(tabDia3);
+
             }
 
             if (String.Compare(opcion, "4 Dias") == 0)
@@ -534,6 +575,11 @@ namespace RedesNeuronalesArtificiales
                 prediccionDiaComboBox.Items.Add("dia 4");
                 resultados = new ConstruccionConjuntos[4];
                 resultados[0] = resultado;
+                this.diasPrediccion.Controls.Add(tabDia1);
+                this.diasPrediccion.Controls.Add(tabDia2);
+                this.diasPrediccion.Controls.Add(tabDia3);
+                this.diasPrediccion.Controls.Add(tabDia4);
+
             }
 
             if (String.Compare(opcion, "5 Dias") == 0)
@@ -545,6 +591,11 @@ namespace RedesNeuronalesArtificiales
                 prediccionDiaComboBox.Items.Add("dia 5");
                 resultados = new ConstruccionConjuntos[5];
                 resultados[0] = resultado;
+                this.diasPrediccion.Controls.Add(tabDia1);
+                this.diasPrediccion.Controls.Add(tabDia2);
+                this.diasPrediccion.Controls.Add(tabDia3);
+                this.diasPrediccion.Controls.Add(tabDia4);
+                this.diasPrediccion.Controls.Add(tabDia5);
             }
             prediccionDiaComboBox.SelectedIndex = 0;
         }
