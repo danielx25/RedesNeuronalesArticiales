@@ -13,7 +13,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 									"Port="+Configuracion.PUERTO+";" +
-									"CommandTimeout=500000;" +
+                                    "CommandTimeout="+Configuracion.TIEMPOESPERA+";" +
 									"User Id="+Configuracion.USUARIO+";" +
 									"Password="+Configuracion.CONTRASEÑA+";" +
 									"Database="+Configuracion.BASEDEDATOS+";";
@@ -103,7 +103,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 				"Port="+Configuracion.PUERTO+";" +
-				"CommandTimeout=500000;" +
+                "CommandTimeout="+Configuracion.TIEMPOESPERA+";" +
 				"User Id="+Configuracion.USUARIO+";" +
 				"Password="+Configuracion.CONTRASEÑA+";" +
 				"Database="+Configuracion.BASEDEDATOS+";";
@@ -226,7 +226,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 				"Port="+Configuracion.PUERTO+";" +
-				"CommandTimeout=500000;" +
+                "CommandTimeout="+Configuracion.TIEMPOESPERA+";" +
 				"User Id="+Configuracion.USUARIO+";" +
 				"Password="+Configuracion.CONTRASEÑA+";" +
 				"Database="+Configuracion.BASEDEDATOS+";";
@@ -279,7 +279,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 				"Port="+Configuracion.PUERTO+";" +
-				"CommandTimeout=500000;" +
+                "CommandTimeout="+Configuracion.TIEMPOESPERA+";" +
 				"User Id="+Configuracion.USUARIO+";" +
 				"Password="+Configuracion.CONTRASEÑA+";" +
 				"Database="+Configuracion.BASEDEDATOS+";";
@@ -355,7 +355,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 		{
 			string datos_conexion = "Server="+Configuracion.SERVIDOR +";" +
 				"Port="+Configuracion.PUERTO+";" +
-				"CommandTimeout=500000;" +
+                "CommandTimeout="+Configuracion.TIEMPOESPERA+";" +
 				"User Id="+Configuracion.USUARIO+";" +
 				"Password="+Configuracion.CONTRASEÑA+";" +
 				"Database="+Configuracion.BASEDEDATOS+";";
