@@ -9,6 +9,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 		public static string USUARIO = "postgres";
 		public static string CONTRASEÑA = "postgres";
 		public static string BASEDEDATOS = "meteorologico";
+        public static int TIEMPOESPERA = 5000000;
 	}
 }
 

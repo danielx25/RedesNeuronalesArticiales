@@ -15,6 +15,9 @@ namespace RedesNeuronalesArtificiales.Ventanas
     public partial class Entrenamiento : Form
     {
         private Som redNeuronal;
+        private Som archivo1;
+        private Som archivo2;
+        private Som archivo3;
         private Thread hilo;
         private Thread hiloProgreso;
         private bool entrenando = false;
@@ -77,10 +80,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 redNeuronal.inicializarMatriz(0, 1);
                 redNeuronal.Datos = datosMeteorologicos;
                 
-                mapaResultado.Navigate("about:black");
-                //mapaResultado.Document.OpenNew(false);//Comentado para linux
 				mapaResultado.DocumentText = Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas);
-                mapaResultado.Refresh();
                 
                 entrenando = true;
                 hilo = new Thread(entrenar);
@@ -200,6 +200,82 @@ namespace RedesNeuronalesArtificiales.Ventanas
             }
             Thread.Sleep(110);
             Application.Exit();
+        }
+
+        private void abrirArchivo_Click(object sender, EventArgs e)
+        {
+            dialogoAbrirArchivo.Filter = "Archivos de red neuronal (*.mp10)|*.mp10";
+            dialogoAbrirArchivo.FilterIndex = 2;
+            dialogoAbrirArchivo.RestoreDirectory = true;
+            if (dialogoAbrirArchivo.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    nombreArchivo1.Text = dialogoAbrirArchivo.SafeFileName;
+                    archivo1 = Guardar.Deserializar(dialogoAbrirArchivo.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al leer el archivo: " + ex.Message);
+                }
+            }
+        }
+
+        private void abrirArchivo2_Click(object sender, EventArgs e)
+        {
+            dialogoAbrirArchivo.Filter = "Archivos de red neuronal (*.mp10)|*.mp10";
+            dialogoAbrirArchivo.FilterIndex = 2;
+            dialogoAbrirArchivo.RestoreDirectory = true;
+            if (dialogoAbrirArchivo.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    nombreArchivo2.Text = dialogoAbrirArchivo.SafeFileName;
+                    archivo2 = Guardar.Deserializar(dialogoAbrirArchivo.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al leer el archivo: " + ex.Message);
+                }
+            }
+        }
+
+        private void abrirArchivo3_Click(object sender, EventArgs e)
+        {
+            dialogoAbrirArchivo.Filter = "Archivos de red neuronal (*.mp10)|*.mp10";
+            dialogoAbrirArchivo.FilterIndex = 2;
+            dialogoAbrirArchivo.RestoreDirectory = true;
+            if (dialogoAbrirArchivo.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    nombreArchivo3.Text = dialogoAbrirArchivo.SafeFileName;
+                    archivo3 = Guardar.Deserializar(dialogoAbrirArchivo.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al leer el archivo: " + ex.Message);
+                }
+            }
+        }
+
+        private void botonIniciarValidacion_Click(object sender, EventArgs e)
+        {
+            if(archivo1 != null && archivo2 != null && archivo3 != null)
+            {
+                barraDeProgresoValidacion.Maximum = 100;
+                List<double[]> datos1 = Conexion.datosMeteorologicos(entradaFechaInicio.Value, entradaFechaTermino.Value,0);
+                barraDeProgresoValidacion.Value = 33;
+                List<double[]> datos2 = Conexion.datosMeteorologicos(entradaFechaInicio2.Value, entradaFechaTermino2.Value, 0);
+                barraDeProgresoValidacion.Value = 66;
+                List<double[]> datos3 = Conexion.datosMeteorologicos(entradaFechaInicio3.Value, entradaFechaTermino3.Value, 0);
+                barraDeProgresoValidacion.Value = 100;
+                panelResultados.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Seleccione los archivos faltantes antes de continuar");
+            }
         }
     }
 }
