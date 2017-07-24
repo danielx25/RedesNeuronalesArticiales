@@ -1,23 +1,20 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using RedesNeuronalesArtificiales.RNA;
 using RedesNeuronalesArtificiales.Archivo;
 using RedesNeuronalesArtificiales.BaseDeDatos;
+using RedesNeuronalesArtificiales.AnalisisDeRNA;
 
 namespace RedesNeuronalesArtificiales.Ventanas
 {
     public partial class Entrenamiento : Form
     {
         private Som redNeuronal;
-        private Som archivo1;
-        private Som archivo2;
-        private Som archivo3;
+        private string nombre1, nombre2, nombre3;
+        private Som archivo1, archivo2, archivo3;
         private Thread hilo;
         private Thread hiloProgreso;
         private bool entrenando = false;
@@ -40,7 +37,10 @@ namespace RedesNeuronalesArtificiales.Ventanas
                     else
                         neuronas += gruposDeNeuronas.Items[x].ToString().Split(' ')[1];
                 }
-                EscribirArchivo archivo = new EscribirArchivo("Grupo de neuronas.txt",true);
+                string nombre = entradaNombreArchivo.Text;
+                if (nombre.Equals(""))
+                    nombre = "Archivo sin nombre";
+                EscribirArchivo archivo = new EscribirArchivo(nombre+".txt",true);
                 archivo.imprimir(neuronas);
                 archivo.cerrar();
             }
@@ -96,8 +96,11 @@ namespace RedesNeuronalesArtificiales.Ventanas
         public void entrenar(object numeroDeCiclos)
         {
             redNeuronal.entrenar((int)numeroDeCiclos);
-			Guardar.Serializar (redNeuronal, "Red entrenada.mp10");
-			EscribirArchivo imagen = new EscribirArchivo ("Mapa del mp10.html", true);
+            string nombre = entradaNombreArchivo.Text;
+            if (nombre.Equals(""))
+                nombre = "Archivo sin nombre";
+			Guardar.Serializar (redNeuronal, nombre+".mp10");
+			EscribirArchivo imagen = new EscribirArchivo (nombre+".html", true);
 			imagen.imprimir (Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
 			imagen.cerrar ();
             entrenando = false;
@@ -212,6 +215,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 try
                 {
                     nombreArchivo1.Text = dialogoAbrirArchivo.SafeFileName;
+                    nombre1 = dialogoAbrirArchivo.FileName;
                     archivo1 = Guardar.Deserializar(dialogoAbrirArchivo.FileName);
                 }
                 catch (Exception ex)
@@ -231,6 +235,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 try
                 {
                     nombreArchivo2.Text = dialogoAbrirArchivo.SafeFileName;
+                    nombre2 = dialogoAbrirArchivo.FileName;
                     archivo2 = Guardar.Deserializar(dialogoAbrirArchivo.FileName);
                 }
                 catch (Exception ex)
@@ -250,6 +255,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 try
                 {
                     nombreArchivo3.Text = dialogoAbrirArchivo.SafeFileName;
+                    nombre3 = dialogoAbrirArchivo.FileName;
                     archivo3 = Guardar.Deserializar(dialogoAbrirArchivo.FileName);
                 }
                 catch (Exception ex)
@@ -265,10 +271,101 @@ namespace RedesNeuronalesArtificiales.Ventanas
             {
                 barraDeProgresoValidacion.Maximum = 100;
                 List<double[]> datos1 = Conexion.datosMeteorologicos(entradaFechaInicio.Value, entradaFechaTermino.Value,0);
-                barraDeProgresoValidacion.Value = 33;
+                barraDeProgresoValidacion.Value = 3;
                 List<double[]> datos2 = Conexion.datosMeteorologicos(entradaFechaInicio2.Value, entradaFechaTermino2.Value, 0);
-                barraDeProgresoValidacion.Value = 66;
+                barraDeProgresoValidacion.Value = 7;
                 List<double[]> datos3 = Conexion.datosMeteorologicos(entradaFechaInicio3.Value, entradaFechaTermino3.Value, 0);
+                barraDeProgresoValidacion.Value = 10;
+                List<double[,]> datosRango = Conexion.datosPorRangoMp10(new DateTime(2010,01,01), new DateTime(2017,03,01), 0);
+                barraDeProgresoValidacion.Value = 30;
+
+                Console.WriteLine("Creando tablas hash");
+                HashSet<int> tabla1 = obtenerTabla(nombre1);
+                barraDeProgresoValidacion.Value = 32;
+                HashSet<int> tabla2 = obtenerTabla(nombre2);
+                barraDeProgresoValidacion.Value = 34;
+                HashSet<int> tabla3 = obtenerTabla(nombre3);
+                barraDeProgresoValidacion.Value = 36;
+
+                Console.WriteLine("Leyendo archivos");
+                Som redNeuronal1 = Guardar.Deserializar(nombre1);
+                barraDeProgresoValidacion.Value = 38;
+                Som redNeuronal2 = Guardar.Deserializar(nombre2);
+                barraDeProgresoValidacion.Value = 40;
+                Som redNeuronal3 = Guardar.Deserializar(nombre3);
+                barraDeProgresoValidacion.Value = 42;
+
+                Console.WriteLine("Obteniendo Neuronas");
+                double[,] pesosPorGrupo1 = redNeuronal1.obtenerPesosNeuronas(tabla1);
+                double[,] pesosPorGrupo2 = redNeuronal2.obtenerPesosNeuronas(tabla2);
+                double[,] pesosPorGrupo3 = redNeuronal3.obtenerPesosNeuronas(tabla3);
+                barraDeProgresoValidacion.Value = 44;
+
+                //Primer Archivo
+                double[,] sa = datosRango[0];//Sin Alerta
+                double[,] a1 = datosRango[1];//Alerta 1
+                double[,] a2 = datosRango[2];//Alerta 2
+                double[,] a3 = datosRango[3];//Alerta 3
+                double[,] a4 = datosRango[4];//Alerta 4
+
+                Console.WriteLine("Creando conjuntos");
+                ConstruccionConjuntos resultado1 = new ConstruccionConjuntos(tabla1.Count, 5);//numero de grupos y los tipos de alerta
+                ConstruccionConjuntos resultado2 = new ConstruccionConjuntos(tabla2.Count, 5);
+                ConstruccionConjuntos resultado3 = new ConstruccionConjuntos(tabla3.Count, 5);
+                barraDeProgresoValidacion.Value = 45;
+
+                Console.WriteLine("Procesando conjuntos");
+                //Primer Archivo
+                resultado1.tablaVectoresGrupos(pesosPorGrupo1);
+                resultado1.calcularConjuntoClase(sa, 0);
+                resultado1.calcularConjuntoClase(a1, 1);
+                resultado1.calcularConjuntoClase(a2, 2);
+                resultado1.calcularConjuntoClase(a3, 3);
+                resultado1.calcularConjuntoClase(a4, 4);
+                resultado1.etiquetadoDelosGrupos();
+                barraDeProgresoValidacion.Value = 50;
+                //Segundo Archivo
+                resultado2.tablaVectoresGrupos(pesosPorGrupo2);
+                resultado2.calcularConjuntoClase(sa, 0);
+                resultado2.calcularConjuntoClase(a1, 1);
+                resultado2.calcularConjuntoClase(a2, 2);
+                resultado2.calcularConjuntoClase(a3, 3);
+                resultado2.calcularConjuntoClase(a4, 4);
+                resultado2.etiquetadoDelosGrupos();
+                barraDeProgresoValidacion.Value = 55;
+                //Tercer Archivo
+                resultado3.tablaVectoresGrupos(pesosPorGrupo3);
+                resultado3.calcularConjuntoClase(sa, 0);
+                resultado3.calcularConjuntoClase(a1, 1);
+                resultado3.calcularConjuntoClase(a2, 2);
+                resultado3.calcularConjuntoClase(a3, 3);
+                resultado3.calcularConjuntoClase(a4, 4);
+                resultado3.etiquetadoDelosGrupos();
+                barraDeProgresoValidacion.Value = 60;
+
+                Console.WriteLine("Calculando precision");
+                double[] resultadoArchivo1 = calcularPrecision(datos1, resultado1);
+                barraDeProgresoValidacion.Value = 70;
+                double[] resultadoArchivo2 = calcularPrecision(datos2, resultado2);
+                barraDeProgresoValidacion.Value = 80;
+                double[] resultadoArchivo3 = calcularPrecision(datos3, resultado3);
+                barraDeProgresoValidacion.Value = 99;
+
+                Console.WriteLine("Mostrando resultados");
+                resultadoArchivo1P.Text = resultadoArchivo1[0] + "";
+                resultadoArchivo2P.Text = resultadoArchivo2[0] + "";
+                resultadoArchivo3P.Text = resultadoArchivo3[0] + "";
+                resultadoTotalP.Text = ((resultadoArchivo1[0]+ resultadoArchivo2[0]+ resultadoArchivo3[0])/3) + "";
+
+                resultadoArchivo1E1.Text = (1-resultadoArchivo1[0]) + "";
+                resultadoArchivo2E1.Text = (1-resultadoArchivo2[0]) + "";
+                resultadoArchivo3E1.Text = (1-resultadoArchivo3[0]) + "";
+                resultadoTotalE1.Text = (1-((resultadoArchivo1[0] + resultadoArchivo2[0] + resultadoArchivo3[0]) / 3)) + "";
+
+                resultadoArchivo1E2.Text = resultadoArchivo1[1] + "";
+                resultadoArchivo2E2.Text = resultadoArchivo2[1] + "";
+                resultadoArchivo3E2.Text = resultadoArchivo3[1] + "";
+                resultadoTotalE2.Text = ((resultadoArchivo1[1] + resultadoArchivo2[1] + resultadoArchivo3[1]) / 3) + "";
                 barraDeProgresoValidacion.Value = 100;
                 panelResultados.Visible = true;
             }
@@ -276,6 +373,56 @@ namespace RedesNeuronalesArtificiales.Ventanas
             {
                 MessageBox.Show("Seleccione los archivos faltantes antes de continuar");
             }
+        }
+
+        private double[] calcularPrecision(List<double[]> datos, ConstruccionConjuntos resultado)
+        {
+            int errores = 0;
+            int errorMayor = 0;
+            int nivelAlertaPredecido = 0;
+            int nivelAlertaReal = 0;
+            for (int x = 0; x < datos.Count; x++)
+            {
+                nivelAlertaReal = obtenerNivelAlerta((int)(datos[x][7] * 800));
+                nivelAlertaPredecido = obtenerNivelAlerta((int)resultado.prediccionMP10(datos[x]));
+                if (nivelAlertaReal != nivelAlertaPredecido)
+                {
+                    errores++;
+                    if (Math.Abs(nivelAlertaReal - nivelAlertaPredecido) > 1)
+                        errorMayor++;
+                }
+            }
+            double porcentajeAcertado = 1 - ((errores * 100.0) / datos.Count);
+            double porcentajeAcertadoMenor = 1 - ((errorMayor * 100.0) / datos.Count);
+            return new double[] {porcentajeAcertado, porcentajeAcertadoMenor};
+        }
+
+        private int obtenerNivelAlerta(double mp10)
+        {
+            if (mp10 <= 150)
+                return 0;
+            else if (mp10 > 150 && mp10 <= 250)
+                return 1;
+            else if (mp10 > 250 && mp10 <= 350)
+                return 2;
+            else if (mp10 > 350 && mp10 <= 500)
+                return 3;
+            else
+                return 4;
+        }
+
+        private HashSet<int> obtenerTabla(string nombre)
+        {
+            StreamReader archivo = new StreamReader(nombre.Substring(0, nombre.Length-5)+".txt");
+            string linea = archivo.ReadLine();
+            string[] neuronas = linea.Split(',');
+
+            HashSet<int> tabla = new HashSet<int>();
+            for (int x = 0; x < neuronas.Length; x++)
+            {
+                tabla.Add(int.Parse(neuronas[x]));
+            }
+            return tabla;
         }
     }
 }

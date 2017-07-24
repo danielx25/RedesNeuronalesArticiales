@@ -358,12 +358,10 @@ namespace RedesNeuronalesArtificiales.RNA
 				for (int columna = 0; columna < numColumna; columna++)
 				{
 					pesosGrupos[fila, columna] = neuronasCentrales[fila][columna];
-					System.Console.Write("| " + pesosGrupos[fila, columna]);
+					//System.Console.Write("| " + pesosGrupos[fila, columna]);
 				}
-				System.Console.WriteLine();
+				//System.Console.WriteLine();
 			}
-
-
 			return pesosGrupos;
 		}
 
