@@ -357,10 +357,10 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 resultadoArchivo3P.Text = resultadoArchivo3[0] + "";
                 resultadoTotalP.Text = ((resultadoArchivo1[0]+ resultadoArchivo2[0]+ resultadoArchivo3[0])/3) + "";
 
-                resultadoArchivo1E1.Text = (1-resultadoArchivo1[0]) + "";
-                resultadoArchivo2E1.Text = (1-resultadoArchivo2[0]) + "";
-                resultadoArchivo3E1.Text = (1-resultadoArchivo3[0]) + "";
-                resultadoTotalE1.Text = (1-((resultadoArchivo1[0] + resultadoArchivo2[0] + resultadoArchivo3[0]) / 3)) + "";
+                resultadoArchivo1E1.Text = (100-resultadoArchivo1[0]) + "";
+                resultadoArchivo2E1.Text = (100-resultadoArchivo2[0]) + "";
+                resultadoArchivo3E1.Text = (100-resultadoArchivo3[0]) + "";
+                resultadoTotalE1.Text = (100-((resultadoArchivo1[0] + resultadoArchivo2[0] + resultadoArchivo3[0]) / 3)) + "";
 
                 resultadoArchivo1E2.Text = resultadoArchivo1[1] + "";
                 resultadoArchivo2E2.Text = resultadoArchivo2[1] + "";
@@ -392,8 +392,8 @@ namespace RedesNeuronalesArtificiales.Ventanas
                         errorMayor++;
                 }
             }
-            double porcentajeAcertado = 1 - ((errores * 100.0) / datos.Count);
-            double porcentajeAcertadoMenor = 1 - ((errorMayor * 100.0) / datos.Count);
+            double porcentajeAcertado = 100 - ((errores * 100.0) / datos.Count);
+            double porcentajeAcertadoMenor = 100 - ((errorMayor * 100.0) / datos.Count);
             return new double[] {porcentajeAcertado, porcentajeAcertadoMenor};
         }
 
