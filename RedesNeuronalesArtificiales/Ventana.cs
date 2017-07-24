@@ -499,6 +499,73 @@ namespace RedesNeuronalesArtificiales
 
         private void diasApredecir_SelectedIndexChanged(object sender, EventArgs e)
         {
+            prediccionDiaComboBox.Items.Clear();
+            String opcion = (string)diasApredecir.SelectedItem;
+            if (String.Compare(opcion, "1 Dia") == 0)
+            {
+                prediccionDiaComboBox.Items.Add("dia 1");
+                resultados = new ConstruccionConjuntos[1];
+                resultados[0] = resultado;
+            }
+
+            if (String.Compare(opcion, "2 Dias") == 0)
+            {
+                prediccionDiaComboBox.Items.Add("dia 1");
+                prediccionDiaComboBox.Items.Add("dia 2");
+                resultados = new ConstruccionConjuntos[2];
+                resultados[0] = resultado;
+                agregarDia("Dia 2");
+            }
+
+            if (String.Compare(opcion, "3 Dias") == 0)
+            {
+                prediccionDiaComboBox.Items.Add("dia 1");
+                prediccionDiaComboBox.Items.Add("dia 2");
+                prediccionDiaComboBox.Items.Add("dia 3");
+                resultados = new ConstruccionConjuntos[3];
+                resultados[0] = resultado;
+            }
+
+            if (String.Compare(opcion, "4 Dias") == 0)
+            {
+                prediccionDiaComboBox.Items.Add("dia 1");
+                prediccionDiaComboBox.Items.Add("dia 2");
+                prediccionDiaComboBox.Items.Add("dia 3");
+                prediccionDiaComboBox.Items.Add("dia 4");
+                resultados = new ConstruccionConjuntos[4];
+                resultados[0] = resultado;
+            }
+
+            if (String.Compare(opcion, "5 Dias") == 0)
+            {
+                prediccionDiaComboBox.Items.Add("dia 1");
+                prediccionDiaComboBox.Items.Add("dia 2");
+                prediccionDiaComboBox.Items.Add("dia 3");
+                prediccionDiaComboBox.Items.Add("dia 4");
+                prediccionDiaComboBox.Items.Add("dia 5");
+                resultados = new ConstruccionConjuntos[5];
+                resultados[0] = resultado;
+            }
+            prediccionDiaComboBox.SelectedIndex = 0;
+        }
+
+        private void agregarDia(string dia)
+        {
+            System.Windows.Forms.TabPage otroDia = new System.Windows.Forms.TabPage();
+            //otroDia.Controls.Add(this.datosEntrada);
+            otroDia.Location = new System.Drawing.Point(4, 25);
+            otroDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            otroDia.Name = "dia_n";
+            otroDia.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            otroDia.Size = new System.Drawing.Size(1139, 481);
+            otroDia.TabIndex = 1;
+            otroDia.Text = dia;
+            otroDia.UseVisualStyleBackColor = true;
+            diasPrediccion.Controls.Add(otroDia);
+        }
+
+        private void tabPage7_Click(object sender, EventArgs e)
+        {
 
         }
     }
