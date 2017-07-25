@@ -205,9 +205,9 @@ namespace RedesNeuronalesArtificiales.RNA
                 //Se disminuye la tasa de aprendizaje
                 alfaActual -= BETA;
 				cicloActual++;
-				EscribirArchivo archivo = new EscribirArchivo("Datos MP10 ciclo ("+cicloActual+").html", true);
-				archivo.imprimir(Mp10.obtenerMP10HTML(MatrizPesos, NumeroFilas, NumeroColumnas));
-				archivo.cerrar ();
+				//EscribirArchivo archivo = new EscribirArchivo("Datos MP10 ciclo ("+cicloActual+").html", true);
+				//archivo.imprimir(Mp10.obtenerMP10HTML(MatrizPesos, NumeroFilas, NumeroColumnas));
+				//archivo.cerrar ();
 			}
 			Console.WriteLine ("Entrenamiento terminado");
 		}
