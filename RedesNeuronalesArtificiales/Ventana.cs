@@ -23,7 +23,7 @@ namespace RedesNeuronalesArtificiales
         private delegate void delegadoCambioProgreso(int value);
         private delegate void graficosPertenencia1();
         graficosPertenencia1 delagadoGraficos;
-        ConstruccionConjuntos resultado;//numero de grupos, numero de alertas
+        ConstruccionConjuntos resultado = null;//numero de grupos, numero de alertas
         List<double[]> listaEntrada;
         double[] vectorEntrada = new double[38];
         public int numeroGrupos = 10;
@@ -32,7 +32,7 @@ namespace RedesNeuronalesArtificiales
         int indiceActualResultado = 0;
         string nombreArchivoMp10 = "Red Som Final.mp10";
         string nombreArchivoHtml = "Pesos aleatorios.html";
-        HashSet<int> listaGruposNeurona;
+        HashSet<int> listaGruposNeurona = null;
 
         //ThreadStart delegado = new ThreadStart(analisisResultadosEntregados);
 
@@ -92,6 +92,7 @@ namespace RedesNeuronalesArtificiales
             resultado.etiquetadoDelosGrupos();
             cambiarBarraProgreso(80);
 
+            /*
             DateTime inicio1 = new DateTime(2017, 01, 01, 00, 00, 00);
             DateTime fin1 = new DateTime(2017, 02, 01, 23, 00, 00);
 
@@ -100,12 +101,25 @@ namespace RedesNeuronalesArtificiales
             System.Console.WriteLine("---------------------->tipo alerta: " + fila[7] * 800);
             resultado.prediccionMP10(fila);
             cambiarBarraProgreso(100);
+            */
+            //resultados[0] = resultado;
+            //resultados[0].prediccionMP10(listaEntrada[0]);
+            
+            for (int indice_dia = 0; indice_dia< resultados.Length; indice_dia++)
+            {
+                resultados[indice_dia] = resultado.clonar();
+                resultados[indice_dia].prediccionMP10(listaEntrada[indice_dia]);
+            }
+            resultado = resultados[0];
         }
 
         private void contruirGraficoMp10()
         {
-            
-
+            /*foreach (var series in graficoMP10.Series)
+            {
+                series.Points.Clear();
+            }*/
+            graficoMP10.Series.Clear();
             double mp10 = resultado.Mp10predecido;
 
             for (int indice_alerta = 0; indice_alerta < resultado.gruposGanadores.GetLength(0); indice_alerta++)
@@ -212,7 +226,6 @@ namespace RedesNeuronalesArtificiales
             }
             else
             {
-                Console.WriteLine("Bueno no entro aca cierto");
                 graficoSinAlerta.Titles.Add("Sin alerta");
                 Grupo grupon = resultado.gruposxclases[0, 6];
                 double rangox0 = 0.0;
@@ -493,6 +506,7 @@ namespace RedesNeuronalesArtificiales
 
         private void button2_Click(object sender, EventArgs e)
         {
+            listaEntrada.Clear();
             if(resultados.Length == 1)
                 listaEntrada.Add(obtenerFormulario1());
 
@@ -526,16 +540,14 @@ namespace RedesNeuronalesArtificiales
                 listaEntrada.Add(obtenerFormulario5());
             }
 
-
-
-            /*
+            
             //Creamos el delegado 
             ThreadStart proceso = new ThreadStart(analisisResultadosEntregados);
             //Creamos la instancia del hilo 
             Thread hilo = new Thread(proceso);
             //Iniciamos el hilo 
             hilo.Start();
-            */
+            
         }
 
         double [] obtenerFormulario1()
@@ -1057,6 +1069,19 @@ namespace RedesNeuronalesArtificiales
 
         private void tabPage7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void prediccionDiaComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indice = prediccionDiaComboBox.SelectedIndex;
+            if(listaGruposNeurona != null)
+            {
+                Console.WriteLine("indice: " + indice);
+                resultado = resultados[indice];
+                contruirGraficoMp10();
+            }
+            
 
         }
     }

@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title11 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title13 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title14 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title15 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.MenuSoft = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.barraProgreso = new System.Windows.Forms.ProgressBar();
@@ -57,6 +57,7 @@
             this.tabDia1 = new System.Windows.Forms.TabPage();
             this.datosEntrada = new System.Windows.Forms.TabControl();
             this.dmeteorologico = new System.Windows.Forms.TabPage();
+            this.datoMes1 = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -118,6 +119,7 @@
             this.tabDia2 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.datoMes2 = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -179,6 +181,7 @@
             this.tabDia3 = new System.Windows.Forms.TabPage();
             this.datosDetencionChancadores_777 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.datoMes3 = new System.Windows.Forms.DateTimePicker();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
@@ -240,6 +243,7 @@
             this.tabDia4 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.datoMes4 = new System.Windows.Forms.DateTimePicker();
             this.label92 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.label94 = new System.Windows.Forms.Label();
@@ -301,6 +305,7 @@
             this.tabDia5 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.datoMes5 = new System.Windows.Forms.DateTimePicker();
             this.label121 = new System.Windows.Forms.Label();
             this.label122 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
@@ -381,11 +386,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.graficoMP10 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.reportes = new System.Windows.Forms.TabPage();
-            this.datoMes1 = new System.Windows.Forms.DateTimePicker();
-            this.datoMes2 = new System.Windows.Forms.DateTimePicker();
-            this.datoMes3 = new System.Windows.Forms.DateTimePicker();
-            this.datoMes4 = new System.Windows.Forms.DateTimePicker();
-            this.datoMes5 = new System.Windows.Forms.DateTimePicker();
             this.MenuSoft.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.diasPrediccion.SuspendLayout();
@@ -616,6 +616,13 @@
             this.dmeteorologico.Text = "Meteorologico";
             this.dmeteorologico.UseVisualStyleBackColor = true;
             // 
+            // datoMes1
+            // 
+            this.datoMes1.Location = new System.Drawing.Point(237, 46);
+            this.datoMes1.Name = "datoMes1";
+            this.datoMes1.Size = new System.Drawing.Size(200, 22);
+            this.datoMes1.TabIndex = 56;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -668,6 +675,7 @@
             this.datoEvapo3_1.Name = "datoEvapo3_1";
             this.datoEvapo3_1.Size = new System.Drawing.Size(100, 22);
             this.datoEvapo3_1.TabIndex = 50;
+            this.datoEvapo3_1.Text = "1751854";
             // 
             // datoEvapo2_1
             // 
@@ -676,6 +684,7 @@
             this.datoEvapo2_1.Name = "datoEvapo2_1";
             this.datoEvapo2_1.Size = new System.Drawing.Size(100, 22);
             this.datoEvapo2_1.TabIndex = 49;
+            this.datoEvapo2_1.Text = "1751854";
             // 
             // datoEvapo1_1
             // 
@@ -684,6 +693,7 @@
             this.datoEvapo1_1.Name = "datoEvapo1_1";
             this.datoEvapo1_1.Size = new System.Drawing.Size(100, 22);
             this.datoEvapo1_1.TabIndex = 48;
+            this.datoEvapo1_1.Text = "1751854";
             // 
             // datoEvapohoy1
             // 
@@ -692,6 +702,7 @@
             this.datoEvapohoy1.Name = "datoEvapohoy1";
             this.datoEvapohoy1.Size = new System.Drawing.Size(100, 22);
             this.datoEvapohoy1.TabIndex = 47;
+            this.datoEvapohoy1.Text = "1751854";
             // 
             // datoEvapomañana1
             // 
@@ -700,6 +711,7 @@
             this.datoEvapomañana1.Name = "datoEvapomañana1";
             this.datoEvapomañana1.Size = new System.Drawing.Size(100, 22);
             this.datoEvapomañana1.TabIndex = 46;
+            this.datoEvapomañana1.Text = "206";
             // 
             // datoPreci3_1
             // 
@@ -708,6 +720,7 @@
             this.datoPreci3_1.Name = "datoPreci3_1";
             this.datoPreci3_1.Size = new System.Drawing.Size(100, 22);
             this.datoPreci3_1.TabIndex = 27;
+            this.datoPreci3_1.Text = "0";
             // 
             // datoPreci2_1
             // 
@@ -716,6 +729,7 @@
             this.datoPreci2_1.Name = "datoPreci2_1";
             this.datoPreci2_1.Size = new System.Drawing.Size(100, 22);
             this.datoPreci2_1.TabIndex = 26;
+            this.datoPreci2_1.Text = "0";
             // 
             // datoPreci1_1
             // 
@@ -724,6 +738,7 @@
             this.datoPreci1_1.Name = "datoPreci1_1";
             this.datoPreci1_1.Size = new System.Drawing.Size(100, 22);
             this.datoPreci1_1.TabIndex = 25;
+            this.datoPreci1_1.Text = "0";
             // 
             // datoPrecihoy1
             // 
@@ -732,6 +747,7 @@
             this.datoPrecihoy1.Name = "datoPrecihoy1";
             this.datoPrecihoy1.Size = new System.Drawing.Size(100, 22);
             this.datoPrecihoy1.TabIndex = 24;
+            this.datoPrecihoy1.Text = "0";
             // 
             // datoPreciMañana1
             // 
@@ -740,6 +756,7 @@
             this.datoPreciMañana1.Name = "datoPreciMañana1";
             this.datoPreciMañana1.Size = new System.Drawing.Size(100, 22);
             this.datoPreciMañana1.TabIndex = 23;
+            this.datoPreciMañana1.Text = "0";
             // 
             // datoPresion1
             // 
@@ -748,6 +765,7 @@
             this.datoPresion1.Name = "datoPresion1";
             this.datoPresion1.Size = new System.Drawing.Size(100, 22);
             this.datoPresion1.TabIndex = 13;
+            this.datoPresion1.Text = "557";
             // 
             // datoRadiaSolar1
             // 
@@ -756,6 +774,7 @@
             this.datoRadiaSolar1.Name = "datoRadiaSolar1";
             this.datoRadiaSolar1.Size = new System.Drawing.Size(100, 22);
             this.datoRadiaSolar1.TabIndex = 11;
+            this.datoRadiaSolar1.Text = "500";
             // 
             // datoHumedad1
             // 
@@ -764,6 +783,7 @@
             this.datoHumedad1.Name = "datoHumedad1";
             this.datoHumedad1.Size = new System.Drawing.Size(100, 22);
             this.datoHumedad1.TabIndex = 9;
+            this.datoHumedad1.Text = "21";
             // 
             // datoTemp1
             // 
@@ -772,6 +792,7 @@
             this.datoTemp1.Name = "datoTemp1";
             this.datoTemp1.Size = new System.Drawing.Size(100, 22);
             this.datoTemp1.TabIndex = 8;
+            this.datoTemp1.Text = "18";
             // 
             // datoDirecViento1
             // 
@@ -780,6 +801,7 @@
             this.datoDirecViento1.Name = "datoDirecViento1";
             this.datoDirecViento1.Size = new System.Drawing.Size(100, 22);
             this.datoDirecViento1.TabIndex = 6;
+            this.datoDirecViento1.Text = "56";
             // 
             // datoVeloViento1
             // 
@@ -788,6 +810,7 @@
             this.datoVeloViento1.Name = "datoVeloViento1";
             this.datoVeloViento1.Size = new System.Drawing.Size(100, 22);
             this.datoVeloViento1.TabIndex = 5;
+            this.datoVeloViento1.Text = "21";
             // 
             // label22
             // 
@@ -950,6 +973,7 @@
             this.datosCachimba2_1.Name = "datosCachimba2_1";
             this.datosCachimba2_1.Size = new System.Drawing.Size(100, 22);
             this.datosCachimba2_1.TabIndex = 19;
+            this.datosCachimba2_1.Text = "1102";
             // 
             // datoGerencia1
             // 
@@ -958,6 +982,7 @@
             this.datoGerencia1.Name = "datoGerencia1";
             this.datoGerencia1.Size = new System.Drawing.Size(100, 22);
             this.datoGerencia1.TabIndex = 17;
+            this.datoGerencia1.Text = "679";
             // 
             // datosCachimba1_1
             // 
@@ -966,6 +991,7 @@
             this.datosCachimba1_1.Name = "datosCachimba1_1";
             this.datosCachimba1_1.Size = new System.Drawing.Size(100, 22);
             this.datosCachimba1_1.TabIndex = 15;
+            this.datosCachimba1_1.Text = "822";
             // 
             // datosCnorte1
             // 
@@ -974,6 +1000,7 @@
             this.datosCnorte1.Name = "datosCnorte1";
             this.datosCnorte1.Size = new System.Drawing.Size(100, 22);
             this.datosCnorte1.TabIndex = 13;
+            this.datosCnorte1.Text = "108";
             // 
             // datosCmovil1
             // 
@@ -982,6 +1009,7 @@
             this.datosCmovil1.Name = "datosCmovil1";
             this.datosCmovil1.Size = new System.Drawing.Size(100, 22);
             this.datosCmovil1.TabIndex = 11;
+            this.datosCmovil1.Text = "676";
             // 
             // datosDasdia1
             // 
@@ -990,6 +1018,7 @@
             this.datosDasdia1.Name = "datosDasdia1";
             this.datosDasdia1.Size = new System.Drawing.Size(100, 22);
             this.datosDasdia1.TabIndex = 9;
+            this.datosDasdia1.Text = "3";
             // 
             // datoMovitecDia1
             // 
@@ -998,6 +1027,7 @@
             this.datoMovitecDia1.Name = "datoMovitecDia1";
             this.datoMovitecDia1.Size = new System.Drawing.Size(100, 22);
             this.datoMovitecDia1.TabIndex = 5;
+            this.datoMovitecDia1.Text = "3";
             // 
             // datoChancadoDia1
             // 
@@ -1006,6 +1036,7 @@
             this.datoChancadoDia1.Name = "datoChancadoDia1";
             this.datoChancadoDia1.Size = new System.Drawing.Size(100, 22);
             this.datoChancadoDia1.TabIndex = 1;
+            this.datoChancadoDia1.Text = "7";
             // 
             // label33
             // 
@@ -1223,6 +1254,13 @@
             this.tabPage8.Text = "Meteorologico";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // datoMes2
+            // 
+            this.datoMes2.Location = new System.Drawing.Point(237, 42);
+            this.datoMes2.Name = "datoMes2";
+            this.datoMes2.Size = new System.Drawing.Size(200, 22);
+            this.datoMes2.TabIndex = 57;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -1275,6 +1313,7 @@
             this.datoEvapo3_2.Name = "datoEvapo3_2";
             this.datoEvapo3_2.Size = new System.Drawing.Size(100, 22);
             this.datoEvapo3_2.TabIndex = 50;
+            this.datoEvapo3_2.Text = "1751854";
             // 
             // datoEvapo2_2
             // 
@@ -1283,6 +1322,7 @@
             this.datoEvapo2_2.Name = "datoEvapo2_2";
             this.datoEvapo2_2.Size = new System.Drawing.Size(100, 22);
             this.datoEvapo2_2.TabIndex = 49;
+            this.datoEvapo2_2.Text = "1751854";
             // 
             // datoEvapo1_2
             // 
@@ -1291,6 +1331,7 @@
             this.datoEvapo1_2.Name = "datoEvapo1_2";
             this.datoEvapo1_2.Size = new System.Drawing.Size(100, 22);
             this.datoEvapo1_2.TabIndex = 48;
+            this.datoEvapo1_2.Text = "1751854";
             // 
             // datoEvapohoy2
             // 
@@ -1299,6 +1340,7 @@
             this.datoEvapohoy2.Name = "datoEvapohoy2";
             this.datoEvapohoy2.Size = new System.Drawing.Size(100, 22);
             this.datoEvapohoy2.TabIndex = 47;
+            this.datoEvapohoy2.Text = "1751854";
             // 
             // datoEvapomañana2
             // 
@@ -1307,6 +1349,7 @@
             this.datoEvapomañana2.Name = "datoEvapomañana2";
             this.datoEvapomañana2.Size = new System.Drawing.Size(100, 22);
             this.datoEvapomañana2.TabIndex = 46;
+            this.datoEvapomañana2.Text = "206";
             // 
             // datoPreci3_2
             // 
@@ -1315,6 +1358,7 @@
             this.datoPreci3_2.Name = "datoPreci3_2";
             this.datoPreci3_2.Size = new System.Drawing.Size(100, 22);
             this.datoPreci3_2.TabIndex = 27;
+            this.datoPreci3_2.Text = "0";
             // 
             // datoPreci2_2
             // 
@@ -1323,6 +1367,7 @@
             this.datoPreci2_2.Name = "datoPreci2_2";
             this.datoPreci2_2.Size = new System.Drawing.Size(100, 22);
             this.datoPreci2_2.TabIndex = 26;
+            this.datoPreci2_2.Text = "0";
             // 
             // datoPreci1_2
             // 
@@ -1331,6 +1376,7 @@
             this.datoPreci1_2.Name = "datoPreci1_2";
             this.datoPreci1_2.Size = new System.Drawing.Size(100, 22);
             this.datoPreci1_2.TabIndex = 25;
+            this.datoPreci1_2.Text = "0";
             // 
             // datoPrecihoy2
             // 
@@ -1339,6 +1385,7 @@
             this.datoPrecihoy2.Name = "datoPrecihoy2";
             this.datoPrecihoy2.Size = new System.Drawing.Size(100, 22);
             this.datoPrecihoy2.TabIndex = 24;
+            this.datoPrecihoy2.Text = "0";
             // 
             // datoPreciMañana2
             // 
@@ -1347,6 +1394,7 @@
             this.datoPreciMañana2.Name = "datoPreciMañana2";
             this.datoPreciMañana2.Size = new System.Drawing.Size(100, 22);
             this.datoPreciMañana2.TabIndex = 23;
+            this.datoPreciMañana2.Text = "0";
             // 
             // datoPresion2
             // 
@@ -1355,6 +1403,7 @@
             this.datoPresion2.Name = "datoPresion2";
             this.datoPresion2.Size = new System.Drawing.Size(100, 22);
             this.datoPresion2.TabIndex = 13;
+            this.datoPresion2.Text = "557";
             // 
             // datoRadiaSolar2
             // 
@@ -1363,6 +1412,7 @@
             this.datoRadiaSolar2.Name = "datoRadiaSolar2";
             this.datoRadiaSolar2.Size = new System.Drawing.Size(100, 22);
             this.datoRadiaSolar2.TabIndex = 11;
+            this.datoRadiaSolar2.Text = "500";
             // 
             // datoHumedad2
             // 
@@ -1371,6 +1421,7 @@
             this.datoHumedad2.Name = "datoHumedad2";
             this.datoHumedad2.Size = new System.Drawing.Size(100, 22);
             this.datoHumedad2.TabIndex = 9;
+            this.datoHumedad2.Text = "2";
             // 
             // datoTemp2
             // 
@@ -1379,6 +1430,7 @@
             this.datoTemp2.Name = "datoTemp2";
             this.datoTemp2.Size = new System.Drawing.Size(100, 22);
             this.datoTemp2.TabIndex = 8;
+            this.datoTemp2.Text = "22";
             // 
             // datoDirecViento2
             // 
@@ -1387,6 +1439,7 @@
             this.datoDirecViento2.Name = "datoDirecViento2";
             this.datoDirecViento2.Size = new System.Drawing.Size(100, 22);
             this.datoDirecViento2.TabIndex = 6;
+            this.datoDirecViento2.Text = "220";
             // 
             // datoVeloViento2
             // 
@@ -1395,6 +1448,7 @@
             this.datoVeloViento2.Name = "datoVeloViento2";
             this.datoVeloViento2.Size = new System.Drawing.Size(100, 22);
             this.datoVeloViento2.TabIndex = 5;
+            this.datoVeloViento2.Text = "40";
             // 
             // label39
             // 
@@ -1556,6 +1610,7 @@
             this.datosCachimba2_2.Name = "datosCachimba2_2";
             this.datosCachimba2_2.Size = new System.Drawing.Size(100, 22);
             this.datosCachimba2_2.TabIndex = 19;
+            this.datosCachimba2_2.Text = "1102";
             // 
             // datoGerencia2
             // 
@@ -1564,6 +1619,7 @@
             this.datoGerencia2.Name = "datoGerencia2";
             this.datoGerencia2.Size = new System.Drawing.Size(100, 22);
             this.datoGerencia2.TabIndex = 17;
+            this.datoGerencia2.Text = "679";
             // 
             // datosCachimba1_2
             // 
@@ -1572,6 +1628,7 @@
             this.datosCachimba1_2.Name = "datosCachimba1_2";
             this.datosCachimba1_2.Size = new System.Drawing.Size(100, 22);
             this.datosCachimba1_2.TabIndex = 15;
+            this.datosCachimba1_2.Text = "822";
             // 
             // datosCnorte2
             // 
@@ -1580,6 +1637,7 @@
             this.datosCnorte2.Name = "datosCnorte2";
             this.datosCnorte2.Size = new System.Drawing.Size(100, 22);
             this.datosCnorte2.TabIndex = 13;
+            this.datosCnorte2.Text = "108";
             // 
             // datosCmovil2
             // 
@@ -1588,6 +1646,7 @@
             this.datosCmovil2.Name = "datosCmovil2";
             this.datosCmovil2.Size = new System.Drawing.Size(100, 22);
             this.datosCmovil2.TabIndex = 11;
+            this.datosCmovil2.Text = "676";
             // 
             // datosDasdia2
             // 
@@ -1596,6 +1655,7 @@
             this.datosDasdia2.Name = "datosDasdia2";
             this.datosDasdia2.Size = new System.Drawing.Size(100, 22);
             this.datosDasdia2.TabIndex = 9;
+            this.datosDasdia2.Text = "3";
             // 
             // datoMovitecDia2
             // 
@@ -1604,6 +1664,7 @@
             this.datoMovitecDia2.Name = "datoMovitecDia2";
             this.datoMovitecDia2.Size = new System.Drawing.Size(100, 22);
             this.datoMovitecDia2.TabIndex = 5;
+            this.datoMovitecDia2.Text = "3";
             // 
             // datoChancadoDia2
             // 
@@ -1612,6 +1673,7 @@
             this.datoChancadoDia2.Name = "datoChancadoDia2";
             this.datoChancadoDia2.Size = new System.Drawing.Size(100, 22);
             this.datoChancadoDia2.TabIndex = 1;
+            this.datoChancadoDia2.Text = "7";
             // 
             // label53
             // 
@@ -1826,6 +1888,13 @@
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "Meteorologico";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // datoMes3
+            // 
+            this.datoMes3.Location = new System.Drawing.Point(237, 46);
+            this.datoMes3.Name = "datoMes3";
+            this.datoMes3.Size = new System.Drawing.Size(200, 22);
+            this.datoMes3.TabIndex = 58;
             // 
             // label63
             // 
@@ -2431,6 +2500,13 @@
             this.tabPage15.Text = "Meteorologico";
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
+            // datoMes4
+            // 
+            this.datoMes4.Location = new System.Drawing.Point(237, 46);
+            this.datoMes4.Name = "datoMes4";
+            this.datoMes4.Size = new System.Drawing.Size(200, 22);
+            this.datoMes4.TabIndex = 58;
+            // 
             // label92
             // 
             this.label92.AutoSize = true;
@@ -3035,6 +3111,13 @@
             this.tabPage19.Text = "Meteorologico";
             this.tabPage19.UseVisualStyleBackColor = true;
             // 
+            // datoMes5
+            // 
+            this.datoMes5.Location = new System.Drawing.Point(239, 46);
+            this.datoMes5.Name = "datoMes5";
+            this.datoMes5.Size = new System.Drawing.Size(200, 22);
+            this.datoMes5.TabIndex = 58;
+            // 
             // label121
             // 
             this.label121.AutoSize = true;
@@ -3592,6 +3675,7 @@
             this.prediccionDiaComboBox.Name = "prediccionDiaComboBox";
             this.prediccionDiaComboBox.Size = new System.Drawing.Size(121, 24);
             this.prediccionDiaComboBox.TabIndex = 4;
+            this.prediccionDiaComboBox.SelectedIndexChanged += new System.EventHandler(this.prediccionDiaComboBox_SelectedIndexChanged);
             // 
             // analisisResultados
             // 
@@ -3645,20 +3729,20 @@
             // graficoSinAlerta
             // 
             this.graficoSinAlerta.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea1.AxisX.Title = "Distancia del grupo Sin Alerta";
-            chartArea1.AxisY.Title = "Nivel Pertenencia";
-            chartArea1.Name = "ChartArea1";
-            this.graficoSinAlerta.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.graficoSinAlerta.Legends.Add(legend1);
+            chartArea13.AxisX.Title = "Distancia del grupo Sin Alerta";
+            chartArea13.AxisY.Title = "Nivel Pertenencia";
+            chartArea13.Name = "ChartArea1";
+            this.graficoSinAlerta.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.graficoSinAlerta.Legends.Add(legend13);
             this.graficoSinAlerta.Location = new System.Drawing.Point(5, 6);
             this.graficoSinAlerta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoSinAlerta.Name = "graficoSinAlerta";
             this.graficoSinAlerta.Size = new System.Drawing.Size(1115, 494);
             this.graficoSinAlerta.TabIndex = 1;
             this.graficoSinAlerta.Text = "Sin alerta";
-            title1.Name = "Sin alerta";
-            this.graficoSinAlerta.Titles.Add(title1);
+            title11.Name = "Sin alerta";
+            this.graficoSinAlerta.Titles.Add(title11);
             // 
             // tabPage3
             // 
@@ -3675,20 +3759,20 @@
             // graficoAlerta1
             // 
             this.graficoAlerta1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea2.AxisX.Title = "Distancia del grupo Alerta 1";
-            chartArea2.AxisY.Title = "Nivel Pertenencia";
-            chartArea2.Name = "ChartArea1";
-            this.graficoAlerta1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.graficoAlerta1.Legends.Add(legend2);
+            chartArea14.AxisX.Title = "Distancia del grupo Alerta 1";
+            chartArea14.AxisY.Title = "Nivel Pertenencia";
+            chartArea14.Name = "ChartArea1";
+            this.graficoAlerta1.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.graficoAlerta1.Legends.Add(legend14);
             this.graficoAlerta1.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta1.Name = "graficoAlerta1";
             this.graficoAlerta1.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta1.TabIndex = 2;
             this.graficoAlerta1.Text = "Sin alerta";
-            title2.Name = "Sin alerta";
-            this.graficoAlerta1.Titles.Add(title2);
+            title12.Name = "Sin alerta";
+            this.graficoAlerta1.Titles.Add(title12);
             // 
             // tabPage4
             // 
@@ -3704,20 +3788,20 @@
             // graficoAlerta2
             // 
             this.graficoAlerta2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea3.AxisX.Title = "Distancia del grupo Alerta 2";
-            chartArea3.AxisY.Title = "Nivel Pertenencia";
-            chartArea3.Name = "ChartArea1";
-            this.graficoAlerta2.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.graficoAlerta2.Legends.Add(legend3);
+            chartArea15.AxisX.Title = "Distancia del grupo Alerta 2";
+            chartArea15.AxisY.Title = "Nivel Pertenencia";
+            chartArea15.Name = "ChartArea1";
+            this.graficoAlerta2.ChartAreas.Add(chartArea15);
+            legend15.Name = "Legend1";
+            this.graficoAlerta2.Legends.Add(legend15);
             this.graficoAlerta2.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta2.Name = "graficoAlerta2";
             this.graficoAlerta2.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta2.TabIndex = 3;
             this.graficoAlerta2.Text = "Sin alerta";
-            title3.Name = "Sin alerta";
-            this.graficoAlerta2.Titles.Add(title3);
+            title13.Name = "Sin alerta";
+            this.graficoAlerta2.Titles.Add(title13);
             // 
             // tabPage5
             // 
@@ -3733,20 +3817,20 @@
             // graficoAlerta3
             // 
             this.graficoAlerta3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea4.AxisX.Title = "Distancia del grupo Alerta 3";
-            chartArea4.AxisY.Title = "Nivel Pertenencia";
-            chartArea4.Name = "ChartArea1";
-            this.graficoAlerta3.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.graficoAlerta3.Legends.Add(legend4);
+            chartArea16.AxisX.Title = "Distancia del grupo Alerta 3";
+            chartArea16.AxisY.Title = "Nivel Pertenencia";
+            chartArea16.Name = "ChartArea1";
+            this.graficoAlerta3.ChartAreas.Add(chartArea16);
+            legend16.Name = "Legend1";
+            this.graficoAlerta3.Legends.Add(legend16);
             this.graficoAlerta3.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta3.Name = "graficoAlerta3";
             this.graficoAlerta3.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta3.TabIndex = 4;
             this.graficoAlerta3.Text = "Sin alerta";
-            title4.Name = "Sin alerta";
-            this.graficoAlerta3.Titles.Add(title4);
+            title14.Name = "Sin alerta";
+            this.graficoAlerta3.Titles.Add(title14);
             // 
             // tabPage6
             // 
@@ -3762,20 +3846,20 @@
             // graficoAlerta4
             // 
             this.graficoAlerta4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea5.AxisX.Title = "Distancia del grupo Alerta 4";
-            chartArea5.AxisY.Title = "Nivel Pertenencia";
-            chartArea5.Name = "ChartArea1";
-            this.graficoAlerta4.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.graficoAlerta4.Legends.Add(legend5);
+            chartArea17.AxisX.Title = "Distancia del grupo Alerta 4";
+            chartArea17.AxisY.Title = "Nivel Pertenencia";
+            chartArea17.Name = "ChartArea1";
+            this.graficoAlerta4.ChartAreas.Add(chartArea17);
+            legend17.Name = "Legend1";
+            this.graficoAlerta4.Legends.Add(legend17);
             this.graficoAlerta4.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta4.Name = "graficoAlerta4";
             this.graficoAlerta4.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta4.TabIndex = 4;
             this.graficoAlerta4.Text = "Sin alerta";
-            title5.Name = "Sin alerta";
-            this.graficoAlerta4.Titles.Add(title5);
+            title15.Name = "Sin alerta";
+            this.graficoAlerta4.Titles.Add(title15);
             // 
             // nivelMp10
             // 
@@ -3832,10 +3916,10 @@
             // graficoMP10
             // 
             this.graficoMP10.BackColor = System.Drawing.Color.Silver;
-            chartArea6.Name = "ChartArea1";
-            this.graficoMP10.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.graficoMP10.Legends.Add(legend6);
+            chartArea18.Name = "ChartArea1";
+            this.graficoMP10.ChartAreas.Add(chartArea18);
+            legend18.Name = "Legend1";
+            this.graficoMP10.Legends.Add(legend18);
             this.graficoMP10.Location = new System.Drawing.Point(25, 21);
             this.graficoMP10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoMP10.Name = "graficoMP10";
@@ -3852,41 +3936,6 @@
             this.reportes.TabIndex = 2;
             this.reportes.Text = "Reportes de prediccion MP10";
             this.reportes.UseVisualStyleBackColor = true;
-            // 
-            // datoMes1
-            // 
-            this.datoMes1.Location = new System.Drawing.Point(237, 46);
-            this.datoMes1.Name = "datoMes1";
-            this.datoMes1.Size = new System.Drawing.Size(200, 22);
-            this.datoMes1.TabIndex = 56;
-            // 
-            // datoMes2
-            // 
-            this.datoMes2.Location = new System.Drawing.Point(237, 42);
-            this.datoMes2.Name = "datoMes2";
-            this.datoMes2.Size = new System.Drawing.Size(200, 22);
-            this.datoMes2.TabIndex = 57;
-            // 
-            // datoMes3
-            // 
-            this.datoMes3.Location = new System.Drawing.Point(237, 46);
-            this.datoMes3.Name = "datoMes3";
-            this.datoMes3.Size = new System.Drawing.Size(200, 22);
-            this.datoMes3.TabIndex = 58;
-            // 
-            // datoMes4
-            // 
-            this.datoMes4.Location = new System.Drawing.Point(237, 46);
-            this.datoMes4.Name = "datoMes4";
-            this.datoMes4.Size = new System.Drawing.Size(200, 22);
-            this.datoMes4.TabIndex = 58;
-            // 
-            // datoMes5
-            // 
-            this.datoMes5.Location = new System.Drawing.Point(239, 46);
-            this.datoMes5.Name = "datoMes5";
-            this.datoMes5.Size = new System.Drawing.Size(200, 22);
-            this.datoMes5.TabIndex = 58;
             // 
             // Ventana
             // 

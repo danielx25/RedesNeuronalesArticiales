@@ -23,6 +23,14 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
         public double distanciaMinima = 0;
         public double Mp10predecido;
 
+        public ConstruccionConjuntos clonar()
+        {
+            ConstruccionConjuntos clon = new ConstruccionConjuntos(this.numeroGrupos, this.numeroClases);
+            clon.gruposxclases = this.gruposxclases;
+            clon.gruposGanadores = this.gruposGanadores;
+            return clon;
+        }
+
         public ConstruccionConjuntos(int numeroGrupos, int numeroClases)
         {
             this.numeroGrupos = numeroGrupos;
@@ -320,7 +328,121 @@ namespace RedesNeuronalesArtificiales.AnalisisDeRNA
             return mp10Predecir;
         }
 
+        public double nivelPertenenciaMp10(double[] entradaNormalizada)
+        {
+            double minMP10 = 0;
+            double maxMP10 = 800;
+            vectorNivelPertenencia = new double[801];
+            rangoMP10 = new double[801];
+            double maxPertenencia = Double.NegativeInfinity;
+            double clasePredecir;
+            double mp10Predecir = 0;
 
+            //List<double> l = entradaNormalizada.ToList();
+            ///l.Add(0);
+
+            double[] vectorEntrada = entradaNormalizada;
+
+            double sinAlerta = 150 / (double)maxMP10;
+            double alerta1 = 250 / (double)maxMP10;
+            double alerta2 = 350 / (double)maxMP10;
+            double alerta3 = 500 / (double)maxMP10;
+
+            int indice_mp10 = 7;//vectorEntrada.Length - 1;
+            double distanciaMin;
+            double mp10Nor = 0;
+            for (int mp10 = 0; mp10 <= 800; mp10++)
+            {
+                rangoMP10[mp10] = mp10;
+                vectorEntrada[indice_mp10] = mp10 / (double)maxMP10;
+                mp10Nor = mp10 / (double)maxMP10;
+
+                if (sinAlerta <= mp10Nor && mp10Nor <= alerta1)//alerta 1
+                {
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[1, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[1, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[1, indice_grupo];
+                        }
+
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                                                             grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                }
+
+                if (alerta1 < mp10Nor && mp10Nor <= alerta2)//alerta 2
+                {
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[2, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[2, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[2, indice_grupo];
+                        }
+
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                                                             grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+
+                }
+
+                if (alerta2 < mp10Nor && mp10Nor <= alerta3)//alerta 3
+                {
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[3, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[3, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[3, indice_grupo];
+                        }
+
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                                                             grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                }
+
+                if (alerta3 < mp10Nor)//alerta 4
+                {
+                    distanciaMin = Double.PositiveInfinity;
+                    Grupo grupoMenorDistancia = null;
+                    // calcula cual es el grupo mas cercano  a la clase = tipo de alerta
+                    for (int indice_grupo = 0; indice_grupo < gruposxclases.GetLength(1); indice_grupo++)
+                    {
+                        if (distanciaMin > gruposxclases[4, indice_grupo].media)
+                        {
+                            distanciaMin = gruposxclases[4, indice_grupo].media;
+                            grupoMenorDistancia = gruposxclases[4, indice_grupo];
+                        }
+
+                    }
+                    double distancia = calculoDistancia(vectorEntrada, grupoMenorDistancia.vector);
+                    vectorNivelPertenencia[mp10] = funcion_gaussiana(distancia, grupoMenorDistancia.media,
+                                                             grupoMenorDistancia.desviacionEstandar, grupoMenorDistancia.nivelPertenencia);
+                }
+                System.Console.WriteLine("min distancia: " + vectorNivelPertenencia[mp10]);
+                if (maxPertenencia < vectorNivelPertenencia[mp10])
+                {
+                    maxPertenencia = vectorNivelPertenencia[mp10];
+                    mp10Predecir = mp10;
+                }
+            }
+
+            return mp10Predecir;
+        }
         /*
 
         if (true)//mp10Nor < sinAlerta)// sin alerta
