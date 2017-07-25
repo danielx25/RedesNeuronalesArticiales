@@ -71,9 +71,11 @@ namespace RedesNeuronalesArtificiales
             DateTime inicio = new DateTime(2010, 01, 01, 00, 00, 00);
             DateTime fin = new DateTime(2017, 03, 01, 00, 00, 00);
 
+
             //List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 10);
             //Console.WriteLine("Total: " + datosMeteorologicos.Count);
-            List<double[,]> dr = Conexion.datosPorRangoMp10(inicio, fin, 10);
+            List<double[,]> dr = Conexion.datosPorRangoMp10(inicio, fin);
+
             cambiarBarraProgreso(55);
             double[,] sa = dr[0];//Sin Alerta
             double[,] a1 = dr[1];//Alerta 1
@@ -96,7 +98,7 @@ namespace RedesNeuronalesArtificiales
             DateTime inicio1 = new DateTime(2017, 01, 01, 00, 00, 00);
             DateTime fin1 = new DateTime(2017, 02, 01, 23, 00, 00);
 
-            List<double[]> datosMeteorologicos1 = Conexion.datosMeteorologicos(inicio1, fin1, 10);
+            List<double[]> datosMeteorologicos1 = Conexion.datosMeteorologicos(inicio1, fin1, 0.1);
             double[] fila = datosMeteorologicos1[0];
             System.Console.WriteLine("---------------------->tipo alerta: " + fila[7] * 800);
             resultado.prediccionMP10(fila);

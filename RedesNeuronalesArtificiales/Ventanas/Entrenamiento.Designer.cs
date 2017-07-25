@@ -39,7 +39,7 @@
             this.textoGruposNeuronas = new System.Windows.Forms.Label();
             this.gruposDeNeuronas = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.entradaNombreArchivo = new System.Windows.Forms.TextBox();
             this.textoNombreArchivo = new System.Windows.Forms.Label();
             this.botonDetener = new System.Windows.Forms.Button();
             this.textoNumeroNeuronasPorFila = new System.Windows.Forms.Label();
@@ -84,6 +84,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.botonIniciarValidacion = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.nombreArchivo3 = new System.Windows.Forms.Label();
             this.textoFechaTermino3 = new System.Windows.Forms.Label();
             this.textoFechaInicio3 = new System.Windows.Forms.Label();
             this.entradaFechaTermino3 = new System.Windows.Forms.DateTimePicker();
@@ -91,6 +92,7 @@
             this.textoArchivo3 = new System.Windows.Forms.Label();
             this.abrirArchivo3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.nombreArchivo2 = new System.Windows.Forms.Label();
             this.textoFechaTermino2 = new System.Windows.Forms.Label();
             this.textoFechaInicio2 = new System.Windows.Forms.Label();
             this.entradaFechaTermino2 = new System.Windows.Forms.DateTimePicker();
@@ -98,6 +100,7 @@
             this.textoArchivo2 = new System.Windows.Forms.Label();
             this.abrirArchivo2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.nombreArchivo1 = new System.Windows.Forms.Label();
             this.textoFechaTermino = new System.Windows.Forms.Label();
             this.textoFechaInicio = new System.Windows.Forms.Label();
             this.entradaFechaTermino = new System.Windows.Forms.DateTimePicker();
@@ -106,9 +109,6 @@
             this.abrirArchivo = new System.Windows.Forms.Button();
             this.textoValidacion = new System.Windows.Forms.Label();
             this.dialogoAbrirArchivo = new System.Windows.Forms.OpenFileDialog();
-            this.nombreArchivo1 = new System.Windows.Forms.Label();
-            this.nombreArchivo2 = new System.Windows.Forms.Label();
-            this.nombreArchivo3 = new System.Windows.Forms.Label();
             this.pestannas.SuspendLayout();
             this.pestannaEntrenamiento.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -238,7 +238,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.entradaNombreArchivo);
             this.panel1.Controls.Add(this.textoNombreArchivo);
             this.panel1.Controls.Add(this.botonDetener);
             this.panel1.Controls.Add(this.textoNumeroNeuronasPorFila);
@@ -262,13 +262,13 @@
             this.panel1.Size = new System.Drawing.Size(319, 286);
             this.panel1.TabIndex = 10;
             // 
-            // textBox1
+            // entradaNombreArchivo
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.Text = "Entrenamiento de la red";
+            this.entradaNombreArchivo.Location = new System.Drawing.Point(109, 30);
+            this.entradaNombreArchivo.Name = "entradaNombreArchivo";
+            this.entradaNombreArchivo.Size = new System.Drawing.Size(200, 20);
+            this.entradaNombreArchivo.TabIndex = 21;
+            this.entradaNombreArchivo.Text = "Entrenamiento de la red";
             // 
             // textoNombreArchivo
             // 
@@ -403,7 +403,7 @@
             this.entradaBeta.Name = "entradaBeta";
             this.entradaBeta.Size = new System.Drawing.Size(199, 20);
             this.entradaBeta.TabIndex = 3;
-            this.entradaBeta.Text = "0,00001";
+            this.entradaBeta.Text = "0,002";
             this.entradaBeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entradaBeta_KeyPress);
             // 
             // entradaAlfa
@@ -412,7 +412,7 @@
             this.entradaAlfa.Name = "entradaAlfa";
             this.entradaAlfa.Size = new System.Drawing.Size(200, 20);
             this.entradaAlfa.TabIndex = 2;
-            this.entradaAlfa.Text = "0,001";
+            this.entradaAlfa.Text = "0,1";
             this.entradaAlfa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entradaAlfa_KeyPress);
             // 
             // beta
@@ -710,6 +710,15 @@
             this.panel6.Size = new System.Drawing.Size(850, 76);
             this.panel6.TabIndex = 3;
             // 
+            // nombreArchivo3
+            // 
+            this.nombreArchivo3.AutoSize = true;
+            this.nombreArchivo3.Location = new System.Drawing.Point(559, 31);
+            this.nombreArchivo3.Name = "nombreArchivo3";
+            this.nombreArchivo3.Size = new System.Drawing.Size(118, 13);
+            this.nombreArchivo3.TabIndex = 8;
+            this.nombreArchivo3.Text = "Seleccione el archivo...";
+            // 
             // textoFechaTermino3
             // 
             this.textoFechaTermino3.AutoSize = true;
@@ -779,6 +788,15 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(850, 76);
             this.panel5.TabIndex = 2;
+            // 
+            // nombreArchivo2
+            // 
+            this.nombreArchivo2.AutoSize = true;
+            this.nombreArchivo2.Location = new System.Drawing.Point(559, 31);
+            this.nombreArchivo2.Name = "nombreArchivo2";
+            this.nombreArchivo2.Size = new System.Drawing.Size(118, 13);
+            this.nombreArchivo2.TabIndex = 7;
+            this.nombreArchivo2.Text = "Seleccione el archivo...";
             // 
             // textoFechaTermino2
             // 
@@ -850,6 +868,15 @@
             this.panel4.Size = new System.Drawing.Size(850, 76);
             this.panel4.TabIndex = 1;
             // 
+            // nombreArchivo1
+            // 
+            this.nombreArchivo1.AutoSize = true;
+            this.nombreArchivo1.Location = new System.Drawing.Point(559, 31);
+            this.nombreArchivo1.Name = "nombreArchivo1";
+            this.nombreArchivo1.Size = new System.Drawing.Size(118, 13);
+            this.nombreArchivo1.TabIndex = 6;
+            this.nombreArchivo1.Text = "Seleccione el archivo...";
+            // 
             // textoFechaTermino
             // 
             this.textoFechaTermino.AutoSize = true;
@@ -916,33 +943,6 @@
             // 
             this.dialogoAbrirArchivo.FileName = "*.mp10";
             // 
-            // nombreArchivo1
-            // 
-            this.nombreArchivo1.AutoSize = true;
-            this.nombreArchivo1.Location = new System.Drawing.Point(559, 31);
-            this.nombreArchivo1.Name = "nombreArchivo1";
-            this.nombreArchivo1.Size = new System.Drawing.Size(118, 13);
-            this.nombreArchivo1.TabIndex = 6;
-            this.nombreArchivo1.Text = "Seleccione el archivo...";
-            // 
-            // nombreArchivo2
-            // 
-            this.nombreArchivo2.AutoSize = true;
-            this.nombreArchivo2.Location = new System.Drawing.Point(559, 31);
-            this.nombreArchivo2.Name = "nombreArchivo2";
-            this.nombreArchivo2.Size = new System.Drawing.Size(118, 13);
-            this.nombreArchivo2.TabIndex = 7;
-            this.nombreArchivo2.Text = "Seleccione el archivo...";
-            // 
-            // nombreArchivo3
-            // 
-            this.nombreArchivo3.AutoSize = true;
-            this.nombreArchivo3.Location = new System.Drawing.Point(559, 31);
-            this.nombreArchivo3.Name = "nombreArchivo3";
-            this.nombreArchivo3.Size = new System.Drawing.Size(118, 13);
-            this.nombreArchivo3.TabIndex = 8;
-            this.nombreArchivo3.Text = "Seleccione el archivo...";
-            // 
             // Entrenamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1004,7 +1004,7 @@
         private System.Windows.Forms.TextBox entradaNumeroNeuronasPorFila;
         private System.Windows.Forms.TextBox entradaNumeroNeuronas;
         private System.Windows.Forms.Button botonDetener;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox entradaNombreArchivo;
         private System.Windows.Forms.Label textoNombreArchivo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
