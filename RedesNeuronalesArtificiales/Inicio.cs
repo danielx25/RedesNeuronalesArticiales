@@ -23,8 +23,8 @@ namespace RedesNeuronalesArtificiales
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Entrenamiento());
-            //Application.Run(new Ventana());
+			//Application.Run(new Entrenamiento());
+            Application.Run(new Ventana());
             //ReportePrediccion reporte1 = new ReportePrediccion();
             //reporte1.crearReporte();
             //ejemploPrediccionGrupo();

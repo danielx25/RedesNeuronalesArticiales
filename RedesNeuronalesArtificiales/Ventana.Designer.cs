@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title10 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.MenuSoft = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.barraProgreso = new System.Windows.Forms.ProgressBar();
@@ -88,7 +88,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.datoMes1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -117,8 +116,68 @@
             this.datosDetencionPalas1 = new System.Windows.Forms.CheckedListBox();
             this.label34 = new System.Windows.Forms.Label();
             this.tabDia2 = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.datoEvapo3_2 = new System.Windows.Forms.TextBox();
+            this.datoEvapo2_2 = new System.Windows.Forms.TextBox();
+            this.datoEvapo1_2 = new System.Windows.Forms.TextBox();
+            this.datoEvapohoy2 = new System.Windows.Forms.TextBox();
+            this.datoEvapomañana2 = new System.Windows.Forms.TextBox();
+            this.datoPreci3_2 = new System.Windows.Forms.TextBox();
+            this.datoPreci2_2 = new System.Windows.Forms.TextBox();
+            this.datoPreci1_2 = new System.Windows.Forms.TextBox();
+            this.datoPrecihoy2 = new System.Windows.Forms.TextBox();
+            this.datoPreciMañana2 = new System.Windows.Forms.TextBox();
+            this.datoPresion2 = new System.Windows.Forms.TextBox();
+            this.datoRadiaSolar2 = new System.Windows.Forms.TextBox();
+            this.datoHumedad2 = new System.Windows.Forms.TextBox();
+            this.datoTemp2 = new System.Windows.Forms.TextBox();
+            this.datoDirecViento2 = new System.Windows.Forms.TextBox();
+            this.datoVeloViento2 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.datosCachimba2_2 = new System.Windows.Forms.TextBox();
+            this.datoGerencia2 = new System.Windows.Forms.TextBox();
+            this.datosCachimba1_2 = new System.Windows.Forms.TextBox();
+            this.datosCnorte2 = new System.Windows.Forms.TextBox();
+            this.datosCmovil2 = new System.Windows.Forms.TextBox();
+            this.datosDasdia2 = new System.Windows.Forms.TextBox();
+            this.datoMovitecDia2 = new System.Windows.Forms.TextBox();
+            this.datoChancadoDia2 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.datosDetencionChancadores_2 = new System.Windows.Forms.CheckedListBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.datosDetencionPalas2 = new System.Windows.Forms.CheckedListBox();
+            this.label62 = new System.Windows.Forms.Label();
             this.tabDia3 = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.datosDetencionChancadores_777 = new System.Windows.Forms.TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label63 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
@@ -151,7 +210,6 @@
             this.label75 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
-            this.datoMes3 = new System.Windows.Forms.ComboBox();
             this.label78 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
@@ -174,10 +232,10 @@
             this.label88 = new System.Windows.Forms.Label();
             this.label89 = new System.Windows.Forms.Label();
             this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.checkedListBox3 = new System.Windows.Forms.CheckedListBox();
+            this.datosDetencionChancadores_3 = new System.Windows.Forms.CheckedListBox();
             this.label90 = new System.Windows.Forms.Label();
             this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.checkedListBox4 = new System.Windows.Forms.CheckedListBox();
+            this.datosDetencionPalas3 = new System.Windows.Forms.CheckedListBox();
             this.label91 = new System.Windows.Forms.Label();
             this.tabDia4 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -213,7 +271,6 @@
             this.label104 = new System.Windows.Forms.Label();
             this.label105 = new System.Windows.Forms.Label();
             this.label106 = new System.Windows.Forms.Label();
-            this.datoMes4 = new System.Windows.Forms.ComboBox();
             this.label107 = new System.Windows.Forms.Label();
             this.label108 = new System.Windows.Forms.Label();
             this.label109 = new System.Windows.Forms.Label();
@@ -236,10 +293,10 @@
             this.label117 = new System.Windows.Forms.Label();
             this.label118 = new System.Windows.Forms.Label();
             this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.checkedListBox5 = new System.Windows.Forms.CheckedListBox();
+            this.datosDetencionChancadores_4 = new System.Windows.Forms.CheckedListBox();
             this.label119 = new System.Windows.Forms.Label();
             this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.checkedListBox6 = new System.Windows.Forms.CheckedListBox();
+            this.datosDetencionPalas4 = new System.Windows.Forms.CheckedListBox();
             this.label120 = new System.Windows.Forms.Label();
             this.tabDia5 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
@@ -275,7 +332,6 @@
             this.label133 = new System.Windows.Forms.Label();
             this.label134 = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
-            this.datoMes5 = new System.Windows.Forms.ComboBox();
             this.label136 = new System.Windows.Forms.Label();
             this.label137 = new System.Windows.Forms.Label();
             this.label138 = new System.Windows.Forms.Label();
@@ -298,10 +354,10 @@
             this.label146 = new System.Windows.Forms.Label();
             this.label147 = new System.Windows.Forms.Label();
             this.tabPage21 = new System.Windows.Forms.TabPage();
-            this.checkedListBox7 = new System.Windows.Forms.CheckedListBox();
+            this.datosDetencionChancadores_5 = new System.Windows.Forms.CheckedListBox();
             this.label148 = new System.Windows.Forms.Label();
             this.tabPage22 = new System.Windows.Forms.TabPage();
-            this.checkedListBox8 = new System.Windows.Forms.CheckedListBox();
+            this.datosDetencionPalas5 = new System.Windows.Forms.CheckedListBox();
             this.label149 = new System.Windows.Forms.Label();
             this.prediccionMP10 = new System.Windows.Forms.TabPage();
             this.prediccionDiaComboBox = new System.Windows.Forms.ComboBox();
@@ -325,67 +381,11 @@
             this.label26 = new System.Windows.Forms.Label();
             this.graficoMP10 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.reportes = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.datoEvapo3_2 = new System.Windows.Forms.TextBox();
-            this.datoEvapo2_2 = new System.Windows.Forms.TextBox();
-            this.datoEvapo1_2 = new System.Windows.Forms.TextBox();
-            this.datoEvapohoy2 = new System.Windows.Forms.TextBox();
-            this.datoEvapomañana2 = new System.Windows.Forms.TextBox();
-            this.datoPreci3_2 = new System.Windows.Forms.TextBox();
-            this.datoPreci2_2 = new System.Windows.Forms.TextBox();
-            this.datoPreci1_2 = new System.Windows.Forms.TextBox();
-            this.datoPrecihoy2 = new System.Windows.Forms.TextBox();
-            this.datoPreciMañana2 = new System.Windows.Forms.TextBox();
-            this.datoPresion2 = new System.Windows.Forms.TextBox();
-            this.datoRadiaSolar2 = new System.Windows.Forms.TextBox();
-            this.datoHumedad2 = new System.Windows.Forms.TextBox();
-            this.datoTemp2 = new System.Windows.Forms.TextBox();
-            this.datoDirecViento2 = new System.Windows.Forms.TextBox();
-            this.datoVeloViento2 = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.datoMes2 = new System.Windows.Forms.ComboBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.datosCachimba2_2 = new System.Windows.Forms.TextBox();
-            this.datoGerencia2 = new System.Windows.Forms.TextBox();
-            this.datosCachimba1_2 = new System.Windows.Forms.TextBox();
-            this.datosCnorte2 = new System.Windows.Forms.TextBox();
-            this.datosCmovil2 = new System.Windows.Forms.TextBox();
-            this.datosDasdia2 = new System.Windows.Forms.TextBox();
-            this.datoMovitecDia2 = new System.Windows.Forms.TextBox();
-            this.datoChancadoDia2 = new System.Windows.Forms.TextBox();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label61 = new System.Windows.Forms.Label();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.label62 = new System.Windows.Forms.Label();
+            this.datoMes1 = new System.Windows.Forms.DateTimePicker();
+            this.datoMes2 = new System.Windows.Forms.DateTimePicker();
+            this.datoMes3 = new System.Windows.Forms.DateTimePicker();
+            this.datoMes4 = new System.Windows.Forms.DateTimePicker();
+            this.datoMes5 = new System.Windows.Forms.DateTimePicker();
             this.MenuSoft.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.diasPrediccion.SuspendLayout();
@@ -396,8 +396,13 @@
             this.ddetencionChancado.SuspendLayout();
             this.ddetencionPalas.SuspendLayout();
             this.tabDia2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.tabDia3.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.datosDetencionChancadores_777.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage12.SuspendLayout();
             this.tabPage13.SuspendLayout();
@@ -430,11 +435,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.graficoAlerta4)).BeginInit();
             this.nivelMp10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graficoMP10)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.tabPage11.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuSoft
@@ -571,6 +571,7 @@
             // 
             // dmeteorologico
             // 
+            this.dmeteorologico.Controls.Add(this.datoMes1);
             this.dmeteorologico.Controls.Add(this.label16);
             this.dmeteorologico.Controls.Add(this.label18);
             this.dmeteorologico.Controls.Add(this.label19);
@@ -602,7 +603,6 @@
             this.dmeteorologico.Controls.Add(this.label9);
             this.dmeteorologico.Controls.Add(this.label8);
             this.dmeteorologico.Controls.Add(this.label7);
-            this.dmeteorologico.Controls.Add(this.datoMes1);
             this.dmeteorologico.Controls.Add(this.label6);
             this.dmeteorologico.Controls.Add(this.label5);
             this.dmeteorologico.Controls.Add(this.label4);
@@ -879,28 +879,6 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Humedad relativa";
             // 
-            // datoMes1
-            // 
-            this.datoMes1.FormattingEnabled = true;
-            this.datoMes1.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.datoMes1.Location = new System.Drawing.Point(237, 46);
-            this.datoMes1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoMes1.Name = "datoMes1";
-            this.datoMes1.Size = new System.Drawing.Size(121, 24);
-            this.datoMes1.TabIndex = 4;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -934,9 +912,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(99, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Mes";
+            this.label3.Text = "Fecha";
             // 
             // dmitigacion
             // 
@@ -1185,2168 +1163,6 @@
             this.tabDia2.UseVisualStyleBackColor = true;
             this.tabDia2.Click += new System.EventHandler(this.tabPage7_Click);
             // 
-            // tabDia3
-            // 
-            this.tabDia3.Controls.Add(this.tabControl2);
-            this.tabDia3.Location = new System.Drawing.Point(4, 25);
-            this.tabDia3.Name = "tabDia3";
-            this.tabDia3.Size = new System.Drawing.Size(1139, 481);
-            this.tabDia3.TabIndex = 3;
-            this.tabDia3.Text = "Dia 3";
-            this.tabDia3.UseVisualStyleBackColor = true;
-            // 
-            // tabControl2
-            // 
-            this.tabControl2.Controls.Add(this.tabPage7);
-            this.tabControl2.Controls.Add(this.tabPage12);
-            this.tabControl2.Controls.Add(this.tabPage13);
-            this.tabControl2.Controls.Add(this.tabPage14);
-            this.tabControl2.Location = new System.Drawing.Point(6, 5);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1127, 471);
-            this.tabControl2.TabIndex = 2;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.label63);
-            this.tabPage7.Controls.Add(this.label64);
-            this.tabPage7.Controls.Add(this.label65);
-            this.tabPage7.Controls.Add(this.label66);
-            this.tabPage7.Controls.Add(this.label67);
-            this.tabPage7.Controls.Add(this.datoEvapo3_3);
-            this.tabPage7.Controls.Add(this.datoEvapo2_3);
-            this.tabPage7.Controls.Add(this.datoEvapo1_3);
-            this.tabPage7.Controls.Add(this.datoEvapohoy3);
-            this.tabPage7.Controls.Add(this.datoEvapomañana3);
-            this.tabPage7.Controls.Add(this.datoPreci3_3);
-            this.tabPage7.Controls.Add(this.datoPreci2_3);
-            this.tabPage7.Controls.Add(this.datoPreci1_3);
-            this.tabPage7.Controls.Add(this.datoPrecihoy3);
-            this.tabPage7.Controls.Add(this.datoPreciMañana3);
-            this.tabPage7.Controls.Add(this.datoPresion3);
-            this.tabPage7.Controls.Add(this.datoRadiaSolar3);
-            this.tabPage7.Controls.Add(this.datoHumedad3);
-            this.tabPage7.Controls.Add(this.datoTemp3);
-            this.tabPage7.Controls.Add(this.datoDirecViento3);
-            this.tabPage7.Controls.Add(this.datoVeloViento3);
-            this.tabPage7.Controls.Add(this.label68);
-            this.tabPage7.Controls.Add(this.label69);
-            this.tabPage7.Controls.Add(this.label70);
-            this.tabPage7.Controls.Add(this.label71);
-            this.tabPage7.Controls.Add(this.label72);
-            this.tabPage7.Controls.Add(this.label73);
-            this.tabPage7.Controls.Add(this.label74);
-            this.tabPage7.Controls.Add(this.label75);
-            this.tabPage7.Controls.Add(this.label76);
-            this.tabPage7.Controls.Add(this.label77);
-            this.tabPage7.Controls.Add(this.datoMes3);
-            this.tabPage7.Controls.Add(this.label78);
-            this.tabPage7.Controls.Add(this.label79);
-            this.tabPage7.Controls.Add(this.label80);
-            this.tabPage7.Controls.Add(this.label81);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage7.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "Meteorologico";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(797, 236);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(85, 17);
-            this.label63.TabIndex = 55;
-            this.label63.Text = "3 dias antes";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(797, 194);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(85, 17);
-            this.label64.TabIndex = 54;
-            this.label64.Text = "2 dias antes";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(797, 156);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(85, 17);
-            this.label65.TabIndex = 53;
-            this.label65.Text = "1 dias antes";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(797, 121);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(31, 17);
-            this.label66.TabIndex = 52;
-            this.label66.Text = "hoy";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(797, 81);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(102, 17);
-            this.label67.TabIndex = 51;
-            this.label67.Text = "dia de mañana";
-            // 
-            // datoEvapo3_3
-            // 
-            this.datoEvapo3_3.Location = new System.Drawing.Point(907, 233);
-            this.datoEvapo3_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo3_3.Name = "datoEvapo3_3";
-            this.datoEvapo3_3.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo3_3.TabIndex = 50;
-            // 
-            // datoEvapo2_3
-            // 
-            this.datoEvapo2_3.Location = new System.Drawing.Point(907, 194);
-            this.datoEvapo2_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo2_3.Name = "datoEvapo2_3";
-            this.datoEvapo2_3.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo2_3.TabIndex = 49;
-            // 
-            // datoEvapo1_3
-            // 
-            this.datoEvapo1_3.Location = new System.Drawing.Point(907, 156);
-            this.datoEvapo1_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo1_3.Name = "datoEvapo1_3";
-            this.datoEvapo1_3.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo1_3.TabIndex = 48;
-            // 
-            // datoEvapohoy3
-            // 
-            this.datoEvapohoy3.Location = new System.Drawing.Point(907, 117);
-            this.datoEvapohoy3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapohoy3.Name = "datoEvapohoy3";
-            this.datoEvapohoy3.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapohoy3.TabIndex = 47;
-            // 
-            // datoEvapomañana3
-            // 
-            this.datoEvapomañana3.Location = new System.Drawing.Point(907, 78);
-            this.datoEvapomañana3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapomañana3.Name = "datoEvapomañana3";
-            this.datoEvapomañana3.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapomañana3.TabIndex = 46;
-            // 
-            // datoPreci3_3
-            // 
-            this.datoPreci3_3.Location = new System.Drawing.Point(565, 233);
-            this.datoPreci3_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci3_3.Name = "datoPreci3_3";
-            this.datoPreci3_3.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci3_3.TabIndex = 27;
-            // 
-            // datoPreci2_3
-            // 
-            this.datoPreci2_3.Location = new System.Drawing.Point(565, 194);
-            this.datoPreci2_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci2_3.Name = "datoPreci2_3";
-            this.datoPreci2_3.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci2_3.TabIndex = 26;
-            // 
-            // datoPreci1_3
-            // 
-            this.datoPreci1_3.Location = new System.Drawing.Point(565, 156);
-            this.datoPreci1_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci1_3.Name = "datoPreci1_3";
-            this.datoPreci1_3.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci1_3.TabIndex = 25;
-            // 
-            // datoPrecihoy3
-            // 
-            this.datoPrecihoy3.Location = new System.Drawing.Point(565, 117);
-            this.datoPrecihoy3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPrecihoy3.Name = "datoPrecihoy3";
-            this.datoPrecihoy3.Size = new System.Drawing.Size(100, 22);
-            this.datoPrecihoy3.TabIndex = 24;
-            // 
-            // datoPreciMañana3
-            // 
-            this.datoPreciMañana3.Location = new System.Drawing.Point(565, 78);
-            this.datoPreciMañana3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreciMañana3.Name = "datoPreciMañana3";
-            this.datoPreciMañana3.Size = new System.Drawing.Size(100, 22);
-            this.datoPreciMañana3.TabIndex = 23;
-            // 
-            // datoPresion3
-            // 
-            this.datoPresion3.Location = new System.Drawing.Point(237, 283);
-            this.datoPresion3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPresion3.Name = "datoPresion3";
-            this.datoPresion3.Size = new System.Drawing.Size(100, 22);
-            this.datoPresion3.TabIndex = 13;
-            // 
-            // datoRadiaSolar3
-            // 
-            this.datoRadiaSolar3.Location = new System.Drawing.Point(237, 240);
-            this.datoRadiaSolar3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoRadiaSolar3.Name = "datoRadiaSolar3";
-            this.datoRadiaSolar3.Size = new System.Drawing.Size(100, 22);
-            this.datoRadiaSolar3.TabIndex = 11;
-            // 
-            // datoHumedad3
-            // 
-            this.datoHumedad3.Location = new System.Drawing.Point(237, 199);
-            this.datoHumedad3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoHumedad3.Name = "datoHumedad3";
-            this.datoHumedad3.Size = new System.Drawing.Size(100, 22);
-            this.datoHumedad3.TabIndex = 9;
-            // 
-            // datoTemp3
-            // 
-            this.datoTemp3.Location = new System.Drawing.Point(237, 160);
-            this.datoTemp3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoTemp3.Name = "datoTemp3";
-            this.datoTemp3.Size = new System.Drawing.Size(100, 22);
-            this.datoTemp3.TabIndex = 8;
-            // 
-            // datoDirecViento3
-            // 
-            this.datoDirecViento3.Location = new System.Drawing.Point(237, 124);
-            this.datoDirecViento3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoDirecViento3.Name = "datoDirecViento3";
-            this.datoDirecViento3.Size = new System.Drawing.Size(100, 22);
-            this.datoDirecViento3.TabIndex = 6;
-            // 
-            // datoVeloViento3
-            // 
-            this.datoVeloViento3.Location = new System.Drawing.Point(237, 85);
-            this.datoVeloViento3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoVeloViento3.Name = "datoVeloViento3";
-            this.datoVeloViento3.Size = new System.Drawing.Size(100, 22);
-            this.datoVeloViento3.TabIndex = 5;
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(799, 46);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(212, 17);
-            this.label68.TabIndex = 28;
-            this.label68.Text = "Evaporacion de los utlimo 5 dias";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(459, 233);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(85, 17);
-            this.label69.TabIndex = 21;
-            this.label69.Text = "3 dias antes";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(459, 192);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(85, 17);
-            this.label70.TabIndex = 20;
-            this.label70.Text = "2 dias antes";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(459, 153);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(85, 17);
-            this.label71.TabIndex = 19;
-            this.label71.Text = "1 dias antes";
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(459, 117);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(31, 17);
-            this.label72.TabIndex = 18;
-            this.label72.Text = "hoy";
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(459, 78);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(102, 17);
-            this.label73.TabIndex = 17;
-            this.label73.Text = "dia de mañana";
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(459, 42);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(214, 17);
-            this.label74.TabIndex = 16;
-            this.label74.Text = "Precipitacion de los utlimo 5 dias";
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(99, 283);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(133, 17);
-            this.label75.TabIndex = 12;
-            this.label75.Text = "Presion atmosferica";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(99, 240);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(106, 17);
-            this.label76.TabIndex = 10;
-            this.label76.Text = "Radiacion solar";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(99, 199);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(119, 17);
-            this.label77.TabIndex = 7;
-            this.label77.Text = "Humedad relativa";
-            // 
-            // datoMes3
-            // 
-            this.datoMes3.FormattingEnabled = true;
-            this.datoMes3.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.datoMes3.Location = new System.Drawing.Point(237, 46);
-            this.datoMes3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoMes3.Name = "datoMes3";
-            this.datoMes3.Size = new System.Drawing.Size(121, 24);
-            this.datoMes3.TabIndex = 4;
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(99, 162);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(85, 17);
-            this.label78.TabIndex = 3;
-            this.label78.Text = "temperatura";
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(99, 124);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(109, 17);
-            this.label79.TabIndex = 2;
-            this.label79.Text = "direccion Viento";
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(99, 85);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(110, 17);
-            this.label80.TabIndex = 1;
-            this.label80.Text = "velocidad viento";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Location = new System.Drawing.Point(99, 46);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(34, 17);
-            this.label81.TabIndex = 0;
-            this.label81.Text = "Mes";
-            // 
-            // tabPage12
-            // 
-            this.tabPage12.Controls.Add(this.datosCachimba2_3);
-            this.tabPage12.Controls.Add(this.datoGerencia3);
-            this.tabPage12.Controls.Add(this.datosCachimba1_3);
-            this.tabPage12.Controls.Add(this.datosCnorte3);
-            this.tabPage12.Controls.Add(this.datosCmovil3);
-            this.tabPage12.Controls.Add(this.datosDasdia3);
-            this.tabPage12.Controls.Add(this.datoMovitecDia3);
-            this.tabPage12.Controls.Add(this.datoChancadoDia3);
-            this.tabPage12.Controls.Add(this.label82);
-            this.tabPage12.Controls.Add(this.label83);
-            this.tabPage12.Controls.Add(this.label84);
-            this.tabPage12.Controls.Add(this.label85);
-            this.tabPage12.Controls.Add(this.label86);
-            this.tabPage12.Controls.Add(this.label87);
-            this.tabPage12.Controls.Add(this.label88);
-            this.tabPage12.Controls.Add(this.label89);
-            this.tabPage12.Location = new System.Drawing.Point(4, 25);
-            this.tabPage12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage12.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage12.TabIndex = 1;
-            this.tabPage12.Text = "Mitigación";
-            this.tabPage12.UseVisualStyleBackColor = true;
-            // 
-            // datosCachimba2_3
-            // 
-            this.datosCachimba2_3.Location = new System.Drawing.Point(757, 263);
-            this.datosCachimba2_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCachimba2_3.Name = "datosCachimba2_3";
-            this.datosCachimba2_3.Size = new System.Drawing.Size(100, 22);
-            this.datosCachimba2_3.TabIndex = 19;
-            // 
-            // datoGerencia3
-            // 
-            this.datoGerencia3.Location = new System.Drawing.Point(377, 263);
-            this.datoGerencia3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoGerencia3.Name = "datoGerencia3";
-            this.datoGerencia3.Size = new System.Drawing.Size(100, 22);
-            this.datoGerencia3.TabIndex = 17;
-            // 
-            // datosCachimba1_3
-            // 
-            this.datosCachimba1_3.Location = new System.Drawing.Point(757, 224);
-            this.datosCachimba1_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCachimba1_3.Name = "datosCachimba1_3";
-            this.datosCachimba1_3.Size = new System.Drawing.Size(100, 22);
-            this.datosCachimba1_3.TabIndex = 15;
-            // 
-            // datosCnorte3
-            // 
-            this.datosCnorte3.Location = new System.Drawing.Point(757, 180);
-            this.datosCnorte3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCnorte3.Name = "datosCnorte3";
-            this.datosCnorte3.Size = new System.Drawing.Size(100, 22);
-            this.datosCnorte3.TabIndex = 13;
-            // 
-            // datosCmovil3
-            // 
-            this.datosCmovil3.Location = new System.Drawing.Point(757, 138);
-            this.datosCmovil3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCmovil3.Name = "datosCmovil3";
-            this.datosCmovil3.Size = new System.Drawing.Size(100, 22);
-            this.datosCmovil3.TabIndex = 11;
-            // 
-            // datosDasdia3
-            // 
-            this.datosDasdia3.Location = new System.Drawing.Point(757, 94);
-            this.datosDasdia3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosDasdia3.Name = "datosDasdia3";
-            this.datosDasdia3.Size = new System.Drawing.Size(100, 22);
-            this.datosDasdia3.TabIndex = 9;
-            // 
-            // datoMovitecDia3
-            // 
-            this.datoMovitecDia3.Location = new System.Drawing.Point(377, 177);
-            this.datoMovitecDia3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoMovitecDia3.Name = "datoMovitecDia3";
-            this.datoMovitecDia3.Size = new System.Drawing.Size(100, 22);
-            this.datoMovitecDia3.TabIndex = 5;
-            // 
-            // datoChancadoDia3
-            // 
-            this.datoChancadoDia3.Location = new System.Drawing.Point(377, 91);
-            this.datoChancadoDia3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoChancadoDia3.Name = "datoChancadoDia3";
-            this.datoChancadoDia3.Size = new System.Drawing.Size(100, 22);
-            this.datoChancadoDia3.TabIndex = 1;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(589, 263);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(78, 17);
-            this.label82.TabIndex = 18;
-            this.label82.Text = "Cachimba2";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(209, 263);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(66, 17);
-            this.label83.TabIndex = 16;
-            this.label83.Text = "Gerencia";
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Location = new System.Drawing.Point(589, 224);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(78, 17);
-            this.label84.TabIndex = 14;
-            this.label84.Text = "Cachimba1";
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Location = new System.Drawing.Point(589, 180);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(50, 17);
-            this.label85.TabIndex = 12;
-            this.label85.Text = "Cnorte";
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(589, 138);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(49, 17);
-            this.label86.TabIndex = 10;
-            this.label86.Text = "Cmovil";
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Location = new System.Drawing.Point(589, 94);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(52, 17);
-            this.label87.TabIndex = 8;
-            this.label87.Text = "Dasdia";
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(209, 177);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(75, 17);
-            this.label88.TabIndex = 4;
-            this.label88.Text = "Movitecdia";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(209, 91);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(120, 17);
-            this.label89.TabIndex = 0;
-            this.label89.Text = "Chancado por dia";
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.Controls.Add(this.checkedListBox3);
-            this.tabPage13.Controls.Add(this.label90);
-            this.tabPage13.Location = new System.Drawing.Point(4, 25);
-            this.tabPage13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage13.TabIndex = 2;
-            this.tabPage13.Text = "detencion de chancadores";
-            this.tabPage13.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox3
-            // 
-            this.checkedListBox3.FormattingEnabled = true;
-            this.checkedListBox3.Items.AddRange(new object[] {
-            "CH-1",
-            "CH-2"});
-            this.checkedListBox3.Location = new System.Drawing.Point(91, 82);
-            this.checkedListBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox3.Name = "checkedListBox3";
-            this.checkedListBox3.Size = new System.Drawing.Size(117, 225);
-            this.checkedListBox3.TabIndex = 5;
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(88, 48);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(125, 17);
-            this.label90.TabIndex = 4;
-            this.label90.Text = "Equipos detenidos";
-            // 
-            // tabPage14
-            // 
-            this.tabPage14.Controls.Add(this.checkedListBox4);
-            this.tabPage14.Controls.Add(this.label91);
-            this.tabPage14.Location = new System.Drawing.Point(4, 25);
-            this.tabPage14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage14.TabIndex = 3;
-            this.tabPage14.Text = "detencion de palas";
-            this.tabPage14.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox4
-            // 
-            this.checkedListBox4.FormattingEnabled = true;
-            this.checkedListBox4.Items.AddRange(new object[] {
-            "PA-01",
-            "PA-03",
-            "PA-04",
-            "PA-05",
-            "PA-07",
-            "CF08",
-            "CF10",
-            "CF11"});
-            this.checkedListBox4.Location = new System.Drawing.Point(91, 57);
-            this.checkedListBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox4.Name = "checkedListBox4";
-            this.checkedListBox4.Size = new System.Drawing.Size(117, 225);
-            this.checkedListBox4.TabIndex = 3;
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(87, 22);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(125, 17);
-            this.label91.TabIndex = 0;
-            this.label91.Text = "Equipos detenidos";
-            // 
-            // tabDia4
-            // 
-            this.tabDia4.Controls.Add(this.tabControl3);
-            this.tabDia4.Location = new System.Drawing.Point(4, 25);
-            this.tabDia4.Name = "tabDia4";
-            this.tabDia4.Size = new System.Drawing.Size(1139, 481);
-            this.tabDia4.TabIndex = 4;
-            this.tabDia4.Text = "Dia 4";
-            this.tabDia4.UseVisualStyleBackColor = true;
-            // 
-            // tabControl3
-            // 
-            this.tabControl3.Controls.Add(this.tabPage15);
-            this.tabControl3.Controls.Add(this.tabPage16);
-            this.tabControl3.Controls.Add(this.tabPage17);
-            this.tabControl3.Controls.Add(this.tabPage18);
-            this.tabControl3.Location = new System.Drawing.Point(6, 5);
-            this.tabControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1127, 471);
-            this.tabControl3.TabIndex = 2;
-            // 
-            // tabPage15
-            // 
-            this.tabPage15.Controls.Add(this.label92);
-            this.tabPage15.Controls.Add(this.label93);
-            this.tabPage15.Controls.Add(this.label94);
-            this.tabPage15.Controls.Add(this.label95);
-            this.tabPage15.Controls.Add(this.label96);
-            this.tabPage15.Controls.Add(this.datoEvapo3_4);
-            this.tabPage15.Controls.Add(this.datoEvapo2_4);
-            this.tabPage15.Controls.Add(this.datoEvapo1_4);
-            this.tabPage15.Controls.Add(this.datoEvapohoy4);
-            this.tabPage15.Controls.Add(this.datoEvapomañana4);
-            this.tabPage15.Controls.Add(this.datoPreci3_4);
-            this.tabPage15.Controls.Add(this.datoPreci2_4);
-            this.tabPage15.Controls.Add(this.datoPreci1_4);
-            this.tabPage15.Controls.Add(this.datoPrecihoy4);
-            this.tabPage15.Controls.Add(this.datoPreciMañana4);
-            this.tabPage15.Controls.Add(this.datoPresion4);
-            this.tabPage15.Controls.Add(this.datoRadiaSolar4);
-            this.tabPage15.Controls.Add(this.datoHumedad4);
-            this.tabPage15.Controls.Add(this.datoTemp4);
-            this.tabPage15.Controls.Add(this.datoDirecViento4);
-            this.tabPage15.Controls.Add(this.datoVeloViento4);
-            this.tabPage15.Controls.Add(this.label97);
-            this.tabPage15.Controls.Add(this.label98);
-            this.tabPage15.Controls.Add(this.label99);
-            this.tabPage15.Controls.Add(this.label100);
-            this.tabPage15.Controls.Add(this.label101);
-            this.tabPage15.Controls.Add(this.label102);
-            this.tabPage15.Controls.Add(this.label103);
-            this.tabPage15.Controls.Add(this.label104);
-            this.tabPage15.Controls.Add(this.label105);
-            this.tabPage15.Controls.Add(this.label106);
-            this.tabPage15.Controls.Add(this.datoMes4);
-            this.tabPage15.Controls.Add(this.label107);
-            this.tabPage15.Controls.Add(this.label108);
-            this.tabPage15.Controls.Add(this.label109);
-            this.tabPage15.Controls.Add(this.label110);
-            this.tabPage15.Location = new System.Drawing.Point(4, 25);
-            this.tabPage15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage15.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage15.TabIndex = 0;
-            this.tabPage15.Text = "Meteorologico";
-            this.tabPage15.UseVisualStyleBackColor = true;
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(797, 236);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(85, 17);
-            this.label92.TabIndex = 55;
-            this.label92.Text = "3 dias antes";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(797, 194);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(85, 17);
-            this.label93.TabIndex = 54;
-            this.label93.Text = "2 dias antes";
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(797, 156);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(85, 17);
-            this.label94.TabIndex = 53;
-            this.label94.Text = "1 dias antes";
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(797, 121);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(31, 17);
-            this.label95.TabIndex = 52;
-            this.label95.Text = "hoy";
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(797, 81);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(102, 17);
-            this.label96.TabIndex = 51;
-            this.label96.Text = "dia de mañana";
-            // 
-            // datoEvapo3_4
-            // 
-            this.datoEvapo3_4.Location = new System.Drawing.Point(907, 233);
-            this.datoEvapo3_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo3_4.Name = "datoEvapo3_4";
-            this.datoEvapo3_4.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo3_4.TabIndex = 50;
-            // 
-            // datoEvapo2_4
-            // 
-            this.datoEvapo2_4.Location = new System.Drawing.Point(907, 194);
-            this.datoEvapo2_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo2_4.Name = "datoEvapo2_4";
-            this.datoEvapo2_4.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo2_4.TabIndex = 49;
-            // 
-            // datoEvapo1_4
-            // 
-            this.datoEvapo1_4.Location = new System.Drawing.Point(907, 156);
-            this.datoEvapo1_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo1_4.Name = "datoEvapo1_4";
-            this.datoEvapo1_4.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo1_4.TabIndex = 48;
-            // 
-            // datoEvapohoy4
-            // 
-            this.datoEvapohoy4.Location = new System.Drawing.Point(907, 117);
-            this.datoEvapohoy4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapohoy4.Name = "datoEvapohoy4";
-            this.datoEvapohoy4.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapohoy4.TabIndex = 47;
-            // 
-            // datoEvapomañana4
-            // 
-            this.datoEvapomañana4.Location = new System.Drawing.Point(907, 78);
-            this.datoEvapomañana4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapomañana4.Name = "datoEvapomañana4";
-            this.datoEvapomañana4.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapomañana4.TabIndex = 46;
-            // 
-            // datoPreci3_4
-            // 
-            this.datoPreci3_4.Location = new System.Drawing.Point(565, 233);
-            this.datoPreci3_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci3_4.Name = "datoPreci3_4";
-            this.datoPreci3_4.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci3_4.TabIndex = 27;
-            // 
-            // datoPreci2_4
-            // 
-            this.datoPreci2_4.Location = new System.Drawing.Point(565, 194);
-            this.datoPreci2_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci2_4.Name = "datoPreci2_4";
-            this.datoPreci2_4.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci2_4.TabIndex = 26;
-            // 
-            // datoPreci1_4
-            // 
-            this.datoPreci1_4.Location = new System.Drawing.Point(565, 156);
-            this.datoPreci1_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci1_4.Name = "datoPreci1_4";
-            this.datoPreci1_4.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci1_4.TabIndex = 25;
-            // 
-            // datoPrecihoy4
-            // 
-            this.datoPrecihoy4.Location = new System.Drawing.Point(565, 117);
-            this.datoPrecihoy4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPrecihoy4.Name = "datoPrecihoy4";
-            this.datoPrecihoy4.Size = new System.Drawing.Size(100, 22);
-            this.datoPrecihoy4.TabIndex = 24;
-            // 
-            // datoPreciMañana4
-            // 
-            this.datoPreciMañana4.Location = new System.Drawing.Point(565, 78);
-            this.datoPreciMañana4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreciMañana4.Name = "datoPreciMañana4";
-            this.datoPreciMañana4.Size = new System.Drawing.Size(100, 22);
-            this.datoPreciMañana4.TabIndex = 23;
-            // 
-            // datoPresion4
-            // 
-            this.datoPresion4.Location = new System.Drawing.Point(237, 283);
-            this.datoPresion4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPresion4.Name = "datoPresion4";
-            this.datoPresion4.Size = new System.Drawing.Size(100, 22);
-            this.datoPresion4.TabIndex = 13;
-            // 
-            // datoRadiaSolar4
-            // 
-            this.datoRadiaSolar4.Location = new System.Drawing.Point(237, 240);
-            this.datoRadiaSolar4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoRadiaSolar4.Name = "datoRadiaSolar4";
-            this.datoRadiaSolar4.Size = new System.Drawing.Size(100, 22);
-            this.datoRadiaSolar4.TabIndex = 11;
-            // 
-            // datoHumedad4
-            // 
-            this.datoHumedad4.Location = new System.Drawing.Point(237, 199);
-            this.datoHumedad4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoHumedad4.Name = "datoHumedad4";
-            this.datoHumedad4.Size = new System.Drawing.Size(100, 22);
-            this.datoHumedad4.TabIndex = 9;
-            // 
-            // datoTemp4
-            // 
-            this.datoTemp4.Location = new System.Drawing.Point(237, 160);
-            this.datoTemp4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoTemp4.Name = "datoTemp4";
-            this.datoTemp4.Size = new System.Drawing.Size(100, 22);
-            this.datoTemp4.TabIndex = 8;
-            // 
-            // datoDirecViento4
-            // 
-            this.datoDirecViento4.Location = new System.Drawing.Point(237, 124);
-            this.datoDirecViento4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoDirecViento4.Name = "datoDirecViento4";
-            this.datoDirecViento4.Size = new System.Drawing.Size(100, 22);
-            this.datoDirecViento4.TabIndex = 6;
-            // 
-            // datoVeloViento4
-            // 
-            this.datoVeloViento4.Location = new System.Drawing.Point(237, 85);
-            this.datoVeloViento4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoVeloViento4.Name = "datoVeloViento4";
-            this.datoVeloViento4.Size = new System.Drawing.Size(100, 22);
-            this.datoVeloViento4.TabIndex = 5;
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(799, 46);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(212, 17);
-            this.label97.TabIndex = 28;
-            this.label97.Text = "Evaporacion de los utlimo 5 dias";
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(459, 233);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(85, 17);
-            this.label98.TabIndex = 21;
-            this.label98.Text = "3 dias antes";
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(459, 192);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(85, 17);
-            this.label99.TabIndex = 20;
-            this.label99.Text = "2 dias antes";
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(459, 153);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(85, 17);
-            this.label100.TabIndex = 19;
-            this.label100.Text = "1 dias antes";
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Location = new System.Drawing.Point(459, 117);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(31, 17);
-            this.label101.TabIndex = 18;
-            this.label101.Text = "hoy";
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(459, 78);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(102, 17);
-            this.label102.TabIndex = 17;
-            this.label102.Text = "dia de mañana";
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(459, 42);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(214, 17);
-            this.label103.TabIndex = 16;
-            this.label103.Text = "Precipitacion de los utlimo 5 dias";
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(99, 283);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(133, 17);
-            this.label104.TabIndex = 12;
-            this.label104.Text = "Presion atmosferica";
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(99, 240);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(106, 17);
-            this.label105.TabIndex = 10;
-            this.label105.Text = "Radiacion solar";
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(99, 199);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(119, 17);
-            this.label106.TabIndex = 7;
-            this.label106.Text = "Humedad relativa";
-            // 
-            // datoMes4
-            // 
-            this.datoMes4.FormattingEnabled = true;
-            this.datoMes4.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.datoMes4.Location = new System.Drawing.Point(237, 46);
-            this.datoMes4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoMes4.Name = "datoMes4";
-            this.datoMes4.Size = new System.Drawing.Size(121, 24);
-            this.datoMes4.TabIndex = 4;
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(99, 162);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(85, 17);
-            this.label107.TabIndex = 3;
-            this.label107.Text = "temperatura";
-            // 
-            // label108
-            // 
-            this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(99, 124);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(109, 17);
-            this.label108.TabIndex = 2;
-            this.label108.Text = "direccion Viento";
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(99, 85);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(110, 17);
-            this.label109.TabIndex = 1;
-            this.label109.Text = "velocidad viento";
-            // 
-            // label110
-            // 
-            this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(99, 46);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(34, 17);
-            this.label110.TabIndex = 0;
-            this.label110.Text = "Mes";
-            // 
-            // tabPage16
-            // 
-            this.tabPage16.Controls.Add(this.datosCachimba2_4);
-            this.tabPage16.Controls.Add(this.datoGerencia4);
-            this.tabPage16.Controls.Add(this.datosCachimba1_4);
-            this.tabPage16.Controls.Add(this.datosCnorte4);
-            this.tabPage16.Controls.Add(this.datosCmovil4);
-            this.tabPage16.Controls.Add(this.datosDasdia4);
-            this.tabPage16.Controls.Add(this.datoMovitecDia4);
-            this.tabPage16.Controls.Add(this.datoChancadoDia4);
-            this.tabPage16.Controls.Add(this.label111);
-            this.tabPage16.Controls.Add(this.label112);
-            this.tabPage16.Controls.Add(this.label113);
-            this.tabPage16.Controls.Add(this.label114);
-            this.tabPage16.Controls.Add(this.label115);
-            this.tabPage16.Controls.Add(this.label116);
-            this.tabPage16.Controls.Add(this.label117);
-            this.tabPage16.Controls.Add(this.label118);
-            this.tabPage16.Location = new System.Drawing.Point(4, 25);
-            this.tabPage16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage16.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage16.TabIndex = 1;
-            this.tabPage16.Text = "Mitigación";
-            this.tabPage16.UseVisualStyleBackColor = true;
-            // 
-            // datosCachimba2_4
-            // 
-            this.datosCachimba2_4.Location = new System.Drawing.Point(757, 263);
-            this.datosCachimba2_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCachimba2_4.Name = "datosCachimba2_4";
-            this.datosCachimba2_4.Size = new System.Drawing.Size(100, 22);
-            this.datosCachimba2_4.TabIndex = 19;
-            // 
-            // datoGerencia4
-            // 
-            this.datoGerencia4.Location = new System.Drawing.Point(377, 263);
-            this.datoGerencia4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoGerencia4.Name = "datoGerencia4";
-            this.datoGerencia4.Size = new System.Drawing.Size(100, 22);
-            this.datoGerencia4.TabIndex = 17;
-            // 
-            // datosCachimba1_4
-            // 
-            this.datosCachimba1_4.Location = new System.Drawing.Point(757, 224);
-            this.datosCachimba1_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCachimba1_4.Name = "datosCachimba1_4";
-            this.datosCachimba1_4.Size = new System.Drawing.Size(100, 22);
-            this.datosCachimba1_4.TabIndex = 15;
-            // 
-            // datosCnorte4
-            // 
-            this.datosCnorte4.Location = new System.Drawing.Point(757, 180);
-            this.datosCnorte4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCnorte4.Name = "datosCnorte4";
-            this.datosCnorte4.Size = new System.Drawing.Size(100, 22);
-            this.datosCnorte4.TabIndex = 13;
-            // 
-            // datosCmovil4
-            // 
-            this.datosCmovil4.Location = new System.Drawing.Point(757, 138);
-            this.datosCmovil4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCmovil4.Name = "datosCmovil4";
-            this.datosCmovil4.Size = new System.Drawing.Size(100, 22);
-            this.datosCmovil4.TabIndex = 11;
-            // 
-            // datosDasdia4
-            // 
-            this.datosDasdia4.Location = new System.Drawing.Point(757, 94);
-            this.datosDasdia4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosDasdia4.Name = "datosDasdia4";
-            this.datosDasdia4.Size = new System.Drawing.Size(100, 22);
-            this.datosDasdia4.TabIndex = 9;
-            // 
-            // datoMovitecDia4
-            // 
-            this.datoMovitecDia4.Location = new System.Drawing.Point(377, 177);
-            this.datoMovitecDia4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoMovitecDia4.Name = "datoMovitecDia4";
-            this.datoMovitecDia4.Size = new System.Drawing.Size(100, 22);
-            this.datoMovitecDia4.TabIndex = 5;
-            // 
-            // datoChancadoDia4
-            // 
-            this.datoChancadoDia4.Location = new System.Drawing.Point(377, 91);
-            this.datoChancadoDia4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoChancadoDia4.Name = "datoChancadoDia4";
-            this.datoChancadoDia4.Size = new System.Drawing.Size(100, 22);
-            this.datoChancadoDia4.TabIndex = 1;
-            // 
-            // label111
-            // 
-            this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(589, 263);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(78, 17);
-            this.label111.TabIndex = 18;
-            this.label111.Text = "Cachimba2";
-            // 
-            // label112
-            // 
-            this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(209, 263);
-            this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(66, 17);
-            this.label112.TabIndex = 16;
-            this.label112.Text = "Gerencia";
-            // 
-            // label113
-            // 
-            this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(589, 224);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(78, 17);
-            this.label113.TabIndex = 14;
-            this.label113.Text = "Cachimba1";
-            // 
-            // label114
-            // 
-            this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(589, 180);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(50, 17);
-            this.label114.TabIndex = 12;
-            this.label114.Text = "Cnorte";
-            // 
-            // label115
-            // 
-            this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(589, 138);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(49, 17);
-            this.label115.TabIndex = 10;
-            this.label115.Text = "Cmovil";
-            // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(589, 94);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(52, 17);
-            this.label116.TabIndex = 8;
-            this.label116.Text = "Dasdia";
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.Location = new System.Drawing.Point(209, 177);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(75, 17);
-            this.label117.TabIndex = 4;
-            this.label117.Text = "Movitecdia";
-            // 
-            // label118
-            // 
-            this.label118.AutoSize = true;
-            this.label118.Location = new System.Drawing.Point(209, 91);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(120, 17);
-            this.label118.TabIndex = 0;
-            this.label118.Text = "Chancado por dia";
-            // 
-            // tabPage17
-            // 
-            this.tabPage17.Controls.Add(this.checkedListBox5);
-            this.tabPage17.Controls.Add(this.label119);
-            this.tabPage17.Location = new System.Drawing.Point(4, 25);
-            this.tabPage17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage17.TabIndex = 2;
-            this.tabPage17.Text = "detencion de chancadores";
-            this.tabPage17.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox5
-            // 
-            this.checkedListBox5.FormattingEnabled = true;
-            this.checkedListBox5.Items.AddRange(new object[] {
-            "CH-1",
-            "CH-2"});
-            this.checkedListBox5.Location = new System.Drawing.Point(91, 82);
-            this.checkedListBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox5.Name = "checkedListBox5";
-            this.checkedListBox5.Size = new System.Drawing.Size(117, 225);
-            this.checkedListBox5.TabIndex = 5;
-            // 
-            // label119
-            // 
-            this.label119.AutoSize = true;
-            this.label119.Location = new System.Drawing.Point(88, 48);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(125, 17);
-            this.label119.TabIndex = 4;
-            this.label119.Text = "Equipos detenidos";
-            // 
-            // tabPage18
-            // 
-            this.tabPage18.Controls.Add(this.checkedListBox6);
-            this.tabPage18.Controls.Add(this.label120);
-            this.tabPage18.Location = new System.Drawing.Point(4, 25);
-            this.tabPage18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage18.TabIndex = 3;
-            this.tabPage18.Text = "detencion de palas";
-            this.tabPage18.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox6
-            // 
-            this.checkedListBox6.FormattingEnabled = true;
-            this.checkedListBox6.Items.AddRange(new object[] {
-            "PA-01",
-            "PA-03",
-            "PA-04",
-            "PA-05",
-            "PA-07",
-            "CF08",
-            "CF10",
-            "CF11"});
-            this.checkedListBox6.Location = new System.Drawing.Point(91, 57);
-            this.checkedListBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox6.Name = "checkedListBox6";
-            this.checkedListBox6.Size = new System.Drawing.Size(117, 225);
-            this.checkedListBox6.TabIndex = 3;
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.Location = new System.Drawing.Point(87, 22);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(125, 17);
-            this.label120.TabIndex = 0;
-            this.label120.Text = "Equipos detenidos";
-            // 
-            // tabDia5
-            // 
-            this.tabDia5.Controls.Add(this.tabControl4);
-            this.tabDia5.Location = new System.Drawing.Point(4, 25);
-            this.tabDia5.Name = "tabDia5";
-            this.tabDia5.Size = new System.Drawing.Size(1139, 481);
-            this.tabDia5.TabIndex = 5;
-            this.tabDia5.Text = "Dia 5";
-            this.tabDia5.UseVisualStyleBackColor = true;
-            // 
-            // tabControl4
-            // 
-            this.tabControl4.Controls.Add(this.tabPage19);
-            this.tabControl4.Controls.Add(this.tabPage20);
-            this.tabControl4.Controls.Add(this.tabPage21);
-            this.tabControl4.Controls.Add(this.tabPage22);
-            this.tabControl4.Location = new System.Drawing.Point(6, 5);
-            this.tabControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(1127, 471);
-            this.tabControl4.TabIndex = 2;
-            // 
-            // tabPage19
-            // 
-            this.tabPage19.Controls.Add(this.label121);
-            this.tabPage19.Controls.Add(this.label122);
-            this.tabPage19.Controls.Add(this.label123);
-            this.tabPage19.Controls.Add(this.label124);
-            this.tabPage19.Controls.Add(this.label125);
-            this.tabPage19.Controls.Add(this.datoEvapo3_5);
-            this.tabPage19.Controls.Add(this.datoEvapo2_5);
-            this.tabPage19.Controls.Add(this.datoEvapo1_5);
-            this.tabPage19.Controls.Add(this.datoEvapohoy5);
-            this.tabPage19.Controls.Add(this.datoEvapomañana5);
-            this.tabPage19.Controls.Add(this.datoPreci3_5);
-            this.tabPage19.Controls.Add(this.datoPreci2_5);
-            this.tabPage19.Controls.Add(this.datoPreci1_5);
-            this.tabPage19.Controls.Add(this.datoPrecihoy5);
-            this.tabPage19.Controls.Add(this.datoPreciMañana5);
-            this.tabPage19.Controls.Add(this.datoPresion5);
-            this.tabPage19.Controls.Add(this.datoRadiaSolar5);
-            this.tabPage19.Controls.Add(this.datoHumedad5);
-            this.tabPage19.Controls.Add(this.datoTemp5);
-            this.tabPage19.Controls.Add(this.datoDirecViento5);
-            this.tabPage19.Controls.Add(this.datoVeloViento5);
-            this.tabPage19.Controls.Add(this.label126);
-            this.tabPage19.Controls.Add(this.label127);
-            this.tabPage19.Controls.Add(this.label128);
-            this.tabPage19.Controls.Add(this.label129);
-            this.tabPage19.Controls.Add(this.label130);
-            this.tabPage19.Controls.Add(this.label131);
-            this.tabPage19.Controls.Add(this.label132);
-            this.tabPage19.Controls.Add(this.label133);
-            this.tabPage19.Controls.Add(this.label134);
-            this.tabPage19.Controls.Add(this.label135);
-            this.tabPage19.Controls.Add(this.datoMes5);
-            this.tabPage19.Controls.Add(this.label136);
-            this.tabPage19.Controls.Add(this.label137);
-            this.tabPage19.Controls.Add(this.label138);
-            this.tabPage19.Controls.Add(this.label139);
-            this.tabPage19.Location = new System.Drawing.Point(4, 25);
-            this.tabPage19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage19.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage19.TabIndex = 0;
-            this.tabPage19.Text = "Meteorologico";
-            this.tabPage19.UseVisualStyleBackColor = true;
-            // 
-            // label121
-            // 
-            this.label121.AutoSize = true;
-            this.label121.Location = new System.Drawing.Point(797, 236);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(85, 17);
-            this.label121.TabIndex = 55;
-            this.label121.Text = "3 dias antes";
-            // 
-            // label122
-            // 
-            this.label122.AutoSize = true;
-            this.label122.Location = new System.Drawing.Point(797, 194);
-            this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(85, 17);
-            this.label122.TabIndex = 54;
-            this.label122.Text = "2 dias antes";
-            // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(797, 156);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(85, 17);
-            this.label123.TabIndex = 53;
-            this.label123.Text = "1 dias antes";
-            // 
-            // label124
-            // 
-            this.label124.AutoSize = true;
-            this.label124.Location = new System.Drawing.Point(797, 121);
-            this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(31, 17);
-            this.label124.TabIndex = 52;
-            this.label124.Text = "hoy";
-            // 
-            // label125
-            // 
-            this.label125.AutoSize = true;
-            this.label125.Location = new System.Drawing.Point(797, 81);
-            this.label125.Name = "label125";
-            this.label125.Size = new System.Drawing.Size(102, 17);
-            this.label125.TabIndex = 51;
-            this.label125.Text = "dia de mañana";
-            // 
-            // datoEvapo3_5
-            // 
-            this.datoEvapo3_5.Location = new System.Drawing.Point(907, 233);
-            this.datoEvapo3_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo3_5.Name = "datoEvapo3_5";
-            this.datoEvapo3_5.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo3_5.TabIndex = 50;
-            // 
-            // datoEvapo2_5
-            // 
-            this.datoEvapo2_5.Location = new System.Drawing.Point(907, 194);
-            this.datoEvapo2_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo2_5.Name = "datoEvapo2_5";
-            this.datoEvapo2_5.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo2_5.TabIndex = 49;
-            // 
-            // datoEvapo1_5
-            // 
-            this.datoEvapo1_5.Location = new System.Drawing.Point(907, 156);
-            this.datoEvapo1_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapo1_5.Name = "datoEvapo1_5";
-            this.datoEvapo1_5.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapo1_5.TabIndex = 48;
-            // 
-            // datoEvapohoy5
-            // 
-            this.datoEvapohoy5.Location = new System.Drawing.Point(907, 117);
-            this.datoEvapohoy5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapohoy5.Name = "datoEvapohoy5";
-            this.datoEvapohoy5.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapohoy5.TabIndex = 47;
-            // 
-            // datoEvapomañana5
-            // 
-            this.datoEvapomañana5.Location = new System.Drawing.Point(907, 78);
-            this.datoEvapomañana5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoEvapomañana5.Name = "datoEvapomañana5";
-            this.datoEvapomañana5.Size = new System.Drawing.Size(100, 22);
-            this.datoEvapomañana5.TabIndex = 46;
-            // 
-            // datoPreci3_5
-            // 
-            this.datoPreci3_5.Location = new System.Drawing.Point(565, 233);
-            this.datoPreci3_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci3_5.Name = "datoPreci3_5";
-            this.datoPreci3_5.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci3_5.TabIndex = 27;
-            // 
-            // datoPreci2_5
-            // 
-            this.datoPreci2_5.Location = new System.Drawing.Point(565, 194);
-            this.datoPreci2_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci2_5.Name = "datoPreci2_5";
-            this.datoPreci2_5.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci2_5.TabIndex = 26;
-            // 
-            // datoPreci1_5
-            // 
-            this.datoPreci1_5.Location = new System.Drawing.Point(565, 156);
-            this.datoPreci1_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreci1_5.Name = "datoPreci1_5";
-            this.datoPreci1_5.Size = new System.Drawing.Size(100, 22);
-            this.datoPreci1_5.TabIndex = 25;
-            // 
-            // datoPrecihoy5
-            // 
-            this.datoPrecihoy5.Location = new System.Drawing.Point(565, 117);
-            this.datoPrecihoy5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPrecihoy5.Name = "datoPrecihoy5";
-            this.datoPrecihoy5.Size = new System.Drawing.Size(100, 22);
-            this.datoPrecihoy5.TabIndex = 24;
-            // 
-            // datoPreciMañana5
-            // 
-            this.datoPreciMañana5.Location = new System.Drawing.Point(565, 78);
-            this.datoPreciMañana5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPreciMañana5.Name = "datoPreciMañana5";
-            this.datoPreciMañana5.Size = new System.Drawing.Size(100, 22);
-            this.datoPreciMañana5.TabIndex = 23;
-            // 
-            // datoPresion5
-            // 
-            this.datoPresion5.Location = new System.Drawing.Point(237, 283);
-            this.datoPresion5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoPresion5.Name = "datoPresion5";
-            this.datoPresion5.Size = new System.Drawing.Size(100, 22);
-            this.datoPresion5.TabIndex = 13;
-            // 
-            // datoRadiaSolar5
-            // 
-            this.datoRadiaSolar5.Location = new System.Drawing.Point(237, 240);
-            this.datoRadiaSolar5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoRadiaSolar5.Name = "datoRadiaSolar5";
-            this.datoRadiaSolar5.Size = new System.Drawing.Size(100, 22);
-            this.datoRadiaSolar5.TabIndex = 11;
-            // 
-            // datoHumedad5
-            // 
-            this.datoHumedad5.Location = new System.Drawing.Point(237, 199);
-            this.datoHumedad5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoHumedad5.Name = "datoHumedad5";
-            this.datoHumedad5.Size = new System.Drawing.Size(100, 22);
-            this.datoHumedad5.TabIndex = 9;
-            // 
-            // datoTemp5
-            // 
-            this.datoTemp5.Location = new System.Drawing.Point(237, 160);
-            this.datoTemp5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoTemp5.Name = "datoTemp5";
-            this.datoTemp5.Size = new System.Drawing.Size(100, 22);
-            this.datoTemp5.TabIndex = 8;
-            // 
-            // datoDirecViento5
-            // 
-            this.datoDirecViento5.Location = new System.Drawing.Point(237, 124);
-            this.datoDirecViento5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoDirecViento5.Name = "datoDirecViento5";
-            this.datoDirecViento5.Size = new System.Drawing.Size(100, 22);
-            this.datoDirecViento5.TabIndex = 6;
-            // 
-            // datoVeloViento5
-            // 
-            this.datoVeloViento5.Location = new System.Drawing.Point(237, 85);
-            this.datoVeloViento5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoVeloViento5.Name = "datoVeloViento5";
-            this.datoVeloViento5.Size = new System.Drawing.Size(100, 22);
-            this.datoVeloViento5.TabIndex = 5;
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Location = new System.Drawing.Point(799, 46);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(212, 17);
-            this.label126.TabIndex = 28;
-            this.label126.Text = "Evaporacion de los utlimo 5 dias";
-            // 
-            // label127
-            // 
-            this.label127.AutoSize = true;
-            this.label127.Location = new System.Drawing.Point(459, 233);
-            this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(85, 17);
-            this.label127.TabIndex = 21;
-            this.label127.Text = "3 dias antes";
-            // 
-            // label128
-            // 
-            this.label128.AutoSize = true;
-            this.label128.Location = new System.Drawing.Point(459, 192);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(85, 17);
-            this.label128.TabIndex = 20;
-            this.label128.Text = "2 dias antes";
-            // 
-            // label129
-            // 
-            this.label129.AutoSize = true;
-            this.label129.Location = new System.Drawing.Point(459, 153);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(85, 17);
-            this.label129.TabIndex = 19;
-            this.label129.Text = "1 dias antes";
-            // 
-            // label130
-            // 
-            this.label130.AutoSize = true;
-            this.label130.Location = new System.Drawing.Point(459, 117);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(31, 17);
-            this.label130.TabIndex = 18;
-            this.label130.Text = "hoy";
-            // 
-            // label131
-            // 
-            this.label131.AutoSize = true;
-            this.label131.Location = new System.Drawing.Point(459, 78);
-            this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(102, 17);
-            this.label131.TabIndex = 17;
-            this.label131.Text = "dia de mañana";
-            // 
-            // label132
-            // 
-            this.label132.AutoSize = true;
-            this.label132.Location = new System.Drawing.Point(459, 42);
-            this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(214, 17);
-            this.label132.TabIndex = 16;
-            this.label132.Text = "Precipitacion de los utlimo 5 dias";
-            // 
-            // label133
-            // 
-            this.label133.AutoSize = true;
-            this.label133.Location = new System.Drawing.Point(99, 283);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(133, 17);
-            this.label133.TabIndex = 12;
-            this.label133.Text = "Presion atmosferica";
-            // 
-            // label134
-            // 
-            this.label134.AutoSize = true;
-            this.label134.Location = new System.Drawing.Point(99, 240);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(106, 17);
-            this.label134.TabIndex = 10;
-            this.label134.Text = "Radiacion solar";
-            // 
-            // label135
-            // 
-            this.label135.AutoSize = true;
-            this.label135.Location = new System.Drawing.Point(99, 199);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(119, 17);
-            this.label135.TabIndex = 7;
-            this.label135.Text = "Humedad relativa";
-            // 
-            // datoMes5
-            // 
-            this.datoMes5.FormattingEnabled = true;
-            this.datoMes5.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.datoMes5.Location = new System.Drawing.Point(237, 46);
-            this.datoMes5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoMes5.Name = "datoMes5";
-            this.datoMes5.Size = new System.Drawing.Size(121, 24);
-            this.datoMes5.TabIndex = 4;
-            // 
-            // label136
-            // 
-            this.label136.AutoSize = true;
-            this.label136.Location = new System.Drawing.Point(99, 162);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(85, 17);
-            this.label136.TabIndex = 3;
-            this.label136.Text = "temperatura";
-            // 
-            // label137
-            // 
-            this.label137.AutoSize = true;
-            this.label137.Location = new System.Drawing.Point(99, 124);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(109, 17);
-            this.label137.TabIndex = 2;
-            this.label137.Text = "direccion Viento";
-            // 
-            // label138
-            // 
-            this.label138.AutoSize = true;
-            this.label138.Location = new System.Drawing.Point(99, 85);
-            this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(110, 17);
-            this.label138.TabIndex = 1;
-            this.label138.Text = "velocidad viento";
-            // 
-            // label139
-            // 
-            this.label139.AutoSize = true;
-            this.label139.Location = new System.Drawing.Point(99, 46);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(34, 17);
-            this.label139.TabIndex = 0;
-            this.label139.Text = "Mes";
-            // 
-            // tabPage20
-            // 
-            this.tabPage20.Controls.Add(this.datosCachimba2_5);
-            this.tabPage20.Controls.Add(this.datoGerencia5);
-            this.tabPage20.Controls.Add(this.datosCachimba1_5);
-            this.tabPage20.Controls.Add(this.datosCnorte5);
-            this.tabPage20.Controls.Add(this.datosCmovil5);
-            this.tabPage20.Controls.Add(this.datosDasdia5);
-            this.tabPage20.Controls.Add(this.datoMovitecDia5);
-            this.tabPage20.Controls.Add(this.datoChancadoDia5);
-            this.tabPage20.Controls.Add(this.label140);
-            this.tabPage20.Controls.Add(this.label141);
-            this.tabPage20.Controls.Add(this.label142);
-            this.tabPage20.Controls.Add(this.label143);
-            this.tabPage20.Controls.Add(this.label144);
-            this.tabPage20.Controls.Add(this.label145);
-            this.tabPage20.Controls.Add(this.label146);
-            this.tabPage20.Controls.Add(this.label147);
-            this.tabPage20.Location = new System.Drawing.Point(4, 25);
-            this.tabPage20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage20.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage20.TabIndex = 1;
-            this.tabPage20.Text = "Mitigación";
-            this.tabPage20.UseVisualStyleBackColor = true;
-            // 
-            // datosCachimba2_5
-            // 
-            this.datosCachimba2_5.Location = new System.Drawing.Point(757, 263);
-            this.datosCachimba2_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCachimba2_5.Name = "datosCachimba2_5";
-            this.datosCachimba2_5.Size = new System.Drawing.Size(100, 22);
-            this.datosCachimba2_5.TabIndex = 19;
-            // 
-            // datoGerencia5
-            // 
-            this.datoGerencia5.Location = new System.Drawing.Point(377, 263);
-            this.datoGerencia5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoGerencia5.Name = "datoGerencia5";
-            this.datoGerencia5.Size = new System.Drawing.Size(100, 22);
-            this.datoGerencia5.TabIndex = 17;
-            // 
-            // datosCachimba1_5
-            // 
-            this.datosCachimba1_5.Location = new System.Drawing.Point(757, 224);
-            this.datosCachimba1_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCachimba1_5.Name = "datosCachimba1_5";
-            this.datosCachimba1_5.Size = new System.Drawing.Size(100, 22);
-            this.datosCachimba1_5.TabIndex = 15;
-            // 
-            // datosCnorte5
-            // 
-            this.datosCnorte5.Location = new System.Drawing.Point(757, 180);
-            this.datosCnorte5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCnorte5.Name = "datosCnorte5";
-            this.datosCnorte5.Size = new System.Drawing.Size(100, 22);
-            this.datosCnorte5.TabIndex = 13;
-            // 
-            // datosCmovil5
-            // 
-            this.datosCmovil5.Location = new System.Drawing.Point(757, 138);
-            this.datosCmovil5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosCmovil5.Name = "datosCmovil5";
-            this.datosCmovil5.Size = new System.Drawing.Size(100, 22);
-            this.datosCmovil5.TabIndex = 11;
-            // 
-            // datosDasdia5
-            // 
-            this.datosDasdia5.Location = new System.Drawing.Point(757, 94);
-            this.datosDasdia5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datosDasdia5.Name = "datosDasdia5";
-            this.datosDasdia5.Size = new System.Drawing.Size(100, 22);
-            this.datosDasdia5.TabIndex = 9;
-            // 
-            // datoMovitecDia5
-            // 
-            this.datoMovitecDia5.Location = new System.Drawing.Point(377, 177);
-            this.datoMovitecDia5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoMovitecDia5.Name = "datoMovitecDia5";
-            this.datoMovitecDia5.Size = new System.Drawing.Size(100, 22);
-            this.datoMovitecDia5.TabIndex = 5;
-            // 
-            // datoChancadoDia5
-            // 
-            this.datoChancadoDia5.Location = new System.Drawing.Point(377, 91);
-            this.datoChancadoDia5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoChancadoDia5.Name = "datoChancadoDia5";
-            this.datoChancadoDia5.Size = new System.Drawing.Size(100, 22);
-            this.datoChancadoDia5.TabIndex = 1;
-            // 
-            // label140
-            // 
-            this.label140.AutoSize = true;
-            this.label140.Location = new System.Drawing.Point(589, 263);
-            this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(78, 17);
-            this.label140.TabIndex = 18;
-            this.label140.Text = "Cachimba2";
-            // 
-            // label141
-            // 
-            this.label141.AutoSize = true;
-            this.label141.Location = new System.Drawing.Point(209, 263);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(66, 17);
-            this.label141.TabIndex = 16;
-            this.label141.Text = "Gerencia";
-            // 
-            // label142
-            // 
-            this.label142.AutoSize = true;
-            this.label142.Location = new System.Drawing.Point(589, 224);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(78, 17);
-            this.label142.TabIndex = 14;
-            this.label142.Text = "Cachimba1";
-            // 
-            // label143
-            // 
-            this.label143.AutoSize = true;
-            this.label143.Location = new System.Drawing.Point(589, 180);
-            this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(50, 17);
-            this.label143.TabIndex = 12;
-            this.label143.Text = "Cnorte";
-            // 
-            // label144
-            // 
-            this.label144.AutoSize = true;
-            this.label144.Location = new System.Drawing.Point(589, 138);
-            this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(49, 17);
-            this.label144.TabIndex = 10;
-            this.label144.Text = "Cmovil";
-            // 
-            // label145
-            // 
-            this.label145.AutoSize = true;
-            this.label145.Location = new System.Drawing.Point(589, 94);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(52, 17);
-            this.label145.TabIndex = 8;
-            this.label145.Text = "Dasdia";
-            // 
-            // label146
-            // 
-            this.label146.AutoSize = true;
-            this.label146.Location = new System.Drawing.Point(209, 177);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(75, 17);
-            this.label146.TabIndex = 4;
-            this.label146.Text = "Movitecdia";
-            // 
-            // label147
-            // 
-            this.label147.AutoSize = true;
-            this.label147.Location = new System.Drawing.Point(209, 91);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(120, 17);
-            this.label147.TabIndex = 0;
-            this.label147.Text = "Chancado por dia";
-            // 
-            // tabPage21
-            // 
-            this.tabPage21.Controls.Add(this.checkedListBox7);
-            this.tabPage21.Controls.Add(this.label148);
-            this.tabPage21.Location = new System.Drawing.Point(4, 25);
-            this.tabPage21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage21.TabIndex = 2;
-            this.tabPage21.Text = "detencion de chancadores";
-            this.tabPage21.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox7
-            // 
-            this.checkedListBox7.FormattingEnabled = true;
-            this.checkedListBox7.Items.AddRange(new object[] {
-            "CH-1",
-            "CH-2"});
-            this.checkedListBox7.Location = new System.Drawing.Point(91, 82);
-            this.checkedListBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox7.Name = "checkedListBox7";
-            this.checkedListBox7.Size = new System.Drawing.Size(117, 225);
-            this.checkedListBox7.TabIndex = 5;
-            // 
-            // label148
-            // 
-            this.label148.AutoSize = true;
-            this.label148.Location = new System.Drawing.Point(88, 48);
-            this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(125, 17);
-            this.label148.TabIndex = 4;
-            this.label148.Text = "Equipos detenidos";
-            // 
-            // tabPage22
-            // 
-            this.tabPage22.Controls.Add(this.checkedListBox8);
-            this.tabPage22.Controls.Add(this.label149);
-            this.tabPage22.Location = new System.Drawing.Point(4, 25);
-            this.tabPage22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage22.Name = "tabPage22";
-            this.tabPage22.Size = new System.Drawing.Size(1119, 442);
-            this.tabPage22.TabIndex = 3;
-            this.tabPage22.Text = "detencion de palas";
-            this.tabPage22.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBox8
-            // 
-            this.checkedListBox8.FormattingEnabled = true;
-            this.checkedListBox8.Items.AddRange(new object[] {
-            "PA-01",
-            "PA-03",
-            "PA-04",
-            "PA-05",
-            "PA-07",
-            "CF08",
-            "CF10",
-            "CF11"});
-            this.checkedListBox8.Location = new System.Drawing.Point(91, 57);
-            this.checkedListBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox8.Name = "checkedListBox8";
-            this.checkedListBox8.Size = new System.Drawing.Size(117, 225);
-            this.checkedListBox8.TabIndex = 3;
-            // 
-            // label149
-            // 
-            this.label149.AutoSize = true;
-            this.label149.Location = new System.Drawing.Point(87, 22);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(125, 17);
-            this.label149.TabIndex = 0;
-            this.label149.Text = "Equipos detenidos";
-            // 
-            // prediccionMP10
-            // 
-            this.prediccionMP10.Controls.Add(this.prediccionDiaComboBox);
-            this.prediccionMP10.Controls.Add(this.analisisResultados);
-            this.prediccionMP10.Location = new System.Drawing.Point(4, 25);
-            this.prediccionMP10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.prediccionMP10.Name = "prediccionMP10";
-            this.prediccionMP10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.prediccionMP10.Size = new System.Drawing.Size(1163, 647);
-            this.prediccionMP10.TabIndex = 1;
-            this.prediccionMP10.Text = "Prediccion del MP10";
-            this.prediccionMP10.UseVisualStyleBackColor = true;
-            // 
-            // prediccionDiaComboBox
-            // 
-            this.prediccionDiaComboBox.FormattingEnabled = true;
-            this.prediccionDiaComboBox.Items.AddRange(new object[] {
-            "Dia 1"});
-            this.prediccionDiaComboBox.Location = new System.Drawing.Point(3, 5);
-            this.prediccionDiaComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.prediccionDiaComboBox.Name = "prediccionDiaComboBox";
-            this.prediccionDiaComboBox.Size = new System.Drawing.Size(121, 24);
-            this.prediccionDiaComboBox.TabIndex = 4;
-            // 
-            // analisisResultados
-            // 
-            this.analisisResultados.Controls.Add(this.nivelConfianza);
-            this.analisisResultados.Controls.Add(this.nivelMp10);
-            this.analisisResultados.Location = new System.Drawing.Point(5, 33);
-            this.analisisResultados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.analisisResultados.Name = "analisisResultados";
-            this.analisisResultados.SelectedIndex = 0;
-            this.analisisResultados.Size = new System.Drawing.Size(1155, 610);
-            this.analisisResultados.TabIndex = 0;
-            // 
-            // nivelConfianza
-            // 
-            this.nivelConfianza.Controls.Add(this.tiposAlertas);
-            this.nivelConfianza.Location = new System.Drawing.Point(4, 25);
-            this.nivelConfianza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nivelConfianza.Name = "nivelConfianza";
-            this.nivelConfianza.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nivelConfianza.Size = new System.Drawing.Size(1147, 581);
-            this.nivelConfianza.TabIndex = 0;
-            this.nivelConfianza.Text = "Nivel de confianza ";
-            this.nivelConfianza.UseVisualStyleBackColor = true;
-            // 
-            // tiposAlertas
-            // 
-            this.tiposAlertas.Controls.Add(this.tabPage2);
-            this.tiposAlertas.Controls.Add(this.tabPage3);
-            this.tiposAlertas.Controls.Add(this.tabPage4);
-            this.tiposAlertas.Controls.Add(this.tabPage5);
-            this.tiposAlertas.Controls.Add(this.tabPage6);
-            this.tiposAlertas.Location = new System.Drawing.Point(5, 6);
-            this.tiposAlertas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tiposAlertas.Name = "tiposAlertas";
-            this.tiposAlertas.SelectedIndex = 0;
-            this.tiposAlertas.Size = new System.Drawing.Size(1135, 572);
-            this.tiposAlertas.TabIndex = 2;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.graficoSinAlerta);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1127, 543);
-            this.tabPage2.TabIndex = 0;
-            this.tabPage2.Text = "Sin alerta";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // graficoSinAlerta
-            // 
-            this.graficoSinAlerta.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea7.AxisX.Title = "Distancia del grupo Sin Alerta";
-            chartArea7.AxisY.Title = "Nivel Pertenencia";
-            chartArea7.Name = "ChartArea1";
-            this.graficoSinAlerta.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.graficoSinAlerta.Legends.Add(legend7);
-            this.graficoSinAlerta.Location = new System.Drawing.Point(5, 6);
-            this.graficoSinAlerta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.graficoSinAlerta.Name = "graficoSinAlerta";
-            this.graficoSinAlerta.Size = new System.Drawing.Size(1115, 494);
-            this.graficoSinAlerta.TabIndex = 1;
-            this.graficoSinAlerta.Text = "Sin alerta";
-            title6.Name = "Sin alerta";
-            this.graficoSinAlerta.Titles.Add(title6);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.graficoAlerta1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(1127, 543);
-            this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = "Alerta 1";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // graficoAlerta1
-            // 
-            this.graficoAlerta1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea8.AxisX.Title = "Distancia del grupo Alerta 1";
-            chartArea8.AxisY.Title = "Nivel Pertenencia";
-            chartArea8.Name = "ChartArea1";
-            this.graficoAlerta1.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.graficoAlerta1.Legends.Add(legend8);
-            this.graficoAlerta1.Location = new System.Drawing.Point(5, 6);
-            this.graficoAlerta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.graficoAlerta1.Name = "graficoAlerta1";
-            this.graficoAlerta1.Size = new System.Drawing.Size(1115, 494);
-            this.graficoAlerta1.TabIndex = 2;
-            this.graficoAlerta1.Text = "Sin alerta";
-            title7.Name = "Sin alerta";
-            this.graficoAlerta1.Titles.Add(title7);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.graficoAlerta2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1127, 543);
-            this.tabPage4.TabIndex = 2;
-            this.tabPage4.Text = "Alerta 2";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // graficoAlerta2
-            // 
-            this.graficoAlerta2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea9.AxisX.Title = "Distancia del grupo Alerta 2";
-            chartArea9.AxisY.Title = "Nivel Pertenencia";
-            chartArea9.Name = "ChartArea1";
-            this.graficoAlerta2.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.graficoAlerta2.Legends.Add(legend9);
-            this.graficoAlerta2.Location = new System.Drawing.Point(5, 6);
-            this.graficoAlerta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.graficoAlerta2.Name = "graficoAlerta2";
-            this.graficoAlerta2.Size = new System.Drawing.Size(1115, 494);
-            this.graficoAlerta2.TabIndex = 3;
-            this.graficoAlerta2.Text = "Sin alerta";
-            title8.Name = "Sin alerta";
-            this.graficoAlerta2.Titles.Add(title8);
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.graficoAlerta3);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1127, 543);
-            this.tabPage5.TabIndex = 3;
-            this.tabPage5.Text = "Alerta 3";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // graficoAlerta3
-            // 
-            this.graficoAlerta3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea10.AxisX.Title = "Distancia del grupo Alerta 3";
-            chartArea10.AxisY.Title = "Nivel Pertenencia";
-            chartArea10.Name = "ChartArea1";
-            this.graficoAlerta3.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.graficoAlerta3.Legends.Add(legend10);
-            this.graficoAlerta3.Location = new System.Drawing.Point(5, 6);
-            this.graficoAlerta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.graficoAlerta3.Name = "graficoAlerta3";
-            this.graficoAlerta3.Size = new System.Drawing.Size(1115, 494);
-            this.graficoAlerta3.TabIndex = 4;
-            this.graficoAlerta3.Text = "Sin alerta";
-            title9.Name = "Sin alerta";
-            this.graficoAlerta3.Titles.Add(title9);
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.graficoAlerta4);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1127, 543);
-            this.tabPage6.TabIndex = 4;
-            this.tabPage6.Text = "Alerta 4";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // graficoAlerta4
-            // 
-            this.graficoAlerta4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea11.AxisX.Title = "Distancia del grupo Alerta 4";
-            chartArea11.AxisY.Title = "Nivel Pertenencia";
-            chartArea11.Name = "ChartArea1";
-            this.graficoAlerta4.ChartAreas.Add(chartArea11);
-            legend11.Name = "Legend1";
-            this.graficoAlerta4.Legends.Add(legend11);
-            this.graficoAlerta4.Location = new System.Drawing.Point(5, 6);
-            this.graficoAlerta4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.graficoAlerta4.Name = "graficoAlerta4";
-            this.graficoAlerta4.Size = new System.Drawing.Size(1115, 494);
-            this.graficoAlerta4.TabIndex = 4;
-            this.graficoAlerta4.Text = "Sin alerta";
-            title10.Name = "Sin alerta";
-            this.graficoAlerta4.Titles.Add(title10);
-            // 
-            // nivelMp10
-            // 
-            this.nivelMp10.Controls.Add(this.textoTipoAlerta);
-            this.nivelMp10.Controls.Add(this.label37);
-            this.nivelMp10.Controls.Add(this.textoNivelMp10);
-            this.nivelMp10.Controls.Add(this.label26);
-            this.nivelMp10.Controls.Add(this.graficoMP10);
-            this.nivelMp10.Location = new System.Drawing.Point(4, 25);
-            this.nivelMp10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nivelMp10.Name = "nivelMp10";
-            this.nivelMp10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nivelMp10.Size = new System.Drawing.Size(1147, 581);
-            this.nivelMp10.TabIndex = 1;
-            this.nivelMp10.Text = "Prediccion alerta y nivel Mp10";
-            this.nivelMp10.UseVisualStyleBackColor = true;
-            // 
-            // textoTipoAlerta
-            // 
-            this.textoTipoAlerta.AutoSize = true;
-            this.textoTipoAlerta.Location = new System.Drawing.Point(152, 528);
-            this.textoTipoAlerta.Name = "textoTipoAlerta";
-            this.textoTipoAlerta.Size = new System.Drawing.Size(68, 17);
-            this.textoTipoAlerta.TabIndex = 4;
-            this.textoTipoAlerta.Text = "Sin alerta";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(22, 528);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(96, 17);
-            this.label37.TabIndex = 3;
-            this.label37.Text = "Tipo de alerta";
-            // 
-            // textoNivelMp10
-            // 
-            this.textoNivelMp10.AutoSize = true;
-            this.textoNivelMp10.Location = new System.Drawing.Point(152, 479);
-            this.textoNivelMp10.Name = "textoNivelMp10";
-            this.textoNivelMp10.Size = new System.Drawing.Size(16, 17);
-            this.textoNivelMp10.TabIndex = 2;
-            this.textoNivelMp10.Text = "0";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(22, 479);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(106, 17);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "Nivel de Mp10: ";
-            // 
-            // graficoMP10
-            // 
-            this.graficoMP10.BackColor = System.Drawing.Color.Silver;
-            chartArea12.Name = "ChartArea1";
-            this.graficoMP10.ChartAreas.Add(chartArea12);
-            legend12.Name = "Legend1";
-            this.graficoMP10.Legends.Add(legend12);
-            this.graficoMP10.Location = new System.Drawing.Point(25, 21);
-            this.graficoMP10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.graficoMP10.Name = "graficoMP10";
-            this.graficoMP10.Size = new System.Drawing.Size(1092, 402);
-            this.graficoMP10.TabIndex = 0;
-            this.graficoMP10.Text = "chart1";
-            // 
-            // reportes
-            // 
-            this.reportes.Location = new System.Drawing.Point(4, 25);
-            this.reportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reportes.Name = "reportes";
-            this.reportes.Size = new System.Drawing.Size(1163, 647);
-            this.reportes.TabIndex = 2;
-            this.reportes.Text = "Reportes de prediccion MP10";
-            this.reportes.UseVisualStyleBackColor = true;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage8);
@@ -3362,6 +1178,7 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.datoMes2);
             this.tabPage8.Controls.Add(this.label10);
             this.tabPage8.Controls.Add(this.label23);
             this.tabPage8.Controls.Add(this.label35);
@@ -3393,7 +1210,6 @@
             this.tabPage8.Controls.Add(this.label46);
             this.tabPage8.Controls.Add(this.label47);
             this.tabPage8.Controls.Add(this.label48);
-            this.tabPage8.Controls.Add(this.datoMes2);
             this.tabPage8.Controls.Add(this.label49);
             this.tabPage8.Controls.Add(this.label50);
             this.tabPage8.Controls.Add(this.label51);
@@ -3670,28 +1486,6 @@
             this.label48.TabIndex = 7;
             this.label48.Text = "Humedad relativa";
             // 
-            // datoMes2
-            // 
-            this.datoMes2.FormattingEnabled = true;
-            this.datoMes2.Items.AddRange(new object[] {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
-            this.datoMes2.Location = new System.Drawing.Point(237, 46);
-            this.datoMes2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.datoMes2.Name = "datoMes2";
-            this.datoMes2.Size = new System.Drawing.Size(121, 24);
-            this.datoMes2.TabIndex = 4;
-            // 
             // label49
             // 
             this.label49.AutoSize = true;
@@ -3724,9 +1518,9 @@
             this.label52.AutoSize = true;
             this.label52.Location = new System.Drawing.Point(99, 46);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(34, 17);
+            this.label52.Size = new System.Drawing.Size(47, 17);
             this.label52.TabIndex = 0;
-            this.label52.Text = "Mes";
+            this.label52.Text = "Fecha";
             // 
             // tabPage9
             // 
@@ -3893,7 +1687,7 @@
             // 
             // tabPage10
             // 
-            this.tabPage10.Controls.Add(this.checkedListBox1);
+            this.tabPage10.Controls.Add(this.datosDetencionChancadores_2);
             this.tabPage10.Controls.Add(this.label61);
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -3903,17 +1697,17 @@
             this.tabPage10.Text = "detencion de chancadores";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox1
+            // datosDetencionChancadores_2
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.datosDetencionChancadores_2.FormattingEnabled = true;
+            this.datosDetencionChancadores_2.Items.AddRange(new object[] {
             "CH-1",
             "CH-2"});
-            this.checkedListBox1.Location = new System.Drawing.Point(91, 82);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(117, 225);
-            this.checkedListBox1.TabIndex = 5;
+            this.datosDetencionChancadores_2.Location = new System.Drawing.Point(91, 82);
+            this.datosDetencionChancadores_2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionChancadores_2.Name = "datosDetencionChancadores_2";
+            this.datosDetencionChancadores_2.Size = new System.Drawing.Size(117, 225);
+            this.datosDetencionChancadores_2.TabIndex = 5;
             // 
             // label61
             // 
@@ -3926,7 +1720,7 @@
             // 
             // tabPage11
             // 
-            this.tabPage11.Controls.Add(this.checkedListBox2);
+            this.tabPage11.Controls.Add(this.datosDetencionPalas2);
             this.tabPage11.Controls.Add(this.label62);
             this.tabPage11.Location = new System.Drawing.Point(4, 25);
             this.tabPage11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -3936,10 +1730,10 @@
             this.tabPage11.Text = "detencion de palas";
             this.tabPage11.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox2
+            // datosDetencionPalas2
             // 
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.datosDetencionPalas2.FormattingEnabled = true;
+            this.datosDetencionPalas2.Items.AddRange(new object[] {
             "PA-01",
             "PA-03",
             "PA-04",
@@ -3948,11 +1742,11 @@
             "CF08",
             "CF10",
             "CF11"});
-            this.checkedListBox2.Location = new System.Drawing.Point(91, 57);
-            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(117, 225);
-            this.checkedListBox2.TabIndex = 3;
+            this.datosDetencionPalas2.Location = new System.Drawing.Point(91, 57);
+            this.datosDetencionPalas2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionPalas2.Name = "datosDetencionPalas2";
+            this.datosDetencionPalas2.Size = new System.Drawing.Size(117, 225);
+            this.datosDetencionPalas2.TabIndex = 3;
             // 
             // label62
             // 
@@ -3962,6 +1756,2137 @@
             this.label62.Size = new System.Drawing.Size(125, 17);
             this.label62.TabIndex = 0;
             this.label62.Text = "Equipos detenidos";
+            // 
+            // tabDia3
+            // 
+            this.tabDia3.Controls.Add(this.datosDetencionChancadores_777);
+            this.tabDia3.Location = new System.Drawing.Point(4, 25);
+            this.tabDia3.Name = "tabDia3";
+            this.tabDia3.Size = new System.Drawing.Size(1139, 481);
+            this.tabDia3.TabIndex = 3;
+            this.tabDia3.Text = "Dia 3";
+            this.tabDia3.UseVisualStyleBackColor = true;
+            // 
+            // datosDetencionChancadores_777
+            // 
+            this.datosDetencionChancadores_777.Controls.Add(this.tabPage7);
+            this.datosDetencionChancadores_777.Controls.Add(this.tabPage12);
+            this.datosDetencionChancadores_777.Controls.Add(this.tabPage13);
+            this.datosDetencionChancadores_777.Controls.Add(this.tabPage14);
+            this.datosDetencionChancadores_777.Location = new System.Drawing.Point(6, 5);
+            this.datosDetencionChancadores_777.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionChancadores_777.Name = "datosDetencionChancadores_777";
+            this.datosDetencionChancadores_777.SelectedIndex = 0;
+            this.datosDetencionChancadores_777.Size = new System.Drawing.Size(1127, 471);
+            this.datosDetencionChancadores_777.TabIndex = 2;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.datoMes3);
+            this.tabPage7.Controls.Add(this.label63);
+            this.tabPage7.Controls.Add(this.label64);
+            this.tabPage7.Controls.Add(this.label65);
+            this.tabPage7.Controls.Add(this.label66);
+            this.tabPage7.Controls.Add(this.label67);
+            this.tabPage7.Controls.Add(this.datoEvapo3_3);
+            this.tabPage7.Controls.Add(this.datoEvapo2_3);
+            this.tabPage7.Controls.Add(this.datoEvapo1_3);
+            this.tabPage7.Controls.Add(this.datoEvapohoy3);
+            this.tabPage7.Controls.Add(this.datoEvapomañana3);
+            this.tabPage7.Controls.Add(this.datoPreci3_3);
+            this.tabPage7.Controls.Add(this.datoPreci2_3);
+            this.tabPage7.Controls.Add(this.datoPreci1_3);
+            this.tabPage7.Controls.Add(this.datoPrecihoy3);
+            this.tabPage7.Controls.Add(this.datoPreciMañana3);
+            this.tabPage7.Controls.Add(this.datoPresion3);
+            this.tabPage7.Controls.Add(this.datoRadiaSolar3);
+            this.tabPage7.Controls.Add(this.datoHumedad3);
+            this.tabPage7.Controls.Add(this.datoTemp3);
+            this.tabPage7.Controls.Add(this.datoDirecViento3);
+            this.tabPage7.Controls.Add(this.datoVeloViento3);
+            this.tabPage7.Controls.Add(this.label68);
+            this.tabPage7.Controls.Add(this.label69);
+            this.tabPage7.Controls.Add(this.label70);
+            this.tabPage7.Controls.Add(this.label71);
+            this.tabPage7.Controls.Add(this.label72);
+            this.tabPage7.Controls.Add(this.label73);
+            this.tabPage7.Controls.Add(this.label74);
+            this.tabPage7.Controls.Add(this.label75);
+            this.tabPage7.Controls.Add(this.label76);
+            this.tabPage7.Controls.Add(this.label77);
+            this.tabPage7.Controls.Add(this.label78);
+            this.tabPage7.Controls.Add(this.label79);
+            this.tabPage7.Controls.Add(this.label80);
+            this.tabPage7.Controls.Add(this.label81);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage7.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "Meteorologico";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(797, 236);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(85, 17);
+            this.label63.TabIndex = 55;
+            this.label63.Text = "3 dias antes";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(797, 194);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(85, 17);
+            this.label64.TabIndex = 54;
+            this.label64.Text = "2 dias antes";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(797, 156);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(85, 17);
+            this.label65.TabIndex = 53;
+            this.label65.Text = "1 dias antes";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(797, 121);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(31, 17);
+            this.label66.TabIndex = 52;
+            this.label66.Text = "hoy";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(797, 81);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(102, 17);
+            this.label67.TabIndex = 51;
+            this.label67.Text = "dia de mañana";
+            // 
+            // datoEvapo3_3
+            // 
+            this.datoEvapo3_3.Location = new System.Drawing.Point(907, 233);
+            this.datoEvapo3_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo3_3.Name = "datoEvapo3_3";
+            this.datoEvapo3_3.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo3_3.TabIndex = 50;
+            // 
+            // datoEvapo2_3
+            // 
+            this.datoEvapo2_3.Location = new System.Drawing.Point(907, 194);
+            this.datoEvapo2_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo2_3.Name = "datoEvapo2_3";
+            this.datoEvapo2_3.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo2_3.TabIndex = 49;
+            // 
+            // datoEvapo1_3
+            // 
+            this.datoEvapo1_3.Location = new System.Drawing.Point(907, 156);
+            this.datoEvapo1_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo1_3.Name = "datoEvapo1_3";
+            this.datoEvapo1_3.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo1_3.TabIndex = 48;
+            // 
+            // datoEvapohoy3
+            // 
+            this.datoEvapohoy3.Location = new System.Drawing.Point(907, 117);
+            this.datoEvapohoy3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapohoy3.Name = "datoEvapohoy3";
+            this.datoEvapohoy3.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapohoy3.TabIndex = 47;
+            // 
+            // datoEvapomañana3
+            // 
+            this.datoEvapomañana3.Location = new System.Drawing.Point(907, 78);
+            this.datoEvapomañana3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapomañana3.Name = "datoEvapomañana3";
+            this.datoEvapomañana3.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapomañana3.TabIndex = 46;
+            // 
+            // datoPreci3_3
+            // 
+            this.datoPreci3_3.Location = new System.Drawing.Point(565, 233);
+            this.datoPreci3_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci3_3.Name = "datoPreci3_3";
+            this.datoPreci3_3.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci3_3.TabIndex = 27;
+            // 
+            // datoPreci2_3
+            // 
+            this.datoPreci2_3.Location = new System.Drawing.Point(565, 194);
+            this.datoPreci2_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci2_3.Name = "datoPreci2_3";
+            this.datoPreci2_3.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci2_3.TabIndex = 26;
+            // 
+            // datoPreci1_3
+            // 
+            this.datoPreci1_3.Location = new System.Drawing.Point(565, 156);
+            this.datoPreci1_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci1_3.Name = "datoPreci1_3";
+            this.datoPreci1_3.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci1_3.TabIndex = 25;
+            // 
+            // datoPrecihoy3
+            // 
+            this.datoPrecihoy3.Location = new System.Drawing.Point(565, 117);
+            this.datoPrecihoy3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPrecihoy3.Name = "datoPrecihoy3";
+            this.datoPrecihoy3.Size = new System.Drawing.Size(100, 22);
+            this.datoPrecihoy3.TabIndex = 24;
+            // 
+            // datoPreciMañana3
+            // 
+            this.datoPreciMañana3.Location = new System.Drawing.Point(565, 78);
+            this.datoPreciMañana3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreciMañana3.Name = "datoPreciMañana3";
+            this.datoPreciMañana3.Size = new System.Drawing.Size(100, 22);
+            this.datoPreciMañana3.TabIndex = 23;
+            // 
+            // datoPresion3
+            // 
+            this.datoPresion3.Location = new System.Drawing.Point(237, 283);
+            this.datoPresion3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPresion3.Name = "datoPresion3";
+            this.datoPresion3.Size = new System.Drawing.Size(100, 22);
+            this.datoPresion3.TabIndex = 13;
+            // 
+            // datoRadiaSolar3
+            // 
+            this.datoRadiaSolar3.Location = new System.Drawing.Point(237, 240);
+            this.datoRadiaSolar3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoRadiaSolar3.Name = "datoRadiaSolar3";
+            this.datoRadiaSolar3.Size = new System.Drawing.Size(100, 22);
+            this.datoRadiaSolar3.TabIndex = 11;
+            // 
+            // datoHumedad3
+            // 
+            this.datoHumedad3.Location = new System.Drawing.Point(237, 199);
+            this.datoHumedad3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoHumedad3.Name = "datoHumedad3";
+            this.datoHumedad3.Size = new System.Drawing.Size(100, 22);
+            this.datoHumedad3.TabIndex = 9;
+            // 
+            // datoTemp3
+            // 
+            this.datoTemp3.Location = new System.Drawing.Point(237, 160);
+            this.datoTemp3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoTemp3.Name = "datoTemp3";
+            this.datoTemp3.Size = new System.Drawing.Size(100, 22);
+            this.datoTemp3.TabIndex = 8;
+            // 
+            // datoDirecViento3
+            // 
+            this.datoDirecViento3.Location = new System.Drawing.Point(237, 124);
+            this.datoDirecViento3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoDirecViento3.Name = "datoDirecViento3";
+            this.datoDirecViento3.Size = new System.Drawing.Size(100, 22);
+            this.datoDirecViento3.TabIndex = 6;
+            // 
+            // datoVeloViento3
+            // 
+            this.datoVeloViento3.Location = new System.Drawing.Point(237, 85);
+            this.datoVeloViento3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoVeloViento3.Name = "datoVeloViento3";
+            this.datoVeloViento3.Size = new System.Drawing.Size(100, 22);
+            this.datoVeloViento3.TabIndex = 5;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(799, 46);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(212, 17);
+            this.label68.TabIndex = 28;
+            this.label68.Text = "Evaporacion de los utlimo 5 dias";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(459, 233);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(85, 17);
+            this.label69.TabIndex = 21;
+            this.label69.Text = "3 dias antes";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(459, 192);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(85, 17);
+            this.label70.TabIndex = 20;
+            this.label70.Text = "2 dias antes";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(459, 153);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(85, 17);
+            this.label71.TabIndex = 19;
+            this.label71.Text = "1 dias antes";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(459, 117);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(31, 17);
+            this.label72.TabIndex = 18;
+            this.label72.Text = "hoy";
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(459, 78);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(102, 17);
+            this.label73.TabIndex = 17;
+            this.label73.Text = "dia de mañana";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(459, 42);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(214, 17);
+            this.label74.TabIndex = 16;
+            this.label74.Text = "Precipitacion de los utlimo 5 dias";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(99, 283);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(133, 17);
+            this.label75.TabIndex = 12;
+            this.label75.Text = "Presion atmosferica";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(99, 240);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(106, 17);
+            this.label76.TabIndex = 10;
+            this.label76.Text = "Radiacion solar";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(99, 199);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(119, 17);
+            this.label77.TabIndex = 7;
+            this.label77.Text = "Humedad relativa";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(99, 162);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(90, 17);
+            this.label78.TabIndex = 3;
+            this.label78.Text = "Temperatura";
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(99, 124);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(111, 17);
+            this.label79.TabIndex = 2;
+            this.label79.Text = "Direccion Viento";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(99, 85);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(112, 17);
+            this.label80.TabIndex = 1;
+            this.label80.Text = "Velocidad viento";
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(99, 46);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(47, 17);
+            this.label81.TabIndex = 0;
+            this.label81.Text = "Fecha";
+            // 
+            // tabPage12
+            // 
+            this.tabPage12.Controls.Add(this.datosCachimba2_3);
+            this.tabPage12.Controls.Add(this.datoGerencia3);
+            this.tabPage12.Controls.Add(this.datosCachimba1_3);
+            this.tabPage12.Controls.Add(this.datosCnorte3);
+            this.tabPage12.Controls.Add(this.datosCmovil3);
+            this.tabPage12.Controls.Add(this.datosDasdia3);
+            this.tabPage12.Controls.Add(this.datoMovitecDia3);
+            this.tabPage12.Controls.Add(this.datoChancadoDia3);
+            this.tabPage12.Controls.Add(this.label82);
+            this.tabPage12.Controls.Add(this.label83);
+            this.tabPage12.Controls.Add(this.label84);
+            this.tabPage12.Controls.Add(this.label85);
+            this.tabPage12.Controls.Add(this.label86);
+            this.tabPage12.Controls.Add(this.label87);
+            this.tabPage12.Controls.Add(this.label88);
+            this.tabPage12.Controls.Add(this.label89);
+            this.tabPage12.Location = new System.Drawing.Point(4, 25);
+            this.tabPage12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage12.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage12.TabIndex = 1;
+            this.tabPage12.Text = "Mitigación";
+            this.tabPage12.UseVisualStyleBackColor = true;
+            // 
+            // datosCachimba2_3
+            // 
+            this.datosCachimba2_3.Location = new System.Drawing.Point(757, 263);
+            this.datosCachimba2_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCachimba2_3.Name = "datosCachimba2_3";
+            this.datosCachimba2_3.Size = new System.Drawing.Size(100, 22);
+            this.datosCachimba2_3.TabIndex = 19;
+            // 
+            // datoGerencia3
+            // 
+            this.datoGerencia3.Location = new System.Drawing.Point(377, 263);
+            this.datoGerencia3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoGerencia3.Name = "datoGerencia3";
+            this.datoGerencia3.Size = new System.Drawing.Size(100, 22);
+            this.datoGerencia3.TabIndex = 17;
+            // 
+            // datosCachimba1_3
+            // 
+            this.datosCachimba1_3.Location = new System.Drawing.Point(757, 224);
+            this.datosCachimba1_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCachimba1_3.Name = "datosCachimba1_3";
+            this.datosCachimba1_3.Size = new System.Drawing.Size(100, 22);
+            this.datosCachimba1_3.TabIndex = 15;
+            // 
+            // datosCnorte3
+            // 
+            this.datosCnorte3.Location = new System.Drawing.Point(757, 180);
+            this.datosCnorte3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCnorte3.Name = "datosCnorte3";
+            this.datosCnorte3.Size = new System.Drawing.Size(100, 22);
+            this.datosCnorte3.TabIndex = 13;
+            // 
+            // datosCmovil3
+            // 
+            this.datosCmovil3.Location = new System.Drawing.Point(757, 138);
+            this.datosCmovil3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCmovil3.Name = "datosCmovil3";
+            this.datosCmovil3.Size = new System.Drawing.Size(100, 22);
+            this.datosCmovil3.TabIndex = 11;
+            // 
+            // datosDasdia3
+            // 
+            this.datosDasdia3.Location = new System.Drawing.Point(757, 94);
+            this.datosDasdia3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDasdia3.Name = "datosDasdia3";
+            this.datosDasdia3.Size = new System.Drawing.Size(100, 22);
+            this.datosDasdia3.TabIndex = 9;
+            // 
+            // datoMovitecDia3
+            // 
+            this.datoMovitecDia3.Location = new System.Drawing.Point(377, 177);
+            this.datoMovitecDia3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoMovitecDia3.Name = "datoMovitecDia3";
+            this.datoMovitecDia3.Size = new System.Drawing.Size(100, 22);
+            this.datoMovitecDia3.TabIndex = 5;
+            // 
+            // datoChancadoDia3
+            // 
+            this.datoChancadoDia3.Location = new System.Drawing.Point(377, 91);
+            this.datoChancadoDia3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoChancadoDia3.Name = "datoChancadoDia3";
+            this.datoChancadoDia3.Size = new System.Drawing.Size(100, 22);
+            this.datoChancadoDia3.TabIndex = 1;
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(589, 263);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(78, 17);
+            this.label82.TabIndex = 18;
+            this.label82.Text = "Cachimba2";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Location = new System.Drawing.Point(209, 263);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(66, 17);
+            this.label83.TabIndex = 16;
+            this.label83.Text = "Gerencia";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Location = new System.Drawing.Point(589, 224);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(78, 17);
+            this.label84.TabIndex = 14;
+            this.label84.Text = "Cachimba1";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(589, 180);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(50, 17);
+            this.label85.TabIndex = 12;
+            this.label85.Text = "Cnorte";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(589, 138);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(49, 17);
+            this.label86.TabIndex = 10;
+            this.label86.Text = "Cmovil";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(589, 94);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(52, 17);
+            this.label87.TabIndex = 8;
+            this.label87.Text = "Dasdia";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(209, 177);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(75, 17);
+            this.label88.TabIndex = 4;
+            this.label88.Text = "Movitecdia";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(209, 91);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(120, 17);
+            this.label89.TabIndex = 0;
+            this.label89.Text = "Chancado por dia";
+            // 
+            // tabPage13
+            // 
+            this.tabPage13.Controls.Add(this.datosDetencionChancadores_3);
+            this.tabPage13.Controls.Add(this.label90);
+            this.tabPage13.Location = new System.Drawing.Point(4, 25);
+            this.tabPage13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage13.TabIndex = 2;
+            this.tabPage13.Text = "detencion de chancadores";
+            this.tabPage13.UseVisualStyleBackColor = true;
+            // 
+            // datosDetencionChancadores_3
+            // 
+            this.datosDetencionChancadores_3.FormattingEnabled = true;
+            this.datosDetencionChancadores_3.Items.AddRange(new object[] {
+            "CH-1",
+            "CH-2"});
+            this.datosDetencionChancadores_3.Location = new System.Drawing.Point(91, 82);
+            this.datosDetencionChancadores_3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionChancadores_3.Name = "datosDetencionChancadores_3";
+            this.datosDetencionChancadores_3.Size = new System.Drawing.Size(117, 225);
+            this.datosDetencionChancadores_3.TabIndex = 5;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(88, 48);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(125, 17);
+            this.label90.TabIndex = 4;
+            this.label90.Text = "Equipos detenidos";
+            // 
+            // tabPage14
+            // 
+            this.tabPage14.Controls.Add(this.datosDetencionPalas3);
+            this.tabPage14.Controls.Add(this.label91);
+            this.tabPage14.Location = new System.Drawing.Point(4, 25);
+            this.tabPage14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage14.TabIndex = 3;
+            this.tabPage14.Text = "detencion de palas";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // datosDetencionPalas3
+            // 
+            this.datosDetencionPalas3.FormattingEnabled = true;
+            this.datosDetencionPalas3.Items.AddRange(new object[] {
+            "PA-01",
+            "PA-03",
+            "PA-04",
+            "PA-05",
+            "PA-07",
+            "CF08",
+            "CF10",
+            "CF11"});
+            this.datosDetencionPalas3.Location = new System.Drawing.Point(91, 57);
+            this.datosDetencionPalas3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionPalas3.Name = "datosDetencionPalas3";
+            this.datosDetencionPalas3.Size = new System.Drawing.Size(117, 225);
+            this.datosDetencionPalas3.TabIndex = 3;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(87, 22);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(125, 17);
+            this.label91.TabIndex = 0;
+            this.label91.Text = "Equipos detenidos";
+            // 
+            // tabDia4
+            // 
+            this.tabDia4.Controls.Add(this.tabControl3);
+            this.tabDia4.Location = new System.Drawing.Point(4, 25);
+            this.tabDia4.Name = "tabDia4";
+            this.tabDia4.Size = new System.Drawing.Size(1139, 481);
+            this.tabDia4.TabIndex = 4;
+            this.tabDia4.Text = "Dia 4";
+            this.tabDia4.UseVisualStyleBackColor = true;
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Controls.Add(this.tabPage15);
+            this.tabControl3.Controls.Add(this.tabPage16);
+            this.tabControl3.Controls.Add(this.tabPage17);
+            this.tabControl3.Controls.Add(this.tabPage18);
+            this.tabControl3.Location = new System.Drawing.Point(6, 5);
+            this.tabControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(1127, 471);
+            this.tabControl3.TabIndex = 2;
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.Controls.Add(this.datoMes4);
+            this.tabPage15.Controls.Add(this.label92);
+            this.tabPage15.Controls.Add(this.label93);
+            this.tabPage15.Controls.Add(this.label94);
+            this.tabPage15.Controls.Add(this.label95);
+            this.tabPage15.Controls.Add(this.label96);
+            this.tabPage15.Controls.Add(this.datoEvapo3_4);
+            this.tabPage15.Controls.Add(this.datoEvapo2_4);
+            this.tabPage15.Controls.Add(this.datoEvapo1_4);
+            this.tabPage15.Controls.Add(this.datoEvapohoy4);
+            this.tabPage15.Controls.Add(this.datoEvapomañana4);
+            this.tabPage15.Controls.Add(this.datoPreci3_4);
+            this.tabPage15.Controls.Add(this.datoPreci2_4);
+            this.tabPage15.Controls.Add(this.datoPreci1_4);
+            this.tabPage15.Controls.Add(this.datoPrecihoy4);
+            this.tabPage15.Controls.Add(this.datoPreciMañana4);
+            this.tabPage15.Controls.Add(this.datoPresion4);
+            this.tabPage15.Controls.Add(this.datoRadiaSolar4);
+            this.tabPage15.Controls.Add(this.datoHumedad4);
+            this.tabPage15.Controls.Add(this.datoTemp4);
+            this.tabPage15.Controls.Add(this.datoDirecViento4);
+            this.tabPage15.Controls.Add(this.datoVeloViento4);
+            this.tabPage15.Controls.Add(this.label97);
+            this.tabPage15.Controls.Add(this.label98);
+            this.tabPage15.Controls.Add(this.label99);
+            this.tabPage15.Controls.Add(this.label100);
+            this.tabPage15.Controls.Add(this.label101);
+            this.tabPage15.Controls.Add(this.label102);
+            this.tabPage15.Controls.Add(this.label103);
+            this.tabPage15.Controls.Add(this.label104);
+            this.tabPage15.Controls.Add(this.label105);
+            this.tabPage15.Controls.Add(this.label106);
+            this.tabPage15.Controls.Add(this.label107);
+            this.tabPage15.Controls.Add(this.label108);
+            this.tabPage15.Controls.Add(this.label109);
+            this.tabPage15.Controls.Add(this.label110);
+            this.tabPage15.Location = new System.Drawing.Point(4, 25);
+            this.tabPage15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage15.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage15.TabIndex = 0;
+            this.tabPage15.Text = "Meteorologico";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(797, 236);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(85, 17);
+            this.label92.TabIndex = 55;
+            this.label92.Text = "3 dias antes";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(797, 194);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(85, 17);
+            this.label93.TabIndex = 54;
+            this.label93.Text = "2 dias antes";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(797, 156);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(85, 17);
+            this.label94.TabIndex = 53;
+            this.label94.Text = "1 dias antes";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(797, 121);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(31, 17);
+            this.label95.TabIndex = 52;
+            this.label95.Text = "hoy";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(797, 81);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(102, 17);
+            this.label96.TabIndex = 51;
+            this.label96.Text = "dia de mañana";
+            // 
+            // datoEvapo3_4
+            // 
+            this.datoEvapo3_4.Location = new System.Drawing.Point(907, 233);
+            this.datoEvapo3_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo3_4.Name = "datoEvapo3_4";
+            this.datoEvapo3_4.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo3_4.TabIndex = 50;
+            // 
+            // datoEvapo2_4
+            // 
+            this.datoEvapo2_4.Location = new System.Drawing.Point(907, 194);
+            this.datoEvapo2_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo2_4.Name = "datoEvapo2_4";
+            this.datoEvapo2_4.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo2_4.TabIndex = 49;
+            // 
+            // datoEvapo1_4
+            // 
+            this.datoEvapo1_4.Location = new System.Drawing.Point(907, 156);
+            this.datoEvapo1_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo1_4.Name = "datoEvapo1_4";
+            this.datoEvapo1_4.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo1_4.TabIndex = 48;
+            // 
+            // datoEvapohoy4
+            // 
+            this.datoEvapohoy4.Location = new System.Drawing.Point(907, 117);
+            this.datoEvapohoy4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapohoy4.Name = "datoEvapohoy4";
+            this.datoEvapohoy4.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapohoy4.TabIndex = 47;
+            // 
+            // datoEvapomañana4
+            // 
+            this.datoEvapomañana4.Location = new System.Drawing.Point(907, 78);
+            this.datoEvapomañana4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapomañana4.Name = "datoEvapomañana4";
+            this.datoEvapomañana4.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapomañana4.TabIndex = 46;
+            // 
+            // datoPreci3_4
+            // 
+            this.datoPreci3_4.Location = new System.Drawing.Point(565, 233);
+            this.datoPreci3_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci3_4.Name = "datoPreci3_4";
+            this.datoPreci3_4.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci3_4.TabIndex = 27;
+            // 
+            // datoPreci2_4
+            // 
+            this.datoPreci2_4.Location = new System.Drawing.Point(565, 194);
+            this.datoPreci2_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci2_4.Name = "datoPreci2_4";
+            this.datoPreci2_4.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci2_4.TabIndex = 26;
+            // 
+            // datoPreci1_4
+            // 
+            this.datoPreci1_4.Location = new System.Drawing.Point(565, 156);
+            this.datoPreci1_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci1_4.Name = "datoPreci1_4";
+            this.datoPreci1_4.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci1_4.TabIndex = 25;
+            // 
+            // datoPrecihoy4
+            // 
+            this.datoPrecihoy4.Location = new System.Drawing.Point(565, 117);
+            this.datoPrecihoy4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPrecihoy4.Name = "datoPrecihoy4";
+            this.datoPrecihoy4.Size = new System.Drawing.Size(100, 22);
+            this.datoPrecihoy4.TabIndex = 24;
+            // 
+            // datoPreciMañana4
+            // 
+            this.datoPreciMañana4.Location = new System.Drawing.Point(565, 78);
+            this.datoPreciMañana4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreciMañana4.Name = "datoPreciMañana4";
+            this.datoPreciMañana4.Size = new System.Drawing.Size(100, 22);
+            this.datoPreciMañana4.TabIndex = 23;
+            // 
+            // datoPresion4
+            // 
+            this.datoPresion4.Location = new System.Drawing.Point(237, 283);
+            this.datoPresion4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPresion4.Name = "datoPresion4";
+            this.datoPresion4.Size = new System.Drawing.Size(100, 22);
+            this.datoPresion4.TabIndex = 13;
+            // 
+            // datoRadiaSolar4
+            // 
+            this.datoRadiaSolar4.Location = new System.Drawing.Point(237, 240);
+            this.datoRadiaSolar4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoRadiaSolar4.Name = "datoRadiaSolar4";
+            this.datoRadiaSolar4.Size = new System.Drawing.Size(100, 22);
+            this.datoRadiaSolar4.TabIndex = 11;
+            // 
+            // datoHumedad4
+            // 
+            this.datoHumedad4.Location = new System.Drawing.Point(237, 199);
+            this.datoHumedad4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoHumedad4.Name = "datoHumedad4";
+            this.datoHumedad4.Size = new System.Drawing.Size(100, 22);
+            this.datoHumedad4.TabIndex = 9;
+            // 
+            // datoTemp4
+            // 
+            this.datoTemp4.Location = new System.Drawing.Point(237, 160);
+            this.datoTemp4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoTemp4.Name = "datoTemp4";
+            this.datoTemp4.Size = new System.Drawing.Size(100, 22);
+            this.datoTemp4.TabIndex = 8;
+            // 
+            // datoDirecViento4
+            // 
+            this.datoDirecViento4.Location = new System.Drawing.Point(237, 124);
+            this.datoDirecViento4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoDirecViento4.Name = "datoDirecViento4";
+            this.datoDirecViento4.Size = new System.Drawing.Size(100, 22);
+            this.datoDirecViento4.TabIndex = 6;
+            // 
+            // datoVeloViento4
+            // 
+            this.datoVeloViento4.Location = new System.Drawing.Point(237, 85);
+            this.datoVeloViento4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoVeloViento4.Name = "datoVeloViento4";
+            this.datoVeloViento4.Size = new System.Drawing.Size(100, 22);
+            this.datoVeloViento4.TabIndex = 5;
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Location = new System.Drawing.Point(799, 46);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(212, 17);
+            this.label97.TabIndex = 28;
+            this.label97.Text = "Evaporacion de los utlimo 5 dias";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(459, 233);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(85, 17);
+            this.label98.TabIndex = 21;
+            this.label98.Text = "3 dias antes";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(459, 192);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(85, 17);
+            this.label99.TabIndex = 20;
+            this.label99.Text = "2 dias antes";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(459, 153);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(85, 17);
+            this.label100.TabIndex = 19;
+            this.label100.Text = "1 dias antes";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(459, 117);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(31, 17);
+            this.label101.TabIndex = 18;
+            this.label101.Text = "hoy";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(459, 78);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(102, 17);
+            this.label102.TabIndex = 17;
+            this.label102.Text = "dia de mañana";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(459, 42);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(214, 17);
+            this.label103.TabIndex = 16;
+            this.label103.Text = "Precipitacion de los utlimo 5 dias";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(99, 283);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(133, 17);
+            this.label104.TabIndex = 12;
+            this.label104.Text = "Presion atmosferica";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Location = new System.Drawing.Point(99, 240);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(106, 17);
+            this.label105.TabIndex = 10;
+            this.label105.Text = "Radiacion solar";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(99, 199);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(119, 17);
+            this.label106.TabIndex = 7;
+            this.label106.Text = "Humedad relativa";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Location = new System.Drawing.Point(99, 162);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(85, 17);
+            this.label107.TabIndex = 3;
+            this.label107.Text = "temperatura";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Location = new System.Drawing.Point(99, 124);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(109, 17);
+            this.label108.TabIndex = 2;
+            this.label108.Text = "direccion Viento";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(99, 85);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(110, 17);
+            this.label109.TabIndex = 1;
+            this.label109.Text = "velocidad viento";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Location = new System.Drawing.Point(99, 46);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(47, 17);
+            this.label110.TabIndex = 0;
+            this.label110.Text = "Fecha";
+            // 
+            // tabPage16
+            // 
+            this.tabPage16.Controls.Add(this.datosCachimba2_4);
+            this.tabPage16.Controls.Add(this.datoGerencia4);
+            this.tabPage16.Controls.Add(this.datosCachimba1_4);
+            this.tabPage16.Controls.Add(this.datosCnorte4);
+            this.tabPage16.Controls.Add(this.datosCmovil4);
+            this.tabPage16.Controls.Add(this.datosDasdia4);
+            this.tabPage16.Controls.Add(this.datoMovitecDia4);
+            this.tabPage16.Controls.Add(this.datoChancadoDia4);
+            this.tabPage16.Controls.Add(this.label111);
+            this.tabPage16.Controls.Add(this.label112);
+            this.tabPage16.Controls.Add(this.label113);
+            this.tabPage16.Controls.Add(this.label114);
+            this.tabPage16.Controls.Add(this.label115);
+            this.tabPage16.Controls.Add(this.label116);
+            this.tabPage16.Controls.Add(this.label117);
+            this.tabPage16.Controls.Add(this.label118);
+            this.tabPage16.Location = new System.Drawing.Point(4, 25);
+            this.tabPage16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage16.Name = "tabPage16";
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage16.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage16.TabIndex = 1;
+            this.tabPage16.Text = "Mitigación";
+            this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // datosCachimba2_4
+            // 
+            this.datosCachimba2_4.Location = new System.Drawing.Point(757, 263);
+            this.datosCachimba2_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCachimba2_4.Name = "datosCachimba2_4";
+            this.datosCachimba2_4.Size = new System.Drawing.Size(100, 22);
+            this.datosCachimba2_4.TabIndex = 19;
+            // 
+            // datoGerencia4
+            // 
+            this.datoGerencia4.Location = new System.Drawing.Point(377, 263);
+            this.datoGerencia4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoGerencia4.Name = "datoGerencia4";
+            this.datoGerencia4.Size = new System.Drawing.Size(100, 22);
+            this.datoGerencia4.TabIndex = 17;
+            // 
+            // datosCachimba1_4
+            // 
+            this.datosCachimba1_4.Location = new System.Drawing.Point(757, 224);
+            this.datosCachimba1_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCachimba1_4.Name = "datosCachimba1_4";
+            this.datosCachimba1_4.Size = new System.Drawing.Size(100, 22);
+            this.datosCachimba1_4.TabIndex = 15;
+            // 
+            // datosCnorte4
+            // 
+            this.datosCnorte4.Location = new System.Drawing.Point(757, 180);
+            this.datosCnorte4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCnorte4.Name = "datosCnorte4";
+            this.datosCnorte4.Size = new System.Drawing.Size(100, 22);
+            this.datosCnorte4.TabIndex = 13;
+            // 
+            // datosCmovil4
+            // 
+            this.datosCmovil4.Location = new System.Drawing.Point(757, 138);
+            this.datosCmovil4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCmovil4.Name = "datosCmovil4";
+            this.datosCmovil4.Size = new System.Drawing.Size(100, 22);
+            this.datosCmovil4.TabIndex = 11;
+            // 
+            // datosDasdia4
+            // 
+            this.datosDasdia4.Location = new System.Drawing.Point(757, 94);
+            this.datosDasdia4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDasdia4.Name = "datosDasdia4";
+            this.datosDasdia4.Size = new System.Drawing.Size(100, 22);
+            this.datosDasdia4.TabIndex = 9;
+            // 
+            // datoMovitecDia4
+            // 
+            this.datoMovitecDia4.Location = new System.Drawing.Point(377, 177);
+            this.datoMovitecDia4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoMovitecDia4.Name = "datoMovitecDia4";
+            this.datoMovitecDia4.Size = new System.Drawing.Size(100, 22);
+            this.datoMovitecDia4.TabIndex = 5;
+            // 
+            // datoChancadoDia4
+            // 
+            this.datoChancadoDia4.Location = new System.Drawing.Point(377, 91);
+            this.datoChancadoDia4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoChancadoDia4.Name = "datoChancadoDia4";
+            this.datoChancadoDia4.Size = new System.Drawing.Size(100, 22);
+            this.datoChancadoDia4.TabIndex = 1;
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(589, 263);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(78, 17);
+            this.label111.TabIndex = 18;
+            this.label111.Text = "Cachimba2";
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Location = new System.Drawing.Point(209, 263);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(66, 17);
+            this.label112.TabIndex = 16;
+            this.label112.Text = "Gerencia";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Location = new System.Drawing.Point(589, 224);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(78, 17);
+            this.label113.TabIndex = 14;
+            this.label113.Text = "Cachimba1";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Location = new System.Drawing.Point(589, 180);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(50, 17);
+            this.label114.TabIndex = 12;
+            this.label114.Text = "Cnorte";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Location = new System.Drawing.Point(589, 138);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(49, 17);
+            this.label115.TabIndex = 10;
+            this.label115.Text = "Cmovil";
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Location = new System.Drawing.Point(589, 94);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(52, 17);
+            this.label116.TabIndex = 8;
+            this.label116.Text = "Dasdia";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Location = new System.Drawing.Point(209, 177);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(75, 17);
+            this.label117.TabIndex = 4;
+            this.label117.Text = "Movitecdia";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Location = new System.Drawing.Point(209, 91);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(120, 17);
+            this.label118.TabIndex = 0;
+            this.label118.Text = "Chancado por dia";
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.datosDetencionChancadores_4);
+            this.tabPage17.Controls.Add(this.label119);
+            this.tabPage17.Location = new System.Drawing.Point(4, 25);
+            this.tabPage17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage17.TabIndex = 2;
+            this.tabPage17.Text = "detencion de chancadores";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // datosDetencionChancadores_4
+            // 
+            this.datosDetencionChancadores_4.FormattingEnabled = true;
+            this.datosDetencionChancadores_4.Items.AddRange(new object[] {
+            "CH-1",
+            "CH-2"});
+            this.datosDetencionChancadores_4.Location = new System.Drawing.Point(91, 82);
+            this.datosDetencionChancadores_4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionChancadores_4.Name = "datosDetencionChancadores_4";
+            this.datosDetencionChancadores_4.Size = new System.Drawing.Size(117, 225);
+            this.datosDetencionChancadores_4.TabIndex = 5;
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Location = new System.Drawing.Point(88, 48);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(125, 17);
+            this.label119.TabIndex = 4;
+            this.label119.Text = "Equipos detenidos";
+            // 
+            // tabPage18
+            // 
+            this.tabPage18.Controls.Add(this.datosDetencionPalas4);
+            this.tabPage18.Controls.Add(this.label120);
+            this.tabPage18.Location = new System.Drawing.Point(4, 25);
+            this.tabPage18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage18.TabIndex = 3;
+            this.tabPage18.Text = "detencion de palas";
+            this.tabPage18.UseVisualStyleBackColor = true;
+            // 
+            // datosDetencionPalas4
+            // 
+            this.datosDetencionPalas4.FormattingEnabled = true;
+            this.datosDetencionPalas4.Items.AddRange(new object[] {
+            "PA-01",
+            "PA-03",
+            "PA-04",
+            "PA-05",
+            "PA-07",
+            "CF08",
+            "CF10",
+            "CF11"});
+            this.datosDetencionPalas4.Location = new System.Drawing.Point(91, 57);
+            this.datosDetencionPalas4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionPalas4.Name = "datosDetencionPalas4";
+            this.datosDetencionPalas4.Size = new System.Drawing.Size(117, 225);
+            this.datosDetencionPalas4.TabIndex = 3;
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Location = new System.Drawing.Point(87, 22);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(125, 17);
+            this.label120.TabIndex = 0;
+            this.label120.Text = "Equipos detenidos";
+            // 
+            // tabDia5
+            // 
+            this.tabDia5.Controls.Add(this.tabControl4);
+            this.tabDia5.Location = new System.Drawing.Point(4, 25);
+            this.tabDia5.Name = "tabDia5";
+            this.tabDia5.Size = new System.Drawing.Size(1139, 481);
+            this.tabDia5.TabIndex = 5;
+            this.tabDia5.Text = "Dia 5";
+            this.tabDia5.UseVisualStyleBackColor = true;
+            // 
+            // tabControl4
+            // 
+            this.tabControl4.Controls.Add(this.tabPage19);
+            this.tabControl4.Controls.Add(this.tabPage20);
+            this.tabControl4.Controls.Add(this.tabPage21);
+            this.tabControl4.Controls.Add(this.tabPage22);
+            this.tabControl4.Location = new System.Drawing.Point(6, 5);
+            this.tabControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl4.Name = "tabControl4";
+            this.tabControl4.SelectedIndex = 0;
+            this.tabControl4.Size = new System.Drawing.Size(1127, 471);
+            this.tabControl4.TabIndex = 2;
+            // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.datoMes5);
+            this.tabPage19.Controls.Add(this.label121);
+            this.tabPage19.Controls.Add(this.label122);
+            this.tabPage19.Controls.Add(this.label123);
+            this.tabPage19.Controls.Add(this.label124);
+            this.tabPage19.Controls.Add(this.label125);
+            this.tabPage19.Controls.Add(this.datoEvapo3_5);
+            this.tabPage19.Controls.Add(this.datoEvapo2_5);
+            this.tabPage19.Controls.Add(this.datoEvapo1_5);
+            this.tabPage19.Controls.Add(this.datoEvapohoy5);
+            this.tabPage19.Controls.Add(this.datoEvapomañana5);
+            this.tabPage19.Controls.Add(this.datoPreci3_5);
+            this.tabPage19.Controls.Add(this.datoPreci2_5);
+            this.tabPage19.Controls.Add(this.datoPreci1_5);
+            this.tabPage19.Controls.Add(this.datoPrecihoy5);
+            this.tabPage19.Controls.Add(this.datoPreciMañana5);
+            this.tabPage19.Controls.Add(this.datoPresion5);
+            this.tabPage19.Controls.Add(this.datoRadiaSolar5);
+            this.tabPage19.Controls.Add(this.datoHumedad5);
+            this.tabPage19.Controls.Add(this.datoTemp5);
+            this.tabPage19.Controls.Add(this.datoDirecViento5);
+            this.tabPage19.Controls.Add(this.datoVeloViento5);
+            this.tabPage19.Controls.Add(this.label126);
+            this.tabPage19.Controls.Add(this.label127);
+            this.tabPage19.Controls.Add(this.label128);
+            this.tabPage19.Controls.Add(this.label129);
+            this.tabPage19.Controls.Add(this.label130);
+            this.tabPage19.Controls.Add(this.label131);
+            this.tabPage19.Controls.Add(this.label132);
+            this.tabPage19.Controls.Add(this.label133);
+            this.tabPage19.Controls.Add(this.label134);
+            this.tabPage19.Controls.Add(this.label135);
+            this.tabPage19.Controls.Add(this.label136);
+            this.tabPage19.Controls.Add(this.label137);
+            this.tabPage19.Controls.Add(this.label138);
+            this.tabPage19.Controls.Add(this.label139);
+            this.tabPage19.Location = new System.Drawing.Point(4, 25);
+            this.tabPage19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage19.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage19.TabIndex = 0;
+            this.tabPage19.Text = "Meteorologico";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(797, 236);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(85, 17);
+            this.label121.TabIndex = 55;
+            this.label121.Text = "3 dias antes";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(797, 194);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(85, 17);
+            this.label122.TabIndex = 54;
+            this.label122.Text = "2 dias antes";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(797, 156);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(85, 17);
+            this.label123.TabIndex = 53;
+            this.label123.Text = "1 dias antes";
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Location = new System.Drawing.Point(797, 121);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(31, 17);
+            this.label124.TabIndex = 52;
+            this.label124.Text = "hoy";
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(797, 81);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(102, 17);
+            this.label125.TabIndex = 51;
+            this.label125.Text = "dia de mañana";
+            // 
+            // datoEvapo3_5
+            // 
+            this.datoEvapo3_5.Location = new System.Drawing.Point(907, 233);
+            this.datoEvapo3_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo3_5.Name = "datoEvapo3_5";
+            this.datoEvapo3_5.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo3_5.TabIndex = 50;
+            // 
+            // datoEvapo2_5
+            // 
+            this.datoEvapo2_5.Location = new System.Drawing.Point(907, 194);
+            this.datoEvapo2_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo2_5.Name = "datoEvapo2_5";
+            this.datoEvapo2_5.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo2_5.TabIndex = 49;
+            // 
+            // datoEvapo1_5
+            // 
+            this.datoEvapo1_5.Location = new System.Drawing.Point(907, 156);
+            this.datoEvapo1_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapo1_5.Name = "datoEvapo1_5";
+            this.datoEvapo1_5.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapo1_5.TabIndex = 48;
+            // 
+            // datoEvapohoy5
+            // 
+            this.datoEvapohoy5.Location = new System.Drawing.Point(907, 117);
+            this.datoEvapohoy5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapohoy5.Name = "datoEvapohoy5";
+            this.datoEvapohoy5.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapohoy5.TabIndex = 47;
+            // 
+            // datoEvapomañana5
+            // 
+            this.datoEvapomañana5.Location = new System.Drawing.Point(907, 78);
+            this.datoEvapomañana5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoEvapomañana5.Name = "datoEvapomañana5";
+            this.datoEvapomañana5.Size = new System.Drawing.Size(100, 22);
+            this.datoEvapomañana5.TabIndex = 46;
+            // 
+            // datoPreci3_5
+            // 
+            this.datoPreci3_5.Location = new System.Drawing.Point(565, 233);
+            this.datoPreci3_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci3_5.Name = "datoPreci3_5";
+            this.datoPreci3_5.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci3_5.TabIndex = 27;
+            // 
+            // datoPreci2_5
+            // 
+            this.datoPreci2_5.Location = new System.Drawing.Point(565, 194);
+            this.datoPreci2_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci2_5.Name = "datoPreci2_5";
+            this.datoPreci2_5.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci2_5.TabIndex = 26;
+            // 
+            // datoPreci1_5
+            // 
+            this.datoPreci1_5.Location = new System.Drawing.Point(565, 156);
+            this.datoPreci1_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreci1_5.Name = "datoPreci1_5";
+            this.datoPreci1_5.Size = new System.Drawing.Size(100, 22);
+            this.datoPreci1_5.TabIndex = 25;
+            // 
+            // datoPrecihoy5
+            // 
+            this.datoPrecihoy5.Location = new System.Drawing.Point(565, 117);
+            this.datoPrecihoy5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPrecihoy5.Name = "datoPrecihoy5";
+            this.datoPrecihoy5.Size = new System.Drawing.Size(100, 22);
+            this.datoPrecihoy5.TabIndex = 24;
+            // 
+            // datoPreciMañana5
+            // 
+            this.datoPreciMañana5.Location = new System.Drawing.Point(565, 78);
+            this.datoPreciMañana5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPreciMañana5.Name = "datoPreciMañana5";
+            this.datoPreciMañana5.Size = new System.Drawing.Size(100, 22);
+            this.datoPreciMañana5.TabIndex = 23;
+            // 
+            // datoPresion5
+            // 
+            this.datoPresion5.Location = new System.Drawing.Point(237, 283);
+            this.datoPresion5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoPresion5.Name = "datoPresion5";
+            this.datoPresion5.Size = new System.Drawing.Size(100, 22);
+            this.datoPresion5.TabIndex = 13;
+            // 
+            // datoRadiaSolar5
+            // 
+            this.datoRadiaSolar5.Location = new System.Drawing.Point(237, 240);
+            this.datoRadiaSolar5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoRadiaSolar5.Name = "datoRadiaSolar5";
+            this.datoRadiaSolar5.Size = new System.Drawing.Size(100, 22);
+            this.datoRadiaSolar5.TabIndex = 11;
+            // 
+            // datoHumedad5
+            // 
+            this.datoHumedad5.Location = new System.Drawing.Point(237, 199);
+            this.datoHumedad5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoHumedad5.Name = "datoHumedad5";
+            this.datoHumedad5.Size = new System.Drawing.Size(100, 22);
+            this.datoHumedad5.TabIndex = 9;
+            // 
+            // datoTemp5
+            // 
+            this.datoTemp5.Location = new System.Drawing.Point(237, 160);
+            this.datoTemp5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoTemp5.Name = "datoTemp5";
+            this.datoTemp5.Size = new System.Drawing.Size(100, 22);
+            this.datoTemp5.TabIndex = 8;
+            // 
+            // datoDirecViento5
+            // 
+            this.datoDirecViento5.Location = new System.Drawing.Point(237, 124);
+            this.datoDirecViento5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoDirecViento5.Name = "datoDirecViento5";
+            this.datoDirecViento5.Size = new System.Drawing.Size(100, 22);
+            this.datoDirecViento5.TabIndex = 6;
+            // 
+            // datoVeloViento5
+            // 
+            this.datoVeloViento5.Location = new System.Drawing.Point(237, 85);
+            this.datoVeloViento5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoVeloViento5.Name = "datoVeloViento5";
+            this.datoVeloViento5.Size = new System.Drawing.Size(100, 22);
+            this.datoVeloViento5.TabIndex = 5;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Location = new System.Drawing.Point(799, 46);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(212, 17);
+            this.label126.TabIndex = 28;
+            this.label126.Text = "Evaporacion de los utlimo 5 dias";
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Location = new System.Drawing.Point(459, 233);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(85, 17);
+            this.label127.TabIndex = 21;
+            this.label127.Text = "3 dias antes";
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Location = new System.Drawing.Point(459, 192);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(85, 17);
+            this.label128.TabIndex = 20;
+            this.label128.Text = "2 dias antes";
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.Location = new System.Drawing.Point(459, 153);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(85, 17);
+            this.label129.TabIndex = 19;
+            this.label129.Text = "1 dias antes";
+            // 
+            // label130
+            // 
+            this.label130.AutoSize = true;
+            this.label130.Location = new System.Drawing.Point(459, 117);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(31, 17);
+            this.label130.TabIndex = 18;
+            this.label130.Text = "hoy";
+            // 
+            // label131
+            // 
+            this.label131.AutoSize = true;
+            this.label131.Location = new System.Drawing.Point(459, 78);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(102, 17);
+            this.label131.TabIndex = 17;
+            this.label131.Text = "dia de mañana";
+            // 
+            // label132
+            // 
+            this.label132.AutoSize = true;
+            this.label132.Location = new System.Drawing.Point(459, 42);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(214, 17);
+            this.label132.TabIndex = 16;
+            this.label132.Text = "Precipitacion de los utlimo 5 dias";
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.Location = new System.Drawing.Point(99, 283);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(133, 17);
+            this.label133.TabIndex = 12;
+            this.label133.Text = "Presion atmosferica";
+            // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.Location = new System.Drawing.Point(99, 240);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(106, 17);
+            this.label134.TabIndex = 10;
+            this.label134.Text = "Radiacion solar";
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Location = new System.Drawing.Point(99, 199);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(119, 17);
+            this.label135.TabIndex = 7;
+            this.label135.Text = "Humedad relativa";
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Location = new System.Drawing.Point(99, 162);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(85, 17);
+            this.label136.TabIndex = 3;
+            this.label136.Text = "temperatura";
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Location = new System.Drawing.Point(99, 124);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(109, 17);
+            this.label137.TabIndex = 2;
+            this.label137.Text = "direccion Viento";
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Location = new System.Drawing.Point(99, 85);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(110, 17);
+            this.label138.TabIndex = 1;
+            this.label138.Text = "velocidad viento";
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Location = new System.Drawing.Point(99, 46);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(47, 17);
+            this.label139.TabIndex = 0;
+            this.label139.Text = "Fecha";
+            // 
+            // tabPage20
+            // 
+            this.tabPage20.Controls.Add(this.datosCachimba2_5);
+            this.tabPage20.Controls.Add(this.datoGerencia5);
+            this.tabPage20.Controls.Add(this.datosCachimba1_5);
+            this.tabPage20.Controls.Add(this.datosCnorte5);
+            this.tabPage20.Controls.Add(this.datosCmovil5);
+            this.tabPage20.Controls.Add(this.datosDasdia5);
+            this.tabPage20.Controls.Add(this.datoMovitecDia5);
+            this.tabPage20.Controls.Add(this.datoChancadoDia5);
+            this.tabPage20.Controls.Add(this.label140);
+            this.tabPage20.Controls.Add(this.label141);
+            this.tabPage20.Controls.Add(this.label142);
+            this.tabPage20.Controls.Add(this.label143);
+            this.tabPage20.Controls.Add(this.label144);
+            this.tabPage20.Controls.Add(this.label145);
+            this.tabPage20.Controls.Add(this.label146);
+            this.tabPage20.Controls.Add(this.label147);
+            this.tabPage20.Location = new System.Drawing.Point(4, 25);
+            this.tabPage20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage20.Name = "tabPage20";
+            this.tabPage20.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage20.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage20.TabIndex = 1;
+            this.tabPage20.Text = "Mitigación";
+            this.tabPage20.UseVisualStyleBackColor = true;
+            // 
+            // datosCachimba2_5
+            // 
+            this.datosCachimba2_5.Location = new System.Drawing.Point(757, 263);
+            this.datosCachimba2_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCachimba2_5.Name = "datosCachimba2_5";
+            this.datosCachimba2_5.Size = new System.Drawing.Size(100, 22);
+            this.datosCachimba2_5.TabIndex = 19;
+            // 
+            // datoGerencia5
+            // 
+            this.datoGerencia5.Location = new System.Drawing.Point(377, 263);
+            this.datoGerencia5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoGerencia5.Name = "datoGerencia5";
+            this.datoGerencia5.Size = new System.Drawing.Size(100, 22);
+            this.datoGerencia5.TabIndex = 17;
+            // 
+            // datosCachimba1_5
+            // 
+            this.datosCachimba1_5.Location = new System.Drawing.Point(757, 224);
+            this.datosCachimba1_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCachimba1_5.Name = "datosCachimba1_5";
+            this.datosCachimba1_5.Size = new System.Drawing.Size(100, 22);
+            this.datosCachimba1_5.TabIndex = 15;
+            // 
+            // datosCnorte5
+            // 
+            this.datosCnorte5.Location = new System.Drawing.Point(757, 180);
+            this.datosCnorte5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCnorte5.Name = "datosCnorte5";
+            this.datosCnorte5.Size = new System.Drawing.Size(100, 22);
+            this.datosCnorte5.TabIndex = 13;
+            // 
+            // datosCmovil5
+            // 
+            this.datosCmovil5.Location = new System.Drawing.Point(757, 138);
+            this.datosCmovil5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosCmovil5.Name = "datosCmovil5";
+            this.datosCmovil5.Size = new System.Drawing.Size(100, 22);
+            this.datosCmovil5.TabIndex = 11;
+            // 
+            // datosDasdia5
+            // 
+            this.datosDasdia5.Location = new System.Drawing.Point(757, 94);
+            this.datosDasdia5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDasdia5.Name = "datosDasdia5";
+            this.datosDasdia5.Size = new System.Drawing.Size(100, 22);
+            this.datosDasdia5.TabIndex = 9;
+            // 
+            // datoMovitecDia5
+            // 
+            this.datoMovitecDia5.Location = new System.Drawing.Point(377, 177);
+            this.datoMovitecDia5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoMovitecDia5.Name = "datoMovitecDia5";
+            this.datoMovitecDia5.Size = new System.Drawing.Size(100, 22);
+            this.datoMovitecDia5.TabIndex = 5;
+            // 
+            // datoChancadoDia5
+            // 
+            this.datoChancadoDia5.Location = new System.Drawing.Point(377, 91);
+            this.datoChancadoDia5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datoChancadoDia5.Name = "datoChancadoDia5";
+            this.datoChancadoDia5.Size = new System.Drawing.Size(100, 22);
+            this.datoChancadoDia5.TabIndex = 1;
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Location = new System.Drawing.Point(589, 263);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(78, 17);
+            this.label140.TabIndex = 18;
+            this.label140.Text = "Cachimba2";
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Location = new System.Drawing.Point(209, 263);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(66, 17);
+            this.label141.TabIndex = 16;
+            this.label141.Text = "Gerencia";
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Location = new System.Drawing.Point(589, 224);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(78, 17);
+            this.label142.TabIndex = 14;
+            this.label142.Text = "Cachimba1";
+            // 
+            // label143
+            // 
+            this.label143.AutoSize = true;
+            this.label143.Location = new System.Drawing.Point(589, 180);
+            this.label143.Name = "label143";
+            this.label143.Size = new System.Drawing.Size(50, 17);
+            this.label143.TabIndex = 12;
+            this.label143.Text = "Cnorte";
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Location = new System.Drawing.Point(589, 138);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(49, 17);
+            this.label144.TabIndex = 10;
+            this.label144.Text = "Cmovil";
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Location = new System.Drawing.Point(589, 94);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(52, 17);
+            this.label145.TabIndex = 8;
+            this.label145.Text = "Dasdia";
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Location = new System.Drawing.Point(209, 177);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(75, 17);
+            this.label146.TabIndex = 4;
+            this.label146.Text = "Movitecdia";
+            // 
+            // label147
+            // 
+            this.label147.AutoSize = true;
+            this.label147.Location = new System.Drawing.Point(209, 91);
+            this.label147.Name = "label147";
+            this.label147.Size = new System.Drawing.Size(120, 17);
+            this.label147.TabIndex = 0;
+            this.label147.Text = "Chancado por dia";
+            // 
+            // tabPage21
+            // 
+            this.tabPage21.Controls.Add(this.datosDetencionChancadores_5);
+            this.tabPage21.Controls.Add(this.label148);
+            this.tabPage21.Location = new System.Drawing.Point(4, 25);
+            this.tabPage21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage21.Name = "tabPage21";
+            this.tabPage21.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage21.TabIndex = 2;
+            this.tabPage21.Text = "detencion de chancadores";
+            this.tabPage21.UseVisualStyleBackColor = true;
+            // 
+            // datosDetencionChancadores_5
+            // 
+            this.datosDetencionChancadores_5.FormattingEnabled = true;
+            this.datosDetencionChancadores_5.Items.AddRange(new object[] {
+            "CH-1",
+            "CH-2"});
+            this.datosDetencionChancadores_5.Location = new System.Drawing.Point(91, 82);
+            this.datosDetencionChancadores_5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionChancadores_5.Name = "datosDetencionChancadores_5";
+            this.datosDetencionChancadores_5.Size = new System.Drawing.Size(117, 225);
+            this.datosDetencionChancadores_5.TabIndex = 5;
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.Location = new System.Drawing.Point(88, 48);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(125, 17);
+            this.label148.TabIndex = 4;
+            this.label148.Text = "Equipos detenidos";
+            // 
+            // tabPage22
+            // 
+            this.tabPage22.Controls.Add(this.datosDetencionPalas5);
+            this.tabPage22.Controls.Add(this.label149);
+            this.tabPage22.Location = new System.Drawing.Point(4, 25);
+            this.tabPage22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage22.Name = "tabPage22";
+            this.tabPage22.Size = new System.Drawing.Size(1119, 442);
+            this.tabPage22.TabIndex = 3;
+            this.tabPage22.Text = "detencion de palas";
+            this.tabPage22.UseVisualStyleBackColor = true;
+            // 
+            // datosDetencionPalas5
+            // 
+            this.datosDetencionPalas5.FormattingEnabled = true;
+            this.datosDetencionPalas5.Items.AddRange(new object[] {
+            "PA-01",
+            "PA-03",
+            "PA-04",
+            "PA-05",
+            "PA-07",
+            "CF08",
+            "CF10",
+            "CF11"});
+            this.datosDetencionPalas5.Location = new System.Drawing.Point(91, 57);
+            this.datosDetencionPalas5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datosDetencionPalas5.Name = "datosDetencionPalas5";
+            this.datosDetencionPalas5.Size = new System.Drawing.Size(117, 225);
+            this.datosDetencionPalas5.TabIndex = 3;
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(87, 22);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(125, 17);
+            this.label149.TabIndex = 0;
+            this.label149.Text = "Equipos detenidos";
+            // 
+            // prediccionMP10
+            // 
+            this.prediccionMP10.Controls.Add(this.prediccionDiaComboBox);
+            this.prediccionMP10.Controls.Add(this.analisisResultados);
+            this.prediccionMP10.Location = new System.Drawing.Point(4, 25);
+            this.prediccionMP10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.prediccionMP10.Name = "prediccionMP10";
+            this.prediccionMP10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.prediccionMP10.Size = new System.Drawing.Size(1163, 647);
+            this.prediccionMP10.TabIndex = 1;
+            this.prediccionMP10.Text = "Prediccion del MP10";
+            this.prediccionMP10.UseVisualStyleBackColor = true;
+            // 
+            // prediccionDiaComboBox
+            // 
+            this.prediccionDiaComboBox.FormattingEnabled = true;
+            this.prediccionDiaComboBox.Items.AddRange(new object[] {
+            "Dia 1"});
+            this.prediccionDiaComboBox.Location = new System.Drawing.Point(3, 5);
+            this.prediccionDiaComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.prediccionDiaComboBox.Name = "prediccionDiaComboBox";
+            this.prediccionDiaComboBox.Size = new System.Drawing.Size(121, 24);
+            this.prediccionDiaComboBox.TabIndex = 4;
+            // 
+            // analisisResultados
+            // 
+            this.analisisResultados.Controls.Add(this.nivelConfianza);
+            this.analisisResultados.Controls.Add(this.nivelMp10);
+            this.analisisResultados.Location = new System.Drawing.Point(5, 33);
+            this.analisisResultados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.analisisResultados.Name = "analisisResultados";
+            this.analisisResultados.SelectedIndex = 0;
+            this.analisisResultados.Size = new System.Drawing.Size(1155, 610);
+            this.analisisResultados.TabIndex = 0;
+            // 
+            // nivelConfianza
+            // 
+            this.nivelConfianza.Controls.Add(this.tiposAlertas);
+            this.nivelConfianza.Location = new System.Drawing.Point(4, 25);
+            this.nivelConfianza.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nivelConfianza.Name = "nivelConfianza";
+            this.nivelConfianza.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nivelConfianza.Size = new System.Drawing.Size(1147, 581);
+            this.nivelConfianza.TabIndex = 0;
+            this.nivelConfianza.Text = "Nivel de confianza ";
+            this.nivelConfianza.UseVisualStyleBackColor = true;
+            // 
+            // tiposAlertas
+            // 
+            this.tiposAlertas.Controls.Add(this.tabPage2);
+            this.tiposAlertas.Controls.Add(this.tabPage3);
+            this.tiposAlertas.Controls.Add(this.tabPage4);
+            this.tiposAlertas.Controls.Add(this.tabPage5);
+            this.tiposAlertas.Controls.Add(this.tabPage6);
+            this.tiposAlertas.Location = new System.Drawing.Point(5, 6);
+            this.tiposAlertas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tiposAlertas.Name = "tiposAlertas";
+            this.tiposAlertas.SelectedIndex = 0;
+            this.tiposAlertas.Size = new System.Drawing.Size(1135, 572);
+            this.tiposAlertas.TabIndex = 2;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.graficoSinAlerta);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(1127, 543);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Sin alerta";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // graficoSinAlerta
+            // 
+            this.graficoSinAlerta.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea1.AxisX.Title = "Distancia del grupo Sin Alerta";
+            chartArea1.AxisY.Title = "Nivel Pertenencia";
+            chartArea1.Name = "ChartArea1";
+            this.graficoSinAlerta.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.graficoSinAlerta.Legends.Add(legend1);
+            this.graficoSinAlerta.Location = new System.Drawing.Point(5, 6);
+            this.graficoSinAlerta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.graficoSinAlerta.Name = "graficoSinAlerta";
+            this.graficoSinAlerta.Size = new System.Drawing.Size(1115, 494);
+            this.graficoSinAlerta.TabIndex = 1;
+            this.graficoSinAlerta.Text = "Sin alerta";
+            title1.Name = "Sin alerta";
+            this.graficoSinAlerta.Titles.Add(title1);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.graficoAlerta1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(1127, 543);
+            this.tabPage3.TabIndex = 1;
+            this.tabPage3.Text = "Alerta 1";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // graficoAlerta1
+            // 
+            this.graficoAlerta1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea2.AxisX.Title = "Distancia del grupo Alerta 1";
+            chartArea2.AxisY.Title = "Nivel Pertenencia";
+            chartArea2.Name = "ChartArea1";
+            this.graficoAlerta1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.graficoAlerta1.Legends.Add(legend2);
+            this.graficoAlerta1.Location = new System.Drawing.Point(5, 6);
+            this.graficoAlerta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.graficoAlerta1.Name = "graficoAlerta1";
+            this.graficoAlerta1.Size = new System.Drawing.Size(1115, 494);
+            this.graficoAlerta1.TabIndex = 2;
+            this.graficoAlerta1.Text = "Sin alerta";
+            title2.Name = "Sin alerta";
+            this.graficoAlerta1.Titles.Add(title2);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.graficoAlerta2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1127, 543);
+            this.tabPage4.TabIndex = 2;
+            this.tabPage4.Text = "Alerta 2";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // graficoAlerta2
+            // 
+            this.graficoAlerta2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea3.AxisX.Title = "Distancia del grupo Alerta 2";
+            chartArea3.AxisY.Title = "Nivel Pertenencia";
+            chartArea3.Name = "ChartArea1";
+            this.graficoAlerta2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.graficoAlerta2.Legends.Add(legend3);
+            this.graficoAlerta2.Location = new System.Drawing.Point(5, 6);
+            this.graficoAlerta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.graficoAlerta2.Name = "graficoAlerta2";
+            this.graficoAlerta2.Size = new System.Drawing.Size(1115, 494);
+            this.graficoAlerta2.TabIndex = 3;
+            this.graficoAlerta2.Text = "Sin alerta";
+            title3.Name = "Sin alerta";
+            this.graficoAlerta2.Titles.Add(title3);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.graficoAlerta3);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1127, 543);
+            this.tabPage5.TabIndex = 3;
+            this.tabPage5.Text = "Alerta 3";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // graficoAlerta3
+            // 
+            this.graficoAlerta3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea4.AxisX.Title = "Distancia del grupo Alerta 3";
+            chartArea4.AxisY.Title = "Nivel Pertenencia";
+            chartArea4.Name = "ChartArea1";
+            this.graficoAlerta3.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.graficoAlerta3.Legends.Add(legend4);
+            this.graficoAlerta3.Location = new System.Drawing.Point(5, 6);
+            this.graficoAlerta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.graficoAlerta3.Name = "graficoAlerta3";
+            this.graficoAlerta3.Size = new System.Drawing.Size(1115, 494);
+            this.graficoAlerta3.TabIndex = 4;
+            this.graficoAlerta3.Text = "Sin alerta";
+            title4.Name = "Sin alerta";
+            this.graficoAlerta3.Titles.Add(title4);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.graficoAlerta4);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1127, 543);
+            this.tabPage6.TabIndex = 4;
+            this.tabPage6.Text = "Alerta 4";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // graficoAlerta4
+            // 
+            this.graficoAlerta4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            chartArea5.AxisX.Title = "Distancia del grupo Alerta 4";
+            chartArea5.AxisY.Title = "Nivel Pertenencia";
+            chartArea5.Name = "ChartArea1";
+            this.graficoAlerta4.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.graficoAlerta4.Legends.Add(legend5);
+            this.graficoAlerta4.Location = new System.Drawing.Point(5, 6);
+            this.graficoAlerta4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.graficoAlerta4.Name = "graficoAlerta4";
+            this.graficoAlerta4.Size = new System.Drawing.Size(1115, 494);
+            this.graficoAlerta4.TabIndex = 4;
+            this.graficoAlerta4.Text = "Sin alerta";
+            title5.Name = "Sin alerta";
+            this.graficoAlerta4.Titles.Add(title5);
+            // 
+            // nivelMp10
+            // 
+            this.nivelMp10.Controls.Add(this.textoTipoAlerta);
+            this.nivelMp10.Controls.Add(this.label37);
+            this.nivelMp10.Controls.Add(this.textoNivelMp10);
+            this.nivelMp10.Controls.Add(this.label26);
+            this.nivelMp10.Controls.Add(this.graficoMP10);
+            this.nivelMp10.Location = new System.Drawing.Point(4, 25);
+            this.nivelMp10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nivelMp10.Name = "nivelMp10";
+            this.nivelMp10.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nivelMp10.Size = new System.Drawing.Size(1147, 581);
+            this.nivelMp10.TabIndex = 1;
+            this.nivelMp10.Text = "Prediccion alerta y nivel Mp10";
+            this.nivelMp10.UseVisualStyleBackColor = true;
+            // 
+            // textoTipoAlerta
+            // 
+            this.textoTipoAlerta.AutoSize = true;
+            this.textoTipoAlerta.Location = new System.Drawing.Point(152, 528);
+            this.textoTipoAlerta.Name = "textoTipoAlerta";
+            this.textoTipoAlerta.Size = new System.Drawing.Size(68, 17);
+            this.textoTipoAlerta.TabIndex = 4;
+            this.textoTipoAlerta.Text = "Sin alerta";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(22, 528);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(96, 17);
+            this.label37.TabIndex = 3;
+            this.label37.Text = "Tipo de alerta";
+            // 
+            // textoNivelMp10
+            // 
+            this.textoNivelMp10.AutoSize = true;
+            this.textoNivelMp10.Location = new System.Drawing.Point(152, 479);
+            this.textoNivelMp10.Name = "textoNivelMp10";
+            this.textoNivelMp10.Size = new System.Drawing.Size(16, 17);
+            this.textoNivelMp10.TabIndex = 2;
+            this.textoNivelMp10.Text = "0";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(22, 479);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(106, 17);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Nivel de Mp10: ";
+            // 
+            // graficoMP10
+            // 
+            this.graficoMP10.BackColor = System.Drawing.Color.Silver;
+            chartArea6.Name = "ChartArea1";
+            this.graficoMP10.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.graficoMP10.Legends.Add(legend6);
+            this.graficoMP10.Location = new System.Drawing.Point(25, 21);
+            this.graficoMP10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.graficoMP10.Name = "graficoMP10";
+            this.graficoMP10.Size = new System.Drawing.Size(1092, 402);
+            this.graficoMP10.TabIndex = 0;
+            this.graficoMP10.Text = "chart1";
+            // 
+            // reportes
+            // 
+            this.reportes.Location = new System.Drawing.Point(4, 25);
+            this.reportes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.reportes.Name = "reportes";
+            this.reportes.Size = new System.Drawing.Size(1163, 647);
+            this.reportes.TabIndex = 2;
+            this.reportes.Text = "Reportes de prediccion MP10";
+            this.reportes.UseVisualStyleBackColor = true;
+            // 
+            // datoMes1
+            // 
+            this.datoMes1.Location = new System.Drawing.Point(237, 46);
+            this.datoMes1.Name = "datoMes1";
+            this.datoMes1.Size = new System.Drawing.Size(200, 22);
+            this.datoMes1.TabIndex = 56;
+            // 
+            // datoMes2
+            // 
+            this.datoMes2.Location = new System.Drawing.Point(237, 42);
+            this.datoMes2.Name = "datoMes2";
+            this.datoMes2.Size = new System.Drawing.Size(200, 22);
+            this.datoMes2.TabIndex = 57;
+            // 
+            // datoMes3
+            // 
+            this.datoMes3.Location = new System.Drawing.Point(237, 46);
+            this.datoMes3.Name = "datoMes3";
+            this.datoMes3.Size = new System.Drawing.Size(200, 22);
+            this.datoMes3.TabIndex = 58;
+            // 
+            // datoMes4
+            // 
+            this.datoMes4.Location = new System.Drawing.Point(237, 46);
+            this.datoMes4.Name = "datoMes4";
+            this.datoMes4.Size = new System.Drawing.Size(200, 22);
+            this.datoMes4.TabIndex = 58;
+            // 
+            // datoMes5
+            // 
+            this.datoMes5.Location = new System.Drawing.Point(239, 46);
+            this.datoMes5.Name = "datoMes5";
+            this.datoMes5.Size = new System.Drawing.Size(200, 22);
+            this.datoMes5.TabIndex = 58;
             // 
             // Ventana
             // 
@@ -3987,8 +3912,17 @@
             this.ddetencionPalas.ResumeLayout(false);
             this.ddetencionPalas.PerformLayout();
             this.tabDia2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage10.PerformLayout();
+            this.tabPage11.ResumeLayout(false);
+            this.tabPage11.PerformLayout();
             this.tabDia3.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
+            this.datosDetencionChancadores_777.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.tabPage12.ResumeLayout(false);
@@ -4034,15 +3968,6 @@
             this.nivelMp10.ResumeLayout(false);
             this.nivelMp10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graficoMP10)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage9.PerformLayout();
-            this.tabPage10.ResumeLayout(false);
-            this.tabPage10.PerformLayout();
-            this.tabPage11.ResumeLayout(false);
-            this.tabPage11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4113,7 +4038,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox datoMes1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -4142,7 +4066,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TabPage tabDia2;
         private System.Windows.Forms.TabPage tabDia3;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl datosDetencionChancadores_777;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label64;
@@ -4175,7 +4099,6 @@
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.ComboBox datoMes3;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Label label80;
@@ -4198,10 +4121,9 @@
         private System.Windows.Forms.Label label88;
         private System.Windows.Forms.Label label89;
         private System.Windows.Forms.TabPage tabPage13;
-        public System.Windows.Forms.CheckedListBox checkedListBox3;
+        public System.Windows.Forms.CheckedListBox datosDetencionChancadores_3;
         private System.Windows.Forms.Label label90;
         private System.Windows.Forms.TabPage tabPage14;
-        private System.Windows.Forms.CheckedListBox checkedListBox4;
         private System.Windows.Forms.Label label91;
         private System.Windows.Forms.TabPage tabDia4;
         private System.Windows.Forms.TabControl tabControl3;
@@ -4237,7 +4159,6 @@
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.ComboBox datoMes4;
         private System.Windows.Forms.Label label107;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.Label label109;
@@ -4260,10 +4181,9 @@
         private System.Windows.Forms.Label label117;
         private System.Windows.Forms.Label label118;
         private System.Windows.Forms.TabPage tabPage17;
-        public System.Windows.Forms.CheckedListBox checkedListBox5;
+        public System.Windows.Forms.CheckedListBox datosDetencionChancadores_4;
         private System.Windows.Forms.Label label119;
         private System.Windows.Forms.TabPage tabPage18;
-        private System.Windows.Forms.CheckedListBox checkedListBox6;
         private System.Windows.Forms.Label label120;
         private System.Windows.Forms.TabPage tabDia5;
         private System.Windows.Forms.TabControl tabControl4;
@@ -4299,7 +4219,6 @@
         private System.Windows.Forms.Label label133;
         private System.Windows.Forms.Label label134;
         private System.Windows.Forms.Label label135;
-        private System.Windows.Forms.ComboBox datoMes5;
         private System.Windows.Forms.Label label136;
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.Label label138;
@@ -4322,10 +4241,9 @@
         private System.Windows.Forms.Label label146;
         private System.Windows.Forms.Label label147;
         private System.Windows.Forms.TabPage tabPage21;
-        public System.Windows.Forms.CheckedListBox checkedListBox7;
+        public System.Windows.Forms.CheckedListBox datosDetencionChancadores_5;
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.TabPage tabPage22;
-        private System.Windows.Forms.CheckedListBox checkedListBox8;
         private System.Windows.Forms.Label label149;
         public System.Windows.Forms.TabControl datosEntrada;
         public System.Windows.Forms.CheckedListBox datosDetencionPalas1;
@@ -4362,7 +4280,6 @@
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.ComboBox datoMes2;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
@@ -4385,10 +4302,18 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.TabPage tabPage10;
-        public System.Windows.Forms.CheckedListBox checkedListBox1;
+        public System.Windows.Forms.CheckedListBox datosDetencionChancadores_2;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.TabPage tabPage11;
-        public System.Windows.Forms.CheckedListBox checkedListBox2;
+        public System.Windows.Forms.CheckedListBox datosDetencionPalas2;
         private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.DateTimePicker datoMes1;
+        private System.Windows.Forms.DateTimePicker datoMes2;
+        private System.Windows.Forms.DateTimePicker datoMes3;
+        private System.Windows.Forms.DateTimePicker datoMes4;
+        private System.Windows.Forms.DateTimePicker datoMes5;
+        public System.Windows.Forms.CheckedListBox datosDetencionPalas3;
+        public System.Windows.Forms.CheckedListBox datosDetencionPalas4;
+        public System.Windows.Forms.CheckedListBox datosDetencionPalas5;
     }
 }

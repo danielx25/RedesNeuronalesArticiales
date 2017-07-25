@@ -24,6 +24,7 @@ namespace RedesNeuronalesArtificiales
         private delegate void graficosPertenencia1();
         graficosPertenencia1 delagadoGraficos;
         ConstruccionConjuntos resultado;//numero de grupos, numero de alertas
+        List<double[]> listaEntrada;
         double[] vectorEntrada = new double[38];
         public int numeroGrupos = 10;
 
@@ -489,7 +490,7 @@ namespace RedesNeuronalesArtificiales
 
         private void button2_Click(object sender, EventArgs e)
         {
-            rellenoFormulario();
+            obtenerFormulario1();
             /*
             //Creamos el delegado 
             ThreadStart proceso = new ThreadStart(analisisResultadosEntregados);
@@ -500,15 +501,17 @@ namespace RedesNeuronalesArtificiales
             */
         }
 
-        double [] rellenoFormulario()
+        double [] obtenerFormulario1()
         {
-            double []vectorEntrada = new double[38];
-
-            int mes = datoMes1.SelectedIndex+1;
+            double []vectorEntrada;
+            double verano = Difuso.verano(datoMes1.Value);
+            double invierno = Difuso.invierno(datoMes1.Value);
+            double hora = datoMes1.Value.Hour;//24 horas
             double velocidadViento = Convert.ToDouble( datoVeloViento1.Text);
             double direccionViento = Convert.ToDouble(datoDirecViento1.Text);
             double temperatura = Convert.ToDouble(datoTemp1.Text);
             double humedad = Convert.ToDouble(datoHumedad1.Text);
+            double mp10 = 0;
             double radiacion = Convert.ToDouble(datoRadiaSolar1.Text);
             double presion = Convert.ToDouble(datoPresion1.Text);
 
@@ -524,8 +527,407 @@ namespace RedesNeuronalesArtificiales
             double evapo4 = Convert.ToDouble(datoEvapo2_1.Text);
             double evapo5 = Convert.ToDouble(datoEvapo3_1.Text);
 
-            Console.WriteLine("mes: " + mes);
+            double datoChancadoDia1_ = Convert.ToDouble(datoChancadoDia1.Text);
+            double datoMovitecDia1_ = Convert.ToDouble(datoMovitecDia1.Text);
+            double datoGerencia1_ = Convert.ToDouble(datoGerencia1.Text);
+            double datosDasdia1_ = Convert.ToDouble(datosDasdia1.Text);
+            double datosCmovil1_ = Convert.ToDouble(datosCmovil1.Text);
+            double datosCnorte1_ = Convert.ToDouble(datosCnorte1.Text);
+            double datosCachimba1_1_ = Convert.ToDouble(datosCachimba1_1.Text);
+            double datosCachimba2_1_ = Convert.ToDouble(datosCachimba2_1.Text);
 
+            double palas1 = (double)datosDetencionPalas1.GetItemCheckState(0);
+            double palas2 = (double)datosDetencionPalas1.GetItemCheckState(1);
+            double palas3 = (double)datosDetencionPalas1.GetItemCheckState(2);
+            double palas4 = (double)datosDetencionPalas1.GetItemCheckState(3);
+            double palas5 = (double)datosDetencionPalas1.GetItemCheckState(4);
+            double palas6 = (double)datosDetencionPalas1.GetItemCheckState(5);
+            double palas7 = (double)datosDetencionPalas1.GetItemCheckState(6);
+            double palas8 = (double)datosDetencionPalas1.GetItemCheckState(7);
+
+            double chancado1 = (double)datosDetencionChancadores_1.GetItemCheckState(0);
+            double chancado2 = (double)datosDetencionChancadores_1.GetItemCheckState(1);
+
+            hora = Entrada.normalizar(datoMes1.Value.Hour, 0, 24);
+            velocidadViento = Entrada.normalizar(velocidadViento, 0, 30);//velocidad_viento
+            direccionViento = Entrada.normalizar(direccionViento, 0, 360);//direccion_viento
+            temperatura = Entrada.normalizar(temperatura, -10, 55);//temperatura
+            humedad = Entrada.normalizar(humedad, 0, 100);//humedad_relativa
+            mp10 = Entrada.normalizar(mp10, 0, 800);//mp10
+            radiacion = Entrada.normalizar(radiacion, 0, 1700);//radiacion_solar
+            presion = Entrada.normalizar(presion, 440, 600);//presion_atmosferica
+            preci1 = Entrada.normalizar(preci1, 0, 47);//precipitaciondia1
+            preci2 = Entrada.normalizar(preci2, 0, 47);//precipitaciondia2
+            preci3 = Entrada.normalizar(preci3, 0, 47);//precipitaciondia3
+            preci4 = Entrada.normalizar(preci4, 0, 47);//precipitaciondia4
+            preci5 = Entrada.normalizar(preci5, 0, 47);//precipitaciondia5
+            evapo1 = Entrada.normalizar(evapo1, 0, 363000);//evaporaciondia1
+            evapo2 = Entrada.normalizar(evapo2, 0, 363000);//evaporaciondia2
+            evapo3 = Entrada.normalizar(evapo3, 0, 363000);//evaporaciondia3
+            evapo4 = Entrada.normalizar(evapo4, 0, 363000);//evaporaciondia4
+            evapo5 = Entrada.normalizar(evapo5, 0, 363000);//evaporaciondia5
+            datoChancadoDia1_ = Entrada.normalizar(datoChancadoDia1_, 0, 7);//chaxa camion dia y noche
+            datoMovitecDia1_ = Entrada.normalizar(datoMovitecDia1_, 0, 8);//movitec camion dia y noche
+            datosDasdia1_ = Entrada.normalizar(datosDasdia1_, 0, 4);//das camion dia
+            datosCnorte1_ = Entrada.normalizar(Math.Round((datosCnorte1_ / 24), 1), 0, 90240);//cnorte consumo de agua
+            datosCmovil1_ = Entrada.normalizar(Math.Round((datosCmovil1_ / 24), 1), 0, 4480);//cmovil consumo de agua
+            datosCachimba1_1_ = Entrada.normalizar(Math.Round((datosCachimba1_1_ / 24), 1), 0, 1500);//cachimba1 consumo de agua
+            datosCachimba2_1_ = Entrada.normalizar(Math.Round((datosCachimba2_1_ / 24), 1), 0, 2270);//cachimba2 consumo de agua
+            datoGerencia1_ = Entrada.normalizar(Math.Round((datoGerencia1_ / 24), 1), 0, 27000);//gerencia consumo de agua
+
+            vectorEntrada = new double[] { verano, invierno, hora, velocidadViento, direccionViento,
+                temperatura, humedad, mp10, radiacion, presion, preci1, preci2, preci3, preci4, preci5,
+                evapo1, evapo2, evapo3, evapo4, evapo5, datoChancadoDia1_, datoMovitecDia1_, datoGerencia1_,
+                datosDasdia1_, datosCmovil1_, datosCnorte1_, datosCachimba1_1_, datosCachimba2_1_, palas1,
+                palas2, palas3, palas4, palas5, palas6, palas7, palas8, chancado1, chancado2};
+            for(int i=0; i<vectorEntrada.Length; i++)
+            {
+                Console.WriteLine(vectorEntrada[i]);
+            }
+            return vectorEntrada;
+        }
+
+        double[] obtenerFormulario2()
+        {
+            double[] vectorEntrada;
+            double verano = Difuso.verano(datoMes2.Value);
+            double invierno = Difuso.invierno(datoMes2.Value);
+            double hora = datoMes2.Value.Hour;//24 horas
+            double velocidadViento = Convert.ToDouble(datoVeloViento2.Text);
+            double direccionViento = Convert.ToDouble(datoDirecViento2.Text);
+            double temperatura = Convert.ToDouble(datoTemp2.Text);
+            double humedad = Convert.ToDouble(datoHumedad2.Text);
+            double mp10 = 0;
+            double radiacion = Convert.ToDouble(datoRadiaSolar2.Text);
+            double presion = Convert.ToDouble(datoPresion2.Text);
+
+            double preci1 = Convert.ToDouble(datoPreciMañana2.Text);
+            double preci2 = Convert.ToDouble(datoPrecihoy2.Text);
+            double preci3 = Convert.ToDouble(datoPreci1_2.Text);
+            double preci4 = Convert.ToDouble(datoPreci2_2.Text);
+            double preci5 = Convert.ToDouble(datoPreci3_2.Text);
+
+            double evapo1 = Convert.ToDouble(datoEvapomañana2.Text);
+            double evapo2 = Convert.ToDouble(datoEvapohoy2.Text);
+            double evapo3 = Convert.ToDouble(datoEvapo1_2.Text);
+            double evapo4 = Convert.ToDouble(datoEvapo2_2.Text);
+            double evapo5 = Convert.ToDouble(datoEvapo3_2.Text);
+
+            double datoChancadoDia1_ = Convert.ToDouble(datoChancadoDia2.Text);
+            double datoMovitecDia1_ = Convert.ToDouble(datoMovitecDia2.Text);
+            double datoGerencia1_ = Convert.ToDouble(datoGerencia2.Text);
+            double datosDasdia1_ = Convert.ToDouble(datosDasdia2.Text);
+            double datosCmovil1_ = Convert.ToDouble(datosCmovil2.Text);
+            double datosCnorte1_ = Convert.ToDouble(datosCnorte2.Text);
+            double datosCachimba1_1_ = Convert.ToDouble(datosCachimba1_2.Text);
+            double datosCachimba2_1_ = Convert.ToDouble(datosCachimba2_2.Text);
+
+            double palas1 = (double)datosDetencionPalas2.GetItemCheckState(0);
+            double palas2 = (double)datosDetencionPalas2.GetItemCheckState(1);
+            double palas3 = (double)datosDetencionPalas2.GetItemCheckState(2);
+            double palas4 = (double)datosDetencionPalas2.GetItemCheckState(3);
+            double palas5 = (double)datosDetencionPalas2.GetItemCheckState(4);
+            double palas6 = (double)datosDetencionPalas2.GetItemCheckState(5);
+            double palas7 = (double)datosDetencionPalas2.GetItemCheckState(6);
+            double palas8 = (double)datosDetencionPalas2.GetItemCheckState(7);
+
+            double chancado1 = (double)datosDetencionChancadores_2.GetItemCheckState(0);
+            double chancado2 = (double)datosDetencionChancadores_2.GetItemCheckState(1);
+
+            hora = Entrada.normalizar(datoMes2.Value.Hour, 0, 24);
+            velocidadViento = Entrada.normalizar(velocidadViento, 0, 30);//velocidad_viento
+            direccionViento = Entrada.normalizar(direccionViento, 0, 360);//direccion_viento
+            temperatura = Entrada.normalizar(temperatura, -10, 55);//temperatura
+            humedad = Entrada.normalizar(humedad, 0, 100);//humedad_relativa
+            mp10 = Entrada.normalizar(mp10, 0, 800);//mp10
+            radiacion = Entrada.normalizar(radiacion, 0, 1700);//radiacion_solar
+            presion = Entrada.normalizar(presion, 440, 600);//presion_atmosferica
+            preci1 = Entrada.normalizar(preci1, 0, 47);//precipitaciondia1
+            preci2 = Entrada.normalizar(preci2, 0, 47);//precipitaciondia2
+            preci3 = Entrada.normalizar(preci3, 0, 47);//precipitaciondia3
+            preci4 = Entrada.normalizar(preci4, 0, 47);//precipitaciondia4
+            preci5 = Entrada.normalizar(preci5, 0, 47);//precipitaciondia5
+            evapo1 = Entrada.normalizar(evapo1, 0, 363000);//evaporaciondia1
+            evapo2 = Entrada.normalizar(evapo2, 0, 363000);//evaporaciondia2
+            evapo3 = Entrada.normalizar(evapo3, 0, 363000);//evaporaciondia3
+            evapo4 = Entrada.normalizar(evapo4, 0, 363000);//evaporaciondia4
+            evapo5 = Entrada.normalizar(evapo5, 0, 363000);//evaporaciondia5
+            datoChancadoDia1_ = Entrada.normalizar(datoChancadoDia1_, 0, 7);//chaxa camion dia y noche
+            datoMovitecDia1_ = Entrada.normalizar(datoMovitecDia1_, 0, 8);//movitec camion dia y noche
+            datosDasdia1_ = Entrada.normalizar(datosDasdia1_, 0, 4);//das camion dia
+            datosCnorte1_ = Entrada.normalizar(Math.Round((datosCnorte1_ / 24), 1), 0, 90240);//cnorte consumo de agua
+            datosCmovil1_ = Entrada.normalizar(Math.Round((datosCmovil1_ / 24), 1), 0, 4480);//cmovil consumo de agua
+            datosCachimba1_1_ = Entrada.normalizar(Math.Round((datosCachimba1_1_ / 24), 1), 0, 1500);//cachimba1 consumo de agua
+            datosCachimba2_1_ = Entrada.normalizar(Math.Round((datosCachimba2_1_ / 24), 1), 0, 2270);//cachimba2 consumo de agua
+            datoGerencia1_ = Entrada.normalizar(Math.Round((datoGerencia1_ / 24), 1), 0, 27000);//gerencia consumo de agua
+
+            vectorEntrada = new double[] { verano, invierno, hora, velocidadViento, direccionViento,
+                temperatura, humedad, mp10, radiacion, presion, preci1, preci2, preci3, preci4, preci5,
+                evapo1, evapo2, evapo3, evapo4, evapo5, datoChancadoDia1_, datoMovitecDia1_, datoGerencia1_,
+                datosDasdia1_, datosCmovil1_, datosCnorte1_, datosCachimba1_1_, datosCachimba2_1_, palas1,
+                palas2, palas3, palas4, palas5, palas6, palas7, palas8, chancado1, chancado2};
+            for (int i = 0; i < vectorEntrada.Length; i++)
+            {
+                Console.WriteLine(vectorEntrada[i]);
+            }
+            return vectorEntrada;
+        }
+
+        double[] obtenerFormulario3()
+        {
+            double[] vectorEntrada;
+            double verano = Difuso.verano(datoMes3.Value);
+            double invierno = Difuso.invierno(datoMes3.Value);
+            double hora = datoMes3.Value.Hour;//34 horas
+            double velocidadViento = Convert.ToDouble(datoVeloViento3.Text);
+            double direccionViento = Convert.ToDouble(datoDirecViento3.Text);
+            double temperatura = Convert.ToDouble(datoTemp3.Text);
+            double humedad = Convert.ToDouble(datoHumedad3.Text);
+            double mp10 = 0;
+            double radiacion = Convert.ToDouble(datoRadiaSolar3.Text);
+            double presion = Convert.ToDouble(datoPresion3.Text);
+
+            double preci1 = Convert.ToDouble(datoPreciMañana3.Text);
+            double preci2 = Convert.ToDouble(datoPrecihoy3.Text);
+            double preci3 = Convert.ToDouble(datoPreci1_3.Text);
+            double preci4 = Convert.ToDouble(datoPreci2_3.Text);
+            double preci5 = Convert.ToDouble(datoPreci3_3.Text);
+
+            double evapo1 = Convert.ToDouble(datoEvapomañana3.Text);
+            double evapo2 = Convert.ToDouble(datoEvapohoy3.Text);
+            double evapo3 = Convert.ToDouble(datoEvapo1_3.Text);
+            double evapo4 = Convert.ToDouble(datoEvapo2_3.Text);
+            double evapo5 = Convert.ToDouble(datoEvapo3_3.Text);
+
+            double datoChancadoDia1_ = Convert.ToDouble(datoChancadoDia3.Text);
+            double datoMovitecDia1_ = Convert.ToDouble(datoMovitecDia3.Text);
+            double datoGerencia1_ = Convert.ToDouble(datoGerencia3.Text);
+            double datosDasdia1_ = Convert.ToDouble(datosDasdia3.Text);
+            double datosCmovil1_ = Convert.ToDouble(datosCmovil3.Text);
+            double datosCnorte1_ = Convert.ToDouble(datosCnorte3.Text);
+            double datosCachimba1_1_ = Convert.ToDouble(datosCachimba1_3.Text);
+            double datosCachimba2_1_ = Convert.ToDouble(datosCachimba2_3.Text);
+
+            double palas1 = (double)datosDetencionPalas3.GetItemCheckState(0);
+            double palas2 = (double)datosDetencionPalas3.GetItemCheckState(1);
+            double palas3 = (double)datosDetencionPalas3.GetItemCheckState(2);
+            double palas4 = (double)datosDetencionPalas3.GetItemCheckState(3);
+            double palas5 = (double)datosDetencionPalas3.GetItemCheckState(4);
+            double palas6 = (double)datosDetencionPalas3.GetItemCheckState(5);
+            double palas7 = (double)datosDetencionPalas3.GetItemCheckState(6);
+            double palas8 = (double)datosDetencionPalas3.GetItemCheckState(7);
+
+            double chancado1 = (double)datosDetencionChancadores_3.GetItemCheckState(0);
+            double chancado2 = (double)datosDetencionChancadores_3.GetItemCheckState(1);
+
+            hora = Entrada.normalizar(datoMes3.Value.Hour, 0, 24);
+            velocidadViento = Entrada.normalizar(velocidadViento, 0, 30);//velocidad_viento
+            direccionViento = Entrada.normalizar(direccionViento, 0, 360);//direccion_viento
+            temperatura = Entrada.normalizar(temperatura, -10, 55);//temperatura
+            humedad = Entrada.normalizar(humedad, 0, 100);//humedad_relativa
+            mp10 = Entrada.normalizar(mp10, 0, 800);//mp10
+            radiacion = Entrada.normalizar(radiacion, 0, 1700);//radiacion_solar
+            presion = Entrada.normalizar(presion, 440, 600);//presion_atmosferica
+            preci1 = Entrada.normalizar(preci1, 0, 47);//precipitaciondia1
+            preci2 = Entrada.normalizar(preci2, 0, 47);//precipitaciondia2
+            preci3 = Entrada.normalizar(preci3, 0, 47);//precipitaciondia3
+            preci4 = Entrada.normalizar(preci4, 0, 47);//precipitaciondia4
+            preci5 = Entrada.normalizar(preci5, 0, 47);//precipitaciondia5
+            evapo1 = Entrada.normalizar(evapo1, 0, 363000);//evaporaciondia1
+            evapo2 = Entrada.normalizar(evapo2, 0, 363000);//evaporaciondia2
+            evapo3 = Entrada.normalizar(evapo3, 0, 363000);//evaporaciondia3
+            evapo4 = Entrada.normalizar(evapo4, 0, 363000);//evaporaciondia4
+            evapo5 = Entrada.normalizar(evapo5, 0, 363000);//evaporaciondia5
+            datoChancadoDia1_ = Entrada.normalizar(datoChancadoDia1_, 0, 7);//chaxa camion dia y noche
+            datoMovitecDia1_ = Entrada.normalizar(datoMovitecDia1_, 0, 8);//movitec camion dia y noche
+            datosDasdia1_ = Entrada.normalizar(datosDasdia1_, 0, 4);//das camion dia
+            datosCnorte1_ = Entrada.normalizar(Math.Round((datosCnorte1_ / 24), 1), 0, 90240);//cnorte consumo de agua
+            datosCmovil1_ = Entrada.normalizar(Math.Round((datosCmovil1_ / 24), 1), 0, 4480);//cmovil consumo de agua
+            datosCachimba1_1_ = Entrada.normalizar(Math.Round((datosCachimba1_1_ / 24), 1), 0, 1500);//cachimba1 consumo de agua
+            datosCachimba2_1_ = Entrada.normalizar(Math.Round((datosCachimba2_1_ / 24), 1), 0, 2270);//cachimba2 consumo de agua
+            datoGerencia1_ = Entrada.normalizar(Math.Round((datoGerencia1_ / 24), 1), 0, 27000);//gerencia consumo de agua
+
+            vectorEntrada = new double[] { verano, invierno, hora, velocidadViento, direccionViento,
+                temperatura, humedad, mp10, radiacion, presion, preci1, preci2, preci3, preci4, preci5,
+                evapo1, evapo2, evapo3, evapo4, evapo5, datoChancadoDia1_, datoMovitecDia1_, datoGerencia1_,
+                datosDasdia1_, datosCmovil1_, datosCnorte1_, datosCachimba1_1_, datosCachimba2_1_, palas1,
+                palas2, palas3, palas4, palas5, palas6, palas7, palas8, chancado1, chancado2};
+            for (int i = 0; i < vectorEntrada.Length; i++)
+            {
+                Console.WriteLine(vectorEntrada[i]);
+            }
+            return vectorEntrada;
+        }
+
+        double[] obtenerFormulario4()
+        {
+            double[] vectorEntrada;
+            double verano = Difuso.verano(datoMes4.Value);
+            double invierno = Difuso.invierno(datoMes4.Value);
+            double hora = datoMes4.Value.Hour;//34 horas
+            double velocidadViento = Convert.ToDouble(datoVeloViento4.Text);
+            double direccionViento = Convert.ToDouble(datoDirecViento4.Text);
+            double temperatura = Convert.ToDouble(datoTemp4.Text);
+            double humedad = Convert.ToDouble(datoHumedad4.Text);
+            double mp10 = 0;
+            double radiacion = Convert.ToDouble(datoRadiaSolar4.Text);
+            double presion = Convert.ToDouble(datoPresion4.Text);
+
+            double preci1 = Convert.ToDouble(datoPreciMañana4.Text);
+            double preci2 = Convert.ToDouble(datoPrecihoy4.Text);
+            double preci3 = Convert.ToDouble(datoPreci1_4.Text);
+            double preci4 = Convert.ToDouble(datoPreci2_4.Text);
+            double preci5 = Convert.ToDouble(datoPreci3_4.Text);
+
+            double evapo1 = Convert.ToDouble(datoEvapomañana4.Text);
+            double evapo2 = Convert.ToDouble(datoEvapohoy4.Text);
+            double evapo3 = Convert.ToDouble(datoEvapo1_4.Text);
+            double evapo4 = Convert.ToDouble(datoEvapo2_4.Text);
+            double evapo5 = Convert.ToDouble(datoEvapo3_4.Text);
+
+            double datoChancadoDia1_ = Convert.ToDouble(datoChancadoDia4.Text);
+            double datoMovitecDia1_ = Convert.ToDouble(datoMovitecDia4.Text);
+            double datoGerencia1_ = Convert.ToDouble(datoGerencia4.Text);
+            double datosDasdia1_ = Convert.ToDouble(datosDasdia4.Text);
+            double datosCmovil1_ = Convert.ToDouble(datosCmovil4.Text);
+            double datosCnorte1_ = Convert.ToDouble(datosCnorte4.Text);
+            double datosCachimba1_1_ = Convert.ToDouble(datosCachimba1_4.Text);
+            double datosCachimba2_1_ = Convert.ToDouble(datosCachimba2_4.Text);
+
+            double palas1 = (double)datosDetencionPalas4.GetItemCheckState(0);
+            double palas2 = (double)datosDetencionPalas4.GetItemCheckState(1);
+            double palas3 = (double)datosDetencionPalas4.GetItemCheckState(2);
+            double palas4 = (double)datosDetencionPalas4.GetItemCheckState(3);
+            double palas5 = (double)datosDetencionPalas4.GetItemCheckState(4);
+            double palas6 = (double)datosDetencionPalas4.GetItemCheckState(5);
+            double palas7 = (double)datosDetencionPalas4.GetItemCheckState(6);
+            double palas8 = (double)datosDetencionPalas4.GetItemCheckState(7);
+
+            double chancado1 = (double)datosDetencionChancadores_4.GetItemCheckState(0);
+            double chancado2 = (double)datosDetencionChancadores_4.GetItemCheckState(1);
+
+            hora = Entrada.normalizar(datoMes4.Value.Hour, 0, 24);
+            velocidadViento = Entrada.normalizar(velocidadViento, 0, 30);//velocidad_viento
+            direccionViento = Entrada.normalizar(direccionViento, 0, 360);//direccion_viento
+            temperatura = Entrada.normalizar(temperatura, -10, 55);//temperatura
+            humedad = Entrada.normalizar(humedad, 0, 100);//humedad_relativa
+            mp10 = Entrada.normalizar(mp10, 0, 800);//mp10
+            radiacion = Entrada.normalizar(radiacion, 0, 1700);//radiacion_solar
+            presion = Entrada.normalizar(presion, 440, 600);//presion_atmosferica
+            preci1 = Entrada.normalizar(preci1, 0, 47);//precipitaciondia1
+            preci2 = Entrada.normalizar(preci2, 0, 47);//precipitaciondia2
+            preci3 = Entrada.normalizar(preci3, 0, 47);//precipitaciondia3
+            preci4 = Entrada.normalizar(preci4, 0, 47);//precipitaciondia4
+            preci5 = Entrada.normalizar(preci5, 0, 47);//precipitaciondia5
+            evapo1 = Entrada.normalizar(evapo1, 0, 363000);//evaporaciondia1
+            evapo2 = Entrada.normalizar(evapo2, 0, 363000);//evaporaciondia2
+            evapo3 = Entrada.normalizar(evapo3, 0, 363000);//evaporaciondia3
+            evapo4 = Entrada.normalizar(evapo4, 0, 363000);//evaporaciondia4
+            evapo5 = Entrada.normalizar(evapo5, 0, 363000);//evaporaciondia5
+            datoChancadoDia1_ = Entrada.normalizar(datoChancadoDia1_, 0, 7);//chaxa camion dia y noche
+            datoMovitecDia1_ = Entrada.normalizar(datoMovitecDia1_, 0, 8);//movitec camion dia y noche
+            datosDasdia1_ = Entrada.normalizar(datosDasdia1_, 0, 4);//das camion dia
+            datosCnorte1_ = Entrada.normalizar(Math.Round((datosCnorte1_ / 24), 1), 0, 90240);//cnorte consumo de agua
+            datosCmovil1_ = Entrada.normalizar(Math.Round((datosCmovil1_ / 24), 1), 0, 4480);//cmovil consumo de agua
+            datosCachimba1_1_ = Entrada.normalizar(Math.Round((datosCachimba1_1_ / 24), 1), 0, 1500);//cachimba1 consumo de agua
+            datosCachimba2_1_ = Entrada.normalizar(Math.Round((datosCachimba2_1_ / 24), 1), 0, 2270);//cachimba2 consumo de agua
+            datoGerencia1_ = Entrada.normalizar(Math.Round((datoGerencia1_ / 24), 1), 0, 27000);//gerencia consumo de agua
+
+            vectorEntrada = new double[] { verano, invierno, hora, velocidadViento, direccionViento,
+                temperatura, humedad, mp10, radiacion, presion, preci1, preci2, preci3, preci4, preci5,
+                evapo1, evapo2, evapo3, evapo4, evapo5, datoChancadoDia1_, datoMovitecDia1_, datoGerencia1_,
+                datosDasdia1_, datosCmovil1_, datosCnorte1_, datosCachimba1_1_, datosCachimba2_1_, palas1,
+                palas2, palas3, palas4, palas5, palas6, palas7, palas8, chancado1, chancado2};
+            for (int i = 0; i < vectorEntrada.Length; i++)
+            {
+                Console.WriteLine(vectorEntrada[i]);
+            }
+            return vectorEntrada;
+        }
+
+        double[] obtenerFormulario5()
+        {
+            double[] vectorEntrada;
+            double verano = Difuso.verano(datoMes5.Value);
+            double invierno = Difuso.invierno(datoMes5.Value);
+            double hora = datoMes5.Value.Hour;//34 horas
+            double velocidadViento = Convert.ToDouble(datoVeloViento5.Text);
+            double direccionViento = Convert.ToDouble(datoDirecViento5.Text);
+            double temperatura = Convert.ToDouble(datoTemp5.Text);
+            double humedad = Convert.ToDouble(datoHumedad5.Text);
+            double mp10 = 0;
+            double radiacion = Convert.ToDouble(datoRadiaSolar5.Text);
+            double presion = Convert.ToDouble(datoPresion5.Text);
+
+            double preci1 = Convert.ToDouble(datoPreciMañana5.Text);
+            double preci2 = Convert.ToDouble(datoPrecihoy5.Text);
+            double preci3 = Convert.ToDouble(datoPreci1_5.Text);
+            double preci4 = Convert.ToDouble(datoPreci2_5.Text);
+            double preci5 = Convert.ToDouble(datoPreci3_5.Text);
+
+            double evapo1 = Convert.ToDouble(datoEvapomañana5.Text);
+            double evapo2 = Convert.ToDouble(datoEvapohoy5.Text);
+            double evapo3 = Convert.ToDouble(datoEvapo1_5.Text);
+            double evapo4 = Convert.ToDouble(datoEvapo2_5.Text);
+            double evapo5 = Convert.ToDouble(datoEvapo3_5.Text);
+
+            double datoChancadoDia1_ = Convert.ToDouble(datoChancadoDia5.Text);
+            double datoMovitecDia1_ = Convert.ToDouble(datoMovitecDia5.Text);
+            double datoGerencia1_ = Convert.ToDouble(datoGerencia5.Text);
+            double datosDasdia1_ = Convert.ToDouble(datosDasdia5.Text);
+            double datosCmovil1_ = Convert.ToDouble(datosCmovil5.Text);
+            double datosCnorte1_ = Convert.ToDouble(datosCnorte5.Text);
+            double datosCachimba1_1_ = Convert.ToDouble(datosCachimba1_5.Text);
+            double datosCachimba2_1_ = Convert.ToDouble(datosCachimba2_5.Text);
+
+            double palas1 = (double)datosDetencionPalas5.GetItemCheckState(0);
+            double palas2 = (double)datosDetencionPalas5.GetItemCheckState(1);
+            double palas3 = (double)datosDetencionPalas5.GetItemCheckState(2);
+            double palas4 = (double)datosDetencionPalas5.GetItemCheckState(3);
+            double palas5 = (double)datosDetencionPalas5.GetItemCheckState(4);
+            double palas6 = (double)datosDetencionPalas5.GetItemCheckState(5);
+            double palas7 = (double)datosDetencionPalas5.GetItemCheckState(6);
+            double palas8 = (double)datosDetencionPalas5.GetItemCheckState(7);
+
+            double chancado1 = (double)datosDetencionChancadores_5.GetItemCheckState(0);
+            double chancado2 = (double)datosDetencionChancadores_5.GetItemCheckState(1);
+
+            hora = Entrada.normalizar(datoMes5.Value.Hour, 0, 24);
+            velocidadViento = Entrada.normalizar(velocidadViento, 0, 30);//velocidad_viento
+            direccionViento = Entrada.normalizar(direccionViento, 0, 360);//direccion_viento
+            temperatura = Entrada.normalizar(temperatura, -10, 55);//temperatura
+            humedad = Entrada.normalizar(humedad, 0, 100);//humedad_relativa
+            mp10 = Entrada.normalizar(mp10, 0, 800);//mp10
+            radiacion = Entrada.normalizar(radiacion, 0, 1700);//radiacion_solar
+            presion = Entrada.normalizar(presion, 440, 600);//presion_atmosferica
+            preci1 = Entrada.normalizar(preci1, 0, 47);//precipitaciondia1
+            preci2 = Entrada.normalizar(preci2, 0, 47);//precipitaciondia2
+            preci3 = Entrada.normalizar(preci3, 0, 47);//precipitaciondia3
+            preci4 = Entrada.normalizar(preci4, 0, 47);//precipitaciondia4
+            preci5 = Entrada.normalizar(preci5, 0, 47);//precipitaciondia5
+            evapo1 = Entrada.normalizar(evapo1, 0, 363000);//evaporaciondia1
+            evapo2 = Entrada.normalizar(evapo2, 0, 363000);//evaporaciondia2
+            evapo3 = Entrada.normalizar(evapo3, 0, 363000);//evaporaciondia3
+            evapo4 = Entrada.normalizar(evapo4, 0, 363000);//evaporaciondia4
+            evapo5 = Entrada.normalizar(evapo5, 0, 363000);//evaporaciondia5
+            datoChancadoDia1_ = Entrada.normalizar(datoChancadoDia1_, 0, 7);//chaxa camion dia y noche
+            datoMovitecDia1_ = Entrada.normalizar(datoMovitecDia1_, 0, 8);//movitec camion dia y noche
+            datosDasdia1_ = Entrada.normalizar(datosDasdia1_, 0, 4);//das camion dia
+            datosCnorte1_ = Entrada.normalizar(Math.Round((datosCnorte1_ / 24), 1), 0, 90240);//cnorte consumo de agua
+            datosCmovil1_ = Entrada.normalizar(Math.Round((datosCmovil1_ / 24), 1), 0, 4480);//cmovil consumo de agua
+            datosCachimba1_1_ = Entrada.normalizar(Math.Round((datosCachimba1_1_ / 24), 1), 0, 1500);//cachimba1 consumo de agua
+            datosCachimba2_1_ = Entrada.normalizar(Math.Round((datosCachimba2_1_ / 24), 1), 0, 2270);//cachimba2 consumo de agua
+            datoGerencia1_ = Entrada.normalizar(Math.Round((datoGerencia1_ / 24), 1), 0, 27000);//gerencia consumo de agua
+
+            vectorEntrada = new double[] { verano, invierno, hora, velocidadViento, direccionViento,
+                temperatura, humedad, mp10, radiacion, presion, preci1, preci2, preci3, preci4, preci5,
+                evapo1, evapo2, evapo3, evapo4, evapo5, datoChancadoDia1_, datoMovitecDia1_, datoGerencia1_,
+                datosDasdia1_, datosCmovil1_, datosCnorte1_, datosCachimba1_1_, datosCachimba2_1_, palas1,
+                palas2, palas3, palas4, palas5, palas6, palas7, palas8, chancado1, chancado2};
+            for (int i = 0; i < vectorEntrada.Length; i++)
+            {
+                Console.WriteLine(vectorEntrada[i]);
+            }
             return vectorEntrada;
         }
 
@@ -533,6 +935,7 @@ namespace RedesNeuronalesArtificiales
         {
             prediccionDiaComboBox.Items.Clear();
             String opcion = (string)diasApredecir.SelectedItem;
+            listaEntrada = new List<double[]>();
 
             this.diasPrediccion.Controls.Clear();
 

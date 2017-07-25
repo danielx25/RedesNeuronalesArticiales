@@ -89,6 +89,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <EmbeddedResource Include="Ventana.resx">
+      <DependentUpon>Ventana.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Entrenamiento.resx">
       <DependentUpon>Entrenamiento.cs</DependentUpon>
     </EmbeddedResource>
