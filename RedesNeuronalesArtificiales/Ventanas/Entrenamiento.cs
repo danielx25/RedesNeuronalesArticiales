@@ -75,7 +75,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 DateTime inicio = fechaDeInicio.Value;
                 DateTime fin = fechaDeTermino.Value;
 
-                List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 0);
+                List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 0.1);
                 redNeuronal = new Som(datosMeteorologicos[0].Length, totalNeuronas, neuronasPorFila, alfa, beta);
                 redNeuronal.inicializarMatriz(0, 1);
                 redNeuronal.Datos = datosMeteorologicos;
@@ -276,7 +276,7 @@ namespace RedesNeuronalesArtificiales.Ventanas
                 barraDeProgresoValidacion.Value = 7;
                 List<double[]> datos3 = Conexion.datosMeteorologicos(entradaFechaInicio3.Value, entradaFechaTermino3.Value, 0);
                 barraDeProgresoValidacion.Value = 10;
-                List<double[,]> datosRango = Conexion.datosPorRangoMp10(new DateTime(2010,01,01), new DateTime(2017,03,01), 0);
+                List<double[,]> datosRango = Conexion.datosPorRangoMp10(new DateTime(2010,01,01), new DateTime(2017,03,01));
                 barraDeProgresoValidacion.Value = 30;
 
                 Console.WriteLine("Creando tablas hash");

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using RedesNeuronalesArtificiales.AnalisisDeRNA;
 using RedesNeuronalesArtificiales.Ventanas;
-using RedesNeuronalesArtificiales.Reportes;
+//using RedesNeuronalesArtificiales.Reportes;
 using System.Diagnostics;
 using System.Windows.Forms;
 
@@ -52,9 +52,9 @@ namespace RedesNeuronalesArtificiales
             DateTime inicio = new DateTime(2010, 01, 01, 00, 00, 00);
             DateTime fin = new DateTime(2017, 03, 01, 00, 00, 00);
 
-            List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 10);
+            List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 0);
             Console.WriteLine("Total: " + datosMeteorologicos.Count);
-            List<double[,]> dr = Conexion.datosPorRangoMp10(inicio, fin, 10);
+            List<double[,]> dr = Conexion.datosPorRangoMp10(inicio, fin);
             double[,] sa = dr[0];//Sin Alerta
             double[,] a1 = dr[1];//Alerta 1
             double[,] a2 = dr[2];//Alerta 2

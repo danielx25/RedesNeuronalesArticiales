@@ -403,7 +403,7 @@
             this.entradaBeta.Name = "entradaBeta";
             this.entradaBeta.Size = new System.Drawing.Size(199, 20);
             this.entradaBeta.TabIndex = 3;
-            this.entradaBeta.Text = "0,00001";
+            this.entradaBeta.Text = "0,002";
             this.entradaBeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entradaBeta_KeyPress);
             // 
             // entradaAlfa
@@ -412,7 +412,7 @@
             this.entradaAlfa.Name = "entradaAlfa";
             this.entradaAlfa.Size = new System.Drawing.Size(200, 20);
             this.entradaAlfa.TabIndex = 2;
-            this.entradaAlfa.Text = "0,001";
+            this.entradaAlfa.Text = "0,1";
             this.entradaAlfa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entradaAlfa_KeyPress);
             // 
             // beta
