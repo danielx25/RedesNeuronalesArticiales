@@ -30,6 +30,9 @@ namespace RedesNeuronalesArtificiales
 
         ConstruccionConjuntos[] resultados;
         int indiceActualResultado = 0;
+        string nombreArchivoMp10 = "Red Som Final.mp10";
+        string nombreArchivoHtml = "Pesos aleatorios.html";
+        HashSet<int> listaGruposNeurona;
 
         //ThreadStart delegado = new ThreadStart(analisisResultadosEntregados);
 
@@ -45,31 +48,31 @@ namespace RedesNeuronalesArtificiales
         private void IngresarResultados()
         {
             
-            Som redNeuronal = Guardar.Deserializar("Red Som Final.mp10");
-            EscribirArchivo archivo = new EscribirArchivo("Pesos aleatorios.html", true);
+            Som redNeuronal = Guardar.Deserializar(nombreArchivoMp10);
+            EscribirArchivo archivo = new EscribirArchivo(nombreArchivoHtml, true);
             archivo.imprimir(Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
             archivo.cerrar();
             cambiarBarraProgreso(22);
 
-            HashSet<int> hashtable = new HashSet<int>();
-            hashtable.Add(555);
-            hashtable.Add(290);
-            hashtable.Add(1373);
-            hashtable.Add(2471);
-            hashtable.Add(2352);
-            hashtable.Add(868);
-            hashtable.Add(1664);
-            hashtable.Add(1300);
-            hashtable.Add(1650);
-            hashtable.Add(943);
+            listaGruposNeurona = new HashSet<int>();
+            listaGruposNeurona.Add(555);
+            listaGruposNeurona.Add(290);
+            listaGruposNeurona.Add(1373);
+            listaGruposNeurona.Add(2471);
+            listaGruposNeurona.Add(2352);
+            listaGruposNeurona.Add(868);
+            listaGruposNeurona.Add(1664);
+            listaGruposNeurona.Add(1300);
+            listaGruposNeurona.Add(1650);
+            listaGruposNeurona.Add(943);
 
-            double[,] pesosxgrupo = redNeuronal.obtenerPesosNeuronas(hashtable);
+            double[,] pesosxgrupo = redNeuronal.obtenerPesosNeuronas(listaGruposNeurona);
 
             DateTime inicio = new DateTime(2010, 01, 01, 00, 00, 00);
             DateTime fin = new DateTime(2017, 03, 01, 00, 00, 00);
 
-            List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 10);
-            Console.WriteLine("Total: " + datosMeteorologicos.Count);
+            //List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 10);
+            //Console.WriteLine("Total: " + datosMeteorologicos.Count);
             List<double[,]> dr = Conexion.datosPorRangoMp10(inicio, fin, 10);
             cambiarBarraProgreso(55);
             double[,] sa = dr[0];//Sin Alerta
@@ -490,7 +493,41 @@ namespace RedesNeuronalesArtificiales
 
         private void button2_Click(object sender, EventArgs e)
         {
-            obtenerFormulario1();
+            if(resultados.Length == 1)
+                listaEntrada.Add(obtenerFormulario1());
+
+            if (resultados.Length == 2)
+            {
+                listaEntrada.Add(obtenerFormulario1());
+                listaEntrada.Add(obtenerFormulario2());
+            }
+
+            if (resultados.Length == 3)
+            {
+                listaEntrada.Add(obtenerFormulario1());
+                listaEntrada.Add(obtenerFormulario2());
+                listaEntrada.Add(obtenerFormulario3());
+            }
+
+            if (resultados.Length == 4)
+            {
+                listaEntrada.Add(obtenerFormulario1());
+                listaEntrada.Add(obtenerFormulario2());
+                listaEntrada.Add(obtenerFormulario3());
+                listaEntrada.Add(obtenerFormulario4());
+            }
+
+            if (resultados.Length == 5)
+            {
+                listaEntrada.Add(obtenerFormulario1());
+                listaEntrada.Add(obtenerFormulario2());
+                listaEntrada.Add(obtenerFormulario3());
+                listaEntrada.Add(obtenerFormulario4());
+                listaEntrada.Add(obtenerFormulario5());
+            }
+
+
+
             /*
             //Creamos el delegado 
             ThreadStart proceso = new ThreadStart(analisisResultadosEntregados);
