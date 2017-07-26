@@ -1,6 +1,7 @@
 ﻿using RedesNeuronalesArtificiales.AnalisisDeRNA;
 using RedesNeuronalesArtificiales.Archivo;
 using RedesNeuronalesArtificiales.BaseDeDatos;
+using RedesNeuronalesArtificiales.Reportes;
 using RedesNeuronalesArtificiales.RNA;
 using System;
 using System.Collections.Generic;
@@ -110,7 +111,9 @@ namespace RedesNeuronalesArtificiales
             for (int indice_dia = 0; indice_dia< resultados.Length; indice_dia++)
             {
                 resultados[indice_dia] = resultado.clonar();
+                //resultados[indice_dia].prediccionMP10HORA(listaEntrada[indice_dia]);
                 resultados[indice_dia].prediccionMP10(listaEntrada[indice_dia]);
+                resultados[indice_dia].nivelPertenenciaMp10(listaEntrada[indice_dia]);
             }
             resultado = resultados[0];
         }
@@ -1085,6 +1088,23 @@ namespace RedesNeuronalesArtificiales
             }
             
 
+        }
+
+        private void reporte1_Click(object sender, EventArgs e)
+        {
+            /*
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "PDF|*.pdf";
+            saveFileDialog1.Title = "Guarda Reporte";
+            saveFileDialog1.ShowDialog();
+
+            Console.WriteLine("nombre: " + saveFileDialog1.FileName);
+            ReportePrediccion reporte = new ReportePrediccion();
+            //reporte.crearReporte(saveFileDialog1.FileName);
+            */
+            ReportePrediccion reporte = new ReportePrediccion(resultados, graficoMP10, graficoSinAlerta,
+                graficoAlerta1, graficoAlerta2, graficoAlerta3, graficoAlerta4);
+            reporte.crearReporte(@"C:\Users\danie\Desktop\ejemplo.pdf");
         }
     }
 }
