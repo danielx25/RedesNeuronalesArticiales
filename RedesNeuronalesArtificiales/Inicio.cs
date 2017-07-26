@@ -18,16 +18,14 @@ namespace RedesNeuronalesArtificiales
         /// </summary>
         [STAThread]
 
-        static void Main()
+		static void Main(string[] argumentos)
         {
-            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-			//Application.Run(new Entrenamiento());
-            Application.Run(new Ventana());
-            //ReportePrediccion reporte1 = new ReportePrediccion();
-            //reporte1.crearReporte();
-            //ejemploPrediccionGrupo();
+			if(argumentos.Length > 0 && argumentos[0].Equals("modo-desarrollo"))
+				Application.Run(new Entrenamiento());
+			else
+				Application.Run(new Ventana());
         }
 
         static void ejemploPrediccionGrupo()
