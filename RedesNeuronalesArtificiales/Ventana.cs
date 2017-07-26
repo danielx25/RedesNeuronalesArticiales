@@ -116,6 +116,7 @@ namespace RedesNeuronalesArtificiales
                 resultados[indice_dia].nivelPertenenciaMp10(listaEntrada[indice_dia]);
             }
             resultado = resultados[0];
+            cambiarBarraProgreso(100);
         }
 
         private void contruirGraficoMp10()
@@ -1105,6 +1106,39 @@ namespace RedesNeuronalesArtificiales
             ReportePrediccion reporte = new ReportePrediccion(resultados, graficoMP10, graficoSinAlerta,
                 graficoAlerta1, graficoAlerta2, graficoAlerta3, graficoAlerta4);
             reporte.crearReporte(@"C:\Users\danie\Desktop\ejemplo.pdf");
+        }
+
+        private void reportePrediccionMP10ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "PDF|*.pdf";
+            saveFileDialog1.Title = "Guarda Reporte";
+            saveFileDialog1.ShowDialog();
+
+            Console.WriteLine("nombre: " + saveFileDialog1.FileName);
+            //ReportePrediccion reporte = new ReportePrediccion();
+            //reporte.crearReporte(saveFileDialog1.FileName);
+            
+            ReportePrediccion reporte = new ReportePrediccion(resultados, graficoMP10, graficoSinAlerta,
+                graficoAlerta1, graficoAlerta2, graficoAlerta3, graficoAlerta4);
+            reporte.crearReporte(saveFileDialog1.FileName);
+        }
+
+        private void reporteTecnicoPrediccionMp10ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "PDF|*.pdf";
+            saveFileDialog1.Title = "Guarda Reporte";
+            saveFileDialog1.ShowDialog();
+
+            Console.WriteLine("nombre: " + saveFileDialog1.FileName);
+            //ReportePrediccion reporte = new ReportePrediccion();
+            //reporte.crearReporte(saveFileDialog1.FileName);
+
+            ReportePrediccion reporte = new ReportePrediccion(resultados, graficoMP10, graficoSinAlerta,
+                graficoAlerta1, graficoAlerta2, graficoAlerta3, graficoAlerta4);
+            reporte.crearReporteDetallado(saveFileDialog1.FileName);
         }
     }
 }

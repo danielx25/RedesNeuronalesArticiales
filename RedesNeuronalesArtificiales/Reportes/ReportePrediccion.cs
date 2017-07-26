@@ -77,6 +77,48 @@ namespace RedesNeuronalesArtificiales.Reportes
             {
                 resultado = resultados[indiceDia];
                 contruirGraficoMp10(indiceDia+1);
+                //contruirGraficoMp10Pertenencia(indiceDia + 1);
+                //contruirGraficoMp10Horas(indiceDia + 1);
+            }
+            
+            doc.Close();
+            writer.Close();
+        }
+
+
+        public void crearReporteDetallado(string rutaArchivo)
+        {
+
+            writer = PdfWriter.GetInstance(doc, new FileStream(rutaArchivo, FileMode.Create));
+
+            // Se le coloca el título y el autor
+            // **Nota: Esto no será visible en el documento
+            doc.AddTitle("Reporte de prediccion Mp10");
+            doc.AddCreator("Daniel Barraza Cortes y Carlo Barraza Escalante.-");
+
+            // Abrimos el archivo
+            doc.Open();
+            // Se crea el tipo de Font que vamos utilizar
+            _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+
+            // Se escribe el encabezamiento en el documento
+            Paragraph titulo = new Paragraph("Reporte de predicción Mp10");
+            titulo.Alignment = Element.ALIGN_CENTER;
+            doc.Add(new Paragraph(titulo));
+            doc.Add(Chunk.NEWLINE);
+
+            var titleFont = FontFactory.GetFont("Courier", 8, BaseColor.BLACK);
+            Paragraph fecha = new Paragraph("fecha: " + hoy.ToString(), titleFont);
+            doc.Add(fecha);
+
+
+            doc.Add(Chunk.NEWLINE);
+            doc.Add(Chunk.NEWLINE);
+
+            for (int indiceDia = 0; indiceDia < resultados.Length; indiceDia++)
+            {
+                resultado = resultados[indiceDia];
+                contruirGraficoMp10(indiceDia + 1);
                 contruirGraficoMp10Pertenencia(indiceDia + 1);
                 //contruirGraficoMp10Horas(indiceDia + 1);
             }
@@ -99,7 +141,6 @@ namespace RedesNeuronalesArtificiales.Reportes
             doc.Close();
             writer.Close();
         }
-
 
         private void contruirGraficoMp10(int indiceDia)
         {
