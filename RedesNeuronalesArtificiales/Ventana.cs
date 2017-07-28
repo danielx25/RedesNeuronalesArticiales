@@ -189,6 +189,14 @@ namespace RedesNeuronalesArtificiales
 
         private bool validacionFormulario1()
         {
+            if (entradaUnValor(mediaVerTexbox) == false)
+                return false;
+            if (entradaUnValor(mediaInvTexbox) == false)
+                return false;
+            if (entradaUnValor(DesvVerTexbox) == false)
+                return false;
+            if (entradaUnValor(desViaInvTexbox) == false)
+                return false;
             if (entradaUnValor(datoVeloViento1) == false)
                 return false;
             if (entradaUnValor(datoDirecViento1) == false)
@@ -476,7 +484,7 @@ namespace RedesNeuronalesArtificiales
         {
             try
             {
-                double valor = Convert.ToInt32(caja.Text);
+                double valor = Convert.ToDouble(caja.Text);
                 return true;
             }
 
@@ -906,9 +914,14 @@ namespace RedesNeuronalesArtificiales
 
         double [] obtenerFormulario1()
         {
+            
             double []vectorEntrada;
-            double verano = Difuso.verano(datoMes1.Value);
-            double invierno = Difuso.invierno(datoMes1.Value);
+            double centroVerano = Convert.ToDouble(mediaVerTexbox.Text);
+            double centroInvierno = Convert.ToDouble(mediaInvTexbox.Text);
+            double desviacionVerano = Convert.ToDouble(desViaInvTexbox.Text);
+            double desviacionInvierno = Convert.ToDouble(desViaInvTexbox.Text);
+            double verano = Difuso.verano(datoMes1.Value, desviacionVerano, centroVerano);
+            double invierno = Difuso.invierno(datoMes1.Value, desviacionInvierno, centroInvierno);
             double hora = datoMes1.Value.Hour;//24 horas
             double velocidadViento = Convert.ToDouble( datoVeloViento1.Text);
             double direccionViento = Convert.ToDouble(datoDirecViento1.Text);
@@ -993,8 +1006,13 @@ namespace RedesNeuronalesArtificiales
         double[] obtenerFormulario2()
         {
             double[] vectorEntrada;
-            double verano = Difuso.verano(datoMes2.Value);
-            double invierno = Difuso.invierno(datoMes2.Value);
+            double centroVerano = Convert.ToDouble(mediaVerTexbox.Text);
+            double centroInvierno = Convert.ToDouble(mediaInvTexbox.Text);
+            double desviacionVerano = Convert.ToDouble(desViaInvTexbox.Text);
+            double desviacionInvierno = Convert.ToDouble(desViaInvTexbox.Text);
+            double verano = Difuso.verano(datoMes2.Value, desviacionVerano, centroVerano);
+            double invierno = Difuso.invierno(datoMes2.Value, desviacionInvierno, centroInvierno);
+
             double hora = datoMes2.Value.Hour;//24 horas
             double velocidadViento = Convert.ToDouble(datoVeloViento2.Text);
             double direccionViento = Convert.ToDouble(datoDirecViento2.Text);
@@ -1079,8 +1097,13 @@ namespace RedesNeuronalesArtificiales
         double[] obtenerFormulario3()
         {
             double[] vectorEntrada;
-            double verano = Difuso.verano(datoMes3.Value);
-            double invierno = Difuso.invierno(datoMes3.Value);
+            double centroVerano = Convert.ToDouble(mediaVerTexbox.Text);
+            double centroInvierno = Convert.ToDouble(mediaInvTexbox.Text);
+            double desviacionVerano = Convert.ToDouble(desViaInvTexbox.Text);
+            double desviacionInvierno = Convert.ToDouble(desViaInvTexbox.Text);
+            double verano = Difuso.verano(datoMes3.Value, desviacionVerano, centroVerano);
+            double invierno = Difuso.invierno(datoMes3.Value, desviacionInvierno, centroInvierno);
+
             double hora = datoMes3.Value.Hour;//34 horas
             double velocidadViento = Convert.ToDouble(datoVeloViento3.Text);
             double direccionViento = Convert.ToDouble(datoDirecViento3.Text);
@@ -1165,8 +1188,12 @@ namespace RedesNeuronalesArtificiales
         double[] obtenerFormulario4()
         {
             double[] vectorEntrada;
-            double verano = Difuso.verano(datoMes4.Value);
-            double invierno = Difuso.invierno(datoMes4.Value);
+            double centroVerano = Convert.ToDouble(mediaVerTexbox.Text);
+            double centroInvierno = Convert.ToDouble(mediaInvTexbox.Text);
+            double desviacionVerano = Convert.ToDouble(desViaInvTexbox.Text);
+            double desviacionInvierno = Convert.ToDouble(desViaInvTexbox.Text);
+            double verano = Difuso.verano(datoMes4.Value, desviacionVerano, centroVerano);
+            double invierno = Difuso.invierno(datoMes4.Value, desviacionInvierno, centroInvierno);
             double hora = datoMes4.Value.Hour;//34 horas
             double velocidadViento = Convert.ToDouble(datoVeloViento4.Text);
             double direccionViento = Convert.ToDouble(datoDirecViento4.Text);
@@ -1251,8 +1278,12 @@ namespace RedesNeuronalesArtificiales
         double[] obtenerFormulario5()
         {
             double[] vectorEntrada;
-            double verano = Difuso.verano(datoMes5.Value);
-            double invierno = Difuso.invierno(datoMes5.Value);
+            double centroVerano = Convert.ToDouble(mediaVerTexbox.Text);
+            double centroInvierno = Convert.ToDouble(mediaInvTexbox.Text);
+            double desviacionVerano = Convert.ToDouble(desViaInvTexbox.Text);
+            double desviacionInvierno = Convert.ToDouble(desViaInvTexbox.Text);
+            double verano = Difuso.verano(datoMes5.Value, desviacionVerano, centroVerano);
+            double invierno = Difuso.invierno(datoMes5.Value, desviacionInvierno, centroInvierno);
             double hora = datoMes5.Value.Hour;//34 horas
             double velocidadViento = Convert.ToDouble(datoVeloViento5.Text);
             double direccionViento = Convert.ToDouble(datoDirecViento5.Text);
