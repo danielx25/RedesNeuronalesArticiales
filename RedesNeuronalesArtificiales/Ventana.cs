@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -23,7 +24,10 @@ namespace RedesNeuronalesArtificiales
         //{}
         private delegate void delegadoCambioProgreso(int value);
         private delegate void graficosPertenencia1();
+        private delegate void delelgadoContruirGraficoMp10();
         graficosPertenencia1 delagadoGraficos;
+        delelgadoContruirGraficoMp10 delegadoGraficoMp10;
+
         ConstruccionConjuntos resultado = null;//numero de grupos, numero de alertas
         List<double[]> listaEntrada;
         double[] vectorEntrada = new double[38];
@@ -31,8 +35,9 @@ namespace RedesNeuronalesArtificiales
 
         ConstruccionConjuntos[] resultados;
         int indiceActualResultado = 0;
-        string nombreArchivoMp10 = "Red Som Final.mp10";
+        string nombreArchivoMp10 = "MapaSom.mp10";
         string nombreArchivoHtml = "Pesos aleatorios.html";
+        string nombreArchivoGrupos = "MapaSom.txt";
         HashSet<int> listaGruposNeurona = null;
 
         //ThreadStart delegado = new ThreadStart(analisisResultadosEntregados);
@@ -41,21 +46,26 @@ namespace RedesNeuronalesArtificiales
         {
             InitializeComponent();
             diasApredecir.SelectedIndex = 0;
-            resultado = new ConstruccionConjuntos(numeroGrupos, 5);//numero de grupos, numero de alertas
+            //resultado = new ConstruccionConjuntos(numeroGrupos, 5);//numero de grupos, numero de alertas
             resultados = new ConstruccionConjuntos[1];
             resultados[0] = resultado;
+            reportePrediccionMP10ToolStripMenuItem.Enabled = false;
+            reporteTecnicoPrediccionMp10ToolStripMenuItem.Enabled = false;
         }
 
         private void IngresarResultados()
         {
-            
+            cambiarBarraProgreso(0);
             Som redNeuronal = Guardar.Deserializar(nombreArchivoMp10);
             EscribirArchivo archivo = new EscribirArchivo(nombreArchivoHtml, true);
             archivo.imprimir(Mp10.obtenerMP10HTML(redNeuronal.MatrizPesos, redNeuronal.NumeroFilas, redNeuronal.NumeroColumnas));
             archivo.cerrar();
             cambiarBarraProgreso(22);
 
-            listaGruposNeurona = new HashSet<int>();
+            listaGruposNeurona = obtenerTabla(nombreArchivoGrupos);
+            resultado = new ConstruccionConjuntos(listaGruposNeurona.Count, 5);
+            numeroGrupos = listaGruposNeurona.Count;
+            /* new HashSet<int>();
             listaGruposNeurona.Add(555);
             listaGruposNeurona.Add(290);
             listaGruposNeurona.Add(1373);
@@ -66,7 +76,7 @@ namespace RedesNeuronalesArtificiales
             listaGruposNeurona.Add(1300);
             listaGruposNeurona.Add(1650);
             listaGruposNeurona.Add(943);
-
+            */
             double[,] pesosxgrupo = redNeuronal.obtenerPesosNeuronas(listaGruposNeurona);
 
             DateTime inicio = new DateTime(2010, 01, 01, 00, 00, 00);
@@ -95,18 +105,6 @@ namespace RedesNeuronalesArtificiales
             resultado.etiquetadoDelosGrupos();
             cambiarBarraProgreso(80);
 
-            /*
-            DateTime inicio1 = new DateTime(2017, 01, 01, 00, 00, 00);
-            DateTime fin1 = new DateTime(2017, 02, 01, 23, 00, 00);
-
-            List<double[]> datosMeteorologicos1 = Conexion.datosMeteorologicos(inicio1, fin1, 0.1);
-            double[] fila = datosMeteorologicos1[0];
-            System.Console.WriteLine("---------------------->tipo alerta: " + fila[7] * 800);
-            resultado.prediccionMP10(fila);
-            cambiarBarraProgreso(100);
-            */
-            //resultados[0] = resultado;
-            //resultados[0].prediccionMP10(listaEntrada[0]);
             
             for (int indice_dia = 0; indice_dia< resultados.Length; indice_dia++)
             {
@@ -121,65 +119,375 @@ namespace RedesNeuronalesArtificiales
 
         private void contruirGraficoMp10()
         {
-            /*foreach (var series in graficoMP10.Series)
+            if (this.InvokeRequired)
             {
-                series.Points.Clear();
-            }*/
-            graficoMP10.Series.Clear();
-            double mp10 = resultado.Mp10predecido;
-
-            for (int indice_alerta = 0; indice_alerta < resultado.gruposGanadores.GetLength(0); indice_alerta++)
-            {
-                double[] vectorDistancia = new double[resultado.vectorDistanciaMP10.GetLength(1)];
-                for (int indice_distancia = 0; indice_distancia < vectorDistancia.Length; indice_distancia++)
-                {
-                    vectorDistancia[indice_distancia] = resultado.vectorDistanciaMP10[indice_alerta, indice_distancia];
-                }
-
-                var serieMp10 = new Series(resultado.gruposGanadores[indice_alerta].clase);
-                serieMp10.ChartType = SeriesChartType.Line;
-                serieMp10.Points.DataBindXY(resultado.rangoMP10, vectorDistancia);
-
-                if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "sin alerta") == 0)
-                    serieMp10.Color = Color.Green;
-
-                if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "alerta 1") == 0)
-                    serieMp10.Color = Color.Yellow;
-
-                if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "alerta 2") == 0)
-                    serieMp10.Color = Color.Orange;
-
-                if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "alerta 3") == 0)
-                    serieMp10.Color = Color.Purple;
-
-                if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "alerta 4") == 0)
-                    serieMp10.Color = Color.Red;
-
-                graficoMP10.Series.Add(serieMp10);
+                //delagadoGraficos = new graficosPertenencia1(graficosPertenencia);
+                delegadoGraficoMp10 = new delelgadoContruirGraficoMp10(contruirGraficoMp10);
+                //this.Invoke(delagadoGraficos);
+                this.Invoke(delegadoGraficoMp10);
             }
-            var seriePuntoMinimo = new Series("punto minimo");
-            seriePuntoMinimo.ChartType = SeriesChartType.Line;
-            seriePuntoMinimo.Points.DataBindXY(new double[]{mp10, mp10}, new double[]{0, resultado.distanciaMinima});
-            graficoMP10.Series.Add(seriePuntoMinimo);
+            else
+            {
+                graficoMP10.Series.Clear();
+                double mp10 = resultado.Mp10predecido;
 
-            textoNivelMp10.Text = mp10.ToString();
+                for (int indice_alerta = 0; indice_alerta < resultado.gruposGanadores.GetLength(0); indice_alerta++)
+                {
+                    double[] vectorDistancia = new double[resultado.vectorDistanciaMP10.GetLength(1)];
+                    for (int indice_distancia = 0; indice_distancia < vectorDistancia.Length; indice_distancia++)
+                    {
+                        vectorDistancia[indice_distancia] = resultado.vectorDistanciaMP10[indice_alerta, indice_distancia];
+                    }
+
+                    var serieMp10 = new Series(resultado.gruposGanadores[indice_alerta].clase);
+                    serieMp10.ChartType = SeriesChartType.Line;
+                    serieMp10.Points.DataBindXY(resultado.rangoMP10, vectorDistancia);
+
+                    if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "sin alerta") == 0)
+                        serieMp10.Color = Color.Green;
+
+                    if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "alerta 1") == 0)
+                        serieMp10.Color = Color.Yellow;
+
+                    if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "alerta 2") == 0)
+                        serieMp10.Color = Color.Orange;
+
+                    if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "alerta 3") == 0)
+                        serieMp10.Color = Color.Purple;
+
+                    if (String.Compare(resultado.gruposGanadores[indice_alerta].clase, "alerta 4") == 0)
+                        serieMp10.Color = Color.Red;
+
+                    graficoMP10.Series.Add(serieMp10);
+                }
+                var seriePuntoMinimo = new Series("punto minimo");
+                seriePuntoMinimo.ChartType = SeriesChartType.Line;
+                seriePuntoMinimo.Points.DataBindXY(new double[] { mp10, mp10 }, new double[] { 0, resultado.distanciaMinima });
+                graficoMP10.Series.Add(seriePuntoMinimo);
+
+                textoNivelMp10.Text = mp10.ToString();
 
 
-            double sinAlerta = 150;
-            double alerta1 = 250;
-            double alerta2 = 350;
-            double alerta3 = 500;
+                double sinAlerta = 150;
+                double alerta1 = 250;
+                double alerta2 = 350;
+                double alerta3 = 500;
 
-            if (mp10 < sinAlerta)// sin alerta
-                textoTipoAlerta.Text = "Sin alerta";
-            if (sinAlerta <= mp10 && mp10 <= alerta1)
-                textoTipoAlerta.Text = "Alerta 1";
-            if (alerta1 < mp10 && mp10 <= alerta2)//alerta 2
-                textoTipoAlerta.Text = "Alerta 2";
-            if (alerta2 < mp10 && mp10 <= alerta3)//alerta 3
-                textoTipoAlerta.Text = "Alerta 3";
-            if (alerta3 < mp10)//alerta 4
-                textoTipoAlerta.Text = "Alerta 4";
+                if (mp10 < sinAlerta)// sin alerta
+                    textoTipoAlerta.Text = "Sin alerta";
+                if (sinAlerta <= mp10 && mp10 <= alerta1)
+                    textoTipoAlerta.Text = "Alerta 1";
+                if (alerta1 < mp10 && mp10 <= alerta2)//alerta 2
+                    textoTipoAlerta.Text = "Alerta 2";
+                if (alerta2 < mp10 && mp10 <= alerta3)//alerta 3
+                    textoTipoAlerta.Text = "Alerta 3";
+                if (alerta3 < mp10)//alerta 4
+                    textoTipoAlerta.Text = "Alerta 4";
+            }
+            
+        }
+
+        private bool validacionFormulario1()
+        {
+            if (entradaUnValor(datoVeloViento1) == false)
+                return false;
+            if (entradaUnValor(datoDirecViento1) == false)
+                return false;
+            if (entradaUnValor(datoTemp1) == false)
+                return false;
+            if (entradaUnValor(datoHumedad1) == false)
+                return false;
+            if (entradaUnValor(datoRadiaSolar1) == false)
+                return false;
+            if (entradaUnValor(datoPresion1) == false)
+                return false;
+            if (entradaUnValor(datoPreciMañana1) == false)
+                return false;
+            if (entradaUnValor(datoPrecihoy1) == false)
+                return false;
+            if (entradaUnValor(datoPreci1_1) == false)
+                return false;
+            if (entradaUnValor(datoPreci2_1) == false)
+                return false;
+            if (entradaUnValor(datoPreci3_1) == false)
+                return false;
+            if (entradaUnValor(datoPresion1) == false)
+                return false;
+            if (entradaUnValor(datoEvapomañana1) == false)
+                return false;
+            if (entradaUnValor(datoEvapohoy1) == false)
+                return false;
+            if (entradaUnValor(datoEvapo1_1) == false)
+                return false;
+            if (entradaUnValor(datoEvapo2_1) == false)
+                return false;
+            if (entradaUnValor(datoEvapo3_1) == false)
+                return false;
+            if (entradaUnValor(datoChancadoDia1) == false)
+                return false;
+            if (entradaUnValor(datoMovitecDia1) == false)
+                return false;
+            if (entradaUnValor(datoGerencia1) == false)
+                return false;
+            if (entradaUnValor(datosDasdia1) == false)
+                return false;
+            if (entradaUnValor(datosCmovil1) == false)
+                return false;
+            if (entradaUnValor(datosCnorte1) == false)
+                return false;
+            if (entradaUnValor(datosCachimba1_1) == false)
+                return false;
+            if (entradaUnValor(datosCachimba2_1) == false)
+                return false;
+
+
+            return true;
+        }
+
+        private bool validacionFormulario2()
+        {
+            if (entradaUnValor(datoVeloViento2) == false)
+                return false;
+            if (entradaUnValor(datoDirecViento2) == false)
+                return false;
+            if (entradaUnValor(datoTemp2) == false)
+                return false;
+            if (entradaUnValor(datoHumedad2) == false)
+                return false;
+            if (entradaUnValor(datoRadiaSolar2) == false)
+                return false;
+            if (entradaUnValor(datoPresion2) == false)
+                return false;
+            if (entradaUnValor(datoPreciMañana2) == false)
+                return false;
+            if (entradaUnValor(datoPrecihoy2) == false)
+                return false;
+            if (entradaUnValor(datoPreci1_2) == false)
+                return false;
+            if (entradaUnValor(datoPreci2_2) == false)
+                return false;
+            if (entradaUnValor(datoPreci3_2) == false)
+                return false;
+            if (entradaUnValor(datoPresion2) == false)
+                return false;
+            if (entradaUnValor(datoEvapomañana2) == false)
+                return false;
+            if (entradaUnValor(datoEvapohoy2) == false)
+                return false;
+            if (entradaUnValor(datoEvapo1_2) == false)
+                return false;
+            if (entradaUnValor(datoEvapo2_2) == false)
+                return false;
+            if (entradaUnValor(datoEvapo3_2) == false)
+                return false;
+            if (entradaUnValor(datoChancadoDia2) == false)
+                return false;
+            if (entradaUnValor(datoMovitecDia2) == false)
+                return false;
+            if (entradaUnValor(datoGerencia2) == false)
+                return false;
+            if (entradaUnValor(datosDasdia2) == false)
+                return false;
+            if (entradaUnValor(datosCmovil2) == false)
+                return false;
+            if (entradaUnValor(datosCnorte2) == false)
+                return false;
+            if (entradaUnValor(datosCachimba1_2) == false)
+                return false;
+            if (entradaUnValor(datosCachimba2_2) == false)
+                return false;
+
+
+            return true;
+        }
+
+        private bool validacionFormulario3()
+        {
+            if (entradaUnValor(datoVeloViento3) == false)
+                return false;
+            if (entradaUnValor(datoDirecViento3) == false)
+                return false;
+            if (entradaUnValor(datoTemp3) == false)
+                return false;
+            if (entradaUnValor(datoHumedad3) == false)
+                return false;
+            if (entradaUnValor(datoRadiaSolar3) == false)
+                return false;
+            if (entradaUnValor(datoPresion3) == false)
+                return false;
+            if (entradaUnValor(datoPreciMañana3) == false)
+                return false;
+            if (entradaUnValor(datoPrecihoy3) == false)
+                return false;
+            if (entradaUnValor(datoPreci1_3) == false)
+                return false;
+            if (entradaUnValor(datoPreci2_3) == false)
+                return false;
+            if (entradaUnValor(datoPreci3_3) == false)
+                return false;
+            if (entradaUnValor(datoPresion3) == false)
+                return false;
+            if (entradaUnValor(datoEvapomañana3) == false)
+                return false;
+            if (entradaUnValor(datoEvapohoy3) == false)
+                return false;
+            if (entradaUnValor(datoEvapo1_3) == false)
+                return false;
+            if (entradaUnValor(datoEvapo2_3) == false)
+                return false;
+            if (entradaUnValor(datoEvapo3_3) == false)
+                return false;
+            if (entradaUnValor(datoChancadoDia3) == false)
+                return false;
+            if (entradaUnValor(datoMovitecDia3) == false)
+                return false;
+            if (entradaUnValor(datoGerencia3) == false)
+                return false;
+            if (entradaUnValor(datosDasdia3) == false)
+                return false;
+            if (entradaUnValor(datosCmovil3) == false)
+                return false;
+            if (entradaUnValor(datosCnorte3) == false)
+                return false;
+            if (entradaUnValor(datosCachimba1_3) == false)
+                return false;
+            if (entradaUnValor(datosCachimba2_3) == false)
+                return false;
+
+
+            return true;
+        }
+
+        private bool validacionFormulario4()
+        {
+            if (entradaUnValor(datoVeloViento4) == false)
+                return false;
+            if (entradaUnValor(datoDirecViento4) == false)
+                return false;
+            if (entradaUnValor(datoTemp4) == false)
+                return false;
+            if (entradaUnValor(datoHumedad4) == false)
+                return false;
+            if (entradaUnValor(datoRadiaSolar4) == false)
+                return false;
+            if (entradaUnValor(datoPresion4) == false)
+                return false;
+            if (entradaUnValor(datoPreciMañana4) == false)
+                return false;
+            if (entradaUnValor(datoPrecihoy4) == false)
+                return false;
+            if (entradaUnValor(datoPreci1_4) == false)
+                return false;
+            if (entradaUnValor(datoPreci2_4) == false)
+                return false;
+            if (entradaUnValor(datoPreci3_4) == false)
+                return false;
+            if (entradaUnValor(datoPresion4) == false)
+                return false;
+            if (entradaUnValor(datoEvapomañana4) == false)
+                return false;
+            if (entradaUnValor(datoEvapohoy4) == false)
+                return false;
+            if (entradaUnValor(datoEvapo1_4) == false)
+                return false;
+            if (entradaUnValor(datoEvapo2_4) == false)
+                return false;
+            if (entradaUnValor(datoEvapo3_4) == false)
+                return false;
+            if (entradaUnValor(datoChancadoDia4) == false)
+                return false;
+            if (entradaUnValor(datoMovitecDia4) == false)
+                return false;
+            if (entradaUnValor(datoGerencia4) == false)
+                return false;
+            if (entradaUnValor(datosDasdia4) == false)
+                return false;
+            if (entradaUnValor(datosCmovil4) == false)
+                return false;
+            if (entradaUnValor(datosCnorte4) == false)
+                return false;
+            if (entradaUnValor(datosCachimba1_4) == false)
+                return false;
+            if (entradaUnValor(datosCachimba2_4) == false)
+                return false;
+
+
+            return true;
+        }
+
+        private bool validacionFormulario5()
+        {
+            if (entradaUnValor(datoVeloViento5) == false)
+                return false;
+            if (entradaUnValor(datoDirecViento5) == false)
+                return false;
+            if (entradaUnValor(datoTemp5) == false)
+                return false;
+            if (entradaUnValor(datoHumedad5) == false)
+                return false;
+            if (entradaUnValor(datoRadiaSolar5) == false)
+                return false;
+            if (entradaUnValor(datoPresion5) == false)
+                return false;
+            if (entradaUnValor(datoPreciMañana5) == false)
+                return false;
+            if (entradaUnValor(datoPrecihoy5) == false)
+                return false;
+            if (entradaUnValor(datoPreci1_5) == false)
+                return false;
+            if (entradaUnValor(datoPreci2_5) == false)
+                return false;
+            if (entradaUnValor(datoPreci3_5) == false)
+                return false;
+            if (entradaUnValor(datoPresion5) == false)
+                return false;
+            if (entradaUnValor(datoEvapomañana5) == false)
+                return false;
+            if (entradaUnValor(datoEvapohoy5) == false)
+                return false;
+            if (entradaUnValor(datoEvapo1_5) == false)
+                return false;
+            if (entradaUnValor(datoEvapo2_5) == false)
+                return false;
+            if (entradaUnValor(datoEvapo3_5) == false)
+                return false;
+            if (entradaUnValor(datoChancadoDia5) == false)
+                return false;
+            if (entradaUnValor(datoMovitecDia5) == false)
+                return false;
+            if (entradaUnValor(datoGerencia5) == false)
+                return false;
+            if (entradaUnValor(datosDasdia5) == false)
+                return false;
+            if (entradaUnValor(datosCmovil5) == false)
+                return false;
+            if (entradaUnValor(datosCnorte5) == false)
+                return false;
+            if (entradaUnValor(datosCachimba1_5) == false)
+                return false;
+            if (entradaUnValor(datosCachimba2_5) == false)
+                return false;
+
+
+            return true;
+        }
+
+        private bool entradaUnValor(TextBox caja)
+        {
+            try
+            {
+                double valor = Convert.ToInt32(caja.Text);
+                return true;
+            }
+
+            catch
+            {
+                MessageBox.Show("Por favor ingrese un numero valido");
+                caja.Text = "";
+                caja.Focus();
+                return false;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -207,6 +515,7 @@ namespace RedesNeuronalesArtificiales
             IngresarResultados();
             contruirGraficoMp10();
             graficosPertenencia();
+            
         }
 
         private void cambiarBarraProgreso(int valor)
@@ -232,6 +541,11 @@ namespace RedesNeuronalesArtificiales
             }
             else
             {
+                graficoSinAlerta.Series.Clear();
+                graficoAlerta1.Series.Clear();
+                graficoAlerta2.Series.Clear();
+                graficoAlerta3.Series.Clear();
+                graficoAlerta4.Series.Clear();
                 graficoSinAlerta.Titles.Add("Sin alerta");
                 Grupo grupon = resultado.gruposxclases[0, 6];
                 double rangox0 = 0.0;
@@ -500,6 +814,8 @@ namespace RedesNeuronalesArtificiales
                     graficoAlerta4.Series.Add(series);
 
                 }
+                reportePrediccionMP10ToolStripMenuItem.Enabled = true;
+                reporteTecnicoPrediccionMp10ToolStripMenuItem.Enabled = true;
             }
             
         }
@@ -512,47 +828,79 @@ namespace RedesNeuronalesArtificiales
 
         private void button2_Click(object sender, EventArgs e)
         {
+            reportePrediccionMP10ToolStripMenuItem.Enabled = false;
+            reporteTecnicoPrediccionMp10ToolStripMenuItem.Enabled = false;
             listaEntrada.Clear();
-            if(resultados.Length == 1)
-                listaEntrada.Add(obtenerFormulario1());
+
+
+            //validacionFormulario1();
+            bool datosValidos = true;
+            
+            if (resultados.Length == 1)
+            {
+                datosValidos = validacionFormulario1();
+                if (datosValidos)
+                    listaEntrada.Add(obtenerFormulario1());
+            }
+                
 
             if (resultados.Length == 2)
             {
-                listaEntrada.Add(obtenerFormulario1());
-                listaEntrada.Add(obtenerFormulario2());
+                datosValidos = validacionFormulario1() && validacionFormulario2();
+                if (datosValidos)
+                {
+                    listaEntrada.Add(obtenerFormulario1());
+                    listaEntrada.Add(obtenerFormulario2());
+                }
             }
 
             if (resultados.Length == 3)
             {
-                listaEntrada.Add(obtenerFormulario1());
-                listaEntrada.Add(obtenerFormulario2());
-                listaEntrada.Add(obtenerFormulario3());
+                datosValidos = validacionFormulario1() && validacionFormulario2() && validacionFormulario3();
+                if (datosValidos)
+                {
+                    listaEntrada.Add(obtenerFormulario1());
+                    listaEntrada.Add(obtenerFormulario2());
+                    listaEntrada.Add(obtenerFormulario3());
+                }
             }
 
             if (resultados.Length == 4)
             {
-                listaEntrada.Add(obtenerFormulario1());
-                listaEntrada.Add(obtenerFormulario2());
-                listaEntrada.Add(obtenerFormulario3());
-                listaEntrada.Add(obtenerFormulario4());
+                datosValidos = validacionFormulario1() && validacionFormulario2() && validacionFormulario3() && validacionFormulario4();
+                if (datosValidos)
+                {
+                    listaEntrada.Add(obtenerFormulario1());
+                    listaEntrada.Add(obtenerFormulario2());
+                    listaEntrada.Add(obtenerFormulario3());
+                    listaEntrada.Add(obtenerFormulario4());
+                }   
             }
 
             if (resultados.Length == 5)
             {
-                listaEntrada.Add(obtenerFormulario1());
-                listaEntrada.Add(obtenerFormulario2());
-                listaEntrada.Add(obtenerFormulario3());
-                listaEntrada.Add(obtenerFormulario4());
-                listaEntrada.Add(obtenerFormulario5());
+                datosValidos = validacionFormulario1() && validacionFormulario2() && validacionFormulario3() && validacionFormulario4() && validacionFormulario5();
+                if(datosValidos)
+                {
+                    listaEntrada.Add(obtenerFormulario1());
+                    listaEntrada.Add(obtenerFormulario2());
+                    listaEntrada.Add(obtenerFormulario3());
+                    listaEntrada.Add(obtenerFormulario4());
+                    listaEntrada.Add(obtenerFormulario5());
+                }
             }
 
+            if(datosValidos)
+            {
+                //Creamos el delegado 
+                ThreadStart proceso = new ThreadStart(analisisResultadosEntregados);
+                //Creamos la instancia del hilo 
+                Thread hilo = new Thread(proceso);
+                //Iniciamos el hilo 
+                hilo.Start();
+            }
             
-            //Creamos el delegado 
-            ThreadStart proceso = new ThreadStart(analisisResultadosEntregados);
-            //Creamos la instancia del hilo 
-            Thread hilo = new Thread(proceso);
-            //Iniciamos el hilo 
-            hilo.Start();
+            
             
         }
 
@@ -1139,6 +1487,88 @@ namespace RedesNeuronalesArtificiales
             ReportePrediccion reporte = new ReportePrediccion(resultados, graficoMP10, graficoSinAlerta,
                 graficoAlerta1, graficoAlerta2, graficoAlerta3, graficoAlerta4);
             reporte.crearReporteDetallado(saveFileDialog1.FileName);
+        }
+
+        private void botonAbrirArchivo_Click(object sender, EventArgs e)
+        {
+            System.IO.Stream myStream = null;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
+            openFileDialog1.Filter = "mapa SOM|*.mp10";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            // Insert code to read the stream here.
+                            textBoxArchivoSom.Text = openFileDialog1.FileName;
+                            nombreArchivoMp10 = textBoxArchivoSom.Text;
+                            string[] words = nombreArchivoMp10.Split('.');
+                            textBoxArchivoGrupo.Text = words[0]+".txt";
+                            nombreArchivoGrupos = textBoxArchivoGrupo.Text;
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
+
+        private void botonAbrirArchivo2_Click(object sender, EventArgs e)
+        {
+            System.IO.Stream myStream = null;
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
+            openFileDialog1.Filter = "Grupos Neuronas|*.txt";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    if ((myStream = openFileDialog1.OpenFile()) != null)
+                    {
+                        using (myStream)
+                        {
+                            // Insert code to read the stream here.
+                            textBoxArchivoGrupo.Text = openFileDialog1.FileName;
+                            nombreArchivoMp10 = textBoxArchivoSom.Text;
+                            
+
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
+
+        private HashSet<int> obtenerTabla(string nombre)
+        {
+            StreamReader archivo = new StreamReader(nombre);
+            string linea = archivo.ReadLine();
+            string[] neuronas = linea.Split(',');
+
+            HashSet<int> tabla = new HashSet<int>();
+            for (int x = 0; x < neuronas.Length; x++)
+            {
+                tabla.Add(int.Parse(neuronas[x]));
+            }
+            return tabla;
         }
     }
 }
