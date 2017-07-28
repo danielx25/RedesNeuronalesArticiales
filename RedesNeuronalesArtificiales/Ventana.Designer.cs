@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea37 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend37 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title31 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea38 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend38 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title32 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea39 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend39 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title33 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea40 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend40 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title34 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea41 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend41 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title35 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea42 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend42 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventana));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportePrediccionMP10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -388,22 +389,22 @@
             this.label149 = new System.Windows.Forms.Label();
             this.MenuSoft = new System.Windows.Forms.TabControl();
             this.configuracionTab = new System.Windows.Forms.TabPage();
+            this.label155 = new System.Windows.Forms.Label();
+            this.label156 = new System.Windows.Forms.Label();
+            this.desViaInvTexbox = new System.Windows.Forms.TextBox();
+            this.mediaInvTexbox = new System.Windows.Forms.TextBox();
+            this.label154 = new System.Windows.Forms.Label();
+            this.DesvVerTexbox = new System.Windows.Forms.TextBox();
+            this.mediaVerTexbox = new System.Windows.Forms.TextBox();
+            this.label153 = new System.Windows.Forms.Label();
+            this.label152 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
             this.botonAbrirArchivo2 = new System.Windows.Forms.Button();
             this.botonAbrirArchivo1 = new System.Windows.Forms.Button();
             this.textBoxArchivoGrupo = new System.Windows.Forms.TextBox();
             this.textBoxArchivoSom = new System.Windows.Forms.TextBox();
             this.label150 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label151 = new System.Windows.Forms.Label();
-            this.label152 = new System.Windows.Forms.Label();
-            this.label153 = new System.Windows.Forms.Label();
-            this.mediaVerTexbox = new System.Windows.Forms.TextBox();
-            this.DesvVerTexbox = new System.Windows.Forms.TextBox();
-            this.desViaInvTexbox = new System.Windows.Forms.TextBox();
-            this.mediaInvTexbox = new System.Windows.Forms.TextBox();
-            this.label154 = new System.Windows.Forms.Label();
-            this.label155 = new System.Windows.Forms.Label();
-            this.label156 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.prediccionMP10.SuspendLayout();
             this.analisisResultados.SuspendLayout();
@@ -568,20 +569,20 @@
             // graficoSinAlerta
             // 
             this.graficoSinAlerta.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea37.AxisX.Title = "Distancia del grupo Sin Alerta";
-            chartArea37.AxisY.Title = "Nivel Pertenencia";
-            chartArea37.Name = "ChartArea1";
-            this.graficoSinAlerta.ChartAreas.Add(chartArea37);
-            legend37.Name = "Legend1";
-            this.graficoSinAlerta.Legends.Add(legend37);
+            chartArea1.AxisX.Title = "Distancia del grupo Sin Alerta";
+            chartArea1.AxisY.Title = "Nivel Pertenencia";
+            chartArea1.Name = "ChartArea1";
+            this.graficoSinAlerta.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.graficoSinAlerta.Legends.Add(legend1);
             this.graficoSinAlerta.Location = new System.Drawing.Point(5, 6);
             this.graficoSinAlerta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoSinAlerta.Name = "graficoSinAlerta";
             this.graficoSinAlerta.Size = new System.Drawing.Size(1115, 494);
             this.graficoSinAlerta.TabIndex = 1;
             this.graficoSinAlerta.Text = "Sin alerta";
-            title31.Name = "Sin alerta";
-            this.graficoSinAlerta.Titles.Add(title31);
+            title1.Name = "Sin alerta";
+            this.graficoSinAlerta.Titles.Add(title1);
             // 
             // tabPage3
             // 
@@ -598,20 +599,20 @@
             // graficoAlerta1
             // 
             this.graficoAlerta1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea38.AxisX.Title = "Distancia del grupo Alerta 1";
-            chartArea38.AxisY.Title = "Nivel Pertenencia";
-            chartArea38.Name = "ChartArea1";
-            this.graficoAlerta1.ChartAreas.Add(chartArea38);
-            legend38.Name = "Legend1";
-            this.graficoAlerta1.Legends.Add(legend38);
+            chartArea2.AxisX.Title = "Distancia del grupo Alerta 1";
+            chartArea2.AxisY.Title = "Nivel Pertenencia";
+            chartArea2.Name = "ChartArea1";
+            this.graficoAlerta1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.graficoAlerta1.Legends.Add(legend2);
             this.graficoAlerta1.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta1.Name = "graficoAlerta1";
             this.graficoAlerta1.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta1.TabIndex = 2;
             this.graficoAlerta1.Text = "Sin alerta";
-            title32.Name = "Sin alerta";
-            this.graficoAlerta1.Titles.Add(title32);
+            title2.Name = "Sin alerta";
+            this.graficoAlerta1.Titles.Add(title2);
             // 
             // tabPage4
             // 
@@ -627,20 +628,20 @@
             // graficoAlerta2
             // 
             this.graficoAlerta2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea39.AxisX.Title = "Distancia del grupo Alerta 2";
-            chartArea39.AxisY.Title = "Nivel Pertenencia";
-            chartArea39.Name = "ChartArea1";
-            this.graficoAlerta2.ChartAreas.Add(chartArea39);
-            legend39.Name = "Legend1";
-            this.graficoAlerta2.Legends.Add(legend39);
+            chartArea3.AxisX.Title = "Distancia del grupo Alerta 2";
+            chartArea3.AxisY.Title = "Nivel Pertenencia";
+            chartArea3.Name = "ChartArea1";
+            this.graficoAlerta2.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.graficoAlerta2.Legends.Add(legend3);
             this.graficoAlerta2.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta2.Name = "graficoAlerta2";
             this.graficoAlerta2.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta2.TabIndex = 3;
             this.graficoAlerta2.Text = "Sin alerta";
-            title33.Name = "Sin alerta";
-            this.graficoAlerta2.Titles.Add(title33);
+            title3.Name = "Sin alerta";
+            this.graficoAlerta2.Titles.Add(title3);
             // 
             // tabPage5
             // 
@@ -656,20 +657,20 @@
             // graficoAlerta3
             // 
             this.graficoAlerta3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea40.AxisX.Title = "Distancia del grupo Alerta 3";
-            chartArea40.AxisY.Title = "Nivel Pertenencia";
-            chartArea40.Name = "ChartArea1";
-            this.graficoAlerta3.ChartAreas.Add(chartArea40);
-            legend40.Name = "Legend1";
-            this.graficoAlerta3.Legends.Add(legend40);
+            chartArea4.AxisX.Title = "Distancia del grupo Alerta 3";
+            chartArea4.AxisY.Title = "Nivel Pertenencia";
+            chartArea4.Name = "ChartArea1";
+            this.graficoAlerta3.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.graficoAlerta3.Legends.Add(legend4);
             this.graficoAlerta3.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta3.Name = "graficoAlerta3";
             this.graficoAlerta3.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta3.TabIndex = 4;
             this.graficoAlerta3.Text = "Sin alerta";
-            title34.Name = "Sin alerta";
-            this.graficoAlerta3.Titles.Add(title34);
+            title4.Name = "Sin alerta";
+            this.graficoAlerta3.Titles.Add(title4);
             // 
             // tabPage6
             // 
@@ -685,20 +686,20 @@
             // graficoAlerta4
             // 
             this.graficoAlerta4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            chartArea41.AxisX.Title = "Distancia del grupo Alerta 4";
-            chartArea41.AxisY.Title = "Nivel Pertenencia";
-            chartArea41.Name = "ChartArea1";
-            this.graficoAlerta4.ChartAreas.Add(chartArea41);
-            legend41.Name = "Legend1";
-            this.graficoAlerta4.Legends.Add(legend41);
+            chartArea5.AxisX.Title = "Distancia del grupo Alerta 4";
+            chartArea5.AxisY.Title = "Nivel Pertenencia";
+            chartArea5.Name = "ChartArea1";
+            this.graficoAlerta4.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.graficoAlerta4.Legends.Add(legend5);
             this.graficoAlerta4.Location = new System.Drawing.Point(5, 6);
             this.graficoAlerta4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoAlerta4.Name = "graficoAlerta4";
             this.graficoAlerta4.Size = new System.Drawing.Size(1115, 494);
             this.graficoAlerta4.TabIndex = 4;
             this.graficoAlerta4.Text = "Sin alerta";
-            title35.Name = "Sin alerta";
-            this.graficoAlerta4.Titles.Add(title35);
+            title5.Name = "Sin alerta";
+            this.graficoAlerta4.Titles.Add(title5);
             // 
             // nivelMp10
             // 
@@ -755,12 +756,12 @@
             // graficoMP10
             // 
             this.graficoMP10.BackColor = System.Drawing.Color.Silver;
-            chartArea42.AxisX.Title = "Nivel Mp10";
-            chartArea42.AxisY.Title = "Error";
-            chartArea42.Name = "ChartArea1";
-            this.graficoMP10.ChartAreas.Add(chartArea42);
-            legend42.Name = "Legend1";
-            this.graficoMP10.Legends.Add(legend42);
+            chartArea6.AxisX.Title = "Nivel Mp10";
+            chartArea6.AxisY.Title = "Error";
+            chartArea6.Name = "ChartArea1";
+            this.graficoMP10.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.graficoMP10.Legends.Add(legend6);
             this.graficoMP10.Location = new System.Drawing.Point(25, 21);
             this.graficoMP10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.graficoMP10.Name = "graficoMP10";
@@ -3986,6 +3987,92 @@
             this.configuracionTab.Text = "Configuración";
             this.configuracionTab.UseVisualStyleBackColor = true;
             // 
+            // label155
+            // 
+            this.label155.AutoSize = true;
+            this.label155.Location = new System.Drawing.Point(570, 186);
+            this.label155.Name = "label155";
+            this.label155.Size = new System.Drawing.Size(138, 17);
+            this.label155.TabIndex = 23;
+            this.label155.Text = "Desviación Estandar";
+            // 
+            // label156
+            // 
+            this.label156.AutoSize = true;
+            this.label156.Location = new System.Drawing.Point(570, 150);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(46, 17);
+            this.label156.TabIndex = 22;
+            this.label156.Text = "Media";
+            // 
+            // desViaInvTexbox
+            // 
+            this.desViaInvTexbox.Location = new System.Drawing.Point(713, 186);
+            this.desViaInvTexbox.Name = "desViaInvTexbox";
+            this.desViaInvTexbox.Size = new System.Drawing.Size(100, 22);
+            this.desViaInvTexbox.TabIndex = 21;
+            this.desViaInvTexbox.Text = "0.25";
+            // 
+            // mediaInvTexbox
+            // 
+            this.mediaInvTexbox.Location = new System.Drawing.Point(713, 144);
+            this.mediaInvTexbox.Name = "mediaInvTexbox";
+            this.mediaInvTexbox.Size = new System.Drawing.Size(100, 22);
+            this.mediaInvTexbox.TabIndex = 20;
+            this.mediaInvTexbox.Text = "6.5";
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(710, 116);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(58, 17);
+            this.label154.TabIndex = 19;
+            this.label154.Text = "Invierno";
+            // 
+            // DesvVerTexbox
+            // 
+            this.DesvVerTexbox.Location = new System.Drawing.Point(373, 186);
+            this.DesvVerTexbox.Name = "DesvVerTexbox";
+            this.DesvVerTexbox.Size = new System.Drawing.Size(100, 22);
+            this.DesvVerTexbox.TabIndex = 16;
+            this.DesvVerTexbox.Text = "0.25";
+            // 
+            // mediaVerTexbox
+            // 
+            this.mediaVerTexbox.Location = new System.Drawing.Point(373, 144);
+            this.mediaVerTexbox.Name = "mediaVerTexbox";
+            this.mediaVerTexbox.Size = new System.Drawing.Size(100, 22);
+            this.mediaVerTexbox.TabIndex = 15;
+            this.mediaVerTexbox.Text = "12.5";
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(370, 116);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(54, 17);
+            this.label153.TabIndex = 14;
+            this.label153.Text = "Verano";
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(228, 186);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(138, 17);
+            this.label152.TabIndex = 13;
+            this.label152.Text = "Desviación Estandar";
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Location = new System.Drawing.Point(228, 150);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(46, 17);
+            this.label151.TabIndex = 12;
+            this.label151.Text = "Media";
+            // 
             // botonAbrirArchivo2
             // 
             this.botonAbrirArchivo2.Location = new System.Drawing.Point(956, 444);
@@ -4040,92 +4127,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Ruta mapa Red SOM (*.mp10)";
             // 
-            // label151
-            // 
-            this.label151.AutoSize = true;
-            this.label151.Location = new System.Drawing.Point(228, 150);
-            this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(46, 17);
-            this.label151.TabIndex = 12;
-            this.label151.Text = "Media";
-            // 
-            // label152
-            // 
-            this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(228, 186);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(138, 17);
-            this.label152.TabIndex = 13;
-            this.label152.Text = "Desviación Estandar";
-            // 
-            // label153
-            // 
-            this.label153.AutoSize = true;
-            this.label153.Location = new System.Drawing.Point(370, 116);
-            this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(54, 17);
-            this.label153.TabIndex = 14;
-            this.label153.Text = "Verano";
-            // 
-            // mediaVerTexbox
-            // 
-            this.mediaVerTexbox.Location = new System.Drawing.Point(373, 144);
-            this.mediaVerTexbox.Name = "mediaVerTexbox";
-            this.mediaVerTexbox.Size = new System.Drawing.Size(100, 22);
-            this.mediaVerTexbox.TabIndex = 15;
-            this.mediaVerTexbox.Text = "12.5";
-            // 
-            // DesvVerTexbox
-            // 
-            this.DesvVerTexbox.Location = new System.Drawing.Point(373, 186);
-            this.DesvVerTexbox.Name = "DesvVerTexbox";
-            this.DesvVerTexbox.Size = new System.Drawing.Size(100, 22);
-            this.DesvVerTexbox.TabIndex = 16;
-            this.DesvVerTexbox.Text = "0.25";
-            // 
-            // desViaInvTexbox
-            // 
-            this.desViaInvTexbox.Location = new System.Drawing.Point(713, 186);
-            this.desViaInvTexbox.Name = "desViaInvTexbox";
-            this.desViaInvTexbox.Size = new System.Drawing.Size(100, 22);
-            this.desViaInvTexbox.TabIndex = 21;
-            this.desViaInvTexbox.Text = "0.25";
-            // 
-            // mediaInvTexbox
-            // 
-            this.mediaInvTexbox.Location = new System.Drawing.Point(713, 144);
-            this.mediaInvTexbox.Name = "mediaInvTexbox";
-            this.mediaInvTexbox.Size = new System.Drawing.Size(100, 22);
-            this.mediaInvTexbox.TabIndex = 20;
-            this.mediaInvTexbox.Text = "6.5";
-            // 
-            // label154
-            // 
-            this.label154.AutoSize = true;
-            this.label154.Location = new System.Drawing.Point(710, 116);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(58, 17);
-            this.label154.TabIndex = 19;
-            this.label154.Text = "Invierno";
-            // 
-            // label155
-            // 
-            this.label155.AutoSize = true;
-            this.label155.Location = new System.Drawing.Point(570, 186);
-            this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(138, 17);
-            this.label155.TabIndex = 23;
-            this.label155.Text = "Desviación Estandar";
-            // 
-            // label156
-            // 
-            this.label156.AutoSize = true;
-            this.label156.Location = new System.Drawing.Point(570, 150);
-            this.label156.Name = "label156";
-            this.label156.Size = new System.Drawing.Size(46, 17);
-            this.label156.TabIndex = 22;
-            this.label156.Text = "Media";
-            // 
             // Ventana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -4133,9 +4134,11 @@
             this.ClientSize = new System.Drawing.Size(1195, 720);
             this.Controls.Add(this.MenuSoft);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Ventana";
-            this.Text = "Ventana";
+            this.Text = "Prediccíon MP10";
+            this.Load += new System.EventHandler(this.Ventana_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.prediccionMP10.ResumeLayout(false);

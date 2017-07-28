@@ -1601,5 +1601,10 @@ namespace RedesNeuronalesArtificiales
             }
             return tabla;
         }
+
+        private void Ventana_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
