@@ -8,6 +8,7 @@ using RedesNeuronalesArtificiales.Ventanas;
 //using RedesNeuronalesArtificiales.Reportes;
 using System.Diagnostics;
 using System.Windows.Forms;
+using System.IO;
 
 namespace RedesNeuronalesArtificiales
 {
@@ -20,12 +21,54 @@ namespace RedesNeuronalesArtificiales
 
 		static void Main(string[] argumentos)
         {
+            DateTime inicio = new DateTime(2010, 01, 01, 00, 00, 00);
+            DateTime fin = new DateTime(2017, 03, 01, 00, 00, 00);
+
+            List<double[]> datosMeteorologicos = Conexion.datosMeteorologicos(inicio, fin, 0);
+            //List<double[,]> dr = Conexion.datosPorRangoMp10(inicio, fin);
+
+
+            string rutaCompleta = "DatosEntrenamiento.csv";
+
+            using (StreamWriter mylogs = File.AppendText(rutaCompleta))         //se crea el archivo
+            {
+
+                //se adiciona alguna información y la fecha
+
+
+                string dato;
+                string linea;
+               
+                foreach (double[] fila in datosMeteorologicos)
+                {
+                    linea = "";
+                    for(int i=0; i<fila.Length; i++)
+                    {
+                        dato = Convert.ToString(Math.Round(fila[i], 3));
+                        if(i < fila.Length-1)
+                        linea += dato + "; ";
+                        else
+                            linea += dato;
+
+                    }
+                    mylogs.WriteLine(linea);
+                }
+                
+
+                mylogs.Close();
+            }
+
+
+            System.Console.WriteLine("fin");
+
+            /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 			if(argumentos.Length > 0 && argumentos[0].Equals("modo-desarrollo"))
 				Application.Run(new Entrenamiento());
 			else
 				Application.Run(new Ventana());
+            */
         }
 
         static void ejemploPrediccionGrupo()

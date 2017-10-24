@@ -56,17 +56,17 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 					filaActual [6] = Entrada.normalizar ((Int16)datosMeteorologicosLeidos [4], 0, 100);//humedad_relativa
 					filaActual [7] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [5], 0, 800);//mp10
 					filaActual [8] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [6], 0, 1700);//radiacion_solar
-					filaActual [9] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [7], 440, 600);//presion_atmosferica
-					filaActual [10] = Entrada.normalizar ((double)datosMeteorologicosLeidos [9], 0, 47);//precipitaciondia1
-					filaActual [11] = Entrada.normalizar ((double)datosMeteorologicosLeidos [10], 0, 47);//precipitaciondia2
-					filaActual [12] = Entrada.normalizar ((double)datosMeteorologicosLeidos [11], 0, 47);//precipitaciondia3
-					filaActual [13] = Entrada.normalizar ((double)datosMeteorologicosLeidos [12], 0, 47);//precipitaciondia4
-					filaActual [14] = Entrada.normalizar ((double)datosMeteorologicosLeidos [13], 0, 47);//precipitaciondia5
-					filaActual [15] = Entrada.normalizar ((double)datosMeteorologicosLeidos [15], 0, 363000);//evaporaciondia1
-					filaActual [16] = Entrada.normalizar ((double)datosMeteorologicosLeidos [16], 0, 363000);//evaporaciondia2
-					filaActual [17] = Entrada.normalizar ((double)datosMeteorologicosLeidos [17], 0, 363000);//evaporaciondia3
-					filaActual [18] = Entrada.normalizar ((double)datosMeteorologicosLeidos [18], 0, 363000);//evaporaciondia4
-					filaActual [19] = Entrada.normalizar ((double)datosMeteorologicosLeidos [19], 0, 363000);//evaporaciondia5
+					filaActual [9] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [7], 0, 600);//presion_atmosferica
+					filaActual [10] = Entrada.normalizar ((double)datosMeteorologicosLeidos [9], 0, 2860);//precipitaciondia1
+					filaActual [11] = Entrada.normalizar ((double)datosMeteorologicosLeidos [10], 0, 2860);//precipitaciondia2
+					filaActual [12] = Entrada.normalizar ((double)datosMeteorologicosLeidos [11], 0, 2860);//precipitaciondia3
+					filaActual [13] = Entrada.normalizar ((double)datosMeteorologicosLeidos [12], 0, 2860);//precipitaciondia4
+					filaActual [14] = Entrada.normalizar ((double)datosMeteorologicosLeidos [13], 0, 2860);//precipitaciondia5
+					filaActual [15] = Entrada.normalizar ((double)datosMeteorologicosLeidos [15], 0, 36300000);//evaporaciondia1
+					filaActual [16] = Entrada.normalizar ((double)datosMeteorologicosLeidos [16], 0, 36300000);//evaporaciondia2
+					filaActual [17] = Entrada.normalizar ((double)datosMeteorologicosLeidos [17], 0, 36300000);//evaporaciondia3
+					filaActual [18] = Entrada.normalizar ((double)datosMeteorologicosLeidos [18], 0, 36300000);//evaporaciondia4
+					filaActual [19] = Entrada.normalizar ((double)datosMeteorologicosLeidos [19], 0, 36300000);//evaporaciondia5
 
 					//Palas y Chancadores
 					filaActual [20] = estado (palas [0], fechaActual);
@@ -151,17 +151,17 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				filaActual [6] = Entrada.normalizar ((Int16)leido [4],0,100);//humedad_relativa
 				filaActual [7] = Entrada.normalizar ((Int32)leido [5],0,800);//mp10
 				filaActual [8] = Entrada.normalizar ((Int32)leido [6],0,1700);//radiacion_solar
-				filaActual [9] = Entrada.normalizar ((Int32)leido [7],440,600);//presion_atmosferica
+				filaActual [9] = Entrada.normalizar ((Int32)leido [7],0,600);//presion_atmosferica
 				filaActual [10] = Entrada.normalizar ((double)leido [9],0,47);//precipitaciondia1
 				filaActual [11] = Entrada.normalizar ((double)leido [10],0,47);//precipitaciondia2
 				filaActual [12] = Entrada.normalizar ((double)leido [11],0,47);//precipitaciondia3
 				filaActual [13] = Entrada.normalizar ((double)leido [12],0,47);//precipitaciondia4
 				filaActual [14] = Entrada.normalizar ((double)leido [13],0,47);//precipitaciondia5
-				filaActual [15] = Entrada.normalizar ((double)leido [15],0,363000);//evaporaciondia1
-				filaActual [16] = Entrada.normalizar ((double)leido [16],0,363000);//evaporaciondia2
-				filaActual [17] = Entrada.normalizar ((double)leido [17],0,363000);//evaporaciondia3
-				filaActual [18] = Entrada.normalizar ((double)leido [18],0,363000);//evaporaciondia4
-				filaActual [19] = Entrada.normalizar ((double)leido [19],0,363000);//evaporaciondia5
+				filaActual [15] = Entrada.normalizar ((double)leido [15],0, 35330083.8);//evaporaciondia1
+				filaActual [16] = Entrada.normalizar ((double)leido [16],0, 35428360.6);//evaporaciondia2
+				filaActual [17] = Entrada.normalizar ((double)leido [17],0, 35780710.9);//evaporaciondia3
+				filaActual [18] = Entrada.normalizar ((double)leido [18],0, 35221726.6);//evaporaciondia4
+				filaActual [19] = Entrada.normalizar ((double)leido [19],0, 36300000);//evaporaciondia5
 
 				//Palas y Chancadores
 				filaActual [20] = estado(palas[0], fechaActual);
