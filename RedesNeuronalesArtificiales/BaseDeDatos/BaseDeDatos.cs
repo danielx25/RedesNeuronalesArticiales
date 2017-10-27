@@ -56,7 +56,7 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 					filaActual [6] = Entrada.normalizar ((Int16)datosMeteorologicosLeidos [4], 0, 100);//humedad_relativa
 					filaActual [7] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [5], 0, 800);//mp10
 					filaActual [8] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [6], 0, 1700);//radiacion_solar
-					filaActual [9] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [7], 0, 600);//presion_atmosferica
+					filaActual [9] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [7], -1, 600);//presion_atmosferica
 					filaActual [10] = Entrada.normalizar ((double)datosMeteorologicosLeidos [9], 0, 2860);//precipitaciondia1
 					filaActual [11] = Entrada.normalizar ((double)datosMeteorologicosLeidos [10], 0, 2860);//precipitaciondia2
 					filaActual [12] = Entrada.normalizar ((double)datosMeteorologicosLeidos [11], 0, 2860);//precipitaciondia3
@@ -86,12 +86,12 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 					if (filaMitigacion == null) {
 						filaMitigacion = new double[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 					}
-					filaActual [30] = Entrada.normalizar (valorHora (filaMitigacion [0], filaMitigacion [1], fechaActual), 0, 7);//chaxa camion dia y noche
-					filaActual [31] = Entrada.normalizar (valorHora (filaMitigacion [2], filaMitigacion [3], fechaActual), 0, 8);//movitec camion dia y noche
+					filaActual [30] = Entrada.normalizar (valorHora (filaMitigacion [0], filaMitigacion [1], fechaActual), -1, 7);//chaxa camion dia y noche
+					filaActual [31] = Entrada.normalizar (valorHora (filaMitigacion [2], filaMitigacion [3], fechaActual), -1, 8);//movitec camion dia y noche
 					double valorNoche = 0;
 					if (filaMitigacion [4] == -1)
 						valorNoche = -1;
-					filaActual [32] = Entrada.normalizar (valorHora (filaMitigacion [4], valorNoche, fechaActual), 0, 4);//das camion dia
+					filaActual [32] = Entrada.normalizar (valorHora (filaMitigacion [4], valorNoche, fechaActual), -1, 4);//das camion dia
 					filaActual [33] = Entrada.normalizar (Math.Round ((filaMitigacion [5] / 24), 1), 0, 90240);//cnorte consumo de agua
 					filaActual [34] = Entrada.normalizar (Math.Round ((filaMitigacion [6] / 24), 1), 0, 4480);//cmovil consumo de agua
 					filaActual [35] = Entrada.normalizar (Math.Round ((filaMitigacion [7] / 24), 1), 0, 1500);//cachimba1 consumo de agua
