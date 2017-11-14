@@ -45,40 +45,45 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 				if (((Int32)datosMeteorologicosLeidos [5] <= 150 && provabilidad > 0 && aleatorio.NextDouble() < provabilidad) || ((Int32)datosMeteorologicosLeidos [5] > 150 || provabilidad <= 0)) {
 					if ((Int32)datosMeteorologicosLeidos [5] <= 150)
 						contador++;
-					double[] filaActual = new double[38];
+					double[] filaActual = new double[32];
 					DateTime fechaActual = (DateTime)datosMeteorologicosLeidos [0];
-					filaActual [0] = Difuso.verano (fechaActual);//Verano
-					filaActual [1] = Difuso.invierno (fechaActual);//Invierno
-					filaActual [2] = Entrada.normalizar (fechaActual.Hour, 0, 24);//Hora
-					filaActual [3] = Entrada.normalizar ((double)datosMeteorologicosLeidos [1], 0, 30);//velocidad_viento
-					filaActual [4] = Entrada.normalizar ((Int16)datosMeteorologicosLeidos [2], 0, 360);//direccion_viento
-					filaActual [5] = Entrada.normalizar ((double)datosMeteorologicosLeidos [3], -10, 55);//temperatura
-					filaActual [6] = Entrada.normalizar ((Int16)datosMeteorologicosLeidos [4], 0, 100);//humedad_relativa
-					filaActual [7] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [5], 0, 800);//mp10
-					filaActual [8] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [6], 0, 1700);//radiacion_solar
-					filaActual [9] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [7], -1, 600);//presion_atmosferica
-					filaActual [10] = Entrada.normalizar ((double)datosMeteorologicosLeidos [9], 0, 2860);//precipitaciondia1
-					filaActual [11] = Entrada.normalizar ((double)datosMeteorologicosLeidos [10], 0, 2860);//precipitaciondia2
-					filaActual [12] = Entrada.normalizar ((double)datosMeteorologicosLeidos [11], 0, 2860);//precipitaciondia3
-					filaActual [13] = Entrada.normalizar ((double)datosMeteorologicosLeidos [12], 0, 2860);//precipitaciondia4
-					filaActual [14] = Entrada.normalizar ((double)datosMeteorologicosLeidos [13], 0, 2860);//precipitaciondia5
-					filaActual [15] = Entrada.normalizar ((double)datosMeteorologicosLeidos [15], 0, 36300000);//evaporaciondia1
-					filaActual [16] = Entrada.normalizar ((double)datosMeteorologicosLeidos [16], 0, 36300000);//evaporaciondia2
-					filaActual [17] = Entrada.normalizar ((double)datosMeteorologicosLeidos [17], 0, 36300000);//evaporaciondia3
-					filaActual [18] = Entrada.normalizar ((double)datosMeteorologicosLeidos [18], 0, 36300000);//evaporaciondia4
-					filaActual [19] = Entrada.normalizar ((double)datosMeteorologicosLeidos [19], 0, 36300000);//evaporaciondia5
+                    //filaActual [0] = Difuso.verano (fechaActual);//Verano
+                    double mes = fechaActual.Month;// + (((99.99999 * fechaActual.Day) / DateTime.DaysInMonth(fechaActual.Year, fechaActual.Month)) / 100);
+                    filaActual[0] = mes / (double)12.0;
+                    //filaActual [1] = Difuso.invierno (fechaActual);//Invierno
+					filaActual [1] = Entrada.normalizar (fechaActual.Hour, 0, 24);//Hora
+					filaActual [2] = Entrada.normalizar ((double)datosMeteorologicosLeidos [1], 0, 30);//velocidad_viento
+					filaActual [3] = Entrada.normalizar ((Int16)datosMeteorologicosLeidos [2], 0, 360);//direccion_viento
+					filaActual [4] = Entrada.normalizar ((double)datosMeteorologicosLeidos [3], -10, 55);//temperatura
+					filaActual [5] = Entrada.normalizar ((Int16)datosMeteorologicosLeidos [4], 0, 100);//humedad_relativa
+					filaActual [6] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [5], 0, 800);//mp10
+					filaActual [7] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [6], 0, 1700);//radiacion_solar
+					//filaActual [9] = Entrada.normalizar ((Int32)datosMeteorologicosLeidos [7], -1, 600);//presion_atmosferica
+					filaActual [8] = Entrada.normalizar ((double)datosMeteorologicosLeidos [9], 0, 2860);//precipitaciondia1
+					filaActual [9] = Entrada.normalizar ((double)datosMeteorologicosLeidos [10], 0, 2860);//precipitaciondia2
+					filaActual [10] = Entrada.normalizar ((double)datosMeteorologicosLeidos [11], 0, 2860);//precipitaciondia3
+					filaActual [11] = Entrada.normalizar ((double)datosMeteorologicosLeidos [12], 0, 2860);//precipitaciondia4
+					filaActual [12] = Entrada.normalizar ((double)datosMeteorologicosLeidos [13], 0, 2860);//precipitaciondia5
 
-					//Palas y Chancadores
-					filaActual [20] = estado (palas [0], fechaActual);
-					filaActual [21] = estado (palas [1], fechaActual);
-					filaActual [22] = estado (palas [2], fechaActual);
-					filaActual [23] = estado (palas [3], fechaActual);
-					filaActual [24] = estado (palas [4], fechaActual);
-					filaActual [25] = estado (palas [5], fechaActual);
-					filaActual [26] = estado (palas [6], fechaActual);
-					filaActual [27] = estado (palas [7], fechaActual);
-					filaActual [28] = estado (chancados [0], fechaActual);
-					filaActual [29] = estado (chancados [1], fechaActual);
+                    filaActual[13] = Entrada.normalizar((double)datosMeteorologicosLeidos[14], -1, 255);//evaporaciondia original
+
+                    //filaActual [15] = Entrada.normalizar ((double)datosMeteorologicosLeidos [15], 0, 36300000);//evaporaciondia1
+                    //filaActual [16] = Entrada.normalizar ((double)datosMeteorologicosLeidos [16], 0, 36300000);//evaporaciondia2
+                    //filaActual [17] = Entrada.normalizar ((double)datosMeteorologicosLeidos [17], 0, 36300000);//evaporaciondia3
+                    //filaActual [18] = Entrada.normalizar ((double)datosMeteorologicosLeidos [18], 0, 36300000);//evaporaciondia4
+                    //filaActual [19] = Entrada.normalizar ((double)datosMeteorologicosLeidos [19], 0, 36300000);//evaporaciondia5
+
+                    //Palas y Chancadores
+                    filaActual [14] = estado (palas [0], fechaActual);
+					filaActual [15] = estado (palas [1], fechaActual);
+					filaActual [16] = estado (palas [2], fechaActual);
+					filaActual [17] = estado (palas [3], fechaActual);
+					filaActual [18] = estado (palas [4], fechaActual);
+					filaActual [19] = estado (palas [5], fechaActual);
+					filaActual [20] = estado (palas [6], fechaActual);
+					filaActual [21] = estado (palas [7], fechaActual);
+					filaActual [22] = estado (chancados [0], fechaActual);
+					filaActual [23] = estado (chancados [1], fechaActual);
 
 					//Mitigación
 					string clave = fechaActual.Year + "-" + fechaActual.Month + "-" + fechaActual.Day;
@@ -86,17 +91,17 @@ namespace RedesNeuronalesArtificiales.BaseDeDatos
 					if (filaMitigacion == null) {
 						filaMitigacion = new double[] { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 					}
-					filaActual [30] = Entrada.normalizar (valorHora (filaMitigacion [0], filaMitigacion [1], fechaActual), -1, 7);//chaxa camion dia y noche
-					filaActual [31] = Entrada.normalizar (valorHora (filaMitigacion [2], filaMitigacion [3], fechaActual), -1, 8);//movitec camion dia y noche
+					filaActual [24] = Entrada.normalizar (valorHora (filaMitigacion [0], filaMitigacion [1], fechaActual), -1, 7);//chaxa camion dia y noche
+					filaActual [25] = Entrada.normalizar (valorHora (filaMitigacion [2], filaMitigacion [3], fechaActual), -1, 8);//movitec camion dia y noche
 					double valorNoche = 0;
 					if (filaMitigacion [4] == -1)
 						valorNoche = -1;
-					filaActual [32] = Entrada.normalizar (valorHora (filaMitigacion [4], valorNoche, fechaActual), -1, 4);//das camion dia
-					filaActual [33] = Entrada.normalizar (Math.Round ((filaMitigacion [5] / 24), 1), 0, 90240);//cnorte consumo de agua
-					filaActual [34] = Entrada.normalizar (Math.Round ((filaMitigacion [6] / 24), 1), 0, 4480);//cmovil consumo de agua
-					filaActual [35] = Entrada.normalizar (Math.Round ((filaMitigacion [7] / 24), 1), 0, 1500);//cachimba1 consumo de agua
-					filaActual [36] = Entrada.normalizar (Math.Round ((filaMitigacion [8] / 24), 1), 0, 2270);//cachimba2 consumo de agua
-					filaActual [37] = Entrada.normalizar (Math.Round ((filaMitigacion [9] / 24), 1), 0, 27000);//gerencia consumo de agua
+					filaActual [26] = Entrada.normalizar (valorHora (filaMitigacion [4], valorNoche, fechaActual), -1, 4);//das camion dia
+					filaActual [27] = Entrada.normalizar (Math.Round ((filaMitigacion [5] / 24), 1), 0, 90240);//cnorte consumo de agua
+					filaActual [28] = Entrada.normalizar (Math.Round ((filaMitigacion [6] / 24), 1), 0, 4480);//cmovil consumo de agua
+					filaActual [29] = Entrada.normalizar (Math.Round ((filaMitigacion [7] / 24), 1), 0, 1500);//cachimba1 consumo de agua
+					filaActual [30] = Entrada.normalizar (Math.Round ((filaMitigacion [8] / 24), 1), 0, 2270);//cachimba2 consumo de agua
+					filaActual [31] = Entrada.normalizar (Math.Round ((filaMitigacion [9] / 24), 1), 0, 27000);//gerencia consumo de agua
 
 					tabla.Add (filaActual);
 				}
